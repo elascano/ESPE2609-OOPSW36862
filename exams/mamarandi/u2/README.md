@@ -4,6 +4,6 @@ ESPE 26 09 - Object Oriented Programming SW 36862
 
 Unit 2 Exams
 
-Instructor: Edison Lazcano
+Instructor: Edison Lascano
 
 Student: Marcos Mamarandi
