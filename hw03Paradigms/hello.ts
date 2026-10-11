@@ -1,1 +1,0 @@
-console.log("Hello, this is Cristopher Lanchimba from TypeScript");
