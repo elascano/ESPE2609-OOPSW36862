@@ -1,0 +1,1 @@
+console.log("Hello, this is Julian from Typescript");
