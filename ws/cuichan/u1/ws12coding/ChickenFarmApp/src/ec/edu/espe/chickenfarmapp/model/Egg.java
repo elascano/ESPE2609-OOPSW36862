@@ -6,7 +6,7 @@ package ec.edu.espe.chickenfarmapp.model;
 
 /**
  *
- * @author Usuario
+ * @author Leslye Cuichan
  */
 public class Egg {
     private int id;
@@ -46,6 +46,7 @@ public class Egg {
     }
     @Override
     public String toString() {
-        return "Egg{" + "id=" + id + '}';
+        return "Egg{" + "id=" + getId() + ", size=" + getSize() + '}';
     }
+    
 }
