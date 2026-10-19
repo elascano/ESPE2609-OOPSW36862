@@ -22,9 +22,14 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+<<<<<<< Updated upstream
 /ws/velez/u1/ws12Coding/ChickenFarmApp/nbproject/private/
 /ws/velez/u1/ws12Coding/ChickenFarmApp/build/
 /ws/velez/u1/ws12Coding/JavaApplication30/nbproject/private/
 /ws/velez/u1/ws12Coding/ChickenFarmApp2/nbproject/private/
 /ws/velez/u1/ws12Coding/ChickenFarmApp23/nbproject/private/
 /ws/velez/u1/ws12Coding/ChickenFarmApp23/build/
+=======
+/ws/olalla/u1/ws12 Coding/ChickenFarmApp/nbproject/private/
+/ws/olalla/u1/ws12 Coding/ChickenFarmApp/build/
+>>>>>>> Stashed changes
