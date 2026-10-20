@@ -19,6 +19,7 @@ public class Chicken {
     public void doStuff(){
         cluck();
         wander();
+        eat();
         drink(1.3F);
         System.out.println("poop -->" + poop());
         System.out.println("egg -->" + layAnEgg());
@@ -52,7 +53,7 @@ public class Chicken {
         return egg;
     }
     public int computeAgeInYears() {
-        int age;
+        int age = 0;
 
         Calendar birth = Calendar.getInstance();
         birth.setTime(bornOnDate);
