@@ -42,6 +42,7 @@ public class ChickenFarmApp {
 
         chickens[0] = new Chicken(3, "Pepita", "black", new Date(2020, 2, 2));
         chickens[1] = chicken;
+        chickens[2] = chicken1;
 
         for (int i = 0; i < 10; i++) {
             System.out.println("chickens -->" + chickens[i]);
