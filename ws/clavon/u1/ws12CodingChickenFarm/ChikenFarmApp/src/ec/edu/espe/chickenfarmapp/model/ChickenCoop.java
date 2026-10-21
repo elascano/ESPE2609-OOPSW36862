@@ -1,67 +1,117 @@
 package ec.edu.espe.chickenfarmapp.model;
 
-import java.util.Date;
 /**
  *
  * @author David Clavón, Infinity Loops, @ESPE
  */
+
 public class ChickenCoop {
+
     private int chickenCoopId;
     private Chicken chickens[] = new Chicken[10];
-    private int currentIndex;
-    
-    @Override
-    public String toString() {
-        return "ChickenCoop{" + "chickenCoopId=" + chickenCoopId + ", chickens=" + chickens + '}';
+    private int count = 0;
+    private int currentIndex = 0;
+
+    public ChickenCoop(int chickenCoopId) {
+        this.chickenCoopId = chickenCoopId;
     }
 
     public ChickenCoop(int chickenCoopId, Chicken[] chickens) {
         this.chickenCoopId = chickenCoopId;
-        this.chickens = chickens;
+        if (chickens != null) {
+            for (Chicken chicken : chickens) {
+                if (chicken != null) {
+                    this.add(chicken);
+                }
+            }
+        }
     }
 
-    public void add(Chicken chicken){
-        
+    public boolean add(Chicken chicken) {
+        if (chicken == null || count >= chickens.length) {
+            return false;
+        }
+        chickens[count] = chicken;
+        count++;
+        return true;
     }
-    
-    public void remove(int chickenId){
-        
+
+    public boolean remove(int chickenId) {
+        int indexFound = -1;
+
+        for (int i = 0; i < count; i++) {
+            if (chickens[i] != null && chickens[i].getId() == chickenId) {
+                indexFound = i;
+                break;
+            }
+        }
+
+        if (indexFound != -1) {
+            for (int i = indexFound; i < count - 1; i++) {
+                chickens[i] = chickens[i + 1];
+            }
+            chickens[count - 1] = null;
+            count--;
+            return true;
+        }
+        return false;
     }
-    
-    public void resetIteration(){
-        currentIndex = 0;
+
+    public void resetIteration() {
+        this.currentIndex = 0;
     }
-    
+
     public Chicken next() {
-        
-        return null; 
+        if (currentIndex < count) {
+            Chicken currentChicken = chickens[currentIndex];
+            currentIndex++;
+            return currentChicken;
+        }
+        return null;
     }
-    
-    /**
-     * @return the chickenCoopId
-     */
+
+    public int getCurrentPosition() {
+        return currentIndex;
+    }
+
+    public Chicken getCurrentChicken() {
+        if (currentIndex > 0 && currentIndex <= count) {
+            return chickens[currentIndex - 1];
+        }
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("ChickenCoop{chickenCoopId=").append(chickenCoopId);
+        sb.append(", totalChickens=").append(count);
+        sb.append(", chickens=[");
+        for (int i = 0; i < count; i++) {
+            sb.append(chickens[i]);
+            if (i < count - 1) sb.append(", ");
+        }
+        sb.append("]}");
+        return sb.toString();
+    }
+
     public int getChickenCoopId() {
         return chickenCoopId;
     }
 
-    /**
-     * @param chickenCoopId the chickenCoopId to set
-     */
     public void setChickenCoopId(int chickenCoopId) {
         this.chickenCoopId = chickenCoopId;
     }
 
-    /**
-     * @return the chickens
-     */
     public Chicken[] getChickens() {
         return chickens;
     }
 
-    /**
-     * @param chickens the chickens to set
-     */
     public void setChickens(Chicken[] chickens) {
         this.chickens = chickens;
+    }
+
+    public int getCount() {
+        return count;
     }
 }
