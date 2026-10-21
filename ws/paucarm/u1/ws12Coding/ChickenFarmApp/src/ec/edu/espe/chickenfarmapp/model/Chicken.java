@@ -61,13 +61,6 @@ public class Chicken {
 
         age = today.get(Calendar.YEAR) - birth.get(Calendar.YEAR);
 
-        if (today.get(Calendar.MONTH) < birth.get(Calendar.MONTH)) {
-            age--;
-       } else if (today.get(Calendar.MONTH) == birth.get(Calendar.MONTH)
-                    && today.get(Calendar.DAY_OF_MONTH) < birth.get(Calendar.DAY_OF_MONTH)) {
-            age--;
-        }
-
         return age + 1900;
     }
     
