@@ -10,7 +10,7 @@ public class Chicken {
     private Date bornOnDate;
     private int ageInYears;
     private boolean molting;
-
+    
     public void doStuff() {
         cluck();
         wander();
@@ -18,7 +18,7 @@ public class Chicken {
         System.out.println("poop--> " + poop());
         System.out.println("egg--> " + layAnEgg());
     }
-
+    
     private void cluck() {
         System.out.println("The chicken " + name + " is clucking");
     }
@@ -113,4 +113,3 @@ public class Chicken {
         this.molting = molting;
     }
 }
-

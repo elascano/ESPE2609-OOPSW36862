@@ -2,7 +2,7 @@ package ec.edu.espe.chickenfarmapp.model;
 
 /**
  *
- * @author Renata Olalla, Binary Bosses, @ESPE
+ * @author Dennis Criollo, Binary Bosses, @ESPE
  */
 public class Poop {
     private int id;
@@ -65,5 +65,4 @@ public class Poop {
     
     
 }
-
 

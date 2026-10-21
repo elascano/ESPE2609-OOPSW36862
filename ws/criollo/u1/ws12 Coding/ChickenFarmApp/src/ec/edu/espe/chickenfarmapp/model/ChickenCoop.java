@@ -6,17 +6,42 @@ package ec.edu.espe.chickenfarmapp.model;
 
 /**
  *
- * @author Renata Olalla, Binary Bosses, @ESPE
+ * @author Dennis , Binary Bosses, @ESPE
  */
 public class ChickenCoop {
 private int chickenCoopId;
 private Chicken chickens[]= new Chicken[10];
-
+private int currentIndex = 0;
 
 public void add(Chicken chicken){
     //if we have less than 10 chickens we can add one more, else we cant't add anymore
-    
+    for (int i = 0; i < chickens.length; i++) {
+        if (chickens[i] == null) {
+            chickens[i] = chicken;
+            break;
+        }
+    }
 
+}
+public void remove(int chickenId) {
+    for (int i = 0; i < chickens.length; i++) {
+        if (chickens[i] != null && chickens[i].getId() == chickenId) {
+            chickens[i] = null;
+            break;
+        }
+    }
+}
+
+public void resetIteration() {
+    currentIndex = 0;
+}
+public Chicken next() {
+    Chicken chicken = null;
+    if (currentIndex < chickens.length) {
+        chicken = chickens[currentIndex];
+        currentIndex++;
+    }
+    return chicken;
 }
 public ChickenCoop(int chickenCoopId, Chicken[] chickens) {
 this.chickenCoopId = chickenCoopId;
