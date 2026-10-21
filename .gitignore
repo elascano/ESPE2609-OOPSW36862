@@ -34,3 +34,6 @@ replay_pid*
 /ws/olalla/u1/ws12 Coding/ChickenFarmApp/build/
 
 /ws/clavon/u1/ws12CodingChickenFarm/ChikenFarmApp/nbproject/private/
+
+# Visual Paradigm backup files
+*.bak_*
