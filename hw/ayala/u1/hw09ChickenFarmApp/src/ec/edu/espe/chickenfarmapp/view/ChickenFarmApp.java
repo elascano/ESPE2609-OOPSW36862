@@ -6,57 +6,80 @@ import ec.edu.espe.chickenfarmapp.model.ChickenCoop;
 import ec.edu.espe.chickenfarmapp.model.Egg;
 import ec.edu.espe.chickenfarmapp.model.Poop;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Scanner;
 
 /**
  *
  * @author Enrique Ayala, LogicLords,@ESPE
  */
 public class ChickenFarmApp {
-    public static void main (String[]args) {
+    public static void main(String[] args) {
         System.out.println("Enrique Ayala Chicken Farm App");
         System.out.println("==============================");
-        
-        //declaration
-        Chicken chicken; 
-        Chicken chicken1;
-        Egg egg;
-        Poop poop;
-        ChickenCoop coop;
-        Chicken chickens[];  
-        
-        chickens = new Chicken[10];
-        //objects initialation
-               chicken = new Chicken(1, "Lucy", "brown and white", new Date(78, 10, 2), true); 
-        egg = new Egg(1, 'M');
-        poop = new Poop(1, "brown", 'S');
-        chicken1 = new Chicken(2, "Renata", "white", new Date(70, 11, 17), false); 
-        
-        
-        System.out.println("chicken-->" + chicken);
-        System.out.println("chicken-->" + egg);
-        System.out.println("chicken-->" + poop);
-        System.out.println("chicken 2 -->" + chicken1);
-        
-                int localAge = chicken.computeAgeInYears();
-        System.out.println("The age of the chicken --> " + chicken.getName() + ", is --> " + localAge);
-        
-        chicken.doStuff();
-        
-        chickens[0] = new Chicken(3, "pepita","black",new Date(2020,2,2), true);
-        chickens[1] = chicken;
-        
-        for(int i =0; i < 10; i++){
-            System.out.println("chickens --->"+ chickens[i]);
-        }
-        int ageForTheLoop=0;
-        for(int i=0 ; i< chickens.length ; i++){
-            ageForTheLoop = 2010 + i;
-            chickens[i] = new Chicken(i, "chicken"+ (i+1), "white", new Date(2020,3,3), true);
-            chickens[i].setAgeInYears();
-        }
-        for (int i=0; i<10 ; i++){
-            System.out.println("chickens -->" + chickens[i]);
-        }
+
+        Scanner scanner = new Scanner(System.in);
+        ChickenCoop coop = new ChickenCoop(1);
+        int option;
+
+        do {
+            System.out.println();
+            System.out.println("1. Add chicken");
+            System.out.println("2. Remove chicken");
+            System.out.println("3. Next chicken");
+            System.out.println("4. Reset iteration");
+            System.out.println("5. Show coop");
+            System.out.println("0. Exit");
+            System.out.print("Choose an option: ");
+            option = Integer.parseInt(scanner.nextLine());
+
+            switch (option) {
+                case 1:
+                    System.out.print("Id: ");
+                    int id = Integer.parseInt(scanner.nextLine());
+                    System.out.print("Name: ");
+                    String name = scanner.nextLine();
+                    System.out.print("Color: ");
+                    String color = scanner.nextLine();
+                    System.out.print("Birth year (e.g. 2022): ");
+                    int year = Integer.parseInt(scanner.nextLine());
+                    System.out.print("Birth month (1-12): ");
+                    int month = Integer.parseInt(scanner.nextLine());
+                    System.out.print("Birth day (1-31): ");
+                    int day = Integer.parseInt(scanner.nextLine());
+
+                    // month - 1 because GregorianCalendar starts months at 0
+                    Chicken chicken = new Chicken(id, name, color,
+                            new GregorianCalendar(year, month - 1, day).getTime(), false);
+                    chicken.setAgeInYears();
+                    coop.add(chicken);
+                    break;
+                case 2:
+                    System.out.print("Id of the chicken to remove: ");
+                    coop.remove(Integer.parseInt(scanner.nextLine()));
+                    break;
+                case 3:
+                    Chicken next = coop.next();
+                    if (next == null) {
+                        System.out.println("No more chickens. Use option 4 to start again.");
+                    } else {
+                        System.out.println(next);
+                        next.doStuff();
+                    }
+                    break;
+                case 4:
+                    coop.resetIteration();
+                    System.out.println("Iteration reset.");
+                    break;
+                case 5:
+                    System.out.println(coop);
+                    break;
+                case 0:
+                    System.out.println("Bye!");
+                    break;
+                default:
+                    System.out.println("Invalid option.");
+            }
+        } while (option != 0);
     }
-    }
-    
+}

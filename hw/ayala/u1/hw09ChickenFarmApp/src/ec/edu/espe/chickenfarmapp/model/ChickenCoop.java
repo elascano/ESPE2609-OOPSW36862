@@ -124,6 +124,10 @@ public class ChickenCoop {
     public void setCount(int count) {
         this.count = count;
     }
+
+    public ChickenCoop(int count) {
+        this.count = count;
+    }
     
     
 }
