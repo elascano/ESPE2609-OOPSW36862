@@ -8,6 +8,9 @@ public class Poop {
     private String color;
     private char consistency;
 
+    public Poop() {
+    }
+
     public Poop(int id, String color, char consistency) {
         this.id = id;
         this.color = color;

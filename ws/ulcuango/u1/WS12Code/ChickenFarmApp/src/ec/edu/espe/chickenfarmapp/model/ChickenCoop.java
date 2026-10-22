@@ -9,6 +9,10 @@ public class ChickenCoop {
     private int id;
     private ArrayList<Chicken> chickens;
 
+    public ChickenCoop() {
+        this.chickens = new ArrayList<>();
+    }
+
     public ChickenCoop(int id) {
         this.id = id;
         this.chickens = new ArrayList<>();
