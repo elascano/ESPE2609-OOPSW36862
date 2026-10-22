@@ -85,3 +85,12 @@ class Chicken:
 
     def do_stuff(self, amount_of_water: float):
         self.cluck()
+
+    def __str__(self):
+        return (
+            f"Chicken{{id={self._id}, name={self._name}, color={self._color}, "
+            f"bornOnDate={self._born_on_date}, molting={self._molting}, "
+            f"ageInYears={self._age_in_years}}}"
+        )
+
+    __repr__ = __str__

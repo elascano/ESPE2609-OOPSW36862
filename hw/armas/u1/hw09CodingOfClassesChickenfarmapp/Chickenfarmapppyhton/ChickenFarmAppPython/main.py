@@ -24,7 +24,8 @@ class ChickenFarmApp:
                 case 2:
                     ChickenFarmApp.remove_chicken(coop)
                 case 3:
-                    coop.next()
+                    chicken = coop.next()
+                    print(chicken if chicken else "The coop is empty.")
                 case 4:
                     coop.reset_iteration()
                 case 5:

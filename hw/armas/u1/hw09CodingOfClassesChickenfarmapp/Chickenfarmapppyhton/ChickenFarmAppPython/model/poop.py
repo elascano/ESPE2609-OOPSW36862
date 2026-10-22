@@ -1,4 +1,5 @@
 class Poop:
+
     def __init__(self, id_poop: int, color: str, consistency: str):
         self._id = id_poop
         self._color = color
@@ -21,10 +22,8 @@ class Poop:
 
     def set_consistency(self, consistency: str):
         self._consistency = consistency
-        
-        
-    def __repr__(self) -> str:
-        return self.__str__()
 
     def __str__(self) -> str:
         return f"Poop{{id={self._id}, color={self._color}, consistency={self._consistency}}}"
+
+    __repr__ = __str__

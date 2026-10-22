@@ -1,4 +1,5 @@
 class Egg:
+
     def __init__(self, id_egg: int, size: str):
         self._id = id_egg
         self._size = size
@@ -14,9 +15,8 @@ class Egg:
 
     def set_size(self, size: str):
         self._size = size
-        
-    def __repr__(self) -> str:
-        return self.__str__()
 
     def __str__(self) -> str:
         return f"Egg{{id={self._id}, size={self._size}}}"
+
+    __repr__ = __str__
