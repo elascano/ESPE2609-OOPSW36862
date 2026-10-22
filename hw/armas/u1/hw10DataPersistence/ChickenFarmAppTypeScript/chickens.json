@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "name": "david",
+        "color": "with",
+        "bornOnDate": "2026-09-02",
+        "ageInYears": 0,
+        "molting": true
+    }
+]

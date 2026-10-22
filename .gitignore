@@ -37,3 +37,6 @@ replay_pid*
 
 # Visual Paradigm backup files
 *.bak_*
+/ws/clavon/u1/ws12CodingChickenFarm/ChikenFarmApp/build/
+
+dist/

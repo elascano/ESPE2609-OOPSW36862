@@ -9,6 +9,10 @@ public class ChickenFarmer {
     private String name;
     private ArrayList<ChickenCoop> coops;
 
+    public ChickenFarmer() {
+        this.coops = new ArrayList<>();
+    }
+
     public ChickenFarmer(String name) {
         this.name = name;
         this.coops = new ArrayList<>();

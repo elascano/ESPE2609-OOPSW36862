@@ -14,6 +14,18 @@ public class Chicken {
     private int ageInYear;
     private boolean molting;
     
+    public Chicken() {
+    }
+    
+    public Chicken(int ide, String name, String color, Date bornOnDate, int age, boolean molting) {
+        this.id = ide;
+        this.name = name;
+        this.color = color;
+        this.bornOnDate = bornOnDate;
+        this.ageInYear = age;
+        this.molting = molting;
+    }
+    
     public void doStuff (){
         cluck();
         wander();
@@ -41,15 +53,6 @@ public class Chicken {
     private Poop poop(){
         Poop poop = new Poop (2, "green", 'M');
         return poop;
-    }
-    
-    public Chicken(int ide, String name, String color, Date bornOnDate, int age, boolean molting) {
-        this.id = ide;
-        this.name = name;
-        this.color = color;
-        this.bornOnDate = bornOnDate;
-        this.ageInYear = age;
-        this.molting = molting;
     }
     
     private Egg layAnEgg() {
