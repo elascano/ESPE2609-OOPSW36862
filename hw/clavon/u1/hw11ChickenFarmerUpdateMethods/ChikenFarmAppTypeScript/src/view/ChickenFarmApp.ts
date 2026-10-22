@@ -149,5 +149,5 @@ export class ChickenFarmApp {
   }
 }
 
-// Punto de entrada de la aplicación
+
 new ChickenFarmApp().start();
