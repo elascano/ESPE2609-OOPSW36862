@@ -1,0 +1,2 @@
+ChickenCoop{chickenCoopId=1, chickens=[
+]}
