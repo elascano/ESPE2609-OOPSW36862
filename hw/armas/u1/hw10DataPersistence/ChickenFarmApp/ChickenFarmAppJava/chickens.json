@@ -1,0 +1,26 @@
+[
+  {
+    "id": 23,
+    "name": "chicken",
+    "color": "balck",
+    "bornOnDate": "2025-03-02",
+    "ageInYears": 1,
+    "molting": false
+  },
+  {
+    "id": 12,
+    "name": "Alex",
+    "color": "Black",
+    "bornOnDate": "2025-11-11",
+    "ageInYears": 0,
+    "molting": false
+  },
+  {
+    "id": 1,
+    "name": "david",
+    "color": "brown",
+    "bornOnDate": "2025-09-11",
+    "ageInYears": 1,
+    "molting": true
+  }
+]
