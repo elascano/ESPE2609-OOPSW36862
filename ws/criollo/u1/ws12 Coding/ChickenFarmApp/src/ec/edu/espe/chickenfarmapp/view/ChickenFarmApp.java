@@ -19,6 +19,7 @@ public class ChickenFarmApp {
         Chicken chicken1;
         Egg egg;
         Poop poop;
+        ChickenCoop Coop;
 
         Chicken[] chickens = new Chicken[10];
 

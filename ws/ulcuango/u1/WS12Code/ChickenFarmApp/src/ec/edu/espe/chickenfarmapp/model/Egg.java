@@ -7,6 +7,9 @@ public class Egg {
     private int id;
     private char size;
 
+    public Egg() {
+    }
+
     public Egg(int id, char size){
         this.id = id; 
         this.size = size;
