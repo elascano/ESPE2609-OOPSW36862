@@ -1,18 +1,62 @@
 import sys
+import json
+import os
 from datetime import date
 from model.chicken import Chicken
 from model.chicken_coop import ChickenCoop
 from model.egg import Egg
 from model.poop import Poop
 
+DATA_FILE = "chickens.json"
+
 class ChickenFarmApp:
     
+    @staticmethod
+    def load_coop_from_json(coop: ChickenCoop):
+        if not os.path.exists(DATA_FILE):
+            return
+
+        try:
+            with open(DATA_FILE, "r", encoding="utf-8") as file:
+                chickens_data = json.load(file)
+                for item in chickens_data:
+                    born_date = date.fromisoformat(item["born_on_date"])
+                    chicken = Chicken(
+                        id_chicken=item["id"],
+                        name=item["name"],
+                        color=item["color"],
+                        born_on_date=born_date
+                    )
+                    chicken.set_molting(item.get("molting", False))
+                    coop.add(chicken)
+            print(f"--> Data loaded successfully from {DATA_FILE}")
+        except Exception as e:
+            print(f"Error loading data from JSON: {e}")
+
+    @staticmethod
+    def save_coop_to_json(coop: ChickenCoop):
+        data = []
+        for chicken in coop.chickens:
+            if chicken is not None:
+                data.append({
+                    "id": chicken.get_id(),
+                    "name": chicken.get_name(),
+                    "color": chicken.get_color(),
+                    "born_on_date": chicken.get_born_on_date().isoformat(),
+                    "molting": chicken.is_molting(),
+                    "age_in_years": chicken.get_age_in_years()
+                })
+
+        with open(DATA_FILE, "w", encoding="utf-8") as file:
+            json.dump(data, file, indent=4)
+
     @staticmethod
     def main(args=None):
         print("Demian Armas's Chicken Farm App")
         print("===============================")
 
         coop = ChickenCoop(1)
+        ChickenFarmApp.load_coop_from_json(coop)
 
         while True:
             ChickenFarmApp.print_menu()
@@ -33,6 +77,8 @@ class ChickenFarmApp:
                 case 6:
                     ChickenFarmApp.run_demo()
                 case 0:
+                    ChickenFarmApp.save_coop_to_json(coop)
+                    print("Exiting and saving data...")
                     break
                 case _:
                     print("Invalid option.")
@@ -72,12 +118,15 @@ class ChickenFarmApp:
         born_on_date = date(year, month, day)
         chicken = Chicken(id_c, name, color, born_on_date)
         chicken.set_age_in_years(chicken.compute_age_in_years())
-        coop.add(chicken)
+        
+        if coop.add(chicken):
+            ChickenFarmApp.save_coop_to_json(coop)
 
     @staticmethod
     def remove_chicken(coop: ChickenCoop):
         id_c = int(input("Id of the chicken to remove: \n").strip())
-        coop.remove(id_c)
+        if coop.remove(id_c):
+            ChickenFarmApp.save_coop_to_json(coop)
 
     @staticmethod
     def run_demo():
