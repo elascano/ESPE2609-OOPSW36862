@@ -1,0 +1,1 @@
+Abre el proyecto en NetBeans y ejecútalo. Al agregar/eliminar guarda chickens.txt en el directorio de ejecución. Al reiniciar lo lee. Los nombres y colores están codificados en Base64 para permitir caracteres especiales.

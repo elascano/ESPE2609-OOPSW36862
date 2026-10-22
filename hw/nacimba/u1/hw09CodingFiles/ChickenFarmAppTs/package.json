@@ -1,0 +1,13 @@
+{
+  "name": "chickenfarmapp-ts",
+  "version": "1.0.0",
+  "description": "Chicken Farm App in TypeScript",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/view/chickenFarmApp.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,2 @@
+class ChickenFarmer:
+    pass
