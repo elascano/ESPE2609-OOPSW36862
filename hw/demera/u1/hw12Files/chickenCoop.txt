@@ -1,0 +1,4 @@
+ChickenCoop{chickenCoopId=1, chickens=[
+    Chicken{id=32, name=Antonia, color=yellow, bornOnDate=2024-12-23, age=1, molting=False}
+    Chicken{id=43, name=Daniela, color=orange, bornOnDate=2026-04-23, age=0, molting=True}
+]}

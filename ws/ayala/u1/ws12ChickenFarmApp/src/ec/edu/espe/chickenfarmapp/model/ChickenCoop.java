@@ -25,13 +25,17 @@ public class ChickenCoop {
         //else we can not add any more
         
     }
-    
-    //public void add(Chicken chicken) {
-        //algothm
+    public ChickenCoop(){
+        chickens = new Chicken[2];
+        chickenCoopId=1;
+        chickens = new Chicken[2];
         
-        //if we have less than 10 chickens, we can add one more
-        //else we can not add any more
-    //}
+        Chicken chicken = new Chicken(3, "Lucy", "white", new Date(), true); 
+        Chicken chicken2 = new Chicken(3, "Lucy", "white", new Date(), true);
+        
+        chickens [0] = chicken;
+        chickens [1] = chicken2;
+    }
     
     public void remove(int chickenId) {
         
@@ -41,9 +45,9 @@ public class ChickenCoop {
         currentIndex = 0;
     }
     
-    public Chicken next() {
-        return new Chicken(3, "Lucy", "white", new Date(2020,3,3), true); 
-    }
+    //public Chicken next() {
+        //return chicken;
+    //
 
     public ChickenCoop(int chickenCoopId, Chicken[] chickens) {
         this.chickenCoopId = chickenCoopId;
@@ -53,6 +57,14 @@ public class ChickenCoop {
     
     @Override
     public String toString() {
+        String localChickens;
+        localChickens ="";
+        
+        for (Chicken chicken : chickens) {
+            localChickens += chicken;
+            localChickens += "\t";
+        }
+        
         return "ChickenCoop{" + "chickenCoopId=" + chickenCoopId + ", chickens=" + chickens + '}';
     }
 
