@@ -41,9 +41,11 @@ replay_pid*
 
 dist/
 <<<<<<< HEAD
-/ws/armas/u1/ws14Collections/CollectionOfThings/nbproject/private/
-/ws/armas/u1/ws14Collections/CollectionOfThings/build/
-=======
-/hw/nacimba/u1/hw09CodingFiles/ChickenFarmApp/build/
-/hw/nacimba/u1/hw09CodingFiles/ChickenFarmApp/nbproject/private/
->>>>>>> e41d7fb706df4590176b5435057eeb758cf79ebb
+<<<<<<< HEAD
+__pycache__/
+*.pyc
+node_modules/
+build/
+nbproject/private/
+>>>>>>> 1a50b6f (Complete HW08 and HW09 and update workshops)
+**/nbproject/private/
