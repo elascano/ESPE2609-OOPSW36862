@@ -18,7 +18,7 @@ async function main(): Promise<void> {
     let option = 0;
 
     do {
-        console.log("\nHello, Francisco Demera's Chicken Farm App");
+        console.log("\nHello, Dennis Criollos's Chicken Farm App");
         console.log("------------------------------------------");
         console.log("-----------------Welcome -----------------");
         console.log("----------What you will do today----------");

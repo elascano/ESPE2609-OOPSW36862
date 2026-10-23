@@ -40,5 +40,19 @@ replay_pid*
 /ws/clavon/u1/ws12CodingChickenFarm/ChikenFarmApp/build/
 
 dist/
+<<<<<<< HEAD
 /hw/nacimba/u1/hw09CodingFiles/ChickenFarmApp/build/
 /hw/nacimba/u1/hw09CodingFiles/ChickenFarmApp/nbproject/private/
+/ws/ulcuango/u1/CollectionOfThings/nbproject/private/
+/ws/ulcuango/u1/CollectionOfThings/build/
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+__pycache__/
+*.pyc
+node_modules/
+build/
+nbproject/private/
+>>>>>>> 1a50b6f (Complete HW08 and HW09 and update workshops)
+**/nbproject/private/
+>>>>>>> d7cd528a629470c306ea2cad6bb69dfca9cfe8fb

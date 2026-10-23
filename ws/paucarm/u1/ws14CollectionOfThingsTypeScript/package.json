@@ -1,0 +1,12 @@
+{
+  "name": "collection-of-things",
+  "version": "1.0.0",
+  "author": "Paucar Matias, ByteWorks, @ESPE",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/ec/edu/espe/collections/view/MyThings.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

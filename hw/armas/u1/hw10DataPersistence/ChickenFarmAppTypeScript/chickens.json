@@ -6,5 +6,13 @@
         "bornOnDate": "2026-09-02",
         "ageInYears": 0,
         "molting": true
+    },
+    {
+        "id": 45,
+        "name": "David",
+        "color": "green",
+        "bornOnDate": "2025-03-02",
+        "ageInYears": 1,
+        "molting": true
     }
 ]
