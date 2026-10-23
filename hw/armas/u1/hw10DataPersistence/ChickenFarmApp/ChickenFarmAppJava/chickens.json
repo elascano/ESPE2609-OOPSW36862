@@ -22,5 +22,13 @@
     "bornOnDate": "2025-09-11",
     "ageInYears": 1,
     "molting": true
+  },
+  {
+    "id": 12345,
+    "name": "Lupita",
+    "color": "Green",
+    "bornOnDate": "2024-08-02",
+    "ageInYears": 2,
+    "molting": true
   }
 ]
