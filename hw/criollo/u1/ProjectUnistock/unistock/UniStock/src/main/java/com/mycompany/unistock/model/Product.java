@@ -1,7 +1,6 @@
-package unistock.model;
+package com.mycompany.unistock.model;
 
-import java.math.BigDecimal;
-
+import java.math.BigDecimal; 
 public abstract class Product {
 
     private final int id;

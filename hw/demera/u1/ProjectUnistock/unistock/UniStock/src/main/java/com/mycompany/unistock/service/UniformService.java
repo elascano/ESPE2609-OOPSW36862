@@ -1,0 +1,70 @@
+package com.mycompany.unistock.service;
+
+import com.mycompany.unistock.structure.FileHandler;
+import com.mycompany.unistock.structure.SimpleList;
+
+/**
+ *
+ * @author Leslye Cuichan, Infinite loops, @eESPE
+ */
+public class UniformService {
+
+    private final SimpleList<String> registeredSizes;
+    private final SimpleList<String> registeredSchools;
+
+    private final String sizesFile = "sizes.txt";
+    private final String schoolsFile = "schools.txt";
+
+    public UniformService() {
+        this.registeredSizes = FileHandler.loadList(sizesFile);
+        this.registeredSchools = FileHandler.loadList(schoolsFile);
+    }
+
+    public void registerSize(String size) {
+        if (size != null && !size.trim().isEmpty() && !existsSize(size)) {
+            registeredSizes.add(size.trim().toUpperCase());
+            FileHandler.saveList(sizesFile, registeredSizes);
+        }
+    }
+
+    public boolean existsSize(String size) {
+        if (size == null) return false;
+
+        registeredSizes.resetIteration();
+        while (registeredSizes.hasNext()) {
+            String currentSize = registeredSizes.next();
+            if (currentSize.equalsIgnoreCase(size.trim())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void registerSchool(String school) {
+        if (school != null && !school.trim().isEmpty() && !existsSchool(school)) {
+            registeredSchools.add(school.trim());
+            FileHandler.saveList(schoolsFile, registeredSchools);
+        }
+    }
+
+    public boolean existsSchool(String school) {
+        if (school == null) return false;
+
+        registeredSchools.resetIteration();
+        while (registeredSchools.hasNext()) {
+            String currentSchool = registeredSchools.next();
+            if (currentSchool.equalsIgnoreCase(school.trim())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public SimpleList<String> getRegisteredSizes() {
+        return registeredSizes;
+    }
+
+    public SimpleList<String> getRegisteredSchools() {
+        return registeredSchools;
+    }
+}

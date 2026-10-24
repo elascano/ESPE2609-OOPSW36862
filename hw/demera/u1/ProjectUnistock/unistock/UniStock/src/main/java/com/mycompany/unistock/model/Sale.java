@@ -1,6 +1,6 @@
-package unistock.model;
+package com.mycompany.unistock.model;
 
-import unistock.structure.SimpleList;
+import com.mycompany.unistock.structure.SimpleList;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

@@ -1,11 +1,11 @@
-package unistock.service;
+package com.mycompany.unistock.service;
 
-import unistock.model.Product;
-import unistock.model.Role;
-import unistock.model.Sale;
-import unistock.model.SaleItem;
-import unistock.model.User;
-import unistock.structure.SimpleList;
+import com.mycompany.unistock.model.Product;
+import com.mycompany.unistock.model.Role;
+import com.mycompany.unistock.model.Sale;
+import com.mycompany.unistock.model.SaleItem;
+import com.mycompany.unistock.model.User;
+import com.mycompany.unistock.structure.SimpleList;
 
 public class SaleService {
 

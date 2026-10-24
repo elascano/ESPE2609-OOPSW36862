@@ -1,4 +1,4 @@
-package unistock.model;
+package com.mycompany.unistock.model;
 
 import java.math.BigDecimal;
 

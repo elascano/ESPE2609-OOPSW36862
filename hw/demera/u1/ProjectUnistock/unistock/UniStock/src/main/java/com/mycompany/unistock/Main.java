@@ -1,14 +1,17 @@
 package com.mycompany.unistock;
 
-import unistock.model.Product;
-import unistock.model.Role;
-import unistock.model.Sale;
-import unistock.model.SaleItem;
-import unistock.model.User;
-import unistock.service.ProductService;
-import unistock.service.SaleService;
-import unistock.service.UserService;
-import unistock.structure.SimpleList;
+import com.mycompany.unistock.model.Product;
+import com.mycompany.unistock.model.Role;
+import com.mycompany.unistock.model.Sale;
+import com.mycompany.unistock.model.SaleItem;
+import com.mycompany.unistock.model.User;
+import com.mycompany.unistock.service.ProductService;
+import com.mycompany.unistock.service.SaleService;
+import com.mycompany.unistock.service.UserService;
+import com.mycompany.unistock.structure.SimpleList;
+import com.mycompany.unistock.service.StationeryService;
+import com.mycompany.unistock.service.StockAlertService;
+import com.mycompany.unistock.service.UniformService;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
@@ -16,7 +19,11 @@ import java.util.Scanner;
 public class Main {
 
     private final Scanner input = new Scanner(System.in);
-    private final ProductService productService = new ProductService();
+    private final UniformService uniformService = new UniformService();
+    private final StationeryService stationeryService = new StationeryService();
+    private final StockAlertService stockAlertService = new StockAlertService();
+    
+    private final ProductService productService = new ProductService(uniformService, stationeryService);
     private final SaleService saleService = new SaleService(productService);
     private final UserService userService = new UserService();
 
@@ -56,6 +63,9 @@ public class Main {
     }
 
     private void openSession(User user) {
+        if (user.getRole() == Role.ADMINISTRATOR) {
+            checkLowStockAlerts();
+        }
         boolean active = true;
         while (active) {
             printMainMenu(user);
@@ -71,6 +81,8 @@ public class Main {
         if (role.canManageProducts()) {
             System.out.println("2. Registrar producto");
             System.out.println("3. Eliminar producto");
+            System.out.println("7. Gestionar catalogos (Tallas, Colegios, Marcas, Tipos de Articulo)");
+            System.out.println("8. Consultar alertas de stock bajo");
         }
         if (role.canRegisterSales()) {
             System.out.println("4. Registrar venta");
@@ -91,6 +103,8 @@ public class Main {
             case 4 -> runIfAllowed(role.canRegisterSales(), () -> registerSale(user));
             case 5 -> runIfAllowed(role.canRegisterSales(), this::listSales);
             case 6 -> runIfAllowed(role.canManageUsers(), this::manageUsers);
+            case 7 -> runIfAllowed(role.canManageProducts(), this::manageCatalogs);
+            case 8 -> runIfAllowed(role.canManageProducts(), this::checkLowStockAlerts);
             case 0 -> {
                 return false;
             }
@@ -114,7 +128,7 @@ public class Main {
     // ---------- US001: product registration ----------
 
     private void registerProduct() {
-        System.out.println("1. Uniforme  2. Papeleria");
+        System.out.println("1. Uniforme  2. Papeleria / Util escolar");
         int type = readInt("Categoria: ");
         String name = readText("Nombre: ");
         BigDecimal price = readMoney("Precio: ");
@@ -126,14 +140,19 @@ public class Main {
             String school = readText("Colegio: ");
             product = productService.registerUniform(name, price, stock, size, school);
         } else if (type == 2) {
-            String brand = readText("Marca: ");
-            String stationeryType = readText("Tipo: ");
+            String brand = readText("Marca del producto (ej: Norma, Faber-Castell): ");
+            String stationeryType = readText("Tipo de articulo / material (ej: Cuaderno, Lapiz): ");
             product = productService.registerStationery(name, price, stock, brand, stationeryType);
         } else {
             System.out.println("Categoria invalida.");
             return;
         }
-        System.out.println("Producto registrado: " + product);
+
+        if (product != null) {
+            System.out.println("Producto registrado: " + product);
+        } else {
+            System.out.println("No se pudo registrar el producto. Verifique los catalogos en la opcion 7.");
+        }
     }
 
     private void removeProduct() {
@@ -152,6 +171,71 @@ public class Main {
         while (products.hasNext()) {
             System.out.println(products.next());
         }
+    }
+
+    // ---------- US003 & US004: catalog management ----------
+
+    private void manageCatalogs() {
+        boolean inCatalogsMenu = true;
+        while (inCatalogsMenu) {
+        System.out.println("\n--- GESTION DE CATALOGOS DEL SISTEMA ---");
+        System.out.println("1. Registrar Talla de Uniforme");
+        System.out.println("2. Registrar Institucion");
+        System.out.println("3. Registrar Marca del Producto del Util escolar");
+        System.out.println("4. Registrar Tipo de Articulo o Material");
+        System.out.println("5. Listar Catalogos Registrados");
+        System.out.println("0. Volver al menu principal");
+        int option = readInt("Opcion: ");
+
+        switch (option) {
+            case 1 -> {
+                String size = readText("Ingrese nueva talla ej: S, M, L, XL: ");
+                uniformService.registerSize(size);
+                System.out.println("Talla registrada en el catalogo.");
+            }
+            case 2 -> {
+                String school = readText("Ingrese nuevo nombre de la institucion: ");
+                uniformService.registerSchool(school);
+                System.out.println("Colegio registrado en el catalogo.");
+            }
+            case 3 -> {
+                String brand = readText("Ingrese marca de utiles: ");
+                stationeryService.registerBrand(brand);
+                System.out.println("Marca registrada en el catalogo.");
+            }
+            case 4 -> {
+                String type = readText("Ingrese tipo de articulo o material: ");
+                stationeryService.registerType(type);
+                System.out.println("Tipo de articulo registrado en el catalogo.");
+            }
+            case 5 -> listCatalogs();
+            case 0 -> inCatalogsMenu = false;
+            default -> System.out.println("Opcion invalida.");
+        }
+       }
+    }
+
+    private void listCatalogs() {
+        System.out.println("\n--- CATALOGOS ACTUALMENTE REGISTRADOS ---");
+        System.out.println("Tallas de Uniformes:");
+        SimpleList<String> sizes = uniformService.getRegisteredSizes();
+        sizes.resetIteration();
+        while (sizes.hasNext()) System.out.println("  - " + sizes.next());
+
+        System.out.println("Colegios / Instituciones:");
+        SimpleList<String> schools = uniformService.getRegisteredSchools();
+        schools.resetIteration();
+        while (schools.hasNext()) System.out.println("  - " + schools.next());
+
+        System.out.println("Marcas de Utiles Escolars:");
+        SimpleList<String> brands = stationeryService.getRegisteredBrands();
+        brands.resetIteration();
+        while (brands.hasNext()) System.out.println("  - " + brands.next());
+
+        System.out.println("Tipos de Articulos o Materiales:");
+        SimpleList<String> types = stationeryService.getRegisteredTypes();
+        types.resetIteration();
+        while (types.hasNext()) System.out.println("  - " + types.next());
     }
 
     // ---------- US005: sales module ----------
@@ -215,6 +299,21 @@ public class Main {
                     sale.getId(), sale.getSeller().getUsername(), sale.total());
         }
     }
+
+    // ---------- US008: low stock alerts ----------
+
+    private void checkLowStockAlerts() {
+    SimpleList<Product> lowStockProducts = stockAlertService.getLowStockProducts(productService.getProducts());
+    if (!lowStockProducts.isEmpty()) {
+        System.out.println("\n--- ALERTA DE STOCK BAJO (Limite: " + stockAlertService.getThreshold() + " unidades) ---");
+        lowStockProducts.resetIteration();
+        while (lowStockProducts.hasNext()) {
+            Product p = lowStockProducts.next();
+            System.out.println("Producto: " + p.getName() + " (ID: " + p.getId() + ") - Stock restante: " + p.getStock() + " unidades.");
+        }
+        System.out.println("---------------------------------------------------\n");
+    }
+}
 
     // ---------- US009: users and roles ----------
 

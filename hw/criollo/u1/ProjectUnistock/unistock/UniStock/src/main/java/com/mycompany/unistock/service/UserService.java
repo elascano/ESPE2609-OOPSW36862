@@ -1,8 +1,8 @@
-package unistock.service;
+package com.mycompany.unistock.service;
 
-import unistock.model.Role;
-import unistock.model.User;
-import unistock.structure.SimpleList;
+import com.mycompany.unistock.model.Role;
+import com.mycompany.unistock.model.User;
+import com.mycompany.unistock.structure.SimpleList;
 
 public class UserService {
 
