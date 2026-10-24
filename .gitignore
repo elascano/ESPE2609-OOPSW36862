@@ -23,25 +23,46 @@
 hs_err_pid*
 replay_pid*
 
-# Visual Paradigm backup files
-*.bak_*
-
-# Python
-__pycache__/
-*.pyc
-
-# Node
-node_modules/
-
-# Build / NetBeans (general)
-dist/
-build/
-nbproject/private/
-**/nbproject/private/
-
-# Rutas específicas
+# NetBeans private configuration and build files
 /ws/velez/u1/ws12Coding/ChickenFarmApp/nbproject/private/
 /ws/velez/u1/ws12Coding/ChickenFarmApp/build/
 /ws/velez/u1/ws12Coding/JavaApplication30/nbproject/private/
 /ws/velez/u1/ws12Coding/ChickenFarmApp2/nbproject/private/
-/ws/velez/u1/ws12Coding/ChickenFarmApp23/nb
+/ws/velez/u1/ws12Coding/ChickenFarmApp23/nbproject/private/
+/ws/velez/u1/ws12Coding/ChickenFarmApp23/build/
+/ws/olalla/u1/ws12 Coding/ChickenFarmApp/nbproject/private/
+/ws/olalla/u1/ws12 Coding/ChickenFarmApp/build/
+
+/ws/clavon/u1/ws12CodingChickenFarm/ChikenFarmApp/nbproject/private/
+
+# Visual Paradigm backup files
+*.bak_*
+/ws/clavon/u1/ws12CodingChickenFarm/ChikenFarmApp/build/
+
+dist/
+HEAD
+/hw/nacimba/u1/hw09CodingFiles/ChickenFarmApp/build/
+/hw/nacimba/u1/hw09CodingFiles/ChickenFarmApp/nbproject/private/
+/ws/ulcuango/u1/CollectionOfThings/nbproject/private/
+/ws/ulcuango/u1/CollectionOfThings/build/
+
+HEAD
+HEAD
+HEAD
+__pycache__/
+*.pyc
+node_modules/
+build/
+nbproject/private/
+ 1a50b6f (Complete HW08 and HW09 and update workshops)
+**/nbproject/private/
+>>>>>>> d7cd528a629470c306ea2cad6bb69dfca9cfe8fb
+<<<<<<< Updated upstream
+/ws/armas/u1/ws16BasicOperations/BasicOperations/target/
+
+/ws/olalla/u1/New Folder (2)/BasicOperations/target/
+>>>>>>> f2e7369 (Update gitignore)
+>>>>>>> 768b91e5e806b152bc59296ed365dc546db53abd
+=======
+/ws/cuichan/u1/ws16UnitTesting/BasicOperations/target/
+>>>>>>> Stashed changes
