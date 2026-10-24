@@ -45,7 +45,7 @@ async function main() {
     const ask = (question) => new Promise(resolve => rl.question(question, resolve));
     let option = 0;
     do {
-        console.log("\nHello, Dennis Criollo's Chicken Farm App");
+        console.log("\nHello, Dennis Criollos's Chicken Farm App");
         console.log("------------------------------------------");
         console.log("-----------------Welcome -----------------");
         console.log("----------What you will do today----------");
