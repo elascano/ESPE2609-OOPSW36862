@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.basicoperations.model.DistanceTest" time="0.138" tests="10" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="26"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Marianita\Desktop\OOP_Folder\ESPE2609-OOPSW36862\ws\demera\u1\ws16UnitTesting\BasicOperations\target\test-classes;C:\Users\Marianita\Desktop\OOP_Folder\ESPE2609-OOPSW36862\ws\demera\u1\ws16UnitTesting\BasicOperations\target\classes;C:\Users\Marianita\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\Marianita\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\Marianita\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Marianita\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\Marianita\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\Marianita\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\Marianita\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Marianita\.m2\repository\com\ditchoom\websocket-jvm\1.1.0\websocket-jvm-1.1.0.jar;C:\Users\Marianita\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\2.0.0\kotlin-stdlib-2.0.0.jar;C:\Users\Marianita\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\Marianita\.m2\repository\com\ditchoom\buffer-jvm\1.4.1\buffer-jvm-1.4.1.jar;C:\Users\Marianita\.m2\repository\com\ditchoom\socket-jvm\1.2.1\socket-jvm-1.2.1.jar;C:\Users\Marianita\.m2\repository\org\jetbrains\kotlinx\kotlinx-coroutines-core-jvm\1.8.1\kotlinx-coroutines-core-jvm-1.8.1.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="America/Guayaquil"/>
+    <property name="user.country.format" value="US"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="26"/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin"/>
+    <property name="sun.java.command" value="C:\Users\Marianita\AppData\Local\Temp\surefire3926724665927621748\surefirebooter-20261024011700300_3.jar C:\Users\Marianita\AppData\Local\Temp\surefire3926724665927621748 2026-10-24T01-17-00_089-jvmRun1 surefire-20261024011700300_1tmp surefire_0-20261024011700300_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="ec.edu.espe.basicoperations.model.DistanceTest"/>
+    <property name="surefire.test.class.path" value="C:\Users\Marianita\Desktop\OOP_Folder\ESPE2609-OOPSW36862\ws\demera\u1\ws16UnitTesting\BasicOperations\target\test-classes;C:\Users\Marianita\Desktop\OOP_Folder\ESPE2609-OOPSW36862\ws\demera\u1\ws16UnitTesting\BasicOperations\target\classes;C:\Users\Marianita\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\Marianita\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\Marianita\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Marianita\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\Marianita\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\Marianita\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\Marianita\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Marianita\.m2\repository\com\ditchoom\websocket-jvm\1.1.0\websocket-jvm-1.1.0.jar;C:\Users\Marianita\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\2.0.0\kotlin-stdlib-2.0.0.jar;C:\Users\Marianita\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\Marianita\.m2\repository\com\ditchoom\buffer-jvm\1.4.1\buffer-jvm-1.4.1.jar;C:\Users\Marianita\.m2\repository\com\ditchoom\socket-jvm\1.2.1\socket-jvm-1.2.1.jar;C:\Users\Marianita\.m2\repository\org\jetbrains\kotlinx\kotlinx-coroutines-core-jvm\1.8.1\kotlinx-coroutines-core-jvm-1.8.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Marianita"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-07-21"/>
+    <property name="java.home" value="C:\Program Files\Apache NetBeans\jdk"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Marianita\Desktop\OOP_Folder\ESPE2609-OOPSW36862\ws\demera\u1\ws16UnitTesting\BasicOperations"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Marianita\AppData\Local\Temp\surefire3926724665927621748\surefirebooter-20261024011700300_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="26.0.2+10"/>
+    <property name="user.name" value="Marianita"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-26.0.2+10"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\Apache NetBeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\Marianita\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\MARIAN~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="26.0.2"/>
+    <property name="user.dir" value="C:\Users\Marianita\Desktop\OOP_Folder\ESPE2609-OOPSW36862\ws\demera\u1\ws16UnitTesting\BasicOperations"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.language.format" value="en"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\GitHub CLI\;C:\Program Files\Git\cmd;C:\Users\Marianita\AppData\Local\Microsoft\WindowsApps;C:\Users\Marianita\AppData\Roaming\npm;C:\Users\Marianita\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Marianita\AppData\Local\GitHubDesktop\bin;C:\Program Files\Apache NetBeans\bin\;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="26.0.2+10"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="70.0"/>
+  </properties>
+  <testcase name="testComputeDistanceNegativeSpeed" classname="ec.edu.espe.basicoperations.model.DistanceTest" time="0.039">
+    <system-out><![CDATA[computeDistance with negative speed
+]]></system-out>
+  </testcase>
+  <testcase name="testComputeDistanceNegativeOverflow" classname="ec.edu.espe.basicoperations.model.DistanceTest" time="0.003">
+    <system-out><![CDATA[computeDistance with negative overflow
+]]></system-out>
+  </testcase>
+  <testcase name="testComputeDistanceComplexDecimal" classname="ec.edu.espe.basicoperations.model.DistanceTest" time="0.004">
+    <system-out><![CDATA[computeDistance with complex decimals
+]]></system-out>
+  </testcase>
+  <testcase name="testComputeDistanceOverflow" classname="ec.edu.espe.basicoperations.model.DistanceTest" time="0.004">
+    <system-out><![CDATA[computeDistance with float overflow
+]]></system-out>
+  </testcase>
+  <testcase name="testComputeDistanceNegativeTime" classname="ec.edu.espe.basicoperations.model.DistanceTest" time="0.003">
+    <system-out><![CDATA[computeDistance with negative time
+]]></system-out>
+  </testcase>
+  <testcase name="testComputeDistanceLargeValues" classname="ec.edu.espe.basicoperations.model.DistanceTest" time="0.003">
+    <system-out><![CDATA[computeDistance with large values
+]]></system-out>
+  </testcase>
+  <testcase name="testComputeDistanceSmallValues" classname="ec.edu.espe.basicoperations.model.DistanceTest" time="0.003">
+    <system-out><![CDATA[computeDistance with small decimal values
+]]></system-out>
+  </testcase>
+  <testcase name="testComputeDistanceMinimumFloat" classname="ec.edu.espe.basicoperations.model.DistanceTest" time="0.003">
+    <system-out><![CDATA[computeDistance with minimum positive float
+]]></system-out>
+  </testcase>
+  <testcase name="testComputeDistanceInfiniteInput" classname="ec.edu.espe.basicoperations.model.DistanceTest" time="0.002">
+    <system-out><![CDATA[computeDistance with infinite input
+]]></system-out>
+  </testcase>
+  <testcase name="testComputeDistanceIndetermination" classname="ec.edu.espe.basicoperations.model.DistanceTest" time="0.002">
+    <system-out><![CDATA[computeDistance with NaN input
+]]></system-out>
+  </testcase>
+</testsuite>
