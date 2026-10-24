@@ -48,11 +48,5 @@ dist/
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-__pycache__/
-*.pyc
-node_modules/
-build/
-nbproject/private/
->>>>>>> 1a50b6f (Complete HW08 and HW09 and update workshops)
-**/nbproject/private/
->>>>>>> d7cd528a629470c306ea2cad6bb69dfca9cfe8fb
+/ws/olalla/u1/New Folder (2)/BasicOperations/target/
+>>>>>>> f2e7369 (Update gitignore)
