@@ -1,0 +1,14 @@
+{
+  "name": "chicken-farm-app",
+  "version": "1.0.0",
+  "description": "Chicken Farm App - Andres Pachacama, Byte Work, @ESPE",
+  "type": "module",
+  "scripts": {
+    "start": "node src/view/ChickenFarmApp.ts",
+    "check": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2"
+  }
+}

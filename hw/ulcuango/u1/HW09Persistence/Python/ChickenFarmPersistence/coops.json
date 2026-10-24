@@ -1,0 +1,15 @@
+[
+    {
+        "coop_id": 1,
+        "chickens": [
+            {
+                "ide": 2,
+                "name": "Lolito",
+                "color": "Black",
+                "born_on_date": "2021-08-18",
+                "age": 5,
+                "molting": false
+            }
+        ]
+    }
+]
