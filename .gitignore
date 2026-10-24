@@ -57,6 +57,7 @@ nbproject/private/
  1a50b6f (Complete HW08 and HW09 and update workshops)
 **/nbproject/private/
 >>>>>>> d7cd528a629470c306ea2cad6bb69dfca9cfe8fb
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 /ws/armas/u1/ws16BasicOperations/BasicOperations/target/
 
@@ -66,3 +67,6 @@ nbproject/private/
 =======
 /ws/cuichan/u1/ws16UnitTesting/BasicOperations/target/
 >>>>>>> Stashed changes
+=======
+/ws/ulcuango/u1/WS16/BasicOperations/target/
+>>>>>>> 82974c77009e38c0360ab079400d0007455eb1dd
