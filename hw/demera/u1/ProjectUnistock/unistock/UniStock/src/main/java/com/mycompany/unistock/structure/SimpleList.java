@@ -1,4 +1,4 @@
-package unistock.structure;
+package com.mycompany.unistock.structure;
 
 import java.util.NoSuchElementException;
 import java.util.Objects;
