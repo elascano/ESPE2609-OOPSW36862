@@ -118,4 +118,32 @@ public class TechnicianTest {
         assertEquals(expAssigned, order.getTechnician() != null);
     }
 
+    @Test
+    public void testAcceptWorkOrder9() {
+        System.out.println("acceptWorkOrder9");
+        String[] row = TestData.row("technician_acceptWorkOrder.csv", 9);
+        boolean available = Boolean.parseBoolean(row[1]);
+        Technician instance = new Technician(1, "Carlos", "Electrical", available);
+        WorkOrder order = new WorkOrder(1, "Replace motor", "High", "Pending", "2026-10-24");
+        boolean expAvailableAfter = Boolean.parseBoolean(row[2]);
+        boolean expAssigned = Boolean.parseBoolean(row[3]);
+        instance.acceptWorkOrder(order);
+        assertEquals(expAvailableAfter, instance.getAvailabilityStatus());
+        assertEquals(expAssigned, order.getTechnician() != null);
+    }
+
+    @Test
+    public void testAcceptWorkOrder10() {
+        System.out.println("acceptWorkOrder10");
+        String[] row = TestData.row("technician_acceptWorkOrder.csv", 10);
+        boolean available = Boolean.parseBoolean(row[1]);
+        Technician instance = new Technician(1, "Carlos", "Electrical", available);
+        WorkOrder order = new WorkOrder(1, "Replace motor", "High", "Pending", "2026-10-24");
+        boolean expAvailableAfter = Boolean.parseBoolean(row[2]);
+        boolean expAssigned = Boolean.parseBoolean(row[3]);
+        instance.acceptWorkOrder(order);
+        assertEquals(expAvailableAfter, instance.getAvailabilityStatus());
+        assertEquals(expAssigned, order.getTechnician() != null);
+    }
+
 }
