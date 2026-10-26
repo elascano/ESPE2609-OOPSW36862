@@ -1,0 +1,48 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.unistock.service.UserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.232 s <<< FAILURE! -- in ec.edu.espe.unistock.service.UserServiceTest
+ec.edu.espe.unistock.service.UserServiceTest.testRegisterDuplicateUser -- Time elapsed: 0.014 s <<< ERROR!
+java.lang.IllegalArgumentException: El usuario ya existe.
+	at ec.edu.espe.unistock.service.UserService.register(UserService.java:17)
+	at ec.edu.espe.unistock.service.UserServiceTest.testRegisterDuplicateUser(UserServiceTest.java:51)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.UserServiceTest.testRegisterNullPassword -- Time elapsed: 0.008 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.IllegalArgumentException: Usuario y contraseña son obligatorios.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.service.UserServiceTest.testRegisterNullPassword(UserServiceTest.java:67)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalArgumentException: Usuario y contraseña son obligatorios.
+	at ec.edu.espe.unistock.model.User.<init>(User.java:11)
+	at ec.edu.espe.unistock.service.UserService.register(UserService.java:19)
+	at ec.edu.espe.unistock.service.UserServiceTest.lambda$testRegisterNullPassword$0(UserServiceTest.java:67)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.service.UserServiceTest.testRegisterNullUsername -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.IllegalArgumentException: Usuario y contraseña son obligatorios.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.service.UserServiceTest.testRegisterNullUsername(UserServiceTest.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalArgumentException: Usuario y contraseña son obligatorios.
+	at ec.edu.espe.unistock.model.User.<init>(User.java:11)
+	at ec.edu.espe.unistock.service.UserService.register(UserService.java:19)
+	at ec.edu.espe.unistock.service.UserServiceTest.lambda$testRegisterNullUsername$0(UserServiceTest.java:62)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
