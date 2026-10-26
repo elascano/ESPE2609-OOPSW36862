@@ -118,4 +118,32 @@ public class MaintenanceScheduleTest {
         assertEquals(expDate, result.getCreationDate());
     }
 
+    @Test
+    public void testCreateWorkOrder9() {
+        System.out.println("createWorkOrder9");
+        String[] row = TestData.row("schedule_createWorkOrder.csv", 9);
+        String frequency = row[1];
+        String scheduleDate = row[2];
+        MaintenanceSchedule instance = new MaintenanceSchedule(1, frequency, scheduleDate, true);
+        String expDescription = row[3];
+        String expDate = row[4];
+        WorkOrder result = instance.createWorkOrder();
+        assertEquals(expDescription, result.getDescription());
+        assertEquals(expDate, result.getCreationDate());
+    }
+
+    @Test
+    public void testCreateWorkOrder10() {
+        System.out.println("createWorkOrder10");
+        String[] row = TestData.row("schedule_createWorkOrder.csv", 10);
+        String frequency = row[1];
+        String scheduleDate = row[2];
+        MaintenanceSchedule instance = new MaintenanceSchedule(1, frequency, scheduleDate, true);
+        String expDescription = row[3];
+        String expDate = row[4];
+        WorkOrder result = instance.createWorkOrder();
+        assertEquals(expDescription, result.getDescription());
+        assertEquals(expDate, result.getCreationDate());
+    }
+
 }
