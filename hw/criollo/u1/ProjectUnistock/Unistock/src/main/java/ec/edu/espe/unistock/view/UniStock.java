@@ -26,6 +26,7 @@ public class UniStock {
     private final UserService userService = new UserService();
 
     private final ProductMenuView productMenuView = new ProductMenuView(productService, console);
+    private final CatalogMenuView catalogMenuView = new CatalogMenuView(uniformService, stationeryService, console);
 
     public static void main(String[] args) {
         new UniStock().run();
@@ -51,7 +52,7 @@ public class UniStock {
         if (username.isBlank()) {
             return null;
         }
-        String password = console.readText("Contraseña: ");
+        String password = console.readText("Contrasena: ");
         User user = userService.authenticate(username, password);
         if (user == null) {
             System.out.println("Credenciales incorrectas.");
@@ -79,7 +80,7 @@ public class UniStock {
         if (role.canManageProducts()) {
             System.out.println("2. Registrar producto");
             System.out.println("3. Eliminar producto");
-            System.out.println("7. Gestionar catálogos");
+            System.out.println("7. Gestionar catalogos");
             System.out.println("8. Consultar alertas de stock bajo");
             System.out.println("9. Actualizar inventario (Reabastecer)");
         }
@@ -102,6 +103,8 @@ public class UniStock {
                 runIfAllowed(role.canManageProducts(), productMenuView::registerProduct);
             case 3 ->
                 runIfAllowed(role.canManageProducts(), productMenuView::removeProduct);
+            case 7 ->
+                runIfAllowed(role.canManageProducts(), catalogMenuView::manageCatalogs);
             case 8 ->
                 runIfAllowed(role.canManageProducts(), this::checkLowStockAlerts);
             case 9 ->
@@ -110,7 +113,7 @@ public class UniStock {
                 return false;
             }
             default ->
-                System.out.println("Opción invalida.");
+                System.out.println("Opcion invalida.");
         }
         return true;
     }

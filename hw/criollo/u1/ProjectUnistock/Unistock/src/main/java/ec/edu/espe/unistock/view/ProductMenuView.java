@@ -23,8 +23,8 @@ public class ProductMenuView {
     }
 
     public void registerProduct() {
-        System.out.println("1. Uniforme  2. Papelería / Útil escolar");
-        int type = console.readInt("Categoría: ");
+        System.out.println("1. Uniforme  2. Papelería / Util escolar");
+        int type = console.readInt("Categoria: ");
         String name = console.readText("Nombre: ");
         BigDecimal price = console.readMoney("Precio: ");
         int stock = console.readInt("Stock inicial: ");
@@ -36,32 +36,32 @@ public class ProductMenuView {
             product = productService.registerUniform(name, price, stock, size, school);
         } else if (type == 2) {
             String brand = console.readText("Marca del producto: ");
-            String stationeryType = console.readText("Tipo de artículo / material: ");
+            String stationeryType = console.readText("Tipo de articulo / material: ");
             product = productService.registerStationery(name, price, stock, brand, stationeryType);
         } else {
-            System.out.println("Categoría inválida.");
+            System.out.println("Categoria invalida.");
             return;
         }
 
         if (product != null) {
             System.out.println("Producto registrado: " + product);
         } else {
-            System.out.println("No se pudo registrar el producto. Verifique los catálogos.");
+            System.out.println("No se pudo registrar el producto. Verifique los catalogos.");
         }
     }
 
     public void removeProduct() {
         int id = console.readInt("ID del producto a eliminar: ");
         boolean removed = productService.removeProduct(id);
-        System.out.println(removed ? "Producto eliminado." : "No se encontró el producto.");
+        System.out.println(removed ? "Producto eliminado." : "No se encontro el producto.");
     }
 
     public void listProducts() {
-        System.out.println("\n--- CONSULTA Y BÚSQUEDA DE PRODUCTOS ---");
+        System.out.println("\n--- CONSULTA Y BUSQUEDA DE PRODUCTOS ---");
         System.out.println("1. Listar todos los productos");
         System.out.println("2. Buscar producto por nombre");
-        System.out.println("3. Filtrar por categoría");
-        int option = console.readInt("Opción: ");
+        System.out.println("3. Filtrar por categoria");
+        int option = console.readInt("Opcion: ");
 
         switch (option) {
             case 1 ->
@@ -71,7 +71,7 @@ public class ProductMenuView {
             case 3 ->
                 filterProductsByCategory();
             default ->
-                System.out.println("Opción inválida.");
+                System.out.println("Opcion invalida.");
         }
     }
 
@@ -82,8 +82,8 @@ public class ProductMenuView {
     }
 
     private void filterProductsByCategory() {
-        System.out.println("1. Uniforme   2. Papelería");
-        int categoryOption = console.readInt("Categoría: ");
+        System.out.println("1. Uniforme   2. Papeleria");
+        int categoryOption = console.readInt("Categoria: ");
         ProductCategory selectedCategory = (categoryOption == 1)
                 ? ProductCategory.UNIFORM
                 : ProductCategory.STATIONERY;
@@ -91,7 +91,7 @@ public class ProductMenuView {
     }
 
     public void updateStockManual() {
-        System.out.println("\n--- ACTUALIZACIÓN DE INVENTARIO ---");
+        System.out.println("\n--- ACTUALIZACION DE INVENTARIO ---");
         int targetProductId = console.readInt("ID del producto a reabastecer: ");
         int quantityToChange = console.readInt("Cantidad a ingresar/ajustar: ");
 
@@ -99,7 +99,7 @@ public class ProductMenuView {
         if (isStockUpdated) {
             System.out.println("Stock actualizado correctamente.");
         } else {
-            System.out.println("No se encontró el producto especificado.");
+            System.out.println("No se encontro el producto especificado.");
         }
     }
 
