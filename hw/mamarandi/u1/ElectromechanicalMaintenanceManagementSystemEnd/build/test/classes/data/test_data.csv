@@ -1,0 +1,37 @@
+# Formato: CLAVE;dato1;dato2;...   (las lineas que empiezan con # se ignoran)
+#
+# CLIENT        : id;nombre;contacto;direccion
+CLIENT;1;Ana Pérez;0991234567;Av. Amazonas y Colón, Quito
+CLIENT;2;Industrias Andes;info@andes.com;Km 5 Vía Latacunga
+CLIENT;3;Taller El Sur;sur@mail.com;Calle 10 y Av. 6 de Diciembre
+#
+# CLIENT_EQUIP  : equipId;nombre;serie;cantidadEsperadaTrasAgregarDosVeces
+CLIENT_EQUIP;10;Motor trifásico;SN-010;1
+CLIENT_EQUIP;11;Compresor;SN-011;1
+#
+# EQUIP_ORDER   : equipId;nombre;serie;ubicacion;descripcionEsperada;prioridadEsperada;estadoEsperado
+EQUIP_ORDER;5;Bomba;SN-005;Planta 1;Maintenance for Bomba;Medium;Pending
+EQUIP_ORDER;6;Generador;SN-006;Bodega;Maintenance for Generador;Medium;Pending
+#
+# TECH_ACCEPT   : id;nombre;especialidad;disponible;quedaAsignado;disponibleDespues
+TECH_ACCEPT;1;Luis Mora;Eléctrico;true;true;false
+TECH_ACCEPT;2;Marta Solís;Mecánica;false;false;false
+#
+# WO_CLOSE      : totalTareas;tareasCompletadas;estadoEsperado
+WO_CLOSE;2;2;Closed
+WO_CLOSE;2;1;Pending
+WO_CLOSE;3;0;Pending
+WO_CLOSE;0;0;Pending
+#
+# TASK_PARTS    : partId;nombre;stock;costo;proveedor;cantidadEsperadaTrasRegistrarDosVeces
+TASK_PARTS;1;Rodamiento;20;12.5;SKF;1
+TASK_PARTS;2;Fusible 10A;100;0.8;Siemens;1
+#
+# PART_STOCK    : stockInicial;stockNuevo;stockEsperado
+PART_STOCK;10;25;25
+PART_STOCK;10;0;0
+PART_STOCK;10;-5;10
+#
+# JSON_CLIENT   : id;nombre;contacto;direccion   (guardar y volver a cargar)
+JSON_CLIENT;1;Ana Pérez;0991234567;Av. Amazonas y Colón, Quito
+JSON_CLIENT;2;Taller "El Sur";sur@mail.com;Calle 10 y Av. 6 de Diciembre
