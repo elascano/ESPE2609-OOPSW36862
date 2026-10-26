@@ -1,0 +1,316 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.unistock.model.UniformTest
+-------------------------------------------------------------------------------
+Tests run: 30, Failures: 24, Errors: 0, Skipped: 0, Time elapsed: 0.230 s <<< FAILURE! -- in ec.edu.espe.unistock.model.UniformTest
+ec.edu.espe.unistock.model.UniformTest.testGetSchoolUpperCase -- Time elapsed: 0.011 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <COLEGIO ESPE> but was: <Colegio Espe>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSchoolUpperCase(UniformTest.java:108)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSchoolTypeCheck -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSchoolTypeCheck(UniformTest.java:128)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSchoolSubstringCheck -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSchoolSubstringCheck(UniformTest.java:123)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSizeTypeCheck -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSizeTypeCheck(UniformTest.java:78)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSchoolEndsWithCheck -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSchoolEndsWithCheck(UniformTest.java:133)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetDetailsStartsWithCheck -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.UniformTest.testGetDetailsStartsWithCheck(UniformTest.java:173)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSchoolNullCheck -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <Colegio Espe>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSchoolNullCheck(UniformTest.java:113)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetDetailsUpperCase -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <TALLA: M | COLEGIO: COLEGIO ESPE> but was: <Talla: M | Colegio: Colegio Espe>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.UniformTest.testGetDetailsUpperCase(UniformTest.java:158)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetDetailsTypeCheck -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.model.UniformTest.testGetDetailsTypeCheck(UniformTest.java:183)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSizeNullCheck -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <M>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSizeNullCheck(UniformTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSizeEmptyString -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <> but was: <M>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSizeEmptyString(UniformTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSizeIncorrectValue -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <L> but was: <M>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSizeIncorrectValue(UniformTest.java:48)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSizeStartsWithCheck -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSizeStartsWithCheck(UniformTest.java:83)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetDetailsNullCheck -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <Talla: M | Colegio: Colegio Espe>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.model.UniformTest.testGetDetailsNullCheck(UniformTest.java:163)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSizeLengthCheck -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <5> but was: <1>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSizeLengthCheck(UniformTest.java:68)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetDetailsEndsWithCheck -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.UniformTest.testGetDetailsEndsWithCheck(UniformTest.java:178)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetDetailsIncorrectFormat -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <M - Colegio Espe> but was: <Talla: M | Colegio: Colegio Espe>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.UniformTest.testGetDetailsIncorrectFormat(UniformTest.java:148)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSchoolEmptyString -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <> but was: <Colegio Espe>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSchoolEmptyString(UniformTest.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSizeSubstringCheck -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSizeSubstringCheck(UniformTest.java:73)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSchoolIncorrectValue -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Colegio Central> but was: <Colegio Espe>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSchoolIncorrectValue(UniformTest.java:98)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSchoolLengthCheck -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <12>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSchoolLengthCheck(UniformTest.java:118)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetDetailsEmptyString -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <> but was: <Talla: M | Colegio: Colegio Espe>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.UniformTest.testGetDetailsEmptyString(UniformTest.java:153)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetDetailsLengthCheck -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <10> but was: <32>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.UniformTest.testGetDetailsLengthCheck(UniformTest.java:168)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.UniformTest.testGetSizeLowerCase -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <m> but was: <M>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.UniformTest.testGetSizeLowerCase(UniformTest.java:58)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+

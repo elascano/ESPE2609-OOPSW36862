@@ -1,0 +1,914 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.unistock.model.SaleTest
+-------------------------------------------------------------------------------
+Tests run: 90, Failures: 68, Errors: 1, Skipped: 0, Time elapsed: 0.514 s <<< FAILURE! -- in ec.edu.espe.unistock.model.SaleTest
+ec.edu.espe.unistock.model.SaleTest.testIsEmptyInvertedCheck -- Time elapsed: 0.069 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testIsEmptyInvertedCheck(SaleTest.java:516)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testIsEmptyNewSaleFalse -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.model.SaleTest.testIsEmptyNewSaleFalse(SaleTest.java:499)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetIdEvenCheck -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.SaleTest.testGetIdEvenCheck(SaleTest.java:313)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetDateFutureCheck -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.SaleTest.testGetDateFutureCheck(SaleTest.java:348)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTaxZeroRate -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <3.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testTaxZeroRate(SaleTest.java:184)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTaxNegative -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <-3.00> but was: <0.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testTaxNegative(SaleTest.java:212)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetDateSpecificDate -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2020-01-01T00:00> but was: <2026-10-25T16:48:09.478461300>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testGetDateSpecificDate(SaleTest.java:358)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testSubtotalNullCheck -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <0.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.model.SaleTest.testSubtotalNullCheck(SaleTest.java:140)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testSubtotalOneDollar -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testSubtotalOneDollar(SaleTest.java:161)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTotalNegative -- Time elapsed: 0.008 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <-23.00> but was: <0.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testTotalNegative(SaleTest.java:262)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetItemsFirstElement -- Time elapsed: 0.003 s <<< ERROR!
+java.util.NoSuchElementException: No hay más elementos.
+	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:74)
+	at ec.edu.espe.unistock.model.SaleTest.testGetItemsFirstElement(SaleTest.java:472)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetDatePastCheck -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.SaleTest.testGetDatePastCheck(SaleTest.java:353)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTotalSubtotalOnly -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <20.00> but was: <23.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testTotalSubtotalOnly(SaleTest.java:240)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testAddItemMaxLimit -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <100>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.SaleTest.testAddItemMaxLimit(SaleTest.java:112)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetIdRangeCheck -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.SaleTest.testGetIdRangeCheck(SaleTest.java:323)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testAddItemCheckFirstItem -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <ec.edu.espe.unistock.structure.SimpleList@5bda8e08>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.model.SaleTest.testAddItemCheckFirstItem(SaleTest.java:96)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetIdNegative -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <-101> but was: <101>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.SaleTest.testGetIdNegative(SaleTest.java:298)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetDateStringComparison -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2026-10-25> but was: <2026-10-25T16:48:09.538878500>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testGetDateStringComparison(SaleTest.java:373)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTotalLessThanSubtotal -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.SaleTest.testTotalLessThanSubtotal(SaleTest.java:278)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testSubtotalWithoutTax -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <11.50> but was: <10.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testSubtotalWithoutTax(SaleTest.java:151)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testAddItemSizeMismatch -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <5> but was: <1>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.SaleTest.testAddItemSizeMismatch(SaleTest.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetIdNullCheck -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <101>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.model.SaleTest.testGetIdNullCheck(SaleTest.java:318)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetSellerPasswordMatch -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.SaleTest.testGetSellerPasswordMatch(SaleTest.java:414)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testSubtotalNegative -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <-10.00> but was: <0.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testSubtotalNegative(SaleTest.java:145)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testSubtotalDoubleValue -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0.0> but was: <0.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testSubtotalDoubleValue(SaleTest.java:156)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetItemsTypeCheck -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.model.SaleTest.testGetItemsTypeCheck(SaleTest.java:454)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testSubtotalScaleMismatch -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <20> but was: <20.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testSubtotalScaleMismatch(SaleTest.java:135)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTaxScaleMismatch -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <3.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testTaxScaleMismatch(SaleTest.java:196)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTotalDoubleValue -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <23.0> but was: <0.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testTotalDoubleValue(SaleTest.java:267)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetSellerRoleMatch -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <SALESPERSON> but was: <ADMINISTRATOR>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testGetSellerRoleMatch(SaleTest.java:409)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetItemsStringComparison -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[]> but was: <ec.edu.espe.unistock.structure.SimpleList@367ffa75>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testGetItemsStringComparison(SaleTest.java:477)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetSellerTypeCheck -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.model.SaleTest.testGetSellerTypeCheck(SaleTest.java:419)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testIsEmptyTypeCheck -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testIsEmptyTypeCheck(SaleTest.java:521)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetSellerUsernameMatch -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <vendedor1> but was: <admin>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testGetSellerUsernameMatch(SaleTest.java:404)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetItemsNullCheck -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <ec.edu.espe.unistock.structure.SimpleList@24aed80c>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.model.SaleTest.testGetItemsNullCheck(SaleTest.java:444)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testSubtotalIncorrectAmount -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <50.00> but was: <20.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testSubtotalIncorrectAmount(SaleTest.java:129)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetDateTypeCheck -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.model.SaleTest.testGetDateTypeCheck(SaleTest.java:368)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTotalIncorrectAmount -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <100.00> but was: <23.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testTotalIncorrectAmount(SaleTest.java:246)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testAddItemReturnsBoolean -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <10> but was: <1>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.SaleTest.testAddItemReturnsBoolean(SaleTest.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTaxGreaterThanSubtotal -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.SaleTest.testTaxGreaterThanSubtotal(SaleTest.java:223)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testSubtotalGreaterThanMax -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.SaleTest.testSubtotalGreaterThanMax(SaleTest.java:167)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTaxDoubleValue -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3.0> but was: <0.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testTaxDoubleValue(SaleTest.java:217)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetSellerDifferentUser -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <vendor (Vendedor)> but was: <admin (Administrador)>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testGetSellerDifferentUser(SaleTest.java:394)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetSellerNullCheck -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <admin (Administrador)>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.model.SaleTest.testGetSellerNullCheck(SaleTest.java:399)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testIsEmptyNullCheck -- Time elapsed: 0.008 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Sale.isEmpty()" because "nullSale" is null
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3228)
+	at ec.edu.espe.unistock.model.SaleTest.testIsEmptyNullCheck(SaleTest.java:511)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Sale.isEmpty()" because "nullSale" is null
+	at ec.edu.espe.unistock.model.SaleTest.lambda$testIsEmptyNullCheck$0(SaleTest.java:511)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+ec.edu.espe.unistock.model.SaleTest.testTaxTwelvePercent -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2.40> but was: <3.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testTaxTwelvePercent(SaleTest.java:207)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetDateNullCheck -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <2026-10-25T16:48:09.695255400>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.model.SaleTest.testGetDateNullCheck(SaleTest.java:343)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetIdMaxInt -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2147483647> but was: <101>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.SaleTest.testGetIdMaxInt(SaleTest.java:308)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTotalNullCheck -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <0.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.model.SaleTest.testTotalNullCheck(SaleTest.java:251)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testAddItemKeepsEmpty -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.SaleTest.testAddItemKeepsEmpty(SaleTest.java:69)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testAddItemNullItem -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: El elemento no puede ser nulo.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.model.SaleTest.testAddItemNullItem(SaleTest.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: El elemento no puede ser nulo.
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
+	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:28)
+	at ec.edu.espe.unistock.model.Sale.addItem(Sale.java:25)
+	at ec.edu.espe.unistock.model.SaleTest.lambda$testAddItemNullItem$0(SaleTest.java:62)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.model.SaleTest.testIsEmptyAfterMultipleAdditions -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.SaleTest.testIsEmptyAfterMultipleAdditions(SaleTest.java:533)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTotalOneDollar -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testTotalOneDollar(SaleTest.java:272)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTotalScaleMismatch -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <23> but was: <23.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testTotalScaleMismatch(SaleTest.java:257)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetItemsDirectModification -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: El elemento no puede ser nulo.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.model.SaleTest.testGetItemsDirectModification(SaleTest.java:465)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: El elemento no puede ser nulo.
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
+	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:28)
+	at ec.edu.espe.unistock.model.SaleTest.lambda$testGetItemsDirectModification$0(SaleTest.java:465)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.model.SaleTest.testGetSellerRoleAdminCheck -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.model.SaleTest.testGetSellerRoleAdminCheck(SaleTest.java:429)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testAddItemNegativeQuantityFail -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.IllegalArgumentException: La cantidad debe ser mayor a cero.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.model.SaleTest.testAddItemNegativeQuantityFail(SaleTest.java:89)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalArgumentException: La cantidad debe ser mayor a cero.
+	at ec.edu.espe.unistock.model.SaleDetail.<init>(SaleDetail.java:12)
+	at ec.edu.espe.unistock.model.SaleTest.lambda$testAddItemNegativeQuantityFail$0(SaleTest.java:89)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.model.SaleTest.testGetItemsAfterAddEmpty -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.SaleTest.testGetItemsAfterAddEmpty(SaleTest.java:460)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testIsEmptyReturnNull -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.model.SaleTest.testIsEmptyReturnNull(SaleTest.java:526)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetDateLeapYearCheck -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.SaleTest.testGetDateLeapYearCheck(SaleTest.java:378)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetIdZero -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <101>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.SaleTest.testGetIdZero(SaleTest.java:293)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetItemsInitialSize -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <5> but was: <0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.SaleTest.testGetItemsInitialSize(SaleTest.java:449)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetSellerStringComparison -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <admin> but was: <admin (Administrador)>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testGetSellerStringComparison(SaleTest.java:424)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testGetIdIncorrectValue -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <999> but was: <101>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.SaleTest.testGetIdIncorrectValue(SaleTest.java:303)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testAddItemDuplicatesIgnored -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.model.SaleTest.testAddItemDuplicatesIgnored(SaleTest.java:84)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTaxNullCheck -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <0.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.model.SaleTest.testTaxNullCheck(SaleTest.java:201)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testTaxIncorrectAmount -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <10.00> but was: <3.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testTaxIncorrectAmount(SaleTest.java:190)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testIsEmptyWithItemsTrue -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at ec.edu.espe.unistock.model.SaleTest.testIsEmptyWithItemsTrue(SaleTest.java:505)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.model.SaleTest.testIsEmptyConstantTrue -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.model.SaleTest.testIsEmptyConstantTrue(SaleTest.java:539)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+

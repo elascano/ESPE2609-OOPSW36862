@@ -1,0 +1,401 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.unistock.service.SaleServiceTest
+-------------------------------------------------------------------------------
+Tests run: 40, Failures: 22, Errors: 9, Skipped: 0, Time elapsed: 0.376 s <<< FAILURE! -- in ec.edu.espe.unistock.service.SaleServiceTest
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemNegativeQuantity -- Time elapsed: 0.071 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.IllegalArgumentException: La cantidad debe ser mayor a cero.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemNegativeQuantity(SaleServiceTest.java:152)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalArgumentException: La cantidad debe ser mayor a cero.
+	at ec.edu.espe.unistock.model.SaleDetail.<init>(SaleDetail.java:12)
+	at ec.edu.espe.unistock.service.SaleService.addItem(SaleService.java:36)
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testAddItemNegativeQuantity$0(SaleServiceTest.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesTypeCheck -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesTypeCheck(SaleServiceTest.java:302)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesNullCheck -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <ec.edu.espe.unistock.structure.SimpleList@72967906>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesNullCheck(SaleServiceTest.java:292)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleStockReduction -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <10> but was: <8>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleStockReduction(SaleServiceTest.java:215)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemMaxIntQuantity -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.IllegalStateException: Stock insuficiente. Disponible: 10
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemMaxIntQuantity(SaleServiceTest.java:187)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalStateException: Stock insuficiente. Disponible: 10
+	at ec.edu.espe.unistock.service.SaleService.addItem(SaleService.java:34)
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testAddItemMaxIntQuantity$0(SaleServiceTest.java:187)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleTypeCheck -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.IllegalStateException: La venta no tiene productos.
+	at ec.edu.espe.unistock.service.SaleService.confirmSale(SaleService.java:41)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleTypeCheck(SaleServiceTest.java:262)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesStringComparison -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[]> but was: <ec.edu.espe.unistock.structure.SimpleList@42a48628>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesStringComparison(SaleServiceTest.java:327)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemZeroQuantity -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.IllegalArgumentException: La cantidad debe ser mayor a cero.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemZeroQuantity(SaleServiceTest.java:143)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalArgumentException: La cantidad debe ser mayor a cero.
+	at ec.edu.espe.unistock.model.SaleDetail.<init>(SaleDetail.java:12)
+	at ec.edu.espe.unistock.service.SaleService.addItem(SaleService.java:36)
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testAddItemZeroQuantity$0(SaleServiceTest.java:143)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleNullSale -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Sale.isEmpty()" because "sale" is null
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleNullSale(SaleServiceTest.java:227)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Sale.isEmpty()" because "sale" is null
+	at ec.edu.espe.unistock.service.SaleService.confirmSale(SaleService.java:40)
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testConfirmSaleNullSale$0(SaleServiceTest.java:227)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesResetIteration -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.IllegalStateException: La venta no tiene productos.
+	at ec.edu.espe.unistock.service.SaleService.confirmSale(SaleService.java:41)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesResetIteration(SaleServiceTest.java:333)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleTwice -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleTwice(SaleServiceTest.java:239)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleReturnsBoolean -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <ec.edu.espe.unistock.structure.SimpleList@4562e04d>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleReturnsBoolean(SaleServiceTest.java:256)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemSubtotalCheck -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0.00> but was: <5.00>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemSubtotalCheck(SaleServiceTest.java:178)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemNegativeProductId -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.IllegalArgumentException: El producto no existe.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemNegativeProductId(SaleServiceTest.java:193)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalArgumentException: El producto no existe.
+	at ec.edu.espe.unistock.service.SaleService.addItem(SaleService.java:31)
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testAddItemNegativeProductId$0(SaleServiceTest.java:193)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemNullSale -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.IllegalArgumentException: El producto no existe.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemNullSale(SaleServiceTest.java:157)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalArgumentException: El producto no existe.
+	at ec.edu.espe.unistock.service.SaleService.addItem(SaleService.java:31)
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testAddItemNullSale$0(SaleServiceTest.java:157)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesInitialSize -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <5> but was: <0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesInitialSize(SaleServiceTest.java:297)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testStartSaleReturnNull -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <ec.edu.espe.unistock.model.Sale@368f2016>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testStartSaleReturnNull(SaleServiceTest.java:89)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testStartSaleInitialEmpty -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testStartSaleInitialEmpty(SaleServiceTest.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleFirstElementCheck -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.IllegalStateException: La venta no tiene productos.
+	at ec.edu.espe.unistock.service.SaleService.confirmSale(SaleService.java:41)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleFirstElementCheck(SaleServiceTest.java:276)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemExceedingStock -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.IllegalStateException: Stock insuficiente. Disponible: 5
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemExceedingStock(SaleServiceTest.java:134)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalStateException: Stock insuficiente. Disponible: 5
+	at ec.edu.espe.unistock.service.SaleService.addItem(SaleService.java:34)
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testAddItemExceedingStock$0(SaleServiceTest.java:134)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesDirectModification -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: El elemento no puede ser nulo.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesDirectModification(SaleServiceTest.java:314)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: El elemento no puede ser nulo.
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
+	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:28)
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testGetSalesDirectModification$0(SaleServiceTest.java:314)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testStartSaleIncrementalId -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testStartSaleIncrementalId(SaleServiceTest.java:108)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testStartSaleRoleCheck -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.SecurityException: Su rol no permite registrar ventas.
+	at ec.edu.espe.unistock.service.SaleService.startSale(SaleService.java:23)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testStartSaleRoleCheck(SaleServiceTest.java:83)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleEmptySale -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.IllegalStateException: La venta no tiene productos.
+	at ec.edu.espe.unistock.service.SaleService.confirmSale(SaleService.java:41)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleEmptySale(SaleServiceTest.java:221)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testStartSaleNullSeller -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.User.getRole()" because "seller" is null
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3228)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testStartSaleNullSeller(SaleServiceTest.java:65)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.User.getRole()" because "seller" is null
+	at ec.edu.espe.unistock.service.SaleService.startSale(SaleService.java:21)
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testStartSaleNullSeller$0(SaleServiceTest.java:65)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testStartSaleTypeCheck -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testStartSaleTypeCheck(SaleServiceTest.java:95)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesAfterConfirmationEmpty -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.IllegalStateException: La venta no tiene productos.
+	at ec.edu.espe.unistock.service.SaleService.confirmSale(SaleService.java:41)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesAfterConfirmationEmpty(SaleServiceTest.java:308)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemNonExistentProduct -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.IllegalArgumentException: El producto no existe.
+	at ec.edu.espe.unistock.service.SaleService.addItem(SaleService.java:31)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemNonExistentProduct(SaleServiceTest.java:124)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleDoesNotSave -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.IllegalStateException: La venta no tiene productos.
+	at ec.edu.espe.unistock.service.SaleService.confirmSale(SaleService.java:41)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleDoesNotSave(SaleServiceTest.java:269)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleListSizeCheck -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <5> but was: <1>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleListSizeCheck(SaleServiceTest.java:250)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesFirstElement -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.IllegalStateException: La venta no tiene productos.
+	at ec.edu.espe.unistock.service.SaleService.confirmSale(SaleService.java:41)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesFirstElement(SaleServiceTest.java:321)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+

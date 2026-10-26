@@ -1,0 +1,47 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.unistock.structure.SimpleListTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 1, Errors: 3, Skipped: 0, Time elapsed: 0.161 s <<< FAILURE! -- in ec.edu.espe.unistock.structure.SimpleListTest
+ec.edu.espe.unistock.structure.SimpleListTest.testAddNullElement -- Time elapsed: 0.015 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: El elemento no puede ser nulo.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.structure.SimpleListTest.testAddNullElement(SimpleListTest.java:52)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: El elemento no puede ser nulo.
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
+	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:28)
+	at ec.edu.espe.unistock.structure.SimpleListTest.lambda$testAddNullElement$0(SimpleListTest.java:52)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.structure.SimpleListTest.testNextOnEmptyList -- Time elapsed: 0.004 s <<< ERROR!
+java.util.NoSuchElementException: No hay más elementos.
+	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:74)
+	at ec.edu.espe.unistock.structure.SimpleListTest.testNextOnEmptyList(SimpleListTest.java:126)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.structure.SimpleListTest.testRemoveNull -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: El elemento no puede ser nulo.
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
+	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:28)
+	at ec.edu.espe.unistock.structure.SimpleListTest.testRemoveNull(SimpleListTest.java:83)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.structure.SimpleListTest.testIteratorFlow -- Time elapsed: 0.004 s <<< ERROR!
+java.util.NoSuchElementException: No hay más elementos.
+	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:74)
+	at ec.edu.espe.unistock.structure.SimpleListTest.testIteratorFlow(SimpleListTest.java:102)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+

@@ -1,0 +1,50 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.unistock.structure.FileHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.169 s <<< FAILURE! -- in ec.edu.espe.unistock.structure.FileHandlerTest
+ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListNullList -- Time elapsed: 0.012 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.structure.SimpleList.resetIteration()" because "list" is null
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListNullList(FileHandlerTest.java:80)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.structure.SimpleList.resetIteration()" because "list" is null
+	at ec.edu.espe.unistock.structure.FileHandler.saveList(FileHandler.java:19)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.lambda$testSaveListNullList$0(FileHandlerTest.java:80)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListNullPath -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "java.io.File.isInvalid()" because "file" is null
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListNullPath(FileHandlerTest.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.io.File.isInvalid()" because "file" is null
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:202)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:120)
+	at java.base/java.io.FileWriter.<init>(FileWriter.java:67)
+	at ec.edu.espe.unistock.structure.FileHandler.saveList(FileHandler.java:18)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.lambda$testSaveListNullPath$0(FileHandlerTest.java:86)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListNullPath -- Time elapsed: 0.018 s <<< ERROR!
+java.lang.NullPointerException
+	at java.base/java.io.File.<init>(File.java:288)
+	at ec.edu.espe.unistock.structure.FileHandler.loadList(FileHandler.java:31)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListNullPath(FileHandlerTest.java:119)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
