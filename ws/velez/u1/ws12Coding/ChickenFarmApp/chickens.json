@@ -1,0 +1,10 @@
+[
+  {
+    "ide": 1,
+    "name": "maria",
+    "color": "black",
+    "bornOnDate": "2025-04-03",
+    "ageInYears": 1,
+    "molting": true
+  }
+]

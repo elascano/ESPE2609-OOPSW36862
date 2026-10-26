@@ -41,3 +41,7 @@ replay_pid*
 
 dist/
 
+/ws/velez/u1/ws14collection/CollectionOrThing/nbproject/private/
+/ws/velez/u1/ws14collection/CollectionOrThing/build/
+/ws/velez/u1/w16UnitTesting/BasicOperations/target/
+/ws/velez/u1/w16UnitTesting/BasicOperations/nbproject/
