@@ -1,0 +1,11 @@
+case;timesAddedSameObject;removeId;expCountAfterAdd;expCountAfterRemove
+1;0;1;0;0
+2;1;1;1;0
+3;2;1;1;0
+4;1;99;1;1
+5;3;5;1;1
+6;1;2;1;1
+7;2;1;1;0
+8;0;1;0;0
+9;5;1;100;99
+10;4;99;100;100
