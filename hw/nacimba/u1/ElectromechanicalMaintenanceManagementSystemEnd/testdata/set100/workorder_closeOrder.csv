@@ -7,3 +7,5 @@ case;totalTasks;completedTasks;expStatus;expTechAvailable
 6;5;5;Closed;true
 7;5;1;Pending;false
 8;2;0;Pending;false
+9;4;4;Closed;true
+10;6;3;Pending;false

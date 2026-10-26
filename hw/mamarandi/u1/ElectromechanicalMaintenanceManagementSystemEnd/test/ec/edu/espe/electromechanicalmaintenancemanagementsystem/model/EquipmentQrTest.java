@@ -102,4 +102,28 @@ public class EquipmentQrTest {
         assertEquals(expResult, result);
     }
 
+    @Test
+    public void testCreateQrCode9() {
+        System.out.println("createQrCode9");
+        String[] row = TestData.row("equipment_createQrCode.csv", 9);
+        int equipmentId = Integer.parseInt(row[1]);
+        String serialNumber = row[2];
+        Equipment instance = new Equipment(equipmentId, "Motor", serialNumber, "Plant B", "Available");
+        String expResult = row[3];
+        String result = instance.createQrCode().getGenerateUrl();
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testCreateQrCode10() {
+        System.out.println("createQrCode10");
+        String[] row = TestData.row("equipment_createQrCode.csv", 10);
+        int equipmentId = Integer.parseInt(row[1]);
+        String serialNumber = row[2];
+        Equipment instance = new Equipment(equipmentId, "Motor", serialNumber, "Plant B", "Available");
+        String expResult = row[3];
+        String result = instance.createQrCode().getGenerateUrl();
+        assertEquals(expResult, result);
+    }
+
 }
