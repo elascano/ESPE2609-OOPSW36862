@@ -1,0 +1,8 @@
+EJECUTAR TYPESCRIPT
+Necesitas Node.js y el compilador TypeScript (tsc).
+1. Abre Terminal o PowerShell en esta carpeta.
+2. Ejecuta: tsc
+3. Ejecuta: node dist/main.js
+4. Escoge las opciones 1, 2, 3 o 4.
+
+Un archivo .ts por cada clase, como en tu proyecto Java.

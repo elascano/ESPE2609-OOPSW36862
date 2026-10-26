@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "chickens": [
+      {
+        "id": 100,
+        "name": "Pepito",
+        "color": "White",
+        "bornOnDate": "Oct 1, 2022, 12:00:00 AM",
+        "ageInYear": 4,
+        "molting": true
+      },
+      {
+        "id": 2,
+        "name": "Enrique",
+        "color": "Brown",
+        "bornOnDate": "Oct 21, 2026, 9:03:24 PM",
+        "ageInYear": 1,
+        "molting": false
+      },
+      {
+        "id": 101,
+        "name": "Pepe",
+        "color": "White",
+        "bornOnDate": "Oct 21, 2024, 12:00:00 AM",
+        "ageInYear": 1,
+        "molting": true
+      },
+      {
+        "id": 102,
+        "name": "Enrique",
+        "color": "Brown",
+        "bornOnDate": "Feb 12, 2025, 12:00:00 AM",
+        "ageInYear": 1,
+        "molting": false
+      },
+      {
+        "id": 103,
+        "name": "Gus",
+        "color": "Orange",
+        "bornOnDate": "Dec 25, 2024, 12:00:00 AM",
+        "ageInYear": 1,
+        "molting": true
+      }
+    ]
+  }
+]

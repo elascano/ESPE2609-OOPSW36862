@@ -1,0 +1,18 @@
+[
+  {
+    "id": 143,
+    "name": "Pepito",
+    "color": "Blue",
+    "bornOnDate": "2026-10-22T02:33:45.095Z",
+    "molting": true,
+    "ageInYears": 0
+  },
+  {
+    "id": 145,
+    "name": "Demian",
+    "color": "Red",
+    "bornOnDate": "2026-10-22T02:33:57.743Z",
+    "molting": false,
+    "ageInYears": 0
+  }
+]

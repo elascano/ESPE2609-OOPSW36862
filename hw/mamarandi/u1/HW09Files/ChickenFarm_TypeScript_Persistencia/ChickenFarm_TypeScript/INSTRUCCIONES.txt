@@ -1,0 +1,3 @@
+Compila: tsc.cmd
+Ejecuta: node dist/main.js
+El archivo chickens.json se crea en esta carpeta al agregar o eliminar y se lee al iniciar.

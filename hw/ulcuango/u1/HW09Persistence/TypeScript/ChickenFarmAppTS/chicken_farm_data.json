@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "chickens": [
+      {
+        "id": 1,
+        "name": "Oreo",
+        "color": "White and black",
+        "bornOnDate": "2023-08-12T00:00:00.000Z",
+        "ageInYear": 3,
+        "molting": true
+      }
+    ]
+  }
+]

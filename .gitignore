@@ -10,7 +10,7 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.nar
@@ -19,6 +19,25 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Virtual machine crash logs
 hs_err_pid*
 replay_pid*
+
+# NetBeans private configuration and build files
+/ws/velez/u1/ws12Coding/ChickenFarmApp/nbproject/private/
+/ws/velez/u1/ws12Coding/ChickenFarmApp/build/
+/ws/velez/u1/ws12Coding/JavaApplication30/nbproject/private/
+/ws/velez/u1/ws12Coding/ChickenFarmApp2/nbproject/private/
+/ws/velez/u1/ws12Coding/ChickenFarmApp23/nbproject/private/
+/ws/velez/u1/ws12Coding/ChickenFarmApp23/build/
+/ws/olalla/u1/ws12 Coding/ChickenFarmApp/nbproject/private/
+/ws/olalla/u1/ws12 Coding/ChickenFarmApp/build/
+
+/ws/clavon/u1/ws12CodingChickenFarm/ChikenFarmApp/nbproject/private/
+
+# Visual Paradigm backup files
+*.bak_*
+/ws/clavon/u1/ws12CodingChickenFarm/ChikenFarmApp/build/
+
+dist/
+
