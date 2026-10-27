@@ -1,0 +1,4 @@
+id;username;fullName;role;passwordHash;salt;active
+1;owner;Propietario;OWNER;94577c7d9ec90f042cfa43d52f918f066408242561895fa949522013713e8213;vFZ7DTlwLiLrKP4L2Pgq0A==;true
+2;vendedor;María López;SALESPERSON;321fd277186b3f081e77600fcb8dcae44eae6acb786d6a201c21b04f6bfa1c7f;f9IiKap9QmENjESxDAxmYQ==;true
+3;bodeguero;Pedro Ramírez;WAREHOUSE_CLERK;e1d58283cc71693b6e4ba555ac80c767037f64679e4c57d96e692f0976aa44f9;0tvHYTHri2/py+m4thnPCg==;true

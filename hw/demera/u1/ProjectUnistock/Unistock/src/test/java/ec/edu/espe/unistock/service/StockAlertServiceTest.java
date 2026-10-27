@@ -1,233 +1,398 @@
 package ec.edu.espe.unistock.service;
 
-/**
- *
- * @author Dennis Criollo, Leslye Cuichan, Francisco Demera, Byte & Fabric Devs, @ESPE
- */
-
 import ec.edu.espe.unistock.model.Product;
 import ec.edu.espe.unistock.model.ProductCategory;
+import ec.edu.espe.unistock.model.Stationery;
+import ec.edu.espe.unistock.model.Uniform;
 import ec.edu.espe.unistock.structure.SimpleList;
-import java.math.BigDecimal;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import java.math.BigDecimal;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StockAlertServiceTest {
 
-    private StockAlertService instance;
-    private SimpleList<Product> products;
+    private StockAlertService stockAlertService;
 
-    public StockAlertServiceTest() {
-    }
-
-    @BeforeAll
-    public static void setUpClass() {
-    }
-
-    @AfterAll
-    public static void tearDownClass() {
+    private Product createConcreteProduct(int id, String name, BigDecimal price, int stock) {
+        return new Product(id, name, price, stock, ProductCategory.STATIONERY) {
+            @Override
+            public String getDetails() {
+                return "Detalles Prueba";
+            }
+        };
     }
 
     @BeforeEach
-    public void setUp() {
-        instance = new StockAlertService();
-        products = new SimpleList<>();
-        products.add(new ProductImpl(1, "Cuaderno", new BigDecimal("2.50"), 3, ProductCategory.STATIONERY));
-        products.add(new ProductImpl(2, "Camisa Escolar", new BigDecimal("15.00"), 12, ProductCategory.UNIFORM));
-    }
-
-    @AfterEach
-    public void tearDown() {
-        instance = null;
-        products = null;
+    void setUp() {
+        stockAlertService = new StockAlertService();
     }
 
     @Test
-    public void testGetLowStockProductsValidList() {
-        SimpleList<Product> result = instance.getLowStockProducts(products);
-        assertNotNull(result);
+    void testDefaultConstructorSetsThresholdToFive() {
+        assertEquals(5, stockAlertService.getThreshold());
     }
 
     @Test
-    public void testGetLowStockProductsSizeCheck() {
-        SimpleList<Product> result = instance.getLowStockProducts(products);
-        assertEquals(1, result.size());
+    void testDefaultConstructorNotNullInstance() {
+        assertNotNull(stockAlertService);
     }
 
     @Test
-    public void testGetLowStockProductsEmptyList() {
+    void testDefaultConstructorThresholdIsPositive() {
+        assertTrue(stockAlertService.getThreshold() > 0);
+    }
+
+    @Test
+    void testDefaultConstructorThresholdIsInteger() {
+        int threshold = stockAlertService.getThreshold();
+        assertEquals(5, threshold);
+    }
+
+    @Test
+    void testDefaultConstructorConsistentThreshold() {
+        assertEquals(stockAlertService.getThreshold(), stockAlertService.getThreshold());
+    }
+
+    @Test
+    void testDefaultConstructorInitialStateReady() {
         SimpleList<Product> emptyList = new SimpleList<>();
-        SimpleList<Product> result = instance.getLowStockProducts(emptyList);
-        assertFalse(result.isEmpty());
+        assertTrue(stockAlertService.getLowStockProducts(emptyList).isEmpty());
     }
 
     @Test
-    public void testGetLowStockProductsNullList() {
-        assertDoesNotThrow(() -> instance.getLowStockProducts(null));
+    void testDefaultConstructorMultipleInstancesHaveSameDefaultThreshold() {
+        StockAlertService service1 = new StockAlertService();
+        StockAlertService service2 = new StockAlertService();
+        assertEquals(service1.getThreshold(), service2.getThreshold());
     }
 
     @Test
-    public void testGetLowStockProductsAllHighStock() {
-        SimpleList<Product> highStockList = new SimpleList<>();
-        highStockList.add(new ProductImpl(1, "Mochila", new BigDecimal("25.00"), 20, ProductCategory.STATIONERY));
-        SimpleList<Product> result = instance.getLowStockProducts(highStockList);
-        assertFalse(result.isEmpty());
+    void testDefaultConstructorCanBeModifiedLater() {
+        stockAlertService.setThreshold(10);
+        assertEquals(10, stockAlertService.getThreshold());
     }
 
     @Test
-    public void testGetLowStockProductsNullReturnCheck() {
-        assertNull(instance.getLowStockProducts(products));
+    void testDefaultConstructorFilterBehaviorWithDefaultThreshold() {
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(createConcreteProduct(1, "Cuaderno Norma", new BigDecimal("2.50"), 5));
+        products.add(createConcreteProduct(2, "Lapiz FaberCastell", new BigDecimal("0.50"), 6));
+        assertEquals(1, stockAlertService.getLowStockProducts(products).size());
     }
 
     @Test
-    public void testGetLowStockProductsTypeCheck() {
-        SimpleList<Product> result = instance.getLowStockProducts(products);
-        assertFalse(result instanceof SimpleList);
+    void testDefaultConstructorSameClassType() {
+        assertTrue(stockAlertService instanceof StockAlertService);
     }
 
     @Test
-    public void testGetLowStockProductsFirstElement() {
-        SimpleList<Product> result = instance.getLowStockProducts(products);
-        assertNull(result.next());
+    void testCustomConstructorSetsCustomThreshold() {
+        StockAlertService customService = new StockAlertService(10);
+        assertEquals(10, customService.getThreshold());
     }
 
     @Test
-    public void testGetLowStockProductsStringComparison() {
-        SimpleList<Product> result = instance.getLowStockProducts(products);
-        assertEquals("[]", result.toString());
+    void testCustomConstructorZeroThresholdAllowed() {
+        StockAlertService customService = new StockAlertService(0);
+        assertEquals(0, customService.getThreshold());
     }
 
     @Test
-    public void testGetLowStockProductsAfterThresholdChange() {
-        instance.setThreshold(15);
-        SimpleList<Product> result = instance.getLowStockProducts(products);
-        assertEquals(0, result.size());
+    void testCustomConstructorNegativeThresholdAllowed() {
+        StockAlertService customService = new StockAlertService(-5);
+        assertEquals(-5, customService.getThreshold());
     }
 
     @Test
-    public void testGetThresholdDefaultValue() {
-        assertEquals(5, instance.getThreshold());
+    void testCustomConstructorHighThresholdAllowed() {
+        StockAlertService customService = new StockAlertService(100);
+        assertEquals(100, customService.getThreshold());
     }
 
     @Test
-    public void testGetThresholdPositiveCheck() {
-        assertTrue(instance.getThreshold() > 0);
+    void testCustomConstructorNotNullInstance() {
+        StockAlertService customService = new StockAlertService(3);
+        assertNotNull(customService);
     }
 
     @Test
-    public void testGetThresholdZero() {
-        assertEquals(0, instance.getThreshold());
+    void testCustomConstructorFilterBehavior() {
+        StockAlertService customService = new StockAlertService(2);
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(createConcreteProduct(1, "Cuaderno Norma", new BigDecimal("2.50"), 2));
+        products.add(createConcreteProduct(2, "Lapiz FaberCastell", new BigDecimal("0.50"), 3));
+        assertEquals(1, customService.getLowStockProducts(products).size());
     }
 
     @Test
-    public void testGetThresholdNegative() {
-        assertEquals(-5, instance.getThreshold());
+    void testCustomConstructorDifferentFromDefault() {
+        StockAlertService customService = new StockAlertService(8);
+        assertNotEquals(stockAlertService.getThreshold(), customService.getThreshold());
     }
 
     @Test
-    public void testGetThresholdIncorrectValue() {
-        assertEquals(10, instance.getThreshold());
+    void testCustomConstructorConsistentThreshold() {
+        StockAlertService customService = new StockAlertService(15);
+        assertEquals(customService.getThreshold(), customService.getThreshold());
     }
 
     @Test
-    public void testGetThresholdMaxInt() {
-        assertEquals(Integer.MAX_VALUE, instance.getThreshold());
+    void testCustomConstructorOneThreshold() {
+        StockAlertService customService = new StockAlertService(1);
+        assertEquals(1, customService.getThreshold());
     }
 
     @Test
-    public void testGetThresholdEvenCheck() {
-        assertEquals(0, instance.getThreshold() % 2);
+    void testCustomConstructorSameClassType() {
+        StockAlertService customService = new StockAlertService(7);
+        assertTrue(customService instanceof StockAlertService);
     }
 
     @Test
-    public void testGetThresholdNullCheck() {
-        assertNull(instance.getThreshold());
+    void testGetLowStockProductsReturnsProductsBelowOrEqualThreshold() {
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(createConcreteProduct(1, "Cuaderno Norma", new BigDecimal("2.50"), 3));
+        products.add(createConcreteProduct(2, "Lapiz FaberCastell", new BigDecimal("0.50"), 10));
+
+        SimpleList<Product> lowStock = stockAlertService.getLowStockProducts(products);
+
+        assertEquals(1, lowStock.size());
+        lowStock.resetIteration();
+        assertEquals("Cuaderno Norma", lowStock.next().getName());
     }
 
     @Test
-    public void testGetThresholdRangeCheck() {
-        assertTrue(instance.getThreshold() > 100);
+    void testGetLowStockProductsIncludesExactThreshold() {
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(createConcreteProduct(1, "Cuaderno Norma", new BigDecimal("2.50"), 5));
+
+        SimpleList<Product> lowStock = stockAlertService.getLowStockProducts(products);
+
+        assertEquals(1, lowStock.size());
     }
 
     @Test
-    public void testGetThresholdDoubleCheck() {
-        assertEquals(5.0, instance.getThreshold());
+    void testGetLowStockProductsExcludesAboveThreshold() {
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(createConcreteProduct(1, "Cuaderno Norma", new BigDecimal("2.50"), 6));
+
+        SimpleList<Product> lowStock = stockAlertService.getLowStockProducts(products);
+
+        assertTrue(lowStock.isEmpty());
     }
 
     @Test
-    public void testSetThresholdValidValue() {
-        instance.setThreshold(10);
-        assertEquals(10, instance.getThreshold());
+    void testGetLowStockProductsNullListReturnsEmptyList() {
+        SimpleList<Product> lowStock = stockAlertService.getLowStockProducts(null);
+
+        assertNotNull(lowStock);
+        assertTrue(lowStock.isEmpty());
     }
 
     @Test
-    public void testSetThresholdZeroValue() {
-        instance.setThreshold(0);
-        assertEquals(0, instance.getThreshold());
+    void testGetLowStockProductsEmptyListReturnsEmptyList() {
+        SimpleList<Product> lowStock = stockAlertService.getLowStockProducts(new SimpleList<>());
+
+        assertNotNull(lowStock);
+        assertTrue(lowStock.isEmpty());
     }
 
     @Test
-    public void testSetThresholdNegativeValue() {
-        instance.setThreshold(-5);
-        assertEquals(-5, instance.getThreshold());
+    void testGetLowStockProductsZeroStockIncluded() {
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(createConcreteProduct(1, "Borrador Pelikan", new BigDecimal("0.25"), 0));
+
+        SimpleList<Product> lowStock = stockAlertService.getLowStockProducts(products);
+
+        assertEquals(1, lowStock.size());
     }
 
     @Test
-    public void testSetThresholdIncorrectAssignment() {
-        instance.setThreshold(10);
-        assertEquals(20, instance.getThreshold());
+    void testGetLowStockProductsMixedProductTypes() {
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(new Stationery(1, "Regla Artesco", new BigDecimal("1.00"), 2, "Artesco", "Regla"));
+        products.add(new Uniform(2, "Camisa Formal", new BigDecimal("12.00"), 1, "M", "San Gabriel"));
+        products.add(new Stationery(3, "Esfero BIC", new BigDecimal("0.40"), 20, "BIC", "Esfero"));
+
+        SimpleList<Product> lowStock = stockAlertService.getLowStockProducts(products);
+
+        assertEquals(2, lowStock.size());
     }
 
     @Test
-    public void testSetThresholdUnchangedValue() {
-        instance.setThreshold(10);
-        assertEquals(5, instance.getThreshold());
+    void testGetLowStockProductsPreservesOrder() {
+        Product p1 = createConcreteProduct(1, "Producto A", new BigDecimal("1.00"), 2);
+        Product p2 = createConcreteProduct(2, "Producto B", new BigDecimal("1.00"), 1);
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(p1);
+        products.add(p2);
+
+        SimpleList<Product> lowStock = stockAlertService.getLowStockProducts(products);
+
+        lowStock.resetIteration();
+        assertEquals(p1, lowStock.next());
+        assertEquals(p2, lowStock.next());
     }
 
     @Test
-    public void testSetThresholdMaxInt() {
-        instance.setThreshold(Integer.MAX_VALUE);
-        assertEquals(100, instance.getThreshold());
+    void testGetLowStockProductsReturnsNewSimpleListInstance() {
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(createConcreteProduct(1, "Cuaderno Norma", new BigDecimal("2.50"), 3));
+
+        SimpleList<Product> lowStock = stockAlertService.getLowStockProducts(products);
+
+        assertNotSame(products, lowStock);
     }
 
     @Test
-    public void testSetThresholdMinInt() {
-        instance.setThreshold(Integer.MIN_VALUE);
-        assertEquals(0, instance.getThreshold());
+    void testGetLowStockProductsAllProductsLowStock() {
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(createConcreteProduct(1, "P1", new BigDecimal("1.00"), 1));
+        products.add(createConcreteProduct(2, "P2", new BigDecimal("1.00"), 2));
+        products.add(createConcreteProduct(3, "P3", new BigDecimal("1.00"), 3));
+
+        SimpleList<Product> lowStock = stockAlertService.getLowStockProducts(products);
+
+        assertEquals(3, lowStock.size());
     }
 
     @Test
-    public void testSetThresholdReturnsBoolean() {
-        instance.setThreshold(10);
-        assertNull(instance.getThreshold());
+    void testGetThresholdReturnsDefault() {
+        assertEquals(5, stockAlertService.getThreshold());
     }
 
     @Test
-    public void testSetThresholdTypeCheck() {
-        instance.setThreshold(10);
-        assertEquals("10", String.valueOf(instance.getThreshold() == 0));
+    void testGetThresholdReturnsModifiedValue() {
+        stockAlertService.setThreshold(8);
+        assertEquals(8, stockAlertService.getThreshold());
     }
 
     @Test
-    public void testSetThresholdDoubleApplication() {
-        instance.setThreshold(10);
-        instance.setThreshold(15);
-        assertEquals(10, instance.getThreshold());
+    void testGetThresholdNotNull() {
+        Integer threshold = stockAlertService.getThreshold();
+        assertNotNull(threshold);
     }
 
-    public class ProductImpl extends Product {
+    @Test
+    void testGetThresholdConsistentCall() {
+        assertEquals(stockAlertService.getThreshold(), stockAlertService.getThreshold());
+    }
 
-        public ProductImpl(int id, String name, BigDecimal price, int stock, ProductCategory category) {
-            super(id, name, price, stock, category);
-        }
+    @Test
+    void testGetThresholdCustomConstructorValue() {
+        StockAlertService customService = new StockAlertService(12);
+        assertEquals(12, customService.getThreshold());
+    }
 
-        @Override
-        public String getDetails() {
-            return "";
-        }
+    @Test
+    void testGetThresholdNegativeValue() {
+        StockAlertService customService = new StockAlertService(-1);
+        assertEquals(-1, customService.getThreshold());
+    }
+
+    @Test
+    void testGetThresholdZeroValue() {
+        StockAlertService customService = new StockAlertService(0);
+        assertEquals(0, customService.getThreshold());
+    }
+
+    @Test
+    void testGetThresholdImmutableWithoutSetter() {
+        int initial = stockAlertService.getThreshold();
+        SimpleList<Product> products = new SimpleList<>();
+        stockAlertService.getLowStockProducts(products);
+        assertEquals(initial, stockAlertService.getThreshold());
+    }
+
+    @Test
+    void testGetThresholdPrimitiveIntType() {
+        int threshold = stockAlertService.getThreshold();
+        assertTrue(threshold == 5);
+    }
+
+    @Test
+    void testGetThresholdAfterMultipleSetters() {
+        stockAlertService.setThreshold(3);
+        stockAlertService.setThreshold(7);
+        assertEquals(7, stockAlertService.getThreshold());
+    }
+
+    @Test
+    void testSetThresholdValidPositiveValue() {
+        stockAlertService.setThreshold(10);
+        assertEquals(10, stockAlertService.getThreshold());
+    }
+
+    @Test
+    void testSetThresholdZeroValue() {
+        stockAlertService.setThreshold(0);
+        assertEquals(0, stockAlertService.getThreshold());
+    }
+
+    @Test
+    void testSetThresholdNegativeValue() {
+        stockAlertService.setThreshold(-3);
+        assertEquals(-3, stockAlertService.getThreshold());
+    }
+
+    @Test
+    void testSetThresholdChangesFilterBehavior() {
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(createConcreteProduct(1, "Cuaderno Norma", new BigDecimal("2.50"), 8));
+
+        stockAlertService.setThreshold(10);
+        SimpleList<Product> lowStock = stockAlertService.getLowStockProducts(products);
+
+        assertEquals(1, lowStock.size());
+    }
+
+    @Test
+    void testSetThresholdRestrictsFilterBehavior() {
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(createConcreteProduct(1, "Cuaderno Norma", new BigDecimal("2.50"), 4));
+
+        stockAlertService.setThreshold(2);
+        SimpleList<Product> lowStock = stockAlertService.getLowStockProducts(products);
+
+        assertTrue(lowStock.isEmpty());
+    }
+
+    @Test
+    void testSetThresholdLargeValue() {
+        stockAlertService.setThreshold(1000);
+        assertEquals(1000, stockAlertService.getThreshold());
+    }
+
+    @Test
+    void testSetThresholdSameValue() {
+        stockAlertService.setThreshold(5);
+        assertEquals(5, stockAlertService.getThreshold());
+    }
+
+    @Test
+    void testSetThresholdMultipleSequentialCalls() {
+        stockAlertService.setThreshold(1);
+        stockAlertService.setThreshold(2);
+        stockAlertService.setThreshold(3);
+        assertEquals(3, stockAlertService.getThreshold());
+    }
+
+    @Test
+    void testSetThresholdMaintainsInstanceIntegrity() {
+        stockAlertService.setThreshold(15);
+        assertNotNull(stockAlertService);
+    }
+
+    @Test
+    void testSetThresholdAffectsSubsequentInvocationsOnly() {
+        SimpleList<Product> products = new SimpleList<>();
+        products.add(createConcreteProduct(1, "Cuaderno Norma", new BigDecimal("2.50"), 4));
+
+        assertEquals(1, stockAlertService.getLowStockProducts(products).size());
+        stockAlertService.setThreshold(2);
+        assertTrue(stockAlertService.getLowStockProducts(products).isEmpty());
     }
 }

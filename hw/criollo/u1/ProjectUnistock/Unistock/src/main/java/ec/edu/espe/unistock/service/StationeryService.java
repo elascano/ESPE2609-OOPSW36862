@@ -13,8 +13,8 @@ public class StationeryService {
     private final SimpleList<String> registeredBrands;
     private final SimpleList<String> registeredTypes;
 
-    private final String brandsFile = "brands.txt";
-    private final String typesFile = "types.txt";
+    private final String brandsFile = "brands.json";
+    private final String typesFile = "types.json";
 
     public StationeryService() {
         this.registeredBrands = FileHandler.loadList(brandsFile);

@@ -7,3 +7,5 @@ case;frequency;scheduleDate;expDescription;expDate
 6;Biweekly;2026-11-08;Scheduled Biweekly maintenance;2026-11-08
 7;Semiannual;2027-04-24;Scheduled Semiannual maintenance;2027-04-24
 8;Weekly;2026-12-31;Scheduled Weekly maintenance;2026-12-31
+9;Monthly;2027-02-01;Scheduled Monthly maintenance;2027-02-01
+10;Yearly;2028-01-01;Scheduled Yearly maintenance;2028-01-01

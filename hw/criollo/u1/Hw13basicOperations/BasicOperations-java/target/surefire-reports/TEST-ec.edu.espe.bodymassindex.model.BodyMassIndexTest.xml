@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.bodymassindex.model.BodyMassIndexTest" time="0.164" tests="10" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="27"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\Desktop\Dennis\BasicOperations\target\test-classes;D:\Desktop\Dennis\BasicOperations\target\classes;C:\Users\LENOVO\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\LENOVO\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\LENOVO\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\LENOVO\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\LENOVO\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\LENOVO\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\LENOVO\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Pacific/Galapagos"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="27"/>
+    <property name="user.country" value="EC"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-27\bin"/>
+    <property name="sun.java.command" value="C:\Users\LENOVO\AppData\Local\Temp\surefire2971555454922392310\surefirebooter-20261024071812490_3.jar C:\Users\LENOVO\AppData\Local\Temp\surefire2971555454922392310 2026-10-24T07-18-12_260-jvmRun1 surefire-20261024071812490_1tmp surefire_0-20261024071812490_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="ec.edu.espe.bodymassindex.model.BodyMassIndexTest"/>
+    <property name="surefire.test.class.path" value="D:\Desktop\Dennis\BasicOperations\target\test-classes;D:\Desktop\Dennis\BasicOperations\target\classes;C:\Users\LENOVO\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\LENOVO\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\LENOVO\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\LENOVO\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\LENOVO\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\LENOVO\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\LENOVO\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\LENOVO"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-09-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-27"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\Desktop\Dennis\BasicOperations"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\LENOVO\AppData\Local\Temp\surefire2971555454922392310\surefirebooter-20261024071812490_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="27+35-2325"/>
+    <property name="user.name" value="LENOVO"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="D:\Downloads\netbeans-31-bin\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\LENOVO\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\LENOVO\AppData\Local\Temp\"/>
+    <property name="java.version" value="27"/>
+    <property name="user.dir" value="D:\Desktop\Dennis\BasicOperations"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-27\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\LENOVO\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin;C:\Users\LENOVO\AppData\Local\Microsoft\WindowsApps;C:\Users\LENOVO\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\LENOVO\AppData\Roaming\npm;C:\Users\LENOVO\AppData\Local\Python\bin;C:\Users\LENOVO\AppData\Local\Programs\Microsoft VS Code\bin\copilot-shim;D:\Downloads\netbeans-31-bin\netbeans\bin\;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="27+35-2325"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="71.0"/>
+  </properties>
+  <testcase name="testBoundaryOverweightToObesity" classname="ec.edu.espe.bodymassindex.model.BodyMassIndexTest" time="0.053">
+    <system-out><![CDATA[classify - strong 3 (30.0)
+]]></system-out>
+  </testcase>
+  <testcase name="testCalculateBmiWithErrors" classname="ec.edu.espe.bodymassindex.model.BodyMassIndexTest" time="0.003">
+    <system-out><![CDATA[calculateBmi - with errors
+]]></system-out>
+  </testcase>
+  <testcase name="testCalculateBmiNormalWeight" classname="ec.edu.espe.bodymassindex.model.BodyMassIndexTest" time="0.003">
+    <system-out><![CDATA[calculateBmi - good 1
+]]></system-out>
+  </testcase>
+  <testcase name="testCalculateBmiOverweight" classname="ec.edu.espe.bodymassindex.model.BodyMassIndexTest" time="0.003">
+    <system-out><![CDATA[calculateBmi - good 2
+]]></system-out>
+  </testcase>
+  <testcase name="testBoundaryUnderweightToNormal" classname="ec.edu.espe.bodymassindex.model.BodyMassIndexTest" time="0.003">
+    <system-out><![CDATA[classify - strong 1 (18.5)
+]]></system-out>
+  </testcase>
+  <testcase name="testHeightZero" classname="ec.edu.espe.bodymassindex.model.BodyMassIndexTest" time="0.007">
+    <system-out><![CDATA[calculateBmi - bad 2 (height = 0)
+]]></system-out>
+  </testcase>
+  <testcase name="testBoundaryNormalToOverweight" classname="ec.edu.espe.bodymassindex.model.BodyMassIndexTest" time="0.003">
+    <system-out><![CDATA[classify - strong 2 (25.0)
+]]></system-out>
+  </testcase>
+  <testcase name="testNegativeWeight" classname="ec.edu.espe.bodymassindex.model.BodyMassIndexTest" time="0.004">
+    <system-out><![CDATA[calculateBmi - bad 3 (negative weight)
+]]></system-out>
+  </testcase>
+  <testcase name="testCalculateBmiUnderweight" classname="ec.edu.espe.bodymassindex.model.BodyMassIndexTest" time="0.003">
+    <system-out><![CDATA[calculateBmi - good 3
+]]></system-out>
+  </testcase>
+  <testcase name="testWeightZero" classname="ec.edu.espe.bodymassindex.model.BodyMassIndexTest" time="0.005">
+    <system-out><![CDATA[calculateBmi - bad 1 (weight = 0)
+]]></system-out>
+  </testcase>
+</testsuite>

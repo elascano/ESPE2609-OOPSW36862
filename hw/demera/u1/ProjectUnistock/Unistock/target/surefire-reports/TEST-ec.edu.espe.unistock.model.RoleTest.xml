@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.unistock.model.RoleTest" time="0.385" tests="60" errors="4" skipped="0" failures="43">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.unistock.model.RoleTest" time="0.3" tests="60" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="27"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="java.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\PC\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,10 +15,10 @@
     <property name="user.country" value="MX"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-27.0.1.0.3\bin"/>
-    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire7431621162146911301\surefirebooter-20261025164226767_3.jar C:\Users\PC\AppData\Local\Temp\surefire7431621162146911301 2026-10-25T16-42-26_588-jvmRun1 surefire-20261025164226767_1tmp surefire_0-20261025164226767_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire5309142337782329734\surefirebooter-20261027150819320_3.jar C:\Users\PC\AppData\Local\Temp\surefire5309142337782329734 2026-10-27T15-08-19_131-jvmRun1 surefire-20261027150819320_1tmp surefire_0-20261027150819320_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="ec.edu.espe.unistock.model.RoleTest"/>
-    <property name="surefire.test.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="surefire.test.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\PC\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\PC"/>
     <property name="user.language" value="es"/>
@@ -26,12 +26,12 @@
     <property name="java.version.date" value="2026-10-25"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-27.0.1.0.3"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock"/>
+    <property name="basedir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire7431621162146911301\surefirebooter-20261025164226767_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire5309142337782329734\surefirebooter-20261027150819320_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="27.0.1.0.3+1-2"/>
@@ -47,7 +47,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\PC\AppData\Local\Temp\"/>
     <property name="java.version" value="27.0.1.0.3"/>
-    <property name="user.dir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock"/>
+    <property name="user.dir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -61,680 +61,64 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="71.0"/>
   </properties>
-  <testcase name="testGetLabelNullLabel" classname="ec.edu.espe.unistock.model.RoleTest" time="0.048">
-    <failure message="expected: &lt;null&gt; but was: &lt;Vendedor&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <Vendedor>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.model.RoleTest.testGetLabelNullLabel(RoleTest.java:165)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageUsersAdminFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.009">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageUsersAdminFalse(RoleTest.java:297)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageProductsSalespersonTrue" classname="ec.edu.espe.unistock.model.RoleTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageProductsSalespersonTrue(RoleTest.java:200)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetLabelNameMatch" classname="ec.edu.espe.unistock.model.RoleTest" time="0.005">
-    <failure message="expected: &lt;ADMINISTRATOR&gt; but was: &lt;Administrador&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <ADMINISTRATOR> but was: <Administrador>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testGetLabelNameMatch(RoleTest.java:180)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageProductsCustomerTrue" classname="ec.edu.espe.unistock.model.RoleTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageProductsCustomerTrue(RoleTest.java:205)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanRegisterSalesDifferentValues" classname="ec.edu.espe.unistock.model.RoleTest" time="0.005">
-    <failure message="expected: not equal but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: not equal but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotEquals.failEqual(AssertNotEquals.java:277)
-	at org.junit.jupiter.api.AssertNotEquals.assertNotEquals(AssertNotEquals.java:263)
-	at org.junit.jupiter.api.AssertNotEquals.assertNotEquals(AssertNotEquals.java:258)
-	at org.junit.jupiter.api.Assertions.assertNotEquals(Assertions.java:2819)
-	at ec.edu.espe.unistock.model.RoleTest.testCanRegisterSalesDifferentValues(RoleTest.java:267)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetLabelAdministratorUpperCase" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003">
-    <failure message="expected: &lt;ADMINISTRADOR&gt; but was: &lt;Administrador&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <ADMINISTRADOR> but was: <Administrador>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testGetLabelAdministratorUpperCase(RoleTest.java:145)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testValuesOrderCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.005">
-    <failure message="array contents differ at index [0], expected: &lt;CUSTOMER&gt; but was: &lt;ADMINISTRATOR&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: array contents differ at index [0], expected: <CUSTOMER> but was: <ADMINISTRATOR>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertArrayEquals.failArraysNotEqual(AssertArrayEquals.java:440)
-	at org.junit.jupiter.api.AssertArrayEquals.assertArrayElementsEqual(AssertArrayEquals.java:389)
-	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:346)
-	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:159)
-	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:155)
-	at org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1456)
-	at ec.edu.espe.unistock.model.RoleTest.testValuesOrderCheck(RoleTest.java:60)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testValueOfLowerCaseName" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003">
-    <error message="No enum constant ec.edu.espe.unistock.model.Role.administrator" type="java.lang.IllegalArgumentException"><![CDATA[java.lang.IllegalArgumentException: No enum constant ec.edu.espe.unistock.model.Role.administrator
-	at java.base/java.lang.Enum.valueOf(Enum.java:293)
-	at ec.edu.espe.unistock.model.Role.valueOf(Role.java:3)
-	at ec.edu.espe.unistock.model.RoleTest.testValueOfLowerCaseName(RoleTest.java:95)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></error>
-  </testcase>
-  <testcase name="testCanRegisterSalesCustomerTrue" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.RoleTest.testCanRegisterSalesCustomerTrue(RoleTest.java:246)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanRegisterSalesTypeCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testCanRegisterSalesTypeCheck(RoleTest.java:277)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetLabelInvertedLabel" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;Administrador&gt; but was: &lt;Vendedor&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Administrador> but was: <Vendedor>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testGetLabelInvertedLabel(RoleTest.java:170)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageProductsAdmin" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003"/>
-  <testcase name="testValuesSingleElementCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.004">
-    <failure message="expected: &lt;1&gt; but was: &lt;3&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1> but was: <3>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.model.RoleTest.testValuesSingleElementCheck(RoleTest.java:49)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageUsersTypeCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageUsersTypeCheck(RoleTest.java:333)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanRegisterSalesSalespersonFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.RoleTest.testCanRegisterSalesSalespersonFalse(RoleTest.java:256)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetLabelSalespersonSimpleName" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;Venta&gt; but was: &lt;Vendedor&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Venta> but was: <Vendedor>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testGetLabelSalespersonSimpleName(RoleTest.java:150)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageProductsInvertedCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageProductsInvertedCheck(RoleTest.java:216)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageUsersSalespersonTrue" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageUsersSalespersonTrue(RoleTest.java:302)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageProductsSalesperson" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
-  <testcase name="testValuesFirstElementCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;SALESPERSON&gt; but was: &lt;ADMINISTRATOR&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <SALESPERSON> but was: <ADMINISTRATOR>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testValuesFirstElementCheck(RoleTest.java:75)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageUsersSalesperson" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
-  <testcase name="testValueOfNullArgument" classname="ec.edu.espe.unistock.model.RoleTest" time="0.005">
-    <failure message="Unexpected exception thrown: java.lang.NullPointerException: Name is null" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Name is null
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
-	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3228)
-	at ec.edu.espe.unistock.model.RoleTest.testValueOfNullArgument(RoleTest.java:105)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-Caused by: java.lang.NullPointerException: Name is null
-	at java.base/java.lang.Enum.valueOf(Enum.java:291)
-	at ec.edu.espe.unistock.model.Role.valueOf(Role.java:3)
-	at ec.edu.espe.unistock.model.RoleTest.lambda$testValueOfNullArgument$0(RoleTest.java:105)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
-	... 6 more
-]]></failure>
-  </testcase>
-  <testcase name="testCanRegisterSalesSalesperson" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
-  <testcase name="testValueOfWhitespaceName" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <error message="No enum constant ec.edu.espe.unistock.model.Role. ADMINISTRATOR " type="java.lang.IllegalArgumentException"><![CDATA[java.lang.IllegalArgumentException: No enum constant ec.edu.espe.unistock.model.Role. ADMINISTRATOR 
-	at java.base/java.lang.Enum.valueOf(Enum.java:293)
-	at ec.edu.espe.unistock.model.Role.valueOf(Role.java:3)
-	at ec.edu.espe.unistock.model.RoleTest.testValueOfWhitespaceName(RoleTest.java:120)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></error>
-  </testcase>
-  <testcase name="testValueOfAdministratorConstant" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
-  <testcase name="testCanManageUsersCustomerTrue" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageUsersCustomerTrue(RoleTest.java:307)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testValueOfInvalidName" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003">
-    <failure message="Unexpected exception thrown: java.lang.IllegalArgumentException: No enum constant ec.edu.espe.unistock.model.Role.INVALID_ROLE" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.IllegalArgumentException: No enum constant ec.edu.espe.unistock.model.Role.INVALID_ROLE
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
-	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3228)
-	at ec.edu.espe.unistock.model.RoleTest.testValueOfInvalidName(RoleTest.java:100)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-Caused by: java.lang.IllegalArgumentException: No enum constant ec.edu.espe.unistock.model.Role.INVALID_ROLE
-	at java.base/java.lang.Enum.valueOf(Enum.java:293)
-	at ec.edu.espe.unistock.model.Role.valueOf(Role.java:3)
-	at ec.edu.espe.unistock.model.RoleTest.lambda$testValueOfInvalidName$0(RoleTest.java:100)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
-	... 6 more
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageUsersSameValues" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageUsersSameValues(RoleTest.java:318)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageProductsTypeCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageProductsTypeCheck(RoleTest.java:231)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanRegisterSalesBothFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.RoleTest.testCanRegisterSalesBothFalse(RoleTest.java:272)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetLabelLengthCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;5&gt; but was: &lt;13&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <5> but was: <13>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.model.RoleTest.testGetLabelLengthCheck(RoleTest.java:175)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanRegisterSalesXorCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.RoleTest.testCanRegisterSalesXorCheck(RoleTest.java:282)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageUsersBothFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageUsersBothFalse(RoleTest.java:328)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageProductsNullCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003">
-    <failure message="Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke &quot;ec.edu.espe.unistock.model.Role.canManageProducts()&quot; because &quot;role&quot; is null" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Role.canManageProducts()" because "role" is null
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
-	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3228)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageProductsNullCheck(RoleTest.java:211)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Role.canManageProducts()" because "role" is null
-	at ec.edu.espe.unistock.model.RoleTest.lambda$testCanManageProductsNullCheck$0(RoleTest.java:211)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
-	... 6 more
-]]></failure>
-  </testcase>
-  <testcase name="testCanRegisterSalesAdminFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.RoleTest.testCanRegisterSalesAdminFalse(RoleTest.java:251)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testValuesEmptyArrayCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001">
-    <failure message="expected: &lt;0&gt; but was: &lt;3&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0> but was: <3>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.model.RoleTest.testValuesEmptyArrayCheck(RoleTest.java:44)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testValuesTypeCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.RoleTest.testValuesTypeCheck(RoleTest.java:70)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testValuesExcessiveLengthCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.RoleTest.testValuesExcessiveLengthCheck(RoleTest.java:65)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testValueOfCrossedValueCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;SALESPERSON&gt; but was: &lt;ADMINISTRATOR&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <SALESPERSON> but was: <ADMINISTRATOR>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testValueOfCrossedValueCheck(RoleTest.java:115)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanRegisterSalesAdmin" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
-  <testcase name="testCanRegisterSalesNullRole" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke &quot;ec.edu.espe.unistock.model.Role.canRegisterSales()&quot; because &quot;role&quot; is null" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Role.canRegisterSales()" because "role" is null
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
-	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3228)
-	at ec.edu.espe.unistock.model.RoleTest.testCanRegisterSalesNullRole(RoleTest.java:262)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Role.canRegisterSales()" because "role" is null
-	at ec.edu.espe.unistock.model.RoleTest.lambda$testCanRegisterSalesNullRole$0(RoleTest.java:262)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
-	... 6 more
-]]></failure>
-  </testcase>
-  <testcase name="testValueOfSalespersonConstant" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
-  <testcase name="testValuesNullCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;null&gt; but was: &lt;[ADMINISTRATOR, SALESPERSON, CUSTOMER]&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <[ADMINISTRATOR, SALESPERSON, CUSTOMER]>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.model.RoleTest.testValuesNullCheck(RoleTest.java:54)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testValuesLength" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
-  <testcase name="testGetLabelSalespersonLabel" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
-  <testcase name="testValueOfNullReturnCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001">
-    <failure message="expected: &lt;null&gt; but was: &lt;SALESPERSON&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <SALESPERSON>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.model.RoleTest.testValueOfNullReturnCheck(RoleTest.java:125)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testValueOfPartialName" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <error message="No enum constant ec.edu.espe.unistock.model.Role.CUST" type="java.lang.IllegalArgumentException"><![CDATA[java.lang.IllegalArgumentException: No enum constant ec.edu.espe.unistock.model.Role.CUST
-	at java.base/java.lang.Enum.valueOf(Enum.java:293)
-	at ec.edu.espe.unistock.model.Role.valueOf(Role.java:3)
-	at ec.edu.espe.unistock.model.RoleTest.testValueOfPartialName(RoleTest.java:130)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></error>
-  </testcase>
-  <testcase name="testGetLabelEmptyLabel" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;&gt; but was: &lt;Administrador&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <> but was: <Administrador>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testGetLabelEmptyLabel(RoleTest.java:160)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageUsersBothTrue" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageUsersBothTrue(RoleTest.java:323)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageProductsBothFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003"/>
-  <testcase name="testValuesContainsEnumConstants" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
-  <testcase name="testGetLabelCustomerLabel" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;Usuario&gt; but was: &lt;Cliente&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Usuario> but was: <Cliente>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testGetLabelCustomerLabel(RoleTest.java:155)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testValuesSecondElementCheck" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <failure message="expected: &lt;CUSTOMER&gt; but was: &lt;SALESPERSON&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <CUSTOMER> but was: <SALESPERSON>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.RoleTest.testValuesSecondElementCheck(RoleTest.java:80)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageProductsBothTrue" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageProductsBothTrue(RoleTest.java:221)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageUsersNullRole" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003">
-    <failure message="Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke &quot;ec.edu.espe.unistock.model.Role.canManageUsers()&quot; because &quot;role&quot; is null" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Role.canManageUsers()" because "role" is null
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:75)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:58)
-	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3228)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageUsersNullRole(RoleTest.java:313)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Role.canManageUsers()" because "role" is null
-	at ec.edu.espe.unistock.model.RoleTest.lambda$testCanManageUsersNullRole$0(RoleTest.java:313)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:71)
-	... 6 more
-]]></failure>
-  </testcase>
-  <testcase name="testValueOfEmptyString" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002">
-    <error message="No enum constant ec.edu.espe.unistock.model.Role." type="java.lang.IllegalArgumentException"><![CDATA[java.lang.IllegalArgumentException: No enum constant ec.edu.espe.unistock.model.Role.
-	at java.base/java.lang.Enum.valueOf(Enum.java:293)
-	at ec.edu.espe.unistock.model.Role.valueOf(Role.java:3)
-	at ec.edu.espe.unistock.model.RoleTest.testValueOfEmptyString(RoleTest.java:110)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></error>
-  </testcase>
-  <testcase name="testGetLabelAdministratorLabel" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
-  <testcase name="testCanManageProductsAdminFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.RoleTest.testCanManageProductsAdminFalse(RoleTest.java:195)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testCanManageUsersAdmin" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testCanManageUsersSalespersonFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.037"/>
+  <testcase name="testValueOfConsistency" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003"/>
+  <testcase name="testCanManageUsersAdministratorTrue" classname="ec.edu.espe.unistock.model.RoleTest" time="0.004"/>
+  <testcase name="testValueOfWithSpacesThrowsException" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003"/>
+  <testcase name="testValuesElementsAreNotNull" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003"/>
+  <testcase name="testCanManageUsersSalespersonAndCustomerEqual" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testValueOfSalesperson" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testCanRegisterSalesAdministratorTrue" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003"/>
+  <testcase name="testCanRegisterSalesConsistencyCustomer" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testGetLabelAdministrator" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testCanManageProductsConsistencyCustomer" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testValueOfLabelNameThrowsException" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003"/>
+  <testcase name="testCanManageUsersPermissionCount" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testCanRegisterSalesMultipleInvocations" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testCanManageProductsMultipleInvocations" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testValueOfReturnsSameInstance" classname="ec.edu.espe.unistock.model.RoleTest" time="0.004"/>
+  <testcase name="testCanRegisterSalesCustomerDifferentFromAdmin" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testCanManageProductsSalespersonFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testCanManageProductsOnlyAdministrator" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testCanRegisterSalesCustomerFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testValuesMatchesEnumCount" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testValueOfAdministrator" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testCanManageUsersConsistencySalesperson" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testValuesReturnsNewArrayInstance" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testCanRegisterSalesAdminAndSalespersonEqual" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testGetLabelNotEmptySalesperson" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testValuesCanBeIterated" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testGetLabelNotEmptyAdministrator" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testGetLabelConsistency" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testCanManageUsersConsistencyCustomer" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testGetLabelNotNullSalesperson" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testGetLabelNotEmptyCustomer" classname="ec.edu.espe.unistock.model.RoleTest" time="0.004"/>
+  <testcase name="testCanManageUsersMultipleInvocations" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testGetLabelNotNullCustomer" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testValuesOrderIsPreserved" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testGetLabelCustomer" classname="ec.edu.espe.unistock.model.RoleTest" time="0.003"/>
+  <testcase name="testCanManageProductsAdministratorTrue" classname="ec.edu.espe.unistock.model.RoleTest" time="0.004"/>
+  <testcase name="testValuesContainsCustomer" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testCanManageProductsConsistencySalesperson" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testCanRegisterSalesPermissionCount" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testValueOfInvalidNameThrowsException" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testCanManageProductsNonAdminRolesAreFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testGetLabelSalesperson" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testCanRegisterSalesSalespersonTrue" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testValueOfNullThrowsException" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testCanManageUsersOnlyAdministrator" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testCanRegisterSalesConsistencyAdministrator" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testValuesLength" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testValueOfLowerCaseThrowsException" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testCanManageProductsBooleanReturn" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testValuesContainsAdministrator" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testCanManageUsersCustomerFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testCanManageUsersConsistencyAdministrator" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testCanRegisterSalesConsistencySalesperson" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testCanManageProductsConsistencyAdministrator" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testValuesArrayNotNull" classname="ec.edu.espe.unistock.model.RoleTest" time="0.002"/>
+  <testcase name="testValueOfCustomer" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testCanManageProductsCustomerFalse" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testGetLabelNotNullAdministrator" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
+  <testcase name="testValuesContainsSalesperson" classname="ec.edu.espe.unistock.model.RoleTest" time="0.001"/>
 </testsuite>
