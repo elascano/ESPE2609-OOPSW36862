@@ -1,685 +1,723 @@
 package ec.edu.espe.unistock.model;
 
-/**
- *
- * @author Dennis Criollo, Leslye Cuichan, Francisco Demera, Byte & Fabric Devs, @ESPE
- */
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ProductTest {
 
-    private Product instance;
+    private Product testProduct;
 
-    public ProductTest() {
-    }
-
-    @BeforeAll
-    public static void setUpClass() {
-    }
-
-    @AfterAll
-    public static void tearDownClass() {
+    private Product createConcreteProduct(int id, String name, BigDecimal price, int stock, ProductCategory category) {
+        return new Product(id, name, price, stock, category) {
+            @Override
+            public String getDetails() {
+                return "Detalles De Prueba";
+            }
+        };
     }
 
     @BeforeEach
-    public void setUp() {
-        instance = new ProductImpl(1, "Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, ProductCategory.STATIONERY);
+    void setUp() {
+        testProduct = createConcreteProduct(1, "Cuaderno Norma", new BigDecimal("2.50"), 10, ProductCategory.STATIONERY);
     }
 
-    @AfterEach
-    public void tearDown() {
-        instance = null;
-    }
-
-    @Test
-    public void testHasStockExactQuantity() {
-        assertTrue(instance.hasStock(10));
-    }
-
-    @Test
-    public void testHasStockLowerQuantity() {
-        assertTrue(instance.hasStock(5));
-    }
-
-    @Test
-    public void testHasStockGreaterQuantity() {
-        assertFalse(instance.hasStock(15));
-    }
-
-    @Test
-    public void testHasStockZeroQuantity() {
-        assertFalse(instance.hasStock(0));
-    }
-
-    @Test
-    public void testHasStockNegativeQuantity() {
-        assertFalse(instance.hasStock(-5));
-    }
-
-    @Test
-    public void testHasStockExcessiveQuantity() {
-        assertTrue(instance.hasStock(1000));
-    }
-
     @Test
-    public void testHasStockOneUnit() {
-        assertFalse(instance.hasStock(1));
+    void testConstructorValidParameters() {
+        Product p = createConcreteProduct(101, "Lapiz FaberCastell", new BigDecimal("0.50"), 20, ProductCategory.STATIONERY);
+        assertNotNull(p);
     }
 
     @Test
-    public void testHasStockMaxInt() {
-        assertTrue(instance.hasStock(Integer.MAX_VALUE));
+    void testConstructorNullNameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> createConcreteProduct(1, null, new BigDecimal("1.00"), 5, ProductCategory.STATIONERY));
     }
 
     @Test
-    public void testHasStockBoundaryMinusOne() {
-        assertFalse(instance.hasStock(9));
+    void testConstructorBlankNameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> createConcreteProduct(1, "   ", new BigDecimal("1.00"), 5, ProductCategory.STATIONERY));
     }
 
     @Test
-    public void testHasStockBoundaryPlusOne() {
-        assertTrue(instance.hasStock(11));
+    void testConstructorNullPriceThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> createConcreteProduct(1, "Cuaderno", null, 5, ProductCategory.STATIONERY));
     }
 
     @Test
-    public void testDecreaseStockValidQuantity() {
-        instance.decreaseStock(3);
-        assertEquals(7, instance.getStock());
+    void testConstructorNegativePriceThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> createConcreteProduct(1, "Cuaderno", new BigDecimal("-0.01"), 5, ProductCategory.STATIONERY));
     }
 
     @Test
-    public void testDecreaseStockAllStock() {
-        instance.decreaseStock(10);
-        assertEquals(0, instance.getStock());
+    void testConstructorNegativeStockThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> createConcreteProduct(1, "Cuaderno", new BigDecimal("1.00"), -1, ProductCategory.STATIONERY));
     }
 
     @Test
-    public void testDecreaseStockZeroQuantity() {
-        instance.decreaseStock(0);
-        assertEquals(5, instance.getStock());
+    void testConstructorZeroPriceAllowed() {
+        Product p = createConcreteProduct(1, "Muestra Muestra", BigDecimal.ZERO, 5, ProductCategory.STATIONERY);
+        assertEquals(BigDecimal.ZERO, p.getPrice());
     }
 
     @Test
-    public void testDecreaseStockNegativeQuantity() {
-        instance.decreaseStock(-2);
-        assertEquals(8, instance.getStock());
+    void testConstructorZeroStockAllowed() {
+        Product p = createConcreteProduct(1, "Cuaderno Agotado", new BigDecimal("1.00"), 0, ProductCategory.STATIONERY);
+        assertEquals(0, p.getStock());
     }
 
     @Test
-    public void testDecreaseStockExceedingQuantity() {
-        instance.decreaseStock(15);
-        assertEquals(0, instance.getStock());
+    void testConstructorTrimsName() {
+        Product p = createConcreteProduct(1, "  Buzo Deportivo  ", new BigDecimal("15.00"), 5, ProductCategory.UNIFORM);
+        assertEquals("Buzo Deportivo", p.getName());
     }
 
     @Test
-    public void testDecreaseStockOneUnit() {
-        instance.decreaseStock(1);
-        assertEquals(10, instance.getStock());
+    void testConstructorAssignsCategoryCorrectly() {
+        Product p = createConcreteProduct(1, "Camisa Formal", new BigDecimal("12.00"), 5, ProductCategory.UNIFORM);
+        assertEquals(ProductCategory.UNIFORM, p.getCategory());
     }
 
     @Test
-    public void testDecreaseStockPartialDecrease() {
-        instance.decreaseStock(4);
-        assertEquals(4, instance.getStock());
+    void testHasStockTrueWhenStockIsGreater() {
+        assertTrue(testProduct.hasStock(5));
     }
 
     @Test
-    public void testDecreaseStockDoubleDecrease() {
-        instance.decreaseStock(2);
-        instance.decreaseStock(2);
-        assertEquals(10, instance.getStock());
+    void testHasStockTrueWhenStockIsEqual() {
+        assertTrue(testProduct.hasStock(10));
     }
 
     @Test
-    public void testDecreaseStockNegativeAmountCheck() {
-        instance.decreaseStock(-10);
-        assertEquals(0, instance.getStock());
+    void testHasStockFalseWhenStockIsLess() {
+        assertFalse(testProduct.hasStock(11));
     }
 
     @Test
-    public void testDecreaseStockBoundaryCheck() {
-        instance.decreaseStock(9);
-        assertEquals(2, instance.getStock());
+    void testHasStockTrueForZeroQuantity() {
+        assertTrue(testProduct.hasStock(0));
     }
 
     @Test
-    public void testIncreaseStockValidQuantity() {
-        instance.increaseStock(5);
-        assertEquals(15, instance.getStock());
+    void testHasStockFalseForLargeQuantity() {
+        assertFalse(testProduct.hasStock(1000));
     }
 
     @Test
-    public void testIncreaseStockZeroQuantity() {
-        instance.increaseStock(0);
-        assertEquals(10, instance.getStock());
+    void testHasStockWhenCurrentStockIsZero() {
+        Product p = createConcreteProduct(2, "Borrador Pelikan", new BigDecimal("0.25"), 0, ProductCategory.STATIONERY);
+        assertFalse(p.hasStock(1));
     }
 
     @Test
-    public void testIncreaseStockNegativeQuantity() {
-        instance.increaseStock(-5);
-        assertEquals(15, instance.getStock());
+    void testHasStockTrueForZeroQuantityWhenStockIsZero() {
+        Product p = createConcreteProduct(2, "Borrador Pelikan", new BigDecimal("0.25"), 0, ProductCategory.STATIONERY);
+        assertTrue(p.hasStock(0));
     }
 
     @Test
-    public void testIncreaseStockLargeQuantity() {
-        instance.increaseStock(100);
-        assertEquals(10, instance.getStock());
+    void testHasStockNegativeQuantityAlwaysTrue() {
+        assertTrue(testProduct.hasStock(-5));
     }
 
     @Test
-    public void testIncreaseStockSingleUnit() {
-        instance.increaseStock(1);
-        assertEquals(10, instance.getStock());
+    void testHasStockOneUnit() {
+        assertTrue(testProduct.hasStock(1));
     }
 
     @Test
-    public void testIncreaseStockMultipleIncrements() {
-        instance.increaseStock(5);
-        instance.increaseStock(5);
-        assertEquals(15, instance.getStock());
+    void testHasStockExactBoundary() {
+        assertTrue(testProduct.hasStock(testProduct.getStock()));
     }
 
     @Test
-    public void testIncreaseStockBoundaryPlusTen() {
-        instance.increaseStock(10);
-        assertEquals(30, instance.getStock());
+    void testDecreaseStockValidQuantity() {
+        testProduct.decreaseStock(3);
+        assertEquals(7, testProduct.getStock());
     }
 
     @Test
-    public void testIncreaseStockNegativeValueNoChange() {
-        instance.increaseStock(-1);
-        assertEquals(11, instance.getStock());
+    void testDecreaseStockExactStock() {
+        testProduct.decreaseStock(10);
+        assertEquals(0, testProduct.getStock());
     }
 
     @Test
-    public void testIncreaseStockMaxLimitCheck() {
-        instance.increaseStock(50);
-        assertEquals(50, instance.getStock());
+    void testDecreaseStockInsufficientStockThrowsException() {
+        assertThrows(IllegalStateException.class, () -> testProduct.decreaseStock(11));
     }
 
     @Test
-    public void testIncreaseStockFractionalConcept() {
-        instance.increaseStock(2);
-        assertEquals(10, instance.getStock());
+    void testDecreaseStockZeroQuantityDoesNotChangeStock() {
+        testProduct.decreaseStock(0);
+        assertEquals(10, testProduct.getStock());
     }
 
     @Test
-    public void testGetDetailsImplementationReturn() {
-        assertNotNull(instance.getDetails());
+    void testDecreaseStockMultipleTimes() {
+        testProduct.decreaseStock(2);
+        testProduct.decreaseStock(3);
+        assertEquals(5, testProduct.getStock());
     }
 
     @Test
-    public void testGetDetailsTypeCheck() {
-        assertTrue(instance.getDetails() instanceof String);
+    void testDecreaseStockWhenStockIsZeroThrowsException() {
+        Product p = createConcreteProduct(2, "Regla Artesco", new BigDecimal("0.80"), 0, ProductCategory.STATIONERY);
+        assertThrows(IllegalStateException.class, () -> p.decreaseStock(1));
     }
 
     @Test
-    public void testGetDetailsExpectedString() {
-        assertEquals("Detalles de Producto", instance.getDetails());
+    void testDecreaseStockOneUnit() {
+        testProduct.decreaseStock(1);
+        assertEquals(9, testProduct.getStock());
     }
 
     @Test
-    public void testGetDetailsNotEmpty() {
-        assertFalse(instance.getDetails().isEmpty());
+    void testDecreaseStockExceptionMessageContainsProductName() {
+        IllegalStateException exception = assertThrows(IllegalStateException.class, () -> testProduct.decreaseStock(100));
+        assertTrue(exception.getMessage().contains("Cuaderno Norma"));
     }
 
     @Test
-    public void testGetDetailsLengthCheck() {
-        assertEquals(10, instance.getDetails().length());
+    void testDecreaseStockToZeroThenFail() {
+        testProduct.decreaseStock(10);
+        assertThrows(IllegalStateException.class, () -> testProduct.decreaseStock(1));
     }
 
     @Test
-    public void testGetDetailsUpperCheck() {
-        assertEquals("DETALLES", instance.getDetails());
+    void testDecreaseStockSequentialValidCalls() {
+        testProduct.decreaseStock(1);
+        testProduct.decreaseStock(1);
+        testProduct.decreaseStock(1);
+        assertEquals(7, testProduct.getStock());
     }
 
     @Test
-    public void testGetDetailsNullCheck() {
-        assertNull(instance.getDetails());
+    void testIncreaseStockValidQuantity() {
+        testProduct.increaseStock(5);
+        assertEquals(15, testProduct.getStock());
     }
 
     @Test
-    public void testGetDetailsFormatCheck() {
-        assertEquals("ID: 1", instance.getDetails());
+    void testIncreaseStockZeroQuantityThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> testProduct.increaseStock(0));
     }
 
     @Test
-    public void testGetDetailsPrefixCheck() {
-        assertTrue(instance.getDetails().startsWith("Product"));
+    void testIncreaseStockNegativeQuantityThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> testProduct.increaseStock(-5));
     }
 
     @Test
-    public void testGetDetailsSuffixCheck() {
-        assertTrue(instance.getDetails().endsWith("End"));
+    void testIncreaseStockFromZeroStock() {
+        Product p = createConcreteProduct(2, "Pluma Pilot", new BigDecimal("1.20"), 0, ProductCategory.STATIONERY);
+        p.increaseStock(10);
+        assertEquals(10, p.getStock());
     }
 
     @Test
-    public void testGetIdValidId() {
-        assertEquals(1, instance.getId());
+    void testIncreaseStockMultipleTimes() {
+        testProduct.increaseStock(2);
+        testProduct.increaseStock(3);
+        assertEquals(15, testProduct.getStock());
     }
 
     @Test
-    public void testGetIdPositiveCheck() {
-        assertTrue(instance.getId() > 0);
+    void testIncreaseStockLargeQuantity() {
+        testProduct.increaseStock(500);
+        assertEquals(510, testProduct.getStock());
     }
 
     @Test
-    public void testGetIdZero() {
-        assertEquals(0, instance.getId());
+    void testIncreaseStockOneUnit() {
+        testProduct.increaseStock(1);
+        assertEquals(11, testProduct.getStock());
     }
 
     @Test
-    public void testGetIdNegative() {
-        assertEquals(-1, instance.getId());
+    void testIncreaseStockThenDecreaseStock() {
+        testProduct.increaseStock(10);
+        testProduct.decreaseStock(5);
+        assertEquals(15, testProduct.getStock());
     }
 
     @Test
-    public void testGetIdIncorrectValue() {
-        assertEquals(999, instance.getId());
+    void testIncreaseStockExceptionMessage() {
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> testProduct.increaseStock(0));
+        assertTrue(exception.getMessage().contains("mayor a cero"));
     }
 
     @Test
-    public void testGetIdMaxInt() {
-        assertEquals(Integer.MAX_VALUE, instance.getId());
+    void testIncreaseStockMaintainsProductProperties() {
+        testProduct.increaseStock(5);
+        assertEquals("Cuaderno Norma", testProduct.getName());
+        assertEquals(new BigDecimal("2.50"), testProduct.getPrice());
     }
 
     @Test
-    public void testGetIdStringComparison() {
-        assertNotEquals(1, instance.getId());
+    void testGetIdPositiveNumber() {
+        assertEquals(1, testProduct.getId());
     }
 
     @Test
-    public void testGetIdEvenCheck() {
-        assertEquals(0, instance.getId() % 2);
+    void testGetIdZero() {
+        Product p = createConcreteProduct(0, "Marcador BIC", new BigDecimal("0.75"), 5, ProductCategory.STATIONERY);
+        assertEquals(0, p.getId());
     }
 
     @Test
-    public void testGetIdNullCheck() {
-        assertNull(instance.getId());
+    void testGetIdNegativeNumber() {
+        Product p = createConcreteProduct(-5, "Marcador BIC", new BigDecimal("0.75"), 5, ProductCategory.STATIONERY);
+        assertEquals(-5, p.getId());
     }
 
     @Test
-    public void testGetIdRangeCheck() {
-        assertTrue(instance.getId() > 100);
+    void testGetIdLargeValue() {
+        Product p = createConcreteProduct(99999, "Pinturas Crayola", new BigDecimal("3.50"), 5, ProductCategory.STATIONERY);
+        assertEquals(99999, p.getId());
     }
 
     @Test
-    public void testGetNameValidName() {
-        assertEquals("Cuaderno 100 Hojas", instance.getName());
+    void testGetIdImmutable() {
+        int id = testProduct.getId();
+        testProduct.increaseStock(5);
+        assertEquals(id, testProduct.getId());
     }
 
     @Test
-    public void testGetNameNotNull() {
-        assertNotNull(instance.getName());
+    void testGetIdUniquePerProduct() {
+        Product p2 = createConcreteProduct(2, "Cuaderno Norma", new BigDecimal("2.50"), 10, ProductCategory.STATIONERY);
+        assertNotEquals(testProduct.getId(), p2.getId());
     }
 
     @Test
-    public void testGetNameIncorrectName() {
-        assertEquals("Mochila Escolar", instance.getName());
+    void testGetIdConsistentCall() {
+        assertEquals(testProduct.getId(), testProduct.getId());
     }
 
     @Test
-    public void testGetNameEmptyString() {
-        assertEquals("", instance.getName());
+    void testGetIdAfterStockModification() {
+        testProduct.decreaseStock(2);
+        assertEquals(1, testProduct.getId());
     }
 
     @Test
-    public void testGetNameUpperCase() {
-        assertEquals("CUADERNO 100 HOJAS", instance.getName());
+    void testGetIdStationeryCategory() {
+        Product p = createConcreteProduct(45, "Cartulina Artesco", new BigDecimal("0.15"), 100, ProductCategory.STATIONERY);
+        assertEquals(45, p.getId());
     }
 
     @Test
-    public void testGetNameNull() {
-        assertNull(instance.getName());
+    void testGetIdUniformCategory() {
+        Product p = createConcreteProduct(88, "Pantalon Formal", new BigDecimal("18.00"), 12, ProductCategory.UNIFORM);
+        assertEquals(88, p.getId());
     }
 
     @Test
-    public void testGetNameShortName() {
-        assertEquals("Cuaderno", instance.getName());
+    void testGetNameReturnsCorrectName() {
+        assertEquals("Cuaderno Norma", testProduct.getName());
     }
 
     @Test
-    public void testGetNameLengthCheck() {
-        assertEquals(5, instance.getName().length());
+    void testGetNameTrimmedOnCreation() {
+        Product p = createConcreteProduct(2, "   Tijeras PaperMate   ", new BigDecimal("1.50"), 5, ProductCategory.STATIONERY);
+        assertEquals("Tijeras PaperMate", p.getName());
     }
 
     @Test
-    public void testGetNameSubstringCheck() {
-        assertFalse(instance.getName().contains("Cuaderno"));
+    void testGetNameImmutable() {
+        testProduct.increaseStock(2);
+        assertEquals("Cuaderno Norma", testProduct.getName());
     }
 
     @Test
-    public void testGetNameEndWithCheck() {
-        assertTrue(instance.getName().endsWith("Lápiz"));
+    void testGetNameSingleWord() {
+        Product p = createConcreteProduct(2, "Compas", new BigDecimal("2.00"), 5, ProductCategory.STATIONERY);
+        assertEquals("Compas", p.getName());
     }
 
     @Test
-    public void testGetPriceValidPrice() {
-        assertEquals(new BigDecimal("2.50"), instance.getPrice());
+    void testGetNameMultipleWords() {
+        Product p = createConcreteProduct(2, "Juego Geometrico Staedtler", new BigDecimal("4.00"), 5, ProductCategory.STATIONERY);
+        assertEquals("Juego Geometrico Staedtler", p.getName());
     }
 
     @Test
-    public void testGetPriceNotNull() {
-        assertNotNull(instance.getPrice());
+    void testGetNameConsistentCall() {
+        assertEquals(testProduct.getName(), testProduct.getName());
     }
 
     @Test
-    public void testGetPriceWrongValue() {
-        assertEquals(new BigDecimal("10.00"), instance.getPrice());
+    void testGetNameWithNumbers() {
+        Product p = createConcreteProduct(2, "Cuaderno 100 Hojas", new BigDecimal("1.80"), 5, ProductCategory.STATIONERY);
+        assertEquals("Cuaderno 100 Hojas", p.getName());
     }
 
     @Test
-    public void testGetPriceZero() {
-        assertEquals(BigDecimal.ZERO, instance.getPrice());
+    void testGetNameUniformItem() {
+        Product p = createConcreteProduct(2, "Camisa Talla 32", new BigDecimal("10.00"), 5, ProductCategory.UNIFORM);
+        assertEquals("Camisa Talla 32", p.getName());
     }
 
     @Test
-    public void testGetPriceNegative() {
-        assertEquals(new BigDecimal("-2.50"), instance.getPrice());
+    void testGetNameNotNull() {
+        assertNotNull(testProduct.getName());
     }
 
     @Test
-    public void testGetPriceIntegerScale() {
-        assertEquals(new BigDecimal("2.5"), instance.getPrice());
+    void testGetNameNotEmpty() {
+        assertFalse(testProduct.getName().isEmpty());
     }
 
     @Test
-    public void testGetPriceHighPrice() {
-        assertTrue(instance.getPrice().compareTo(new BigDecimal("100.00")) > 0);
+    void testGetPriceReturnsCorrectPrice() {
+        assertEquals(new BigDecimal("2.50"), testProduct.getPrice());
     }
 
     @Test
-    public void testGetPriceOneDollar() {
-        assertEquals(BigDecimal.ONE, instance.getPrice());
+    void testGetPriceZero() {
+        Product p = createConcreteProduct(2, "Gratis", BigDecimal.ZERO, 5, ProductCategory.STATIONERY);
+        assertEquals(BigDecimal.ZERO, p.getPrice());
     }
 
     @Test
-    public void testGetPriceNullCheck() {
-        assertNull(instance.getPrice());
+    void testGetPriceDecimalValue() {
+        Product p = createConcreteProduct(2, "Lapiz", new BigDecimal("0.35"), 5, ProductCategory.STATIONERY);
+        assertEquals(new BigDecimal("0.35"), p.getPrice());
     }
 
     @Test
-    public void testGetPriceExactDouble() {
-        assertEquals(2.50, instance.getPrice());
+    void testGetPriceHighValue() {
+        Product p = createConcreteProduct(2, "Mo chila Cintas", new BigDecimal("45.99"), 5, ProductCategory.STATIONERY);
+        assertEquals(new BigDecimal("45.99"), p.getPrice());
     }
 
     @Test
-    public void testGetStockValidStock() {
-        assertEquals(10, instance.getStock());
+    void testGetPriceImmutable() {
+        testProduct.increaseStock(10);
+        assertEquals(new BigDecimal("2.50"), testProduct.getPrice());
     }
 
     @Test
-    public void testGetStockNonNegative() {
-        assertTrue(instance.getStock() >= 0);
+    void testGetPriceConsistentCall() {
+        assertEquals(testProduct.getPrice(), testProduct.getPrice());
     }
 
     @Test
-    public void testGetStockIncorrectValue() {
-        assertEquals(50, instance.getStock());
+    void testGetPriceNotNull() {
+        assertNotNull(testProduct.getPrice());
     }
 
     @Test
-    public void testGetStockZero() {
-        assertEquals(0, instance.getStock());
+    void testGetPricePrecision() {
+        Product p = createConcreteProduct(2, "Goma", new BigDecimal("0.123"), 5, ProductCategory.STATIONERY);
+        assertEquals(new BigDecimal("0.123"), p.getPrice());
     }
 
     @Test
-    public void testGetStockNegative() {
-        assertEquals(-10, instance.getStock());
+    void testGetPriceUniformCategory() {
+        Product p = createConcreteProduct(2, "Buzo", new BigDecimal("25.00"), 5, ProductCategory.UNIFORM);
+        assertEquals(new BigDecimal("25.00"), p.getPrice());
     }
 
     @Test
-    public void testGetStockMaxInt() {
-        assertEquals(Integer.MAX_VALUE, instance.getStock());
+    void testGetPriceSignumNonNegative() {
+        assertTrue(testProduct.getPrice().signum() >= 0);
     }
 
     @Test
-    public void testGetStockOddCheck() {
-        assertEquals(1, instance.getStock() % 2);
+    void testGetStockInitialValue() {
+        assertEquals(10, testProduct.getStock());
     }
 
     @Test
-    public void testGetStockGreaterThanHundred() {
-        assertTrue(instance.getStock() > 100);
+    void testGetStockAfterIncrease() {
+        testProduct.increaseStock(5);
+        assertEquals(15, testProduct.getStock());
     }
 
     @Test
-    public void testGetStockNullCheck() {
-        assertNull(instance.getStock());
+    void testGetStockAfterDecrease() {
+        testProduct.decreaseStock(4);
+        assertEquals(6, testProduct.getStock());
     }
 
     @Test
-    public void testGetStockDoubleCheck() {
-        assertEquals(10.0, instance.getStock());
+    void testGetStockZero() {
+        Product p = createConcreteProduct(2, "Agotado", new BigDecimal("1.00"), 0, ProductCategory.STATIONERY);
+        assertEquals(0, p.getStock());
     }
 
     @Test
-    public void testGetCategoryValidCategory() {
-        assertEquals(ProductCategory.STATIONERY, instance.getCategory());
+    void testGetStockNeverNegative() {
+        assertTrue(testProduct.getStock() >= 0);
     }
 
     @Test
-    public void testGetCategoryNotNull() {
-        assertNotNull(instance.getCategory());
+    void testGetStockConsistentCall() {
+        assertEquals(testProduct.getStock(), testProduct.getStock());
     }
 
     @Test
-    public void testGetCategoryWrongCategory() {
-        assertEquals(ProductCategory.UNIFORM, instance.getCategory());
+    void testGetStockLargeAmount() {
+        Product p = createConcreteProduct(2, "Grapas", new BigDecimal("1.00"), 5000, ProductCategory.STATIONERY);
+        assertEquals(5000, p.getStock());
     }
 
     @Test
-    public void testGetCategoryNull() {
-        assertNull(instance.getCategory());
+    void testGetStockAfterMultipleModifications() {
+        testProduct.increaseStock(10);
+        testProduct.decreaseStock(5);
+        testProduct.increaseStock(2);
+        assertEquals(17, testProduct.getStock());
     }
 
     @Test
-    public void testGetCategoryNameCheck() {
-        assertEquals("UNIFORM", instance.getCategory().name());
+    void testGetStockReflectsCurrentState() {
+        int initial = testProduct.getStock();
+        testProduct.increaseStock(1);
+        assertNotEquals(initial, testProduct.getStock());
     }
 
     @Test
-    public void testGetCategoryOrdinalCheck() {
-        assertEquals(99, instance.getCategory().ordinal());
+    void testGetStockOne() {
+        Product p = createConcreteProduct(2, "Ultimo", new BigDecimal("1.00"), 1, ProductCategory.STATIONERY);
+        assertEquals(1, p.getStock());
     }
 
     @Test
-    public void testGetCategoryStringComparison() {
-        assertEquals("STATIONERY", instance.getCategory());
+    void testGetCategoryStationery() {
+        assertEquals(ProductCategory.STATIONERY, testProduct.getCategory());
     }
 
     @Test
-    public void testGetCategoryDifferentEnum() {
-        assertNotEquals(ProductCategory.STATIONERY, instance.getCategory());
+    void testGetCategoryUniform() {
+        Product p = createConcreteProduct(2, "Falda", new BigDecimal("15.00"), 5, ProductCategory.UNIFORM);
+        assertEquals(ProductCategory.UNIFORM, p.getCategory());
     }
 
     @Test
-    public void testGetCategoryToStringCheck() {
-        assertEquals("StationeryCategory", instance.getCategory().toString());
+    void testGetCategoryNotNull() {
+        assertNotNull(testProduct.getCategory());
     }
 
     @Test
-    public void testGetCategoryTypeCheck() {
-        assertFalse(instance.getCategory() instanceof ProductCategory);
+    void testGetCategoryImmutable() {
+        testProduct.increaseStock(10);
+        assertEquals(ProductCategory.STATIONERY, testProduct.getCategory());
     }
 
     @Test
-    public void testEqualsSameInstance() {
-        assertTrue(instance.equals(instance));
+    void testGetCategoryConsistentCall() {
+        assertEquals(testProduct.getCategory(), testProduct.getCategory());
     }
 
     @Test
-    public void testEqualsSameProperties() {
-        Product same = new ProductImpl(1, "Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, ProductCategory.STATIONERY);
-        assertTrue(instance.equals(same));
+    void testGetCategoryEnumValue() {
+        Product p = createConcreteProduct(2, "SacaPuntas", new BigDecimal("0.20"), 5, ProductCategory.STATIONERY);
+        assertSame(ProductCategory.STATIONERY, p.getCategory());
     }
 
     @Test
-    public void testEqualsNullObject() {
-        assertTrue(instance.equals(null));
+    void testGetCategoryComparison() {
+        Product p1 = createConcreteProduct(1, "Prod1", new BigDecimal("1.00"), 5, ProductCategory.STATIONERY);
+        Product p2 = createConcreteProduct(2, "Prod2", new BigDecimal("1.00"), 5, ProductCategory.UNIFORM);
+        assertNotEquals(p1.getCategory(), p2.getCategory());
     }
 
     @Test
-    public void testEqualsDifferentClass() {
-        assertTrue(instance.equals("Cadena De Texto"));
+    void testGetCategoryStationeryLabel() {
+        assertEquals(ProductCategory.STATIONERY, testProduct.getCategory());
     }
 
     @Test
-    public void testEqualsDifferentId() {
-        Product differentId = new ProductImpl(2, "Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, ProductCategory.STATIONERY);
-        assertTrue(instance.equals(differentId));
+    void testGetCategoryAfterStockDecrease() {
+        testProduct.decreaseStock(1);
+        assertEquals(ProductCategory.STATIONERY, testProduct.getCategory());
     }
 
     @Test
-    public void testEqualsDifferentName() {
-        Product differentName = new ProductImpl(1, "Otro Nombre", new BigDecimal("2.50"), 10, ProductCategory.STATIONERY);
-        assertFalse(instance.equals(differentName));
+    void testGetCategoryMultipleProducts() {
+        Product p1 = createConcreteProduct(1, "A", new BigDecimal("1.00"), 1, ProductCategory.STATIONERY);
+        Product p2 = createConcreteProduct(2, "B", new BigDecimal("1.00"), 1, ProductCategory.STATIONERY);
+        assertEquals(p1.getCategory(), p2.getCategory());
     }
 
     @Test
-    public void testEqualsDifferentPrice() {
-        Product differentPrice = new ProductImpl(1, "Cuaderno 100 Hojas", new BigDecimal("9.99"), 10, ProductCategory.STATIONERY);
-        assertFalse(instance.equals(differentPrice));
+    void testEqualsSameObjectReturnsTrue() {
+        assertTrue(testProduct.equals(testProduct));
     }
 
     @Test
-    public void testEqualsDifferentStock() {
-        Product differentStock = new ProductImpl(1, "Cuaderno 100 Hojas", new BigDecimal("2.50"), 99, ProductCategory.STATIONERY);
-        assertFalse(instance.equals(differentStock));
+    void testEqualsSameIdReturnsTrue() {
+        Product p2 = createConcreteProduct(1, "Cuaderno Distinto", new BigDecimal("3.00"), 20, ProductCategory.STATIONERY);
+        assertTrue(testProduct.equals(p2));
     }
 
     @Test
-    public void testEqualsDifferentCategory() {
-        Product differentCat = new ProductImpl(1, "Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, ProductCategory.UNIFORM);
-        assertFalse(instance.equals(differentCat));
+    void testEqualsDifferentIdReturnsFalse() {
+        Product p2 = createConcreteProduct(2, "Cuaderno Norma", new BigDecimal("2.50"), 10, ProductCategory.STATIONERY);
+        assertFalse(testProduct.equals(p2));
     }
 
     @Test
-    public void testEqualsSymmetricCheck() {
-        Product dummy = new ProductImpl(5, "A", new BigDecimal("1.00"), 1, ProductCategory.STATIONERY);
-        assertTrue(instance.equals(dummy));
+    void testEqualsNullReturnsFalse() {
+        assertFalse(testProduct.equals(null));
     }
 
     @Test
-    public void testHashCodeSameInstance() {
-        Product same = new ProductImpl(1, "Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, ProductCategory.STATIONERY);
-        assertEquals(instance.hashCode(), same.hashCode());
+    void testEqualsDifferentClassReturnsFalse() {
+        assertFalse(testProduct.equals("Cuaderno Norma"));
     }
 
     @Test
-    public void testHashCodeConsistency() {
-        int initialHash = instance.hashCode();
-        assertEquals(initialHash, instance.hashCode());
+    void testEqualsSymmetric() {
+        Product p2 = createConcreteProduct(1, "Otro", new BigDecimal("1.00"), 5, ProductCategory.UNIFORM);
+        assertTrue(testProduct.equals(p2) && p2.equals(testProduct));
     }
 
     @Test
-    public void testHashCodeZero() {
-        assertEquals(0, instance.hashCode());
+    void testEqualsTransitive() {
+        Product p1 = createConcreteProduct(1, "A", new BigDecimal("1.00"), 5, ProductCategory.STATIONERY);
+        Product p2 = createConcreteProduct(1, "B", new BigDecimal("2.00"), 5, ProductCategory.UNIFORM);
+        Product p3 = createConcreteProduct(1, "C", new BigDecimal("3.00"), 5, ProductCategory.STATIONERY);
+        assertTrue(p1.equals(p2) && p2.equals(p3) && p1.equals(p3));
     }
 
     @Test
-    public void testHashCodeNegative() {
-        assertTrue(instance.hashCode() < 0);
+    void testEqualsConsistent() {
+        Product p2 = createConcreteProduct(1, "A", new BigDecimal("1.00"), 5, ProductCategory.STATIONERY);
+        assertTrue(testProduct.equals(p2));
+        assertTrue(testProduct.equals(p2));
     }
 
     @Test
-    public void testHashCodeDifferentId() {
-        Product other = new ProductImpl(2, "Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, ProductCategory.STATIONERY);
-        assertEquals(instance.hashCode(), other.hashCode());
+    void testEqualsDifferentCategorySameIdReturnsTrue() {
+        Product p2 = createConcreteProduct(1, "Camisa", new BigDecimal("10.00"), 5, ProductCategory.UNIFORM);
+        assertTrue(testProduct.equals(p2));
     }
 
     @Test
-    public void testHashCodeFixedNumber() {
-        assertEquals(12345, instance.hashCode());
+    void testEqualsZeroIdsReturnsTrue() {
+        Product p1 = createConcreteProduct(0, "P1", new BigDecimal("1.00"), 1, ProductCategory.STATIONERY);
+        Product p2 = createConcreteProduct(0, "P2", new BigDecimal("2.00"), 2, ProductCategory.UNIFORM);
+        assertTrue(p1.equals(p2));
     }
 
     @Test
-    public void testHashCodeStringHash() {
-        assertEquals("1".hashCode(), instance.hashCode());
+    void testHashCodeSameForEqualObjects() {
+        Product p2 = createConcreteProduct(1, "Otro Nombre", new BigDecimal("5.00"), 2, ProductCategory.UNIFORM);
+        assertEquals(testProduct.hashCode(), p2.hashCode());
     }
 
     @Test
-    public void testHashCodeNull() {
-        assertNotNull(instance.hashCode());
-        assertEquals(-1, instance.hashCode());
+    void testHashCodeConsistent() {
+        int initialHashCode = testProduct.hashCode();
+        assertEquals(initialHashCode, testProduct.hashCode());
     }
 
     @Test
-    public void testHashCodeMaxInt() {
-        assertEquals(Integer.MAX_VALUE, instance.hashCode());
+    void testHashCodeDifferentForDifferentIds() {
+        Product p2 = createConcreteProduct(2, "Cuaderno Norma", new BigDecimal("2.50"), 10, ProductCategory.STATIONERY);
+        assertNotEquals(testProduct.hashCode(), p2.hashCode());
     }
 
     @Test
-    public void testHashCodeMultiplyCheck() {
-        assertEquals(instance.hashCode() * 2, instance.hashCode());
+    void testHashCodeEqualsIntegerHashCode() {
+        assertEquals(Integer.hashCode(1), testProduct.hashCode());
     }
 
     @Test
-    public void testToStringContainsId() {
-        assertTrue(instance.toString().contains("1"));
+    void testHashCodeZeroId() {
+        Product p = createConcreteProduct(0, "Test", new BigDecimal("1.00"), 1, ProductCategory.STATIONERY);
+        assertEquals(Integer.hashCode(0), p.hashCode());
     }
 
     @Test
-    public void testToStringContainsName() {
-        assertTrue(instance.toString().contains("Cuaderno 100 Hojas"));
+    void testHashCodeNegativeId() {
+        Product p = createConcreteProduct(-10, "Test", new BigDecimal("1.00"), 1, ProductCategory.STATIONERY);
+        assertEquals(Integer.hashCode(-10), p.hashCode());
     }
 
     @Test
-    public void testToStringExactMatch() {
-        assertEquals("Producto Vacio", instance.toString());
+    void testHashCodeUnchangedAfterStockChange() {
+        int hashBefore = testProduct.hashCode();
+        testProduct.increaseStock(10);
+        assertEquals(hashBefore, testProduct.hashCode());
     }
 
     @Test
-    public void testToStringEmptyString() {
-        assertEquals("", instance.toString());
-    }
-
-    @Test
-    public void testToStringNull() {
-        assertNull(instance.toString());
-    }
-
-    @Test
-    public void testToStringUpperCase() {
-        assertEquals(instance.toString().toUpperCase(), instance.toString());
-    }
-
-    @Test
-    public void testToStringLengthCheck() {
-        assertEquals(5, instance.toString().length());
-    }
-
-    @Test
-    public void testToStringStartsWithId() {
-        assertTrue(instance.toString().startsWith("ID:"));
-    }
-
-    @Test
-    public void testToStringEndsWithPrice() {
-        assertTrue(instance.toString().endsWith("USD"));
-    }
-
-    @Test
-    public void testToStringJsonFormat() {
-        assertTrue(instance.toString().startsWith("{"));
-    }
-
-    public class ProductImpl extends Product {
-
-        public ProductImpl(int id, String name, BigDecimal price, int stock, ProductCategory category) {
-            super(id, name, price, stock, category);
+    void testHashCodeMultipleInvocations() {
+        for (int i = 0; i < 5; i++) {
+            assertEquals(Integer.hashCode(1), testProduct.hashCode());
         }
+    }
 
-        @Override
-        public String getDetails() {
-            return "";
-        }
+    @Test
+    void testHashCodeLargeId() {
+        Product p = createConcreteProduct(88888, "Test", new BigDecimal("1.00"), 1, ProductCategory.STATIONERY);
+        assertEquals(Integer.hashCode(88888), p.hashCode());
+    }
+
+    @Test
+    void testHashCodeDifferentCategoriesSameId() {
+        Product p2 = createConcreteProduct(1, "Falda", new BigDecimal("12.00"), 3, ProductCategory.UNIFORM);
+        assertEquals(testProduct.hashCode(), p2.hashCode());
+    }
+
+    @Test
+    void testToStringContainsId() {
+        assertTrue(testProduct.toString().contains("[1]"));
+    }
+
+    @Test
+    void testToStringContainsName() {
+        assertTrue(testProduct.toString().contains("Cuaderno Norma"));
+    }
+
+    @Test
+    void testToStringContainsStock() {
+        assertTrue(testProduct.toString().contains("Stock: 10"));
+    }
+
+    @Test
+    void testToStringContainsPrice() {
+        assertTrue(testProduct.toString().contains("2.50"));
+    }
+
+    @Test
+    void testToStringContainsDetails() {
+        assertTrue(testProduct.toString().contains("Detalles De Prueba"));
+    }
+
+    @Test
+    void testToStringNotNull() {
+        assertNotNull(testProduct.toString());
+    }
+
+    @Test
+    void testToStringNotEmpty() {
+        assertFalse(testProduct.toString().isEmpty());
+    }
+
+    @Test
+    void testToStringUpdatesWhenStockChanges() {
+        testProduct.increaseStock(5);
+        assertTrue(testProduct.toString().contains("Stock: 15"));
+    }
+
+    @Test
+    void testToStringUniformProduct() {
+        Product p = createConcreteProduct(5, "Camisa", new BigDecimal("10.00"), 4, ProductCategory.UNIFORM);
+        assertTrue(p.toString().contains("Camisa"));
+    }
+
+    @Test
+    void testToStringFormatConsistency() {
+        String str1 = testProduct.toString();
+        String str2 = testProduct.toString();
+        assertEquals(str1, str2);
     }
 }

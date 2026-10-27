@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.unistock.structure.SimpleListTest" time="0.161" tests="15" errors="3" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.unistock.structure.SimpleListTest" time="0.372" tests="70" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="27"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="java.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\PC\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,10 +15,10 @@
     <property name="user.country" value="MX"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-27.0.1.0.3\bin"/>
-    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire6859218064972224509\surefirebooter-20261025172423762_3.jar C:\Users\PC\AppData\Local\Temp\surefire6859218064972224509 2026-10-25T17-24-23_572-jvmRun1 surefire-20261025172423762_1tmp surefire_0-20261025172423762_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire8912890891266148243\surefirebooter-20261027151123688_3.jar C:\Users\PC\AppData\Local\Temp\surefire8912890891266148243 2026-10-27T15-11-23_511-jvmRun1 surefire-20261027151123688_1tmp surefire_0-20261027151123688_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="ec.edu.espe.unistock.structure.SimpleListTest"/>
-    <property name="surefire.test.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="surefire.test.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\PC\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\PC"/>
     <property name="user.language" value="es"/>
@@ -26,12 +26,12 @@
     <property name="java.version.date" value="2026-10-25"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-27.0.1.0.3"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock"/>
+    <property name="basedir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire6859218064972224509\surefirebooter-20261025172423762_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire8912890891266148243\surefirebooter-20261027151123688_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="27.0.1.0.3+1-2"/>
@@ -47,7 +47,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\PC\AppData\Local\Temp\"/>
     <property name="java.version" value="27.0.1.0.3"/>
-    <property name="user.dir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock"/>
+    <property name="user.dir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -61,62 +61,74 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="71.0"/>
   </properties>
-  <testcase name="testIsEmptyAfterRemoveAll" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.03"/>
-  <testcase name="testRemoveExistingElement" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.006"/>
-  <testcase name="testSizeOnEmptyList" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
-  <testcase name="testRemoveFromEmptyList" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
-  <testcase name="testIsEmptyTrue" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
-  <testcase name="testAddSingleElement" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
-  <testcase name="testAddNullElement" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.015">
-    <failure message="Unexpected exception thrown: java.lang.NullPointerException: El elemento no puede ser nulo." type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: El elemento no puede ser nulo.
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
-	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
-	at ec.edu.espe.unistock.structure.SimpleListTest.testAddNullElement(SimpleListTest.java:52)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-Caused by: java.lang.NullPointerException: El elemento no puede ser nulo.
-	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
-	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:28)
-	at ec.edu.espe.unistock.structure.SimpleListTest.lambda$testAddNullElement$0(SimpleListTest.java:52)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
-	... 6 more
-]]></failure>
-  </testcase>
-  <testcase name="testAddMultipleElements" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
-  <testcase name="testNextOnEmptyList" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.004">
-    <error message="No hay más elementos." type="java.util.NoSuchElementException"><![CDATA[java.util.NoSuchElementException: No hay más elementos.
-	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:74)
-	at ec.edu.espe.unistock.structure.SimpleListTest.testNextOnEmptyList(SimpleListTest.java:126)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></error>
-  </testcase>
-  <testcase name="testRemoveNull" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003">
-    <error message="El elemento no puede ser nulo." type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: El elemento no puede ser nulo.
-	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
-	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:28)
-	at ec.edu.espe.unistock.structure.SimpleListTest.testRemoveNull(SimpleListTest.java:83)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></error>
-  </testcase>
-  <testcase name="testHasNextOnEmptyList" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
-  <testcase name="testResetIteration" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
-  <testcase name="testIteratorFlow" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.004">
-    <error message="No hay más elementos." type="java.util.NoSuchElementException"><![CDATA[java.util.NoSuchElementException: No hay más elementos.
-	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:74)
-	at ec.edu.espe.unistock.structure.SimpleListTest.testIteratorFlow(SimpleListTest.java:102)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></error>
-  </testcase>
-  <testcase name="testRemoveNonExistingElement" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
-  <testcase name="testIsEmptyFalse" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testAddCustomObject" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.036"/>
+  <testcase name="testHasNextSequentialElements" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.006"/>
+  <testcase name="testResetIterationOnEmptyList" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.008"/>
+  <testcase name="testAddDuplicateElementsAllowed" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testRemoveTailAndAddAgain" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testHasNextAfterResetIteration" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testRemoveHeadElement" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testNextReturnsElementAndAdvancesCursor" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testIsEmptyConsistentCall" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testResetIterationAfterFullTraversal" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testIsEmptyTrueAfterRemovingOnlyElement" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testRemoveTailElement" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testSizeUnchangedWhenRemovingNonExistent" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testIsEmptyFalseWhenSizeIsGreaterThanZero" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testResetIterationResetsCursorToHead" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testHasNextReturnsFalseWhenCursorAtEnd" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testIsEmptyAfterResetIteration" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testNextThrowsExceptionWhenNoMoreElements" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testAddChangesIsEmptyStatus" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testHasNextReturnsTrueWhenCursorNotNull" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testHasNextConsistentWithNext" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testSizeLargeList" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.004"/>
+  <testcase name="testNextWithGenericTypes" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testSizeDecrementsOnRemove" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testIsEmptyConsistentWithZeroSize" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testSizeAfterFailedAddAttempts" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testIsEmptyAfterFullTraversal" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testAddSingleElement" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testRemoveNonExistentElementDoesNothing" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testResetIterationAfterRemove" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testResetIterationAfterPartialTraversal" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testAddElementSetsHeadAndTailOnFirstAdd" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testRemoveElementUpdatesCursorIfPointsToRemoved" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testHasNextDoesNotAdvanceCursor" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testIsEmptyFalseAfterAdd" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testAddMultipleElements" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testAddPreservesInsertionOrder" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testRemoveNullDoesNothing" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testNextExceptionMessageExactMatch" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testSizeIncrementsOnAdd" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testAddSequentialElementsCount" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testResetIterationSingleElementList" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testResetIterationDoesNotModifySize" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testHasNextMultipleCalls" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testIsEmptyTrueInitially" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testSizeZeroAfterRemovingAll" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testIsEmptyAfterFailedAdd" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testResetIterationAllowsMultiplePasses" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testNextOnSingleElementList" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testAddEmptyStringAllowed" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testSizeConsistentCall" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testResetIterationConsistentBehavior" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testRemoveFromEmptyListDoesNothing" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testRemoveFirstOccurrenceOnly" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testResetIterationAfterAdd" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testHasNextAfterClearOrRemoveAll" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testSizePrimitiveIntType" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testNextAfterResetIteration" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testNextReturnsExactInjectedObjects" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testHasNextReturnsFalseOnEmptyList" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testIsEmptyFalseWithMultipleElements" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testNextConsecutiveCalls" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testNextIterationLoop" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testHasNextInitialStateWithoutReset" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.008"/>
+  <testcase name="testNextThrowsExceptionAfterReachingEnd" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testRemoveMiddleElement" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testSizeInitiallyZero" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.003"/>
+  <testcase name="testSizeUnchangedOnTraversal" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.002"/>
+  <testcase name="testRemoveOnlyElementLeavesListEmpty" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.001"/>
+  <testcase name="testAddNullElementThrowsException" classname="ec.edu.espe.unistock.structure.SimpleListTest" time="0.004"/>
 </testsuite>

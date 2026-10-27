@@ -47,6 +47,10 @@ public class Sale {
         return subtotal().add(tax());
     }
 
+    public BigDecimal getTotal() {
+        return total();
+    }
+
     public int getId() {
         return id;
     }

@@ -22,7 +22,7 @@ public class ConsoleAdapter {
             try {
                 return Integer.parseInt(readText(prompt));
             } catch (NumberFormatException e) {
-                System.out.println("Ingrese un número entero válido.");
+                System.out.println("Ingrese un numero entero valido.");
             }
         }
     }
@@ -32,7 +32,7 @@ public class ConsoleAdapter {
             try {
                 return new BigDecimal(readText(prompt));
             } catch (NumberFormatException e) {
-                System.out.println("Ingrese un valor numérico válido.");
+                System.out.println("Ingrese un valor numerico valido.");
             }
         }
     }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.169" tests="10" errors="1" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.616" tests="50" errors="6" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="27"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="java.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\PC\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,10 +15,10 @@
     <property name="user.country" value="MX"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-27.0.1.0.3\bin"/>
-    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire15333086463182073194\surefirebooter-20261025172220579_3.jar C:\Users\PC\AppData\Local\Temp\surefire15333086463182073194 2026-10-25T17-22-20_409-jvmRun1 surefire-20261025172220579_1tmp surefire_0-20261025172220579_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire14790750897074610574\surefirebooter-20261027150742078_3.jar C:\Users\PC\AppData\Local\Temp\surefire14790750897074610574 2026-10-27T15-07-41_903-jvmRun1 surefire-20261027150742078_1tmp surefire_0-20261027150742078_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="ec.edu.espe.unistock.structure.FileHandlerTest"/>
-    <property name="surefire.test.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="surefire.test.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\PC\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\PC"/>
     <property name="user.language" value="es"/>
@@ -26,12 +26,12 @@
     <property name="java.version.date" value="2026-10-25"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-27.0.1.0.3"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock"/>
+    <property name="basedir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire15333086463182073194\surefirebooter-20261025172220579_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire14790750897074610574\surefirebooter-20261027150742078_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="27.0.1.0.3+1-2"/>
@@ -47,7 +47,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\PC\AppData\Local\Temp\"/>
     <property name="java.version" value="27.0.1.0.3"/>
-    <property name="user.dir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock"/>
+    <property name="user.dir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -61,66 +61,151 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="71.0"/>
   </properties>
-  <testcase name="testOverwriteFile" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.04"/>
-  <testcase name="testSaveAndLoadListValidString" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.006"/>
-  <testcase name="testSaveListCreatesFile" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004"/>
-  <testcase name="testLoadListNonExistentFile" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.002"/>
-  <testcase name="testSaveListNullList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.012">
-    <failure message="Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke &quot;ec.edu.espe.unistock.structure.SimpleList.resetIteration()&quot; because &quot;list&quot; is null" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.structure.SimpleList.resetIteration()" because "list" is null
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
-	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
-	at ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListNullList(FileHandlerTest.java:80)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.structure.SimpleList.resetIteration()" because "list" is null
-	at ec.edu.espe.unistock.structure.FileHandler.saveList(FileHandler.java:19)
-	at ec.edu.espe.unistock.structure.FileHandlerTest.lambda$testSaveListNullList$0(FileHandlerTest.java:80)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
-	... 6 more
-]]></failure>
-  </testcase>
-  <testcase name="testSaveListNullPath" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.003">
-    <failure message="Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke &quot;java.io.File.isInvalid()&quot; because &quot;file&quot; is null" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "java.io.File.isInvalid()" because "file" is null
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
-	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
-	at ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListNullPath(FileHandlerTest.java:86)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-Caused by: java.lang.NullPointerException: Cannot invoke "java.io.File.isInvalid()" because "file" is null
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:202)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:120)
-	at java.base/java.io.FileWriter.<init>(FileWriter.java:67)
-	at ec.edu.espe.unistock.structure.FileHandler.saveList(FileHandler.java:18)
-	at ec.edu.espe.unistock.structure.FileHandlerTest.lambda$testSaveListNullPath$0(FileHandlerTest.java:86)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
-	... 6 more
-]]></failure>
-  </testcase>
-  <testcase name="testLoadListEmptyPath" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.003">
-    <system-out><![CDATA[Archivo no encontrado: 
+  <testcase name="testExportToCSVNullRowsDoesNotCrash" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.09"/>
+  <testcase name="testExportToCSVAutoAppendsExtension" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.009">
+    <system-out><![CDATA[Reporte CSV generado exitosamente en: testFileHandlerOutput/reportNoExt.csv
 ]]></system-out>
   </testcase>
-  <testcase name="testSaveAndLoadEmptyList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.003"/>
-  <testcase name="testSaveListEmptyPath" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004">
-    <system-out><![CDATA[Error al guardar en el archivo : 
-]]></system-out>
-  </testcase>
-  <testcase name="testLoadListNullPath" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.018">
-    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
-	at java.base/java.io.File.<init>(File.java:288)
-	at ec.edu.espe.unistock.structure.FileHandler.loadList(FileHandler.java:31)
-	at ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListNullPath(FileHandlerTest.java:119)
+  <testcase name="testLoadListFromJsonValidContent" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.038"/>
+  <testcase name="testSaveListToJsonFiltersNullItems" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.027">
+    <error message="El elemento no puede ser nulo." type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: El elemento no puede ser nulo.
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
+	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:29)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListToJsonFiltersNullItems(FileHandlerTest.java:83)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 ]]></error>
+  </testcase>
+  <testcase name="testExportToCSVBlankPathDoesNotCrash" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.012"/>
+  <testcase name="testLoadListNullPathReturnsEmptyList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.014"/>
+  <testcase name="testSaveListToJsonNullPathDoesNotCrash" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.009"/>
+  <testcase name="testLoadListFromJsonBlankPathReturnsEmptyList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.005"/>
+  <testcase name="testLoadListDelegatesToLoadListFromJson" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.007">
+    <error message="No hay más elementos." type="java.util.NoSuchElementException"><![CDATA[java.util.NoSuchElementException: No hay más elementos.
+	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:75)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListDelegatesToLoadListFromJson(FileHandlerTest.java:338)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+]]></error>
+  </testcase>
+  <testcase name="testLoadListFromJsonReturnsNewSimpleListInstance" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.005"/>
+  <testcase name="testLoadListFromJsonEmptyFileReturnsEmptyList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.005"/>
+  <testcase name="testLoadListFromJsonGenericIntegerList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.005"/>
+  <testcase name="testLoadListMissingFileReturnsEmptyList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.002"/>
+  <testcase name="testSaveListDelegatesToSaveListToJson" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.005"/>
+  <testcase name="testExportToCSVNullHeaderOmitsHeader" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.009">
+    <system-out><![CDATA[Reporte CSV generado exitosamente en: testFileHandlerOutput/noHeader.csv
+]]></system-out>
+  </testcase>
+  <testcase name="testLoadListMultipleStrings" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004"/>
+  <testcase name="testSaveListToJsonEmptyListCreatesValidJsonArray" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004"/>
+  <testcase name="testExportToCSVFiltersNullRows" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.003">
+    <error message="El elemento no puede ser nulo." type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: El elemento no puede ser nulo.
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
+	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:29)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testExportToCSVFiltersNullRows(FileHandlerTest.java:504)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+]]></error>
+  </testcase>
+  <testcase name="testLoadListReturnsNewInstance" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004"/>
+  <testcase name="testSaveListToJsonCreatesFile" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004"/>
+  <testcase name="testExportToCSVCreatesFile" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004">
+    <system-out><![CDATA[Reporte CSV generado exitosamente en: testFileHandlerOutput/report.csv
+]]></system-out>
+  </testcase>
+  <testcase name="testLoadListFromJsonPreservesOrder" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004"/>
+  <testcase name="testLoadListAutoAppendsExtension" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.003"/>
+  <testcase name="testExportToCSVNullPathDoesNotCrash" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.003"/>
+  <testcase name="testSaveListBlankPathDoesNotCrash" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.003"/>
+  <testcase name="testLoadListBlankPathReturnsEmptyList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004"/>
+  <testcase name="testExportToCSVWritesHeaderAndRows" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.003">
+    <system-out><![CDATA[Reporte CSV generado exitosamente en: testFileHandlerOutput/headerRows.csv
+]]></system-out>
+  </testcase>
+  <testcase name="testSaveListNullListDoesNotCrash" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.003"/>
+  <testcase name="testLoadListFromJsonInvalidJsonReturnsEmptyList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.006">
+    <error message="java.lang.IllegalStateException: Expected BEGIN_ARRAY but was BEGIN_OBJECT at line 1 column 2 path $&#10;See https://github.com/google/gson/blob/main/Troubleshooting.md#unexpected-json-structure" type="com.google.gson.JsonSyntaxException"><![CDATA[com.google.gson.JsonSyntaxException: 
+java.lang.IllegalStateException: Expected BEGIN_ARRAY but was BEGIN_OBJECT at line 1 column 2 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#unexpected-json-structure
+	at com.google.gson.Gson.fromJson(Gson.java:1103)
+	at com.google.gson.Gson.fromJson(Gson.java:981)
+	at com.google.gson.Gson.fromJson(Gson.java:949)
+	at ec.edu.espe.unistock.structure.FileHandler.loadListFromJson(FileHandler.java:67)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListFromJsonInvalidJsonReturnsEmptyList(FileHandlerTest.java:219)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was BEGIN_OBJECT at line 1 column 2 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#unexpected-json-structure
+	at com.google.gson.stream.JsonReader.unexpectedTokenError(JsonReader.java:1831)
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:468)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter.read(CollectionTypeAdapterFactory.java:82)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter.read(CollectionTypeAdapterFactory.java:64)
+	at com.google.gson.Gson.fromJson(Gson.java:1080)
+	... 7 more
+]]></error>
+  </testcase>
+  <testcase name="testSaveListToJsonGenericIntegerList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.005"/>
+  <testcase name="testSaveListAutoAppendsExtension" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.002"/>
+  <testcase name="testLoadListFromJsonReturnsEmptyListIfFileMissing" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004"/>
+  <testcase name="testExportToCSVBlankHeaderOmitsHeader" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004">
+    <system-out><![CDATA[Reporte CSV generado exitosamente en: testFileHandlerOutput/blankHeader.csv
+]]></system-out>
+  </testcase>
+  <testcase name="testLoadListFromJsonAutoAppendsExtension" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.01"/>
+  <testcase name="testSaveListToJsonOverwritesExistingFile" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.005"/>
+  <testcase name="testSaveListFiltersNullEntries" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.005">
+    <error message="El elemento no puede ser nulo." type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: El elemento no puede ser nulo.
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
+	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:29)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListFiltersNullEntries(FileHandlerTest.java:312)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+]]></error>
+  </testcase>
+  <testcase name="testSaveListToJsonNullListDoesNotCrash" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.003"/>
+  <testcase name="testSaveListToJsonBlankPathDoesNotCrash" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.002"/>
+  <testcase name="testLoadListCorruptFileReturnsEmptyList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.011">
+    <error message="java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $&#10;See https://github.com/google/gson/blob/main/Troubleshooting.md#unexpected-json-structure" type="com.google.gson.JsonSyntaxException"><![CDATA[com.google.gson.JsonSyntaxException: 
+java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#unexpected-json-structure
+	at com.google.gson.Gson.fromJson(Gson.java:1103)
+	at com.google.gson.Gson.fromJson(Gson.java:981)
+	at com.google.gson.Gson.fromJson(Gson.java:949)
+	at ec.edu.espe.unistock.structure.FileHandler.loadListFromJson(FileHandler.java:67)
+	at ec.edu.espe.unistock.structure.FileHandler.loadList(FileHandler.java:91)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListCorruptFileReturnsEmptyList(FileHandlerTest.java:409)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#unexpected-json-structure
+	at com.google.gson.stream.JsonReader.unexpectedTokenError(JsonReader.java:1831)
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:468)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter.read(CollectionTypeAdapterFactory.java:82)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter.read(CollectionTypeAdapterFactory.java:64)
+	at com.google.gson.Gson.fromJson(Gson.java:1080)
+	... 8 more
+]]></error>
+  </testcase>
+  <testcase name="testLoadListFromJsonNullPathReturnsEmptyList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.003"/>
+  <testcase name="testSaveListToJsonAutoAppendsExtension" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.005"/>
+  <testcase name="testSaveListPreservesOrder" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004"/>
+  <testcase name="testLoadListReturnsSimpleListInstance" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.008"/>
+  <testcase name="testSaveListOverwritesExistingFile" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.012"/>
+  <testcase name="testSaveListEmptyList" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.009"/>
+  <testcase name="testSaveListMultipleStrings" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.003"/>
+  <testcase name="testSaveListNullPathDoesNotCrash" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.009"/>
+  <testcase name="testLoadListPreservesOrder" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.005"/>
+  <testcase name="testSaveListToJsonPreservesOrder" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.006"/>
+  <testcase name="testExportToCSVOverwritesExistingFile" classname="ec.edu.espe.unistock.structure.FileHandlerTest" time="0.004">
+    <system-out><![CDATA[Reporte CSV generado exitosamente en: testFileHandlerOutput/overwriteCsv.csv
+Reporte CSV generado exitosamente en: testFileHandlerOutput/overwriteCsv.csv
+]]></system-out>
   </testcase>
 </testsuite>

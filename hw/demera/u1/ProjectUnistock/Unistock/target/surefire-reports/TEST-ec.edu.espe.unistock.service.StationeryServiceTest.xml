@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.443" tests="60" errors="0" skipped="0" failures="44">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.479" tests="70" errors="2" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="27"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="java.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\PC\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,10 +15,10 @@
     <property name="user.country" value="MX"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-27.0.1.0.3\bin"/>
-    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire4681227637546225135\surefirebooter-20261025171446616_3.jar C:\Users\PC\AppData\Local\Temp\surefire4681227637546225135 2026-10-25T17-14-46_441-jvmRun1 surefire-20261025171446616_1tmp surefire_0-20261025171446616_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire11188038051265438161\surefirebooter-20261027150949599_3.jar C:\Users\PC\AppData\Local\Temp\surefire11188038051265438161 2026-10-27T15-09-49_420-jvmRun1 surefire-20261027150949599_1tmp surefire_0-20261027150949599_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="ec.edu.espe.unistock.service.StationeryServiceTest"/>
-    <property name="surefire.test.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="surefire.test.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\PC\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\PC"/>
     <property name="user.language" value="es"/>
@@ -26,12 +26,12 @@
     <property name="java.version.date" value="2026-10-25"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-27.0.1.0.3"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock"/>
+    <property name="basedir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire4681227637546225135\surefirebooter-20261025171446616_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire11188038051265438161\surefirebooter-20261027150949599_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="27.0.1.0.3+1-2"/>
@@ -47,7 +47,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\PC\AppData\Local\Temp\"/>
     <property name="java.version" value="27.0.1.0.3"/>
-    <property name="user.dir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock"/>
+    <property name="user.dir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -61,646 +61,90 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="71.0"/>
   </properties>
-  <testcase name="testRegisterTypeValidType" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.039"/>
-  <testcase name="testExistsBrandEmptyString" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.014">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsBrandEmptyString(StationeryServiceTest.java:121)
+  <testcase name="testExistsTypeMultipleTypesSearch" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.091"/>
+  <testcase name="testRegisterTypeValidString" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
+  <testcase name="testConstructorLoadsExistingTypesFromFile" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.008"/>
+  <testcase name="testConstructorCreatesServiceInstance" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testGetRegisteredTypesConsistentCall" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testGetRegisteredTypesNotNull" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testRegisterBrandTrimsInput" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.012">
+    <error message="No hay más elementos." type="java.util.NoSuchElementException"><![CDATA[java.util.NoSuchElementException: No hay más elementos.
+	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:75)
+	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterBrandTrimsInput(StationeryServiceTest.java:158)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
+]]></error>
   </testcase>
-  <testcase name="testGetRegisteredTypesNotNull" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
-  <testcase name="testExistsTypeReturnNull" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005">
-    <failure message="expected: &lt;null&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsTypeReturnNull(StationeryServiceTest.java:259)
+  <testcase name="testGetRegisteredBrandsReturnsSimpleList" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testExistsBrandNullReturnsFalse" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testConstructorHandlesBrandAndTypePersistenceTogether" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.015"/>
+  <testcase name="testGetRegisteredBrandsInitiallyEmpty" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.001"/>
+  <testcase name="testConstructorMultipleBrandsLoaded" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.007"/>
+  <testcase name="testConstructorPreservesDataIntegrity" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
+  <testcase name="testRegisterBrandValidString" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005"/>
+  <testcase name="testExistsTypeNullReturnsFalse" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testGetRegisteredBrandsNotNull" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testRegisterTypeNullIgnored" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredTypesMultipleTypesCount" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005"/>
+  <testcase name="testGetRegisteredBrandsAllowsIteration" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testExistsBrandEmptyStringReturnsFalse" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
+  <testcase name="testConstructorInitializesEmptyListsWhenFilesMissing" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testExistsBrandTrimsInput" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
+  <testcase name="testExistsBrandMultipleBrandsSearch" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testRegisterTypeWithSpecialCharacters" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testRegisterBrandPersistsToFile" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testRegisterBrandNullIgnored" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testRegisterTypeDuplicateIgnored" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testExistsTypeTrimsInput" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testRegisterTypeMultipleTypes" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.006"/>
+  <testcase name="testExistsBrandBlankStringReturnsFalse" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredBrandsConsistentCall" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredTypesOrderPreserved" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
+  <testcase name="testExistsBrandConsistentCall" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredTypesReturnsSimpleList" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.001"/>
+  <testcase name="testExistsBrandReturnsTrueWhenPresent" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testExistsBrandReturnsFalseWhenAbsent" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testExistsTypeEmptyStringReturnsFalse" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testRegisterTypeBlankIgnored" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.001"/>
+  <testcase name="testRegisterBrandCaseInsensitiveDuplicateIgnored" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testConstructorMultipleTypesLoaded" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005"/>
+  <testcase name="testGetRegisteredTypesSameReference" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
+  <testcase name="testRegisterBrandBlankIgnored" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.001"/>
+  <testcase name="testGetRegisteredBrandsSameReference" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testGetRegisteredBrandsDoesNotIncludeTypes" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testGetRegisteredTypesInitiallyEmpty" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testRegisterBrandDuplicateIgnored" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredBrandsReflectsRegisteredBrands" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testConstructorIndependentFileLoading" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testGetRegisteredTypesAllowsIteration" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
+  <testcase name="testConstructorLoadsExistingBrandsFromFile" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testRegisterBrandSpecialCharacters" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
+  <testcase name="testRegisterTypeEmptyIgnored" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testExistsTypeCaseInsensitiveLower" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
+  <testcase name="testExistsTypeCaseInsensitiveUpper" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testExistsTypeBlankStringReturnsFalse" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testExistsTypeConsistentCall" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.001"/>
+  <testcase name="testRegisterTypeCaseInsensitiveDuplicateIgnored" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testRegisterBrandEmptyIgnored" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.001"/>
+  <testcase name="testRegisterTypeTrimsInput" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003">
+    <error message="No hay más elementos." type="java.util.NoSuchElementException"><![CDATA[java.util.NoSuchElementException: No hay más elementos.
+	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:75)
+	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterTypeTrimsInput(StationeryServiceTest.java:284)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
+]]></error>
   </testcase>
-  <testcase name="testRegisterBrandTypeCheck" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.006">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterBrandTypeCheck(StationeryServiceTest.java:94)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterTypeWhitespaceOnly" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterTypeWhitespaceOnly(StationeryServiceTest.java:178)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsBrandWhitespacePadding" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsBrandWhitespacePadding(StationeryServiceTest.java:127)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsBrandSubstringMatch" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsBrandSubstringMatch(StationeryServiceTest.java:133)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRegisteredBrandsInitialState" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005"/>
-  <testcase name="testGetRegisteredBrandsDirectModification" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.006">
-    <failure message="Unexpected exception thrown: java.lang.NullPointerException: El elemento no puede ser nulo." type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: El elemento no puede ser nulo.
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
-	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredBrandsDirectModification(StationeryServiceTest.java:301)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-Caused by: java.lang.NullPointerException: El elemento no puede ser nulo.
-	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
-	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:28)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.lambda$testGetRegisteredBrandsDirectModification$0(StationeryServiceTest.java:301)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
-	... 6 more
-]]></failure>
-  </testcase>
-  <testcase name="testGetRegisteredBrandsNotNull" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
-  <testcase name="testGetRegisteredTypesResetIteration" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005"/>
-  <testcase name="testGetRegisteredTypesAfterRegisterEmpty" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredTypesAfterRegisterEmpty(StationeryServiceTest.java:350)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterTypeReturnsBoolean" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.007">
-    <failure message="expected: &lt;null&gt; but was: &lt;ec.edu.espe.unistock.structure.SimpleList@6f1de4c7&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <ec.edu.espe.unistock.structure.SimpleList@6f1de4c7>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterTypeReturnsBoolean(StationeryServiceTest.java:204)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterTypeCaseInsensitiveDuplicate" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005">
-    <failure message="expected: &lt;2&gt; but was: &lt;1&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterTypeCaseInsensitiveDuplicate(StationeryServiceTest.java:192)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterBrandNullBrand" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
-  <testcase name="testRegisterTypeDuplicateType" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;10&gt; but was: &lt;2&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <10> but was: <2>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterTypeDuplicateType(StationeryServiceTest.java:185)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRegisteredTypesFirstElement" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;null&gt; but was: &lt;Lápiz&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <Lápiz>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredTypesFirstElement(StationeryServiceTest.java:362)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterBrandCaseInsensitiveDuplicate" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.006">
-    <failure message="expected: &lt;2&gt; but was: &lt;1&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterBrandCaseInsensitiveDuplicate(StationeryServiceTest.java:76)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterTypeTypeCheck" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterTypeTypeCheck(StationeryServiceTest.java:210)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsBrandCaseInsensitive" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005"/>
-  <testcase name="testExistsTypeSubstringMatch" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsTypeSubstringMatch(StationeryServiceTest.java:249)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterBrandValidBrand" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
-  <testcase name="testRegisterTypeCheckListSize" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
-  <testcase name="testRegisterBrandWhitespaceOnly" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterBrandWhitespaceOnly(StationeryServiceTest.java:62)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterTypeDoesNotSave" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterTypeDoesNotSave(StationeryServiceTest.java:198)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRegisteredTypesDirectModification" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="Unexpected exception thrown: java.lang.NullPointerException: El elemento no puede ser nulo." type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: El elemento no puede ser nulo.
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
-	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredTypesDirectModification(StationeryServiceTest.java:355)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-Caused by: java.lang.NullPointerException: El elemento no puede ser nulo.
-	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
-	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:28)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.lambda$testGetRegisteredTypesDirectModification$0(StationeryServiceTest.java:355)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
-	... 6 more
-]]></failure>
-  </testcase>
-  <testcase name="testGetRegisteredBrandsStringComparison" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005">
-    <failure message="expected: &lt;[]&gt; but was: &lt;ec.edu.espe.unistock.structure.SimpleList@73a1e9a9&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <[]> but was: <ec.edu.espe.unistock.structure.SimpleList@73a1e9a9>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredBrandsStringComparison(StationeryServiceTest.java:313)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsTypeValidType" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
-  <testcase name="testGetRegisteredBrandsResetIteration" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
-  <testcase name="testRegisterBrandReturnsBoolean" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;null&gt; but was: &lt;ec.edu.espe.unistock.structure.SimpleList@3e694b3f&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <ec.edu.espe.unistock.structure.SimpleList@3e694b3f>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterBrandReturnsBoolean(StationeryServiceTest.java:88)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRegisteredBrandsTypeCheck" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredBrandsTypeCheck(StationeryServiceTest.java:290)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsBrandValidBrand" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
-  <testcase name="testGetRegisteredTypesInitialState" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
-  <testcase name="testGetRegisteredTypesInitialSize" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003">
-    <failure message="expected: &lt;10&gt; but was: &lt;3&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <10> but was: <3>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredTypesInitialSize(StationeryServiceTest.java:339)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsTypeNullType" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsTypeNullType(StationeryServiceTest.java:232)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsTypeCaseInsensitive" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
-  <testcase name="testExistsBrandInvertedResult" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsBrandInvertedResult(StationeryServiceTest.java:149)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterTypeEmptyString" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterTypeEmptyString(StationeryServiceTest.java:172)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRegisteredBrandsInitialSize" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003">
-    <failure message="expected: &lt;10&gt; but was: &lt;1&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <10> but was: <1>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredBrandsInitialSize(StationeryServiceTest.java:285)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsBrandTypeCheck" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsBrandTypeCheck(StationeryServiceTest.java:138)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterBrandDoesNotSave" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterBrandDoesNotSave(StationeryServiceTest.java:82)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRegisteredTypesStringComparison" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003">
-    <failure message="expected: &lt;[]&gt; but was: &lt;ec.edu.espe.unistock.structure.SimpleList@618b19ad&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <[]> but was: <ec.edu.espe.unistock.structure.SimpleList@618b19ad>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredTypesStringComparison(StationeryServiceTest.java:367)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsTypeNonExistent" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsTypeNonExistent(StationeryServiceTest.java:227)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRegisteredBrandsNullCheck" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002">
-    <failure message="expected: &lt;null&gt; but was: &lt;ec.edu.espe.unistock.structure.SimpleList@6771beb3&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <ec.edu.espe.unistock.structure.SimpleList@6771beb3>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredBrandsNullCheck(StationeryServiceTest.java:280)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRegisteredTypesTypeCheck" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredTypesTypeCheck(StationeryServiceTest.java:344)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterTypeNullType" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
-  <testcase name="testGetRegisteredBrandsAfterRegisterEmpty" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredBrandsAfterRegisterEmpty(StationeryServiceTest.java:296)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsBrandNullBrand" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.006">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsBrandNullBrand(StationeryServiceTest.java:116)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterBrandDuplicateBrand" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;10&gt; but was: &lt;2&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <10> but was: <2>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterBrandDuplicateBrand(StationeryServiceTest.java:69)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterBrandEmptyString" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterBrandEmptyString(StationeryServiceTest.java:56)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRegisteredBrandsFirstElement" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005">
-    <failure message="expected: &lt;null&gt; but was: &lt;Bic&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <Bic>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredBrandsFirstElement(StationeryServiceTest.java:308)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsTypeWhitespacePadding" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsTypeWhitespacePadding(StationeryServiceTest.java:243)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testRegisterBrandCheckListSize" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
-  <testcase name="testExistsTypeEmptyString" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsTypeEmptyString(StationeryServiceTest.java:237)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRegisteredTypesNullCheck" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003">
-    <failure message="expected: &lt;null&gt; but was: &lt;ec.edu.espe.unistock.structure.SimpleList@5bf0d49&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <ec.edu.espe.unistock.structure.SimpleList@5bf0d49>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testGetRegisteredTypesNullCheck(StationeryServiceTest.java:334)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsBrandNonExistent" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsBrandNonExistent(StationeryServiceTest.java:111)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsTypeInvertedResult" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsTypeInvertedResult(StationeryServiceTest.java:265)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsTypeTypeCheck" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsTypeTypeCheck(StationeryServiceTest.java:254)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testExistsBrandReturnNull" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003">
-    <failure message="expected: &lt;null&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.service.StationeryServiceTest.testExistsBrandReturnNull(StationeryServiceTest.java:143)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
+  <testcase name="testGetRegisteredTypesReflectsRegisteredTypes" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testExistsBrandCaseInsensitiveLower" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testExistsBrandCaseInsensitiveUpper" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testRegisterTypePersistsToFile" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredTypesDoesNotIncludeBrands" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005"/>
+  <testcase name="testConstructorListsAreNotSameInstance" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredBrandsMultipleBrandsCount" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.003"/>
+  <testcase name="testRegisterBrandMultipleBrands" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.005"/>
+  <testcase name="testExistsTypeReturnsTrueWhenPresent" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.001"/>
+  <testcase name="testExistsTypeReturnsFalseWhenAbsent" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.007"/>
+  <testcase name="testGetRegisteredBrandsOrderPreserved" classname="ec.edu.espe.unistock.service.StationeryServiceTest" time="0.004"/>
 </testsuite>
