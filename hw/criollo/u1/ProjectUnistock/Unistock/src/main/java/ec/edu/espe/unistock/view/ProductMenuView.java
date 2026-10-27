@@ -23,7 +23,11 @@ public class ProductMenuView {
     }
 
     public void registerProduct() {
+<<<<<<< HEAD
         System.out.println("1. Uniforme  2. Papeleria / Util escolar");
+=======
+        System.out.println("1. Uniforme  2. Papelería / Util escolar");
+>>>>>>> 40d64e74a6f7fb91e084d1147d0bd41298d42aae
         int type = console.readInt("Categoria: ");
         String name = console.readText("Nombre: ");
         BigDecimal price = console.readMoney("Precio: ");
@@ -39,7 +43,11 @@ public class ProductMenuView {
             String stationeryType = console.readText("Tipo de articulo / material: ");
             product = productService.registerStationery(name, price, stock, brand, stationeryType);
         } else {
+<<<<<<< HEAD
             System.out.println("Categoría invalida.");
+=======
+            System.out.println("Categoria invalida.");
+>>>>>>> 40d64e74a6f7fb91e084d1147d0bd41298d42aae
             return;
         }
 
@@ -61,7 +69,10 @@ public class ProductMenuView {
         System.out.println("1. Listar todos los productos");
         System.out.println("2. Buscar producto por nombre");
         System.out.println("3. Filtrar por categoria");
+<<<<<<< HEAD
         System.out.println("4. Exportar reporte de inventario a CSV");
+=======
+>>>>>>> 40d64e74a6f7fb91e084d1147d0bd41298d42aae
         int option = console.readInt("Opcion: ");
 
         switch (option) {

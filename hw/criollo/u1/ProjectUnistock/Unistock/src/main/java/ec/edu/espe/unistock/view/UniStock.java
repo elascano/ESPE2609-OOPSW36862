@@ -104,12 +104,15 @@ public class UniStock {
                 runIfAllowed(role.canManageProducts(), productMenuView::registerProduct);
             case 3 ->
                 runIfAllowed(role.canManageProducts(), productMenuView::removeProduct);
+<<<<<<< HEAD
             case 4 ->
                 runIfAllowed(role.canRegisterSales(), () -> registerSaleMenu(user));
             case 5 ->
                 runIfAllowed(role.canRegisterSales(), this::viewSalesMenu);
             case 6 ->
                 runIfAllowed(role.canManageUsers(), this::manageUsersMenu);
+=======
+>>>>>>> 40d64e74a6f7fb91e084d1147d0bd41298d42aae
             case 7 ->
                 runIfAllowed(role.canManageProducts(), catalogMenuView::manageCatalogs);
             case 8 ->

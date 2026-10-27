@@ -23,6 +23,7 @@ public class CatalogMenuView {
     public void manageCatalogs() {
         boolean inCatalogsMenu = true;
         while (inCatalogsMenu) {
+<<<<<<< HEAD
             System.out.println("\n--- GESTION DE CATALOGOS ---");
             System.out.println("1. Registrar Talla de Uniforme");
             System.out.println("2. Registrar Colegio / Institucion");
@@ -31,6 +32,16 @@ public class CatalogMenuView {
             System.out.println("5. Listar Catalogos Registrados");
             System.out.println("0. Volver al menu principal");
             int option = console.readInt("Opcion: ");
+=======
+            System.out.println("\n--- GESTIÓN DE CATÁLOGOS ---");
+            System.out.println("1. Registrar Talla de Uniforme");
+            System.out.println("2. Registrar Colegio / Institución");
+            System.out.println("3. Registrar Marca de Útiles");
+            System.out.println("4. Registrar Tipo de Artículo o Material");
+            System.out.println("5. Listar Catálogos Registrados");
+            System.out.println("0. Volver al menú principal");
+            int option = console.readInt("Opción: ");
+>>>>>>> 40d64e74a6f7fb91e084d1147d0bd41298d42aae
 
             switch (option) {
                 case 1 -> {
@@ -39,7 +50,11 @@ public class CatalogMenuView {
                     System.out.println("Talla procesada.");
                 }
                 case 2 -> {
+<<<<<<< HEAD
                     String school = console.readText("Ingrese nombre del colegio/institucion: ");
+=======
+                    String school = console.readText("Ingrese nombre del colegio/institución: ");
+>>>>>>> 40d64e74a6f7fb91e084d1147d0bd41298d42aae
                     uniformService.registerSchool(school);
                     System.out.println("Colegio procesado.");
                 }
@@ -49,6 +64,7 @@ public class CatalogMenuView {
                     System.out.println("Marca procesada.");
                 }
                 case 4 -> {
+<<<<<<< HEAD
                     String type = console.readText("Ingrese tipo de articulo (ej: Cuaderno, Lapiz): ");
                     stationeryService.registerType(type);
                     System.out.println("Tipo de articulo procesado.");
@@ -56,12 +72,25 @@ public class CatalogMenuView {
                 case 5 -> listCatalogs();
                 case 0 -> inCatalogsMenu = false;
                 default -> System.out.println("Opcion invalida.");
+=======
+                    String type = console.readText("Ingrese tipo de artículo (ej: Cuaderno, Lápiz): ");
+                    stationeryService.registerType(type);
+                    System.out.println("Tipo de artículo procesado.");
+                }
+                case 5 -> listCatalogs();
+                case 0 -> inCatalogsMenu = false;
+                default -> System.out.println("Opción inválida.");
+>>>>>>> 40d64e74a6f7fb91e084d1147d0bd41298d42aae
             }
         }
     }
 
     private void listCatalogs() {
+<<<<<<< HEAD
         System.out.println("\n--- CATALOGOS REGISTRADOS ---");
+=======
+        System.out.println("\n--- CATÁLOGOS REGISTRADOS ---");
+>>>>>>> 40d64e74a6f7fb91e084d1147d0bd41298d42aae
         
         System.out.println("Tallas:");
         var sizes = uniformService.getRegisteredSizes();
