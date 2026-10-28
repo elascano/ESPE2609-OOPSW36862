@@ -3,7 +3,7 @@ import random
 from datetime import date
 from pathlib import Path
 
-from phyton.model.Chicken import Chicken
+from model.Chicken import Chicken
 from model.ChickenCoop import ChickenCoop
 from model.Egg import Egg
 from model.Poop import Poop

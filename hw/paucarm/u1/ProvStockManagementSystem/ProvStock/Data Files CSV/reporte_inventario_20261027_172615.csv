@@ -1,0 +1,12 @@
+﻿REPORTE DE INVENTARIO
+
+Codigo;Producto;Categoria;Unidad;Ubicacion;Stock;Stock minimo;Costo;Valor;Stock bajo
+CAB-001;Cable THHN 12 AWG;CABLES;METER;Pasillo A1;350.00;100.00;0.45;157.50;NO
+CAB-002;Cable gemelo 2x14 AWG;CABLES;METER;Pasillo A2;80.00;100.00;0.35;28.00;SI
+HER-001;Alicate universal 8 pulgadas;TOOLS;UNIT;Pasillo E1;11.00;5.00;6.00;66.00;NO
+ILU-001;Foco LED 9W luz blanca;LIGHTING;UNIT;Pasillo B1;60.00;20.00;1.20;72.00;NO
+INT-001;Interruptor simple;SWITCHES_AND_OUTLETS;UNIT;Pasillo C1;35.00;15.00;1.10;38.50;NO
+PRO-001;Breaker 1 polo 20A;PROTECTION_DEVICES;UNIT;Pasillo D1;61.00;10.00;4.50;274.50;NO
+
+Productos;6
+Valor total del stock;636.50

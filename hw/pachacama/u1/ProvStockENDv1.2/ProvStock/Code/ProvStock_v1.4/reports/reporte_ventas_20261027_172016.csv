@@ -1,0 +1,12 @@
+﻿REPORTE DE VENTAS
+Desde;2026-10-21;Hasta;2026-10-27
+
+Numero;Fecha;Cliente;Identificacion;Vendedor;Forma de pago;Subtotal;IVA;Total;Estado
+1;27/10/2026 17:03;Juan Pérez;1712345675;vendedor;CASH;55.50;8.32;63.82;REGISTERED
+2;27/10/2026 17:04;Instalaciones Andes;1701234567001;vendedor;TRANSFER;70.00;10.50;80.50;REGISTERED
+3;27/10/2026 17:07;CONSUMIDOR FINAL;9999999999999;vendedor;CARD;15.60;2.34;17.94;REGISTERED
+4;27/10/2026 17:07;Alexander Martinez;1728743244;vendedor;CASH;10.00;1.50;11.50;REGISTERED
+
+Ventas registradas;4
+Total vendido;173.76
+IVA recaudado;22.66

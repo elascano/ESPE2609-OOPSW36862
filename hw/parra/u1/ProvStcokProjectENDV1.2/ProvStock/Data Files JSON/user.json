@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "username": "owner",
+    "fullName": "Propietario",
+    "role": "OWNER",
+    "passwordHash": "aa48634414ae61f48880f162eda7ebcbb8731466c2822f3e6a5dcbf332440b95",
+    "salt": "oQmra52T58UbQHXwGF22EA==",
+    "active": true
+  },
+  {
+    "id": 2,
+    "username": "vendedor",
+    "fullName": "María López",
+    "role": "SALESPERSON",
+    "passwordHash": "772bd7d239b07e5272084ecf1d715533bcc0cfe4a7a8577336f1a12061988191",
+    "salt": "sKgHg+lya4xAEoMpCPMRUw==",
+    "active": true
+  },
+  {
+    "id": 3,
+    "username": "bodeguero",
+    "fullName": "Pedro Ramírez",
+    "role": "WAREHOUSE_CLERK",
+    "passwordHash": "3dd3150b9677f2653c9e1a798330e9665b55c238a315131c355bcf9b64291ae4",
+    "salt": "hoZkiVl0i6lejpqwYUPRdw==",
+    "active": true
+  }
+]

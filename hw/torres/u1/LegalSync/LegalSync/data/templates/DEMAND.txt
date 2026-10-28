@@ -1,0 +1,18 @@
+                        LAW FIRM - LEGALSYNC
+                    Quito, {DATE}
+
+SIR/MADAM JUDGE OF THE CIVIL UNIT
+
+I, {CLIENT}, with identity card No. {CLIENT_ID}, through my lawyer
+{LAWYER} (license {LICENSE}), file the following DEMAND against
+{DEFENDANT}, ID {DEFENDANT_ID}.
+
+Case: {TITLE}
+Docket number: {DOCKET}
+Current status: {STATUS} (opened on {OPENING_DATE})
+
+I ask that this demand be accepted for processing.
+
+____________________________          ____________________________
+{CLIENT}                              {LAWYER}
+Plaintiff                             Lawyer - License {LICENSE}
