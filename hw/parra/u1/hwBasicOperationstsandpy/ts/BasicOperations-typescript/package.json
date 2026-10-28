@@ -1,0 +1,16 @@
+{
+  "name": "basic-operations",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Port a TypeScript del proyecto Java ec.edu.espe.basicoperations",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/view/BasicOperations.ts",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

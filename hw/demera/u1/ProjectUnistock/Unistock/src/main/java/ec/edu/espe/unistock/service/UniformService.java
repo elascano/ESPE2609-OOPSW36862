@@ -13,8 +13,8 @@ public class UniformService {
     private final SimpleList<String> registeredSizes;
     private final SimpleList<String> registeredSchools;
 
-    private final String sizesFile = "sizes.txt";
-    private final String schoolsFile = "schools.txt";
+    private final String sizesFile = "sizes.json";
+    private final String schoolsFile = "schools.json";
 
     public UniformService() {
         this.registeredSizes = FileHandler.loadList(sizesFile);

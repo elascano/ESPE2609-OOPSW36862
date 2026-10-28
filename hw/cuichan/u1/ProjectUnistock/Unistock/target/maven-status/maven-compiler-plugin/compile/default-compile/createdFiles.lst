@@ -10,6 +10,7 @@ ec\edu\espe\unistock\service\StationeryService.class
 ec\edu\espe\unistock\structure\SimpleList.class
 ec\edu\espe\unistock\model\Sale.class
 ec\edu\espe\unistock\service\ProductService.class
+ec\edu\espe\unistock\view\CatalogMenuView.class
 ec\edu\espe\unistock\view\ProductMenuView.class
 ec\edu\espe\unistock\service\StockAlertService.class
 ec\edu\espe\unistock\structure\SimpleList$Node.class

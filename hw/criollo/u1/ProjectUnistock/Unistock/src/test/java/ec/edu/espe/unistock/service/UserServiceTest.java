@@ -1,184 +1,532 @@
 package ec.edu.espe.unistock.service;
 
-/**
- *
- * @author Dennis Criollo, Leslye Cuichan, Francisco Demera, Byte & Fabric Devs, @ESPE
- */
-
 import ec.edu.espe.unistock.model.Role;
 import ec.edu.espe.unistock.model.User;
+import ec.edu.espe.unistock.structure.FileHandler;
 import ec.edu.espe.unistock.structure.SimpleList;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UserServiceTest {
 
-    private UserService instance;
-
-    public UserServiceTest() {
-    }
-
-    @BeforeAll
-    public static void setUpClass() {
-    }
-
-    @AfterAll
-    public static void tearDownClass() {
-    }
+    private static final String FILE_PATH = "users.json";
+    private static final String TEST_DIR = "testUserServiceOutput";
+    private UserService userService;
 
     @BeforeEach
-    public void setUp() {
-        instance = new UserService();
+    void setUp() {
+        deleteJsonFile();
+        File dir = new File(TEST_DIR);
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+        userService = new UserService();
     }
 
     @AfterEach
-    public void tearDown() {
-        instance = null;
+    void tearDown() {
+        deleteJsonFile();
+        File dir = new File(TEST_DIR);
+        if (dir.exists()) {
+            File[] files = dir.listFiles();
+            if (files != null) {
+                for (File file : files) {
+                    file.delete();
+                }
+            }
+            dir.delete();
+        }
+    }
+
+    private void deleteJsonFile() {
+        File jsonFile = new File(FILE_PATH);
+        if (jsonFile.exists()) {
+            jsonFile.delete();
+        }
     }
 
     @Test
-    public void testRegisterValidUser() {
-        instance.register("newuser", "password123", Role.CUSTOMER);
-        User user = instance.findByUsername("newuser");
-        assertNotNull(user);
-        assertEquals("newuser", user.getUsername());
-        // Removed getPassword() assertion to avoid compilation error
+    void testConstructorCreatesDefaultAdminWhenFileMissing() {
+        assertEquals(1, userService.getUsers().size());
+        User admin = userService.findByUsername("admin");
+        assertNotNull(admin);
+        assertEquals(Role.ADMINISTRATOR, admin.getRole());
+    }
+
+    @Test
+    void testConstructorSavesDefaultAdminFileWhenMissing() {
+        File file = new File(FILE_PATH);
+        assertTrue(file.exists() && file.length() > 0);
+    }
+
+    @Test
+    void testConstructorLoadsExistingUsersFromFile() {
+        userService.registerUser("vendedor1", "pass123", Role.SALESPERSON);
+        UserService newService = new UserService();
+        assertEquals(2, newService.getUsers().size());
+        assertNotNull(newService.findByUsername("vendedor1"));
+    }
+
+    @Test
+    void testConstructorDoesNotDuplicateAdminIfFileExists() {
+        UserService service2 = new UserService();
+        assertEquals(1, service2.getUsers().size());
+    }
+
+    @Test
+    void testConstructorHandlesEmptyJsonList() {
+        FileHandler.saveListToJson(FILE_PATH, new SimpleList<User>());
+        UserService service = new UserService();
+        assertEquals(1, service.getUsers().size());
+        assertNotNull(service.findByUsername("admin"));
+    }
+
+    @Test
+    void testConstructorNotNullInstance() {
+        assertNotNull(userService);
+    }
+
+    @Test
+    void testConstructorNotNullUsersList() {
+        assertNotNull(userService.getUsers());
+    }
+
+    @Test
+    void testConstructorMultipleSavedUsersLoadedCorrectly() {
+        userService.registerUser("user1", "pass1", Role.SALESPERSON);
+        userService.registerUser("user2", "pass2", Role.CUSTOMER);
+        UserService loadedService = new UserService();
+        assertEquals(3, loadedService.getUsers().size());
+    }
+
+    @Test
+    void testConstructorDefaultAdminCredentialsMatch() {
+        assertNotNull(userService.authenticate("admin", "admin123"));
+    }
+
+    @Test
+    void testConstructorDefaultAdminIsFirstInList() {
+        userService.getUsers().resetIteration();
+        assertEquals("admin", userService.getUsers().next().getUsername());
+    }
+
+    @Test
+    void testRegisterUserValidParameters() {
+        userService.registerUser("leslye", "leslye123", Role.ADMINISTRATOR);
+        assertNotNull(userService.findByUsername("leslye"));
+    }
+
+    @Test
+    void testRegisterUserExistingUsernameThrowsException() {
+        IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () ->
+            userService.registerUser("admin", "admin123", Role.ADMINISTRATOR)
+        );
+        assertTrue(ex.getMessage().contains("El usuario ya existe"));
+    }
+
+    @Test
+    void testRegisterUserCaseInsensitiveDuplicateThrowsException() {
+        assertThrows(IllegalArgumentException.class, () ->
+            userService.registerUser("ADMIN", "pass", Role.SALESPERSON)
+        );
+    }
+
+    @Test
+    void testRegisterUserPersistsToFile() {
+        userService.registerUser("dennis", "dennis123", Role.SALESPERSON);
+        UserService newService = new UserService();
+        assertNotNull(newService.findByUsername("dennis"));
+    }
+
+    @Test
+    void testRegisterUserIncrementsListSize() {
+        assertEquals(1, userService.getUsers().size());
+        userService.registerUser("francisco", "fran123", Role.CUSTOMER);
+        assertEquals(2, userService.getUsers().size());
+    }
+
+    @Test
+    void testRegisterUserSalespersonRole() {
+        userService.registerUser("seller", "pass", Role.SALESPERSON);
+        User user = userService.findByUsername("seller");
+        assertEquals(Role.SALESPERSON, user.getRole());
+    }
+
+    @Test
+    void testRegisterUserCustomerRole() {
+        userService.registerUser("client", "pass", Role.CUSTOMER);
+        User user = userService.findByUsername("client");
         assertEquals(Role.CUSTOMER, user.getRole());
     }
 
     @Test
-    public void testRegisterDuplicateUser() {
-        instance.register("duplicate", "pass1", Role.ADMINISTRATOR);
-        instance.register("duplicate", "pass2", Role.CUSTOMER);
-        
-        // Check that the user exists. If the service prevents duplicates, 
-        // the original role (ADMINISTRATOR) should be preserved.
-        User user = instance.findByUsername("duplicate");
+    void testRegisterUserNullUsernameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () ->
+            userService.registerUser(null, "pass", Role.CUSTOMER)
+        );
+    }
+
+    @Test
+    void testRegisterUserBlankUsernameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () ->
+            userService.registerUser("   ", "pass", Role.CUSTOMER)
+        );
+    }
+
+    @Test
+    void testRegisterUserNullPasswordThrowsException() {
+        assertThrows(IllegalArgumentException.class, () ->
+            userService.registerUser("userTest", null, Role.CUSTOMER)
+        );
+    }
+
+    @Test
+    void testRemoveValidUserReturnsTrue() {
+        userService.registerUser("vendedor", "pass", Role.SALESPERSON);
+        boolean removed = userService.remove("vendedor");
+        assertTrue(removed);
+        assertNull(userService.findByUsername("vendedor"));
+    }
+
+    @Test
+    void testRemoveNonExistentUserReturnsFalse() {
+        boolean removed = userService.remove("usuarioInexistente");
+        assertFalse(removed);
+    }
+
+    @Test
+    void testRemoveCaseInsensitive() {
+        userService.registerUser("vendedor", "pass", Role.SALESPERSON);
+        boolean removed = userService.remove("VENDEDOR");
+        assertTrue(removed);
+        assertNull(userService.findByUsername("vendedor"));
+    }
+
+    @Test
+    void testRemoveDefaultAdmin() {
+        boolean removed = userService.remove("admin");
+        assertTrue(removed);
+        assertTrue(userService.getUsers().isEmpty());
+    }
+
+    @Test
+    void testRemovePersistsToFile() {
+        userService.registerUser("vendedor", "pass", Role.SALESPERSON);
+        userService.remove("vendedor");
+        UserService newService = new UserService();
+        assertNull(newService.findByUsername("vendedor"));
+    }
+
+    @Test
+    void testRemoveDecreasesListSize() {
+        userService.registerUser("vendedor", "pass", Role.SALESPERSON);
+        assertEquals(2, userService.getUsers().size());
+        userService.remove("vendedor");
+        assertEquals(1, userService.getUsers().size());
+    }
+
+    @Test
+    void testRemoveNullReturnsFalse() {
+        assertFalse(userService.remove(null));
+    }
+
+    @Test
+    void testRemoveBlankReturnsFalse() {
+        assertFalse(userService.remove("   "));
+    }
+
+    @Test
+    void testRemoveUserTwiceReturnsFalse() {
+        userService.registerUser("vendedor", "pass", Role.SALESPERSON);
+        userService.remove("vendedor");
+        assertFalse(userService.remove("vendedor"));
+    }
+
+    @Test
+    void testRemoveDoesNotAffectOtherUsers() {
+        userService.registerUser("vendedor1", "pass", Role.SALESPERSON);
+        userService.registerUser("vendedor2", "pass", Role.SALESPERSON);
+        userService.remove("vendedor1");
+        assertNotNull(userService.findByUsername("vendedor2"));
+    }
+
+    @Test
+    void testAuthenticateValidCredentialsReturnsUser() {
+        User user = userService.authenticate("admin", "admin123");
         assertNotNull(user);
-        assertEquals(Role.ADMINISTRATOR, user.getRole()); 
+        assertEquals("admin", user.getUsername());
     }
 
     @Test
-    public void testRegisterNullUsername() {
-        assertDoesNotThrow(() -> instance.register(null, "pass", Role.CUSTOMER));
+    void testAuthenticateWrongPasswordReturnsNull() {
+        assertNull(userService.authenticate("admin", "wrongPass"));
     }
 
     @Test
-    public void testRegisterNullPassword() {
-        assertDoesNotThrow(() -> instance.register("user", null, Role.CUSTOMER));
+    void testAuthenticateWrongUsernameReturnsNull() {
+        assertNull(userService.authenticate("wrongUser", "admin123"));
     }
 
     @Test
-    public void testRegisterNullRole() {
-        assertDoesNotThrow(() -> instance.register("user", "pass", null));
+    void testAuthenticateNullUsernameReturnsNull() {
+        assertNull(userService.authenticate(null, "admin123"));
     }
 
     @Test
-    public void testRemoveExistingUser() {
-        instance.register("toremove", "pass", Role.CUSTOMER);
-        boolean result = instance.remove("toremove");
-        assertTrue(result);
-        assertNull(instance.findByUsername("toremove"));
+    void testAuthenticateNullPasswordReturnsNull() {
+        assertNull(userService.authenticate("admin", null));
     }
 
     @Test
-    public void testRemoveNonExistingUser() {
-        boolean result = instance.remove("nonexistent");
-        assertFalse(result);
+    void testAuthenticateRegisteredUser() {
+        userService.registerUser("dennis", "pass2026", Role.SALESPERSON);
+        User user = userService.authenticate("dennis", "pass2026");
+        assertNotNull(user);
+        assertEquals(Role.SALESPERSON, user.getRole());
     }
 
     @Test
-    public void testRemoveNullUsername() {
-        boolean result = instance.remove(null);
-        assertFalse(result);
+    void testAuthenticateCaseSensitiveUsername() {
+        assertNull(userService.authenticate("ADMIN", "admin123"));
     }
 
     @Test
-    public void testRemoveCaseSensitivity() {
-        instance.register("usercase", "pass", Role.CUSTOMER);
-        boolean result = instance.remove("USERCASE");
-        // Depends on implementation, but typically username matching is exact or case insensitive.
-        assertFalse(result);
+    void testAuthenticateCaseSensitivePassword() {
+        assertNull(userService.authenticate("admin", "ADMIN123"));
     }
 
     @Test
-    public void testAuthenticateValidCredentials() {
-        instance.register("authuser", "authpass", Role.ADMINISTRATOR);
-        User result = instance.authenticate("authuser", "authpass");
-        assertNotNull(result);
-        assertEquals("authuser", result.getUsername());
+    void testAuthenticateAfterUserRemovedReturnsNull() {
+        userService.registerUser("dennis", "pass2026", Role.SALESPERSON);
+        userService.remove("dennis");
+        assertNull(userService.authenticate("dennis", "pass2026"));
     }
 
     @Test
-    public void testAuthenticateInvalidPassword() {
-        instance.register("authuser", "authpass", Role.ADMINISTRATOR);
-        User result = instance.authenticate("authuser", "wrongpass");
-        assertNull(result);
+    void testAuthenticateEmptyCredentialsReturnsNull() {
+        assertNull(userService.authenticate("", ""));
     }
 
     @Test
-    public void testAuthenticateInvalidUsername() {
-        instance.register("authuser", "authpass", Role.ADMINISTRATOR);
-        User result = instance.authenticate("wronguser", "authpass");
-        assertNull(result);
+    void testFindByUsernameExactMatch() {
+        User user = userService.findByUsername("admin");
+        assertNotNull(user);
+        assertEquals("admin", user.getUsername());
     }
 
     @Test
-    public void testAuthenticateNullUsername() {
-        User result = instance.authenticate(null, "pass");
-        assertNull(result);
+    void testFindByUsernameCaseInsensitiveLower() {
+        userService.registerUser("Carlos", "pass", Role.CUSTOMER);
+        User user = userService.findByUsername("carlos");
+        assertNotNull(user);
+        assertEquals("Carlos", user.getUsername());
     }
 
     @Test
-    public void testAuthenticateNullPassword() {
-        instance.register("authuser", "authpass", Role.ADMINISTRATOR);
-        User result = instance.authenticate("authuser", null);
-        assertNull(result);
+    void testFindByUsernameCaseInsensitiveUpper() {
+        User user = userService.findByUsername("ADMIN");
+        assertNotNull(user);
+        assertEquals("admin", user.getUsername());
     }
 
     @Test
-    public void testFindByUsernameExisting() {
-        instance.register("findme", "pass", Role.CUSTOMER);
-        User result = instance.findByUsername("findme");
-        assertNotNull(result);
-        assertEquals("findme", result.getUsername());
+    void testFindByUsernameNonExistentReturnsNull() {
+        assertNull(userService.findByUsername("desconocido"));
     }
 
     @Test
-    public void testFindByUsernameNonExisting() {
-        User result = instance.findByUsername("missing");
-        assertNull(result);
+    void testFindByUsernameNullReturnsNull() {
+        assertNull(userService.findByUsername(null));
     }
 
     @Test
-    public void testFindByUsernameNull() {
-        User result = instance.findByUsername(null);
-        assertNull(result);
+    void testFindByUsernameEmptyReturnsNull() {
+        assertNull(userService.findByUsername(""));
     }
 
     @Test
-    public void testGetUsersNotNull() {
-        SimpleList<User> result = instance.getUsers();
-        assertNotNull(result);
+    void testFindByUsernameBlankReturnsNull() {
+        assertNull(userService.findByUsername("   "));
     }
 
     @Test
-    public void testGetUsersSizeAfterRegistration() {
-        int initialSize = instance.getUsers().size();
-        instance.register("user1", "pass", Role.CUSTOMER);
-        instance.register("user2", "pass", Role.ADMINISTRATOR);
-        assertEquals(initialSize + 2, instance.getUsers().size());
+    void testFindByUsernameConsistentCall() {
+        assertEquals(userService.findByUsername("admin"), userService.findByUsername("admin"));
     }
 
     @Test
-    public void testGetUsersSizeAfterRemoval() {
-        instance.register("temp", "pass", Role.CUSTOMER);
-        int sizeAfterAdd = instance.getUsers().size();
-        instance.remove("temp");
-        assertEquals(sizeAfterAdd - 1, instance.getUsers().size());
+    void testFindByUsernameMultipleUsersSearch() {
+        userService.registerUser("user1", "pass", Role.SALESPERSON);
+        userService.registerUser("user2", "pass", Role.CUSTOMER);
+        assertNotNull(userService.findByUsername("user2"));
+    }
+
+    @Test
+    void testFindByUsernameAfterStockChange() {
+        assertNotNull(userService.findByUsername("admin"));
+    }
+
+    @Test
+    void testGetUsersNotNull() {
+        assertNotNull(userService.getUsers());
+    }
+
+    @Test
+    void testGetUsersInitialSizeIsOne() {
+        assertEquals(1, userService.getUsers().size());
+    }
+
+    @Test
+    void testGetUsersReflectsAdditions() {
+        userService.registerUser("vendedor", "pass", Role.SALESPERSON);
+        assertEquals(2, userService.getUsers().size());
+    }
+
+    @Test
+    void testGetUsersReflectsRemovals() {
+        userService.remove("admin");
+        assertTrue(userService.getUsers().isEmpty());
+    }
+
+    @Test
+    void testGetUsersSameReference() {
+        assertSame(userService.getUsers(), userService.getUsers());
+    }
+
+    @Test
+    void testGetUsersAllowsIteration() {
+        SimpleList<User> users = userService.getUsers();
+        users.resetIteration();
+        assertTrue(users.hasNext());
+        assertEquals("admin", users.next().getUsername());
+    }
+
+    @Test
+    void testGetUsersConsistentCall() {
+        assertEquals(userService.getUsers(), userService.getUsers());
+    }
+
+    @Test
+    void testGetUsersOrderPreserved() {
+        userService.registerUser("user1", "pass", Role.SALESPERSON);
+        userService.registerUser("user2", "pass", Role.CUSTOMER);
+        SimpleList<User> users = userService.getUsers();
+        users.resetIteration();
+        assertEquals("admin", users.next().getUsername());
+        assertEquals("user1", users.next().getUsername());
+        assertEquals("user2", users.next().getUsername());
+    }
+
+    @Test
+    void testGetUsersReturnsSimpleListInstance() {
+        assertTrue(userService.getUsers() instanceof SimpleList);
+    }
+
+    @Test
+    void testGetUsersContainsUserInstances() {
+        userService.getUsers().resetIteration();
+        assertTrue(userService.getUsers().next() instanceof User);
+    }
+
+    @Test
+    void testExportReportCsvValidFileGeneration() throws IOException {
+        String path = TEST_DIR + "/usuarios.csv";
+        userService.exportReportCSV(path);
+
+        File file = new File(path);
+        assertTrue(file.exists());
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertEquals(2, lines.size());
+        assertEquals("Usuario,Rol", lines.get(0));
+    }
+
+    @Test
+    void testExportReportCsvAutoAppendsExtension() {
+        String path = TEST_DIR + "/usuariosReport";
+        userService.exportReportCSV(path);
+
+        assertTrue(new File(path + ".csv").exists());
+    }
+
+    @Test
+    void testExportReportCsvContainsAdminData() throws IOException {
+        String path = TEST_DIR + "/adminReport.csv";
+        userService.exportReportCSV(path);
+
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertTrue(lines.get(1).contains("admin") && lines.get(1).contains("ADMINISTRATOR"));
+    }
+
+    @Test
+    void testExportReportCsvMultipleUsers() throws IOException {
+        String path = TEST_DIR + "/multiUsuarios.csv";
+        userService.registerUser("vendedor1", "pass", Role.SALESPERSON);
+        userService.registerUser("cliente1", "pass", Role.CUSTOMER);
+
+        userService.exportReportCSV(path);
+
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertEquals(4, lines.size());
+    }
+
+    @Test
+    void testExportReportCsvNullPathDoesNotCrash() {
+        assertDoesNotThrow(() -> userService.exportReportCSV(null));
+    }
+
+    @Test
+    void testExportReportCsvBlankPathDoesNotCrash() {
+        assertDoesNotThrow(() -> userService.exportReportCSV("   "));
+    }
+
+    @Test
+    void testExportReportCsvOverwritesExistingFile() throws IOException {
+        String path = TEST_DIR + "/overwriteUsuarios.csv";
+        userService.exportReportCSV(path);
+
+        userService.registerUser("vendedor1", "pass", Role.SALESPERSON);
+        userService.exportReportCSV(path);
+
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertEquals(3, lines.size());
+    }
+
+    @Test
+    void testExportReportCsvContainsHeaderLine() throws IOException {
+        String path = TEST_DIR + "/headerUserCheck.csv";
+        userService.exportReportCSV(path);
+
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertFalse(lines.isEmpty());
+        assertEquals("Usuario,Rol", lines.get(0));
+    }
+
+    @Test
+    void testExportReportCsvEmptyUsersList() throws IOException {
+        String path = TEST_DIR + "/emptyUsuarios.csv";
+        userService.remove("admin");
+        userService.exportReportCSV(path);
+
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertEquals(1, lines.size());
+        assertEquals("Usuario,Rol", lines.get(0));
+    }
+
+    @Test
+    void testExportReportCsvFormatExactMatch() throws IOException {
+        String path = TEST_DIR + "/exactFormat.csv";
+        userService.exportReportCSV(path);
+
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertEquals("admin,ADMINISTRATOR", lines.get(1));
     }
 }

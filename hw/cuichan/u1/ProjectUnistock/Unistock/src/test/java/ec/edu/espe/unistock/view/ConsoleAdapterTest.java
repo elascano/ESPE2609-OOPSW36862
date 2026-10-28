@@ -1,265 +1,236 @@
 package ec.edu.espe.unistock.view;
 
-/**
- *
- * @author Dennis Criollo, Leslye Cuichan, Francisco Demera, Byte & Fabric Devs, @ESPE
- */
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.math.BigDecimal;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ConsoleAdapterTest {
 
-    private ConsoleAdapter instance;
-    private final InputStream standardIn = System.in;
-
-    public ConsoleAdapterTest() {
-    }
-
-    @BeforeAll
-    public static void setUpClass() {
-    }
-
-    @AfterAll
-    public static void tearDownClass() {
-    }
-
-    @BeforeEach
-    public void setUp() {
-    }
+    private final InputStream originalIn = System.in;
 
     @AfterEach
-    public void tearDown() {
-        System.setIn(standardIn);
+    void tearDown() {
+        System.setIn(originalIn);
     }
 
     private void provideInput(String data) {
         ByteArrayInputStream testIn = new ByteArrayInputStream(data.getBytes());
         System.setIn(testIn);
-        instance = new ConsoleAdapter();
-    }
-
-    // --- Tests for readText (10 tests) ---
-
-    @Test
-    public void testReadTextStandardWord() {
-        provideInput("Hola\n");
-        String result = instance.readText("Ingrese texto:");
-        assertEquals("Hola", result.trim());
     }
 
     @Test
-    public void testReadTextMultipleWords() {
+    void testReadTextStandardInput() {
         provideInput("Hola Mundo\n");
-        String result = instance.readText("Ingrese texto:");
-        assertEquals("Hola Mundo", result.trim());
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals("Hola Mundo", adapter.readText("Ingrese: "));
     }
 
     @Test
-    public void testReadTextWithNumbers() {
-        provideInput("Texto123\n");
-        String result = instance.readText("Ingrese texto:");
-        assertEquals("Texto123", result.trim());
+    void testReadTextTrimsLeadingAndTrailingWhitespace() {
+        provideInput("   Texto con espacios   \n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals("Texto con espacios", adapter.readText("Ingrese: "));
     }
 
     @Test
-    public void testReadTextSpecialCharacters() {
-        provideInput("@#%&*\n");
-        String result = instance.readText("Ingrese texto:");
-        assertEquals("@#%&*", result.trim());
-    }
-
-    @Test
-    public void testReadTextLeadingTrailingSpaces() {
-        provideInput("  Espacios  \n");
-        String result = instance.readText("Ingrese texto:");
-        assertEquals("Espacios", result.trim());
-    }
-
-    @Test
-    public void testReadTextEmptyString() {
+    void testReadTextEmptyInputReturnsEmptyString() {
         provideInput("\n");
-        String result = instance.readText("Ingrese texto:");
-        assertEquals("", result.trim());
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals("", adapter.readText("Ingrese: "));
     }
 
     @Test
-    public void testReadTextSingleCharacter() {
+    void testReadTextBlankInputReturnsEmptyString() {
+        provideInput("     \n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals("", adapter.readText("Ingrese: "));
+    }
+
+    @Test
+    void testReadTextSpecialCharacters() {
+        provideInput("admin@espe.edu.ec#2026\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals("admin@espe.edu.ec#2026", adapter.readText("Ingrese: "));
+    }
+
+    @Test
+    void testReadTextNumericInputAsString() {
+        provideInput("12345\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals("12345", adapter.readText("Ingrese: "));
+    }
+
+    @Test
+    void testReadTextSingleCharacter() {
         provideInput("A\n");
-        String result = instance.readText("Ingrese texto:");
-        assertEquals("A", result.trim());
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals("A", adapter.readText("Ingrese: "));
     }
 
     @Test
-    public void testReadTextLongString() {
-        String longText = "Este es un texto muy largo para probar la capacidad de lectura del adaptador de consola";
-        provideInput(longText + "\n");
-        String result = instance.readText("Ingrese texto:");
-        assertEquals(longText, result.trim());
+    void testReadTextConsecutiveReads() {
+        provideInput("Primera Linea\nSegunda Linea\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals("Primera Linea", adapter.readText("Prompt 1: "));
+        assertEquals("Segunda Linea", adapter.readText("Prompt 2: "));
     }
 
     @Test
-    public void testReadTextNullPrompt() {
-        provideInput("Test\n");
-        String result = instance.readText(null);
-        assertEquals("Test", result.trim());
+    void testReadTextNotNullResult() {
+        provideInput("Prueba\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertNotNull(adapter.readText("Ingrese: "));
     }
 
     @Test
-    public void testReadTextEmptyPrompt() {
-        provideInput("Test2\n");
-        String result = instance.readText("");
-        assertEquals("Test2", result.trim());
-    }
-
-    // --- Tests for readInt (10 tests) ---
-
-    @Test
-    public void testReadIntPositivePositive() {
-        provideInput("15\n");
-        int result = instance.readInt("Ingrese entero:");
-        assertEquals(15, result);
+    void testReadTextPreservesInternalSpaces() {
+        provideInput("  Cuaderno   Universitario  \n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals("Cuaderno   Universitario", adapter.readText("Ingrese: "));
     }
 
     @Test
-    public void testReadIntNegative() {
+    void testReadIntValidPositiveNumber() {
+        provideInput("25\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(25, adapter.readInt("Ingrese entero: "));
+    }
+
+    @Test
+    void testReadIntValidNegativeNumber() {
         provideInput("-10\n");
-        int result = instance.readInt("Ingrese entero:");
-        assertEquals(-10, result);
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(-10, adapter.readInt("Ingrese entero: "));
     }
 
     @Test
-    public void testReadIntZero() {
+    void testReadIntZero() {
         provideInput("0\n");
-        int result = instance.readInt("Ingrese entero:");
-        assertEquals(0, result);
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(0, adapter.readInt("Ingrese entero: "));
     }
 
     @Test
-    public void testReadIntMaxInteger() {
-        provideInput("2147483647\n");
-        int result = instance.readInt("Ingrese entero:");
-        assertEquals(Integer.MAX_VALUE, result);
+    void testReadIntWithSurroundingSpaces() {
+        provideInput("   50   \n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(50, adapter.readInt("Ingrese entero: "));
     }
 
     @Test
-    public void testReadIntMinInteger() {
-        provideInput("-2147483648\n");
-        int result = instance.readInt("Ingrese entero:");
-        assertEquals(Integer.MIN_VALUE, result);
+    void testReadIntInvalidThenValidInput() {
+        provideInput("abc\n15\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(15, adapter.readInt("Ingrese entero: "));
     }
 
     @Test
-    public void testReadIntLeadingZeros() {
-        provideInput("007\n");
-        int result = instance.readInt("Ingrese entero:");
-        assertEquals(7, result);
+    void testReadIntDecimalThenValidInput() {
+        provideInput("12.34\n8\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(8, adapter.readInt("Ingrese entero: "));
     }
 
     @Test
-    public void testReadIntWithPlusSign() {
-        provideInput("+25\n");
-        int result = instance.readInt("Ingrese entero:");
-        assertEquals(25, result);
+    void testReadIntEmptyThenValidInput() {
+        provideInput("\n99\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(99, adapter.readInt("Ingrese entero: "));
     }
 
     @Test
-    public void testReadIntWithSpaces() {
-        provideInput("  42  \n");
-        int result = instance.readInt("Ingrese entero:");
-        assertEquals(42, result);
+    void testReadIntMultipleInvalidInputsBeforeValid() {
+        provideInput("texto\n--5\n12.5.6\n100\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(100, adapter.readInt("Ingrese entero: "));
     }
 
     @Test
-    public void testReadIntNullPrompt() {
+    void testReadIntMaxInteger() {
+        provideInput(Integer.MAX_VALUE + "\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(Integer.MAX_VALUE, adapter.readInt("Ingrese entero: "));
+    }
+
+    @Test
+    void testReadIntMinInteger() {
+        provideInput(Integer.MIN_VALUE + "\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(Integer.MIN_VALUE, adapter.readInt("Ingrese entero: "));
+    }
+
+    @Test
+    void testReadMoneyValidIntegerAmount() {
         provideInput("100\n");
-        int result = instance.readInt(null);
-        assertEquals(100, result);
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(new BigDecimal("100"), adapter.readMoney("Ingrese monto: "));
     }
 
     @Test
-    public void testReadIntEmptyPrompt() {
-        provideInput("99\n");
-        int result = instance.readInt("");
-        assertEquals(99, result);
-    }
-
-    // --- Tests for readMoney (10 tests) ---
-
-    @Test
-    public void testReadMoneyStandardDecimal() {
-        provideInput("10.50\n");
-        BigDecimal result = instance.readMoney("Ingrese dinero:");
-        assertEquals(new BigDecimal("10.50"), result);
+    void testReadMoneyValidDecimalAmount() {
+        provideInput("12.50\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(new BigDecimal("12.50"), adapter.readMoney("Ingrese monto: "));
     }
 
     @Test
-    public void testReadMoneyWholeNumber() {
-        provideInput("100\n");
-        BigDecimal result = instance.readMoney("Ingrese dinero:");
-        assertEquals(new BigDecimal("100"), result);
-    }
-
-    @Test
-    public void testReadMoneyZero() {
+    void testReadMoneyZero() {
         provideInput("0.00\n");
-        BigDecimal result = instance.readMoney("Ingrese dinero:");
-        assertEquals(new BigDecimal("0.00"), result);
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(new BigDecimal("0.00"), adapter.readMoney("Ingrese monto: "));
     }
 
     @Test
-    public void testReadMoneyNoLeadingZero() {
-        provideInput(".75\n");
-        BigDecimal result = instance.readMoney("Ingrese dinero:");
-        assertEquals(new BigDecimal("0.75"), result);
+    void testReadMoneyNegativeAmount() {
+        provideInput("-5.75\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(new BigDecimal("-5.75"), adapter.readMoney("Ingrese monto: "));
     }
 
     @Test
-    public void testReadMoneyNegativeAmount() {
-        provideInput("-20.50\n");
-        BigDecimal result = instance.readMoney("Ingrese dinero:");
-        assertEquals(new BigDecimal("-20.50"), result);
+    void testReadMoneyWithSurroundingSpaces() {
+        provideInput("   45.99   \n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(new BigDecimal("45.99"), adapter.readMoney("Ingrese monto: "));
     }
 
     @Test
-    public void testReadMoneyLargeAmount() {
-        provideInput("9999999.99\n");
-        BigDecimal result = instance.readMoney("Ingrese dinero:");
-        assertEquals(new BigDecimal("9999999.99"), result);
+    void testReadMoneyInvalidTextThenValidAmount() {
+        provideInput("gratis\n15.25\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(new BigDecimal("15.25"), adapter.readMoney("Ingrese monto: "));
     }
 
     @Test
-    public void testReadMoneyManyDecimals() {
-        provideInput("10.12345\n");
-        BigDecimal result = instance.readMoney("Ingrese dinero:");
-        assertEquals(new BigDecimal("10.12345"), result);
+    void testReadMoneyEmptyThenValidAmount() {
+        provideInput("\n3.50\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(new BigDecimal("3.50"), adapter.readMoney("Ingrese monto: "));
     }
 
     @Test
-    public void testReadMoneyWithSpaces() {
-        provideInput("  50.25  \n");
-        BigDecimal result = instance.readMoney("Ingrese dinero:");
-        assertEquals(new BigDecimal("50.25"), result);
+    void testReadMoneyMultipleInvalidInputsBeforeValid() {
+        provideInput("abc\n$10.00\n10,00\n10.00\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(new BigDecimal("10.00"), adapter.readMoney("Ingrese monto: "));
     }
 
     @Test
-    public void testReadMoneyNullPrompt() {
-        provideInput("5.5\n");
-        BigDecimal result = instance.readMoney(null);
-        assertEquals(new BigDecimal("5.5"), result);
+    void testReadMoneyHighPrecisionDecimal() {
+        provideInput("0.123456789\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertEquals(new BigDecimal("0.123456789"), adapter.readMoney("Ingrese monto: "));
     }
 
     @Test
-    public void testReadMoneyEmptyPrompt() {
-        provideInput("3.14\n");
-        BigDecimal result = instance.readMoney("");
-        assertEquals(new BigDecimal("3.14"), result);
+    void testReadMoneyNotNullResult() {
+        provideInput("2.50\n");
+        ConsoleAdapter adapter = new ConsoleAdapter();
+        assertNotNull(adapter.readMoney("Ingrese monto: "));
     }
 }

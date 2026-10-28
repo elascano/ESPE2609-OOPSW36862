@@ -1,190 +1,248 @@
 package ec.edu.espe.unistock.model;
 
-/**
- *
- * @author Dennis Criollo, Leslye Cuichan, Francisco Demera, Byte & Fabric Devs, @ESPE
- */
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StationeryTest {
 
-    private Stationery instance;
-
-    public StationeryTest() {
-    }
-
-    @BeforeAll
-    public static void setUpClass() {
-    }
-
-    @AfterAll
-    public static void tearDownClass() {
-    }
+    private Stationery testStationery;
 
     @BeforeEach
-    public void setUp() {
-        instance = new Stationery(1, "Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-    }
-
-    @AfterEach
-    public void tearDown() {
-        instance = null;
+    void setUp() {
+        testStationery = new Stationery(201, "Cuaderno Universitario", new BigDecimal("2.50"), 50, "Norma", "Cuaderno");
     }
 
     @Test
-    public void testGetBrandValidBrand() {
-        assertEquals("Norma", instance.getBrand());
+    void testConstructorValidParameters() {
+        Stationery stationery = new Stationery(202, "Lapiz de Color", new BigDecimal("4.80"), 30, "FaberCastell", "Colores");
+        assertNotNull(stationery);
     }
 
     @Test
-    public void testGetBrandNotNull() {
-        assertNotNull(instance.getBrand());
+    void testConstructorInheritedProductAttributes() {
+        assertEquals(201, testStationery.getId());
+        assertEquals("Cuaderno Universitario", testStationery.getName());
+        assertEquals(new BigDecimal("2.50"), testStationery.getPrice());
+        assertEquals(50, testStationery.getStock());
+        assertEquals(ProductCategory.STATIONERY, testStationery.getCategory());
     }
 
     @Test
-    public void testGetBrandIncorrectValue() {
-        assertEquals("Faber-Castell", instance.getBrand());
+    void testConstructorNullNameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> new Stationery(1, null, new BigDecimal("1.00"), 5, "Norma", "Cuaderno"));
     }
 
     @Test
-    public void testGetBrandEmptyString() {
-        assertEquals("", instance.getBrand());
+    void testConstructorBlankNameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> new Stationery(1, "   ", new BigDecimal("1.00"), 5, "Norma", "Cuaderno"));
     }
 
     @Test
-    public void testGetBrandUpperCase() {
-        assertEquals("NORMA", instance.getBrand());
+    void testConstructorNegativePriceThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> new Stationery(1, "Borrador", new BigDecimal("-0.50"), 5, "Pelikan", "Goma"));
     }
 
     @Test
-    public void testGetBrandNullCheck() {
-        assertNull(instance.getBrand());
+    void testConstructorNegativeStockThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> new Stationery(1, "Borrador", new BigDecimal("0.50"), -1, "Pelikan", "Goma"));
     }
 
     @Test
-    public void testGetBrandLengthCheck() {
-        assertEquals(10, instance.getBrand().length());
+    void testConstructorAllowsNullBrandAndType() {
+        Stationery stationery = new Stationery(203, "Regla Metalica", new BigDecimal("1.20"), 15, null, null);
+        assertNull(stationery.getBrand());
+        assertNull(stationery.getType());
     }
 
     @Test
-    public void testGetBrandSubstringCheck() {
-        assertFalse(instance.getBrand().contains("Nor"));
+    void testConstructorZeroPriceAllowed() {
+        Stationery stationery = new Stationery(204, "Muestra Escolar", BigDecimal.ZERO, 5, "BIC", "Esfero");
+        assertEquals(BigDecimal.ZERO, stationery.getPrice());
     }
 
     @Test
-    public void testGetBrandTypeCheck() {
-        assertFalse(instance.getBrand() instanceof String);
+    void testConstructorZeroStockAllowed() {
+        Stationery stationery = new Stationery(205, "Pluma Agotada", new BigDecimal("0.80"), 0, "Pilot", "Esfero");
+        assertEquals(0, stationery.getStock());
     }
 
     @Test
-    public void testGetBrandStartsWithCheck() {
-        assertTrue(instance.getBrand().startsWith("Bic"));
+    void testConstructorCategoryIsAlwaysStationery() {
+        assertEquals(ProductCategory.STATIONERY, testStationery.getCategory());
     }
 
     @Test
-    public void testGetTypeValidType() {
-        assertEquals("Cuaderno", instance.getType());
+    void testGetBrandValidString() {
+        assertEquals("Norma", testStationery.getBrand());
     }
 
     @Test
-    public void testGetTypeNotNull() {
-        assertNotNull(instance.getType());
+    void testGetBrandFaberCastell() {
+        Stationery stationery = new Stationery(2, "Pluma", new BigDecimal("0.50"), 10, "FaberCastell", "Esfero");
+        assertEquals("FaberCastell", stationery.getBrand());
     }
 
     @Test
-    public void testGetTypeIncorrectValue() {
-        assertEquals("Esfero", instance.getType());
+    void testGetBrandNull() {
+        Stationery stationery = new Stationery(3, "Goma", new BigDecimal("0.30"), 10, null, "Pegamento");
+        assertNull(stationery.getBrand());
     }
 
     @Test
-    public void testGetTypeEmptyString() {
-        assertEquals("", instance.getType());
+    void testGetBrandEmpty() {
+        Stationery stationery = new Stationery(4, "Goma", new BigDecimal("0.30"), 10, "", "Pegamento");
+        assertEquals("", stationery.getBrand());
     }
 
     @Test
-    public void testGetTypeUpperCase() {
-        assertEquals("CUADERNO", instance.getType());
+    void testGetBrandImmutable() {
+        String brand = testStationery.getBrand();
+        assertEquals("Norma", brand);
     }
 
     @Test
-    public void testGetTypeNullCheck() {
-        assertNull(instance.getType());
+    void testGetBrandConsistentCall() {
+        assertEquals(testStationery.getBrand(), testStationery.getBrand());
     }
 
     @Test
-    public void testGetTypeLengthCheck() {
-        assertEquals(3, instance.getType().length());
+    void testGetBrandWithSpaces() {
+        Stationery stationery = new Stationery(5, "Tijeras", new BigDecimal("1.50"), 10, " PaperMate ", "Corte");
+        assertEquals(" PaperMate ", stationery.getBrand());
     }
 
     @Test
-    public void testGetTypeSubstringCheck() {
-        assertFalse(instance.getType().contains("Cua"));
+    void testGetBrandPelikan() {
+        Stationery stationery = new Stationery(6, "Acuarelas", new BigDecimal("3.50"), 10, "Pelikan", "Pintura");
+        assertEquals("Pelikan", stationery.getBrand());
     }
 
     @Test
-    public void testGetTypeTypeCheck() {
-        assertFalse(instance.getType() instanceof String);
+    void testGetBrandArtesco() {
+        Stationery stationery = new Stationery(7, "Juego Geometrico", new BigDecimal("2.00"), 10, "Artesco", "Geometria");
+        assertEquals("Artesco", stationery.getBrand());
     }
 
     @Test
-    public void testGetTypeEndsWithCheck() {
-        assertTrue(instance.getType().endsWith("piz"));
+    void testGetBrandStaedtler() {
+        Stationery stationery = new Stationery(8, "Compas", new BigDecimal("4.00"), 10, "Staedtler", "Dibujo");
+        assertEquals("Staedtler", stationery.getBrand());
     }
 
     @Test
-    public void testGetDetailsValidFormat() {
-        assertEquals("Marca: Norma | Tipo: Cuaderno", instance.getDetails());
+    void testGetTypeValidString() {
+        assertEquals("Cuaderno", testStationery.getType());
     }
 
     @Test
-    public void testGetDetailsNotNull() {
-        assertNotNull(instance.getDetails());
+    void testGetTypeEsfero() {
+        Stationery stationery = new Stationery(2, "Pluma BIC", new BigDecimal("0.40"), 20, "BIC", "Esfero");
+        assertEquals("Esfero", stationery.getType());
     }
 
     @Test
-    public void testGetDetailsIncorrectFormat() {
-        assertEquals("Norma - Cuaderno", instance.getDetails());
+    void testGetTypeNull() {
+        Stationery stationery = new Stationery(3, "Goma", new BigDecimal("0.30"), 10, "Pelikan", null);
+        assertNull(stationery.getType());
     }
 
     @Test
-    public void testGetDetailsEmptyString() {
-        assertEquals("", instance.getDetails());
+    void testGetTypeEmpty() {
+        Stationery stationery = new Stationery(4, "Goma", new BigDecimal("0.30"), 10, "Pelikan", "");
+        assertEquals("", stationery.getType());
     }
 
     @Test
-    public void testGetDetailsUpperCase() {
-        assertEquals("MARCA: NORMA | TIPO: CUADERNO", instance.getDetails());
+    void testGetTypeImmutable() {
+        String type = testStationery.getType();
+        assertEquals("Cuaderno", type);
     }
 
     @Test
-    public void testGetDetailsNullCheck() {
-        assertNull(instance.getDetails());
+    void testGetTypeConsistentCall() {
+        assertEquals(testStationery.getType(), testStationery.getType());
     }
 
     @Test
-    public void testGetDetailsLengthCheck() {
-        assertEquals(10, instance.getDetails().length());
+    void testGetTypeWithSpaces() {
+        Stationery stationery = new Stationery(5, "Carpeta", new BigDecimal("0.80"), 10, "Norma", " Archivo ");
+        assertEquals(" Archivo ", stationery.getType());
     }
 
     @Test
-    public void testGetDetailsStartsWithCheck() {
-        assertTrue(instance.getDetails().startsWith("Detalle:"));
+    void testGetTypeMarcador() {
+        Stationery stationery = new Stationery(6, "Resaltador", new BigDecimal("0.90"), 10, "Pelikan", "Marcador");
+        assertEquals("Marcador", stationery.getType());
     }
 
     @Test
-    public void testGetDetailsEndsWithCheck() {
-        assertTrue(instance.getDetails().endsWith("Norma"));
+    void testGetTypePintura() {
+        Stationery stationery = new Stationery(7, "Temperas", new BigDecimal("2.80"), 10, "Crayola", "Pintura");
+        assertEquals("Pintura", stationery.getType());
     }
 
     @Test
-    public void testGetDetailsTypeCheck() {
-        assertFalse(instance.getDetails() instanceof String);
+    void testGetTypeCalculadora() {
+        Stationery stationery = new Stationery(8, "Calculadora", new BigDecimal("15.00"), 10, "Casio", "Electronico");
+        assertEquals("Electronico", stationery.getType());
+    }
+
+    @Test
+    void testGetDetailsFormatExactMatch() {
+        assertEquals("Marca: Norma | Tipo: Cuaderno", testStationery.getDetails());
+    }
+
+    @Test
+    void testGetDetailsContainsBrand() {
+        assertTrue(testStationery.getDetails().contains("Norma"));
+    }
+
+    @Test
+    void testGetDetailsContainsType() {
+        assertTrue(testStationery.getDetails().contains("Cuaderno"));
+    }
+
+    @Test
+    void testGetDetailsWithNullValues() {
+        Stationery stationery = new Stationery(1, "Regla", new BigDecimal("0.50"), 5, null, null);
+        assertEquals("Marca: null | Tipo: null", stationery.getDetails());
+    }
+
+    @Test
+    void testGetDetailsNotNull() {
+        assertNotNull(testStationery.getDetails());
+    }
+
+    @Test
+    void testGetDetailsNotEmpty() {
+        assertFalse(testStationery.getDetails().isEmpty());
+    }
+
+    @Test
+    void testGetDetailsConsistency() {
+        String details1 = testStationery.getDetails();
+        String details2 = testStationery.getDetails();
+        assertEquals(details1, details2);
+    }
+
+    @Test
+    void testGetDetailsContainsSeparators() {
+        assertTrue(testStationery.getDetails().contains("Marca:") && testStationery.getDetails().contains("| Tipo:"));
+    }
+
+    @Test
+    void testGetDetailsCustomStationery() {
+        Stationery stationery = new Stationery(2, "Color", new BigDecimal("5.00"), 10, "FaberCastell", "Colores");
+        assertEquals("Marca: FaberCastell | Tipo: Colores", stationery.getDetails());
+    }
+
+    @Test
+    void testGetDetailsUnchangedAfterStockChange() {
+        testStationery.decreaseStock(10);
+        assertEquals("Marca: Norma | Tipo: Cuaderno", testStationery.getDetails());
     }
 }

@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Ejecutar BasicOperations",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "basicoperations.view.basic_operations",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

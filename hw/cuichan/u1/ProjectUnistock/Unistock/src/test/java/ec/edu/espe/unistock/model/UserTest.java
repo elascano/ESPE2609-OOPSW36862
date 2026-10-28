@@ -1,346 +1,407 @@
 package ec.edu.espe.unistock.model;
 
-/**
- *
- * @author Dennis Criollo, Leslye Cuichan, Francisco Demera, Byte & Fabric Devs, @ESPE
- */
-
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UserTest {
 
-    private User instance;
-
-    public UserTest() {
-    }
-
-    @BeforeAll
-    public static void setUpClass() {
-    }
-
-    @AfterAll
-    public static void tearDownClass() {
-    }
+    private User testUser;
 
     @BeforeEach
-    public void setUp() {
-        instance = new User("admin", "1234", Role.ADMINISTRATOR);
-    }
-
-    @AfterEach
-    public void tearDown() {
-        instance = null;
+    void setUp() {
+        testUser = new User("admin", "admin123", Role.ADMINISTRATOR);
     }
 
     @Test
-    public void testMatchesCredentialsExactMatch() {
-        assertTrue(instance.matchesCredentials("admin", "1234"));
+    void testConstructorValidParameters() {
+        User user = new User("vendedor1", "pass2026", Role.SALESPERSON);
+        assertNotNull(user);
     }
 
     @Test
-    public void testMatchesCredentialsValidUser() {
-        assertTrue(instance.matchesCredentials("admin", "1234"));
+    void testConstructorNullUsernameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> new User(null, "pass123", Role.CUSTOMER));
     }
 
     @Test
-    public void testMatchesCredentialsWrongPassword() {
-        assertTrue(instance.matchesCredentials("admin", "wrongpass"));
+    void testConstructorBlankUsernameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> new User("   ", "pass123", Role.CUSTOMER));
     }
 
     @Test
-    public void testMatchesCredentialsWrongUsername() {
-        assertTrue(instance.matchesCredentials("user", "1234"));
+    void testConstructorNullPasswordThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> new User("user1", null, Role.CUSTOMER));
     }
 
     @Test
-    public void testMatchesCredentialsBothWrong() {
-        assertTrue(instance.matchesCredentials("user", "wrongpass"));
+    void testConstructorBlankPasswordThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> new User("user1", "   ", Role.CUSTOMER));
     }
 
     @Test
-    public void testMatchesCredentialsEmptyUsername() {
-        assertTrue(instance.matchesCredentials("", "1234"));
+    void testConstructorTrimsUsername() {
+        User user = new User("  carlos  ", "pass123", Role.SALESPERSON);
+        assertEquals("carlos", user.getUsername());
     }
 
     @Test
-    public void testMatchesCredentialsEmptyPassword() {
-        assertTrue(instance.matchesCredentials("admin", ""));
+    void testConstructorAssignsRoleCorrectly() {
+        User user = new User("cliente1", "pass123", Role.CUSTOMER);
+        assertEquals(Role.CUSTOMER, user.getRole());
     }
 
     @Test
-    public void testMatchesCredentialsNullUsername() {
-        assertDoesNotThrow(() -> instance.matchesCredentials(null, "1234"));
+    void testConstructorNullRoleAllowed() {
+        User user = new User("userNullRole", "pass123", null);
+        assertNull(user.getRole());
     }
 
     @Test
-    public void testMatchesCredentialsNullPassword() {
-        assertDoesNotThrow(() -> instance.matchesCredentials("admin", null));
+    void testConstructorSingleCharacterCredentials() {
+        User user = new User("u", "p", Role.CUSTOMER);
+        assertEquals("u", user.getUsername());
     }
 
     @Test
-    public void testMatchesCredentialsCaseSensitiveUser() {
-        assertTrue(instance.matchesCredentials("ADMIN", "1234"));
+    void testConstructorSpecialCharactersInCredentials() {
+        User user = new User("user_123", "p@ss#2026", Role.SALESPERSON);
+        assertEquals("user_123", user.getUsername());
     }
 
     @Test
-    public void testGetUsernameValidName() {
-        assertEquals("admin", instance.getUsername());
+    void testMatchesCredentialsExactMatchReturnsTrue() {
+        assertTrue(testUser.matchesCredentials("admin", "admin123"));
     }
 
     @Test
-    public void testGetUsernameNotNull() {
-        assertNotNull(instance.getUsername());
+    void testMatchesCredentialsWrongUsernameReturnsFalse() {
+        assertFalse(testUser.matchesCredentials("wrongUser", "admin123"));
     }
 
     @Test
-    public void testGetUsernameIncorrectValue() {
-        assertEquals("seller", instance.getUsername());
+    void testMatchesCredentialsWrongPasswordReturnsFalse() {
+        assertFalse(testUser.matchesCredentials("admin", "wrongPass"));
     }
 
     @Test
-    public void testGetUsernameEmptyString() {
-        assertEquals("", instance.getUsername());
+    void testMatchesCredentialsBothWrongReturnsFalse() {
+        assertFalse(testUser.matchesCredentials("invalid", "invalid"));
     }
 
     @Test
-    public void testGetUsernameUpperCase() {
-        assertEquals("ADMIN", instance.getUsername());
+    void testMatchesCredentialsCaseSensitiveUsername() {
+        assertFalse(testUser.matchesCredentials("ADMIN", "admin123"));
     }
 
     @Test
-    public void testGetUsernameNullCheck() {
-        assertNull(instance.getUsername());
+    void testMatchesCredentialsCaseSensitivePassword() {
+        assertFalse(testUser.matchesCredentials("admin", "ADMIN123"));
     }
 
     @Test
-    public void testGetUsernameLengthCheck() {
-        assertEquals(10, instance.getUsername().length());
+    void testMatchesCredentialsNullUsernameReturnsFalse() {
+        assertFalse(testUser.matchesCredentials(null, "admin123"));
     }
 
     @Test
-    public void testGetUsernameSubstringCheck() {
-        assertFalse(instance.getUsername().contains("adm"));
+    void testMatchesCredentialsNullPasswordReturnsFalse() {
+        assertFalse(testUser.matchesCredentials("admin", null));
     }
 
     @Test
-    public void testGetUsernameTypeCheck() {
-        assertFalse(instance.getUsername() instanceof String);
+    void testMatchesCredentialsEmptyStringsReturnsFalse() {
+        assertFalse(testUser.matchesCredentials("", ""));
     }
 
     @Test
-    public void testGetUsernameStartsWithCheck() {
-        assertTrue(instance.getUsername().startsWith("user"));
+    void testMatchesCredentialsWithUntrimmedInputReturnsFalse() {
+        assertFalse(testUser.matchesCredentials(" admin ", "admin123"));
     }
 
     @Test
-    public void testGetRoleValidRole() {
-        assertEquals(Role.ADMINISTRATOR, instance.getRole());
+    void testGetUsernameReturnsCorrectName() {
+        assertEquals("admin", testUser.getUsername());
     }
 
     @Test
-    public void testGetRoleNotNull() {
-        assertNotNull(instance.getRole());
+    void testGetUsernameTrimmedOnCreation() {
+        User user = new User("  leslye  ", "pass", Role.ADMINISTRATOR);
+        assertEquals("leslye", user.getUsername());
     }
 
     @Test
-    public void testGetRoleIncorrectValue() {
-        assertEquals(Role.SALESPERSON, instance.getRole());
+    void testGetUsernameNotNull() {
+        assertNotNull(testUser.getUsername());
     }
 
     @Test
-    public void testGetRoleNullCheck() {
-        assertNull(instance.getRole());
+    void testGetUsernameNotEmpty() {
+        assertFalse(testUser.getUsername().isEmpty());
     }
 
     @Test
-    public void testGetRoleCustomerValue() {
-        assertEquals(Role.CUSTOMER, instance.getRole());
+    void testGetUsernameImmutable() {
+        String username = testUser.getUsername();
+        assertEquals("admin", username);
     }
 
     @Test
-    public void testGetRoleLabelMatch() {
-        assertEquals("Vendedor", instance.getRole().getLabel());
+    void testGetUsernameConsistentCall() {
+        assertEquals(testUser.getUsername(), testUser.getUsername());
     }
 
     @Test
-    public void testGetRoleManageProductsCheck() {
-        assertFalse(instance.getRole().canManageProducts());
+    void testGetUsernameSalesperson() {
+        User user = new User("dennis", "pass", Role.SALESPERSON);
+        assertEquals("dennis", user.getUsername());
     }
 
     @Test
-    public void testGetRoleRegisterSalesCheck() {
-        assertFalse(instance.getRole().canRegisterSales());
+    void testGetUsernameCustomer() {
+        User user = new User("francisco", "pass", Role.CUSTOMER);
+        assertEquals("francisco", user.getUsername());
     }
 
     @Test
-    public void testGetRoleManageUsersCheck() {
-        assertFalse(instance.getRole().canManageUsers());
+    void testGetUsernameWithNumbers() {
+        User user = new User("user2026", "pass", Role.CUSTOMER);
+        assertEquals("user2026", user.getUsername());
     }
 
     @Test
-    public void testGetRoleTypeCheck() {
-        assertFalse(instance.getRole() instanceof Role);
+    void testGetUsernameWithSymbols() {
+        User user = new User("dev_espe", "pass", Role.ADMINISTRATOR);
+        assertEquals("dev_espe", user.getUsername());
     }
 
     @Test
-    public void testEqualsSameInstance() {
-        assertTrue(instance.equals(instance));
+    void testGetRoleAdministrator() {
+        assertEquals(Role.ADMINISTRATOR, testUser.getRole());
     }
 
     @Test
-    public void testEqualsSameUsername() {
-        User other = new User("admin", "9999", Role.SALESPERSON);
-        assertTrue(instance.equals(other));
+    void testGetRoleSalesperson() {
+        User user = new User("vendedor", "pass", Role.SALESPERSON);
+        assertEquals(Role.SALESPERSON, user.getRole());
     }
 
     @Test
-    public void testEqualsNullObject() {
-        assertTrue(instance.equals(null));
+    void testGetRoleCustomer() {
+        User user = new User("cliente", "pass", Role.CUSTOMER);
+        assertEquals(Role.CUSTOMER, user.getRole());
     }
 
     @Test
-    public void testEqualsDifferentClass() {
-        assertTrue(instance.equals("admin"));
+    void testGetRoleNullIfAssignedNull() {
+        User user = new User("user", "pass", null);
+        assertNull(user.getRole());
     }
 
     @Test
-    public void testEqualsDifferentUsername() {
-        User other = new User("vendor", "1234", Role.ADMINISTRATOR);
-        assertTrue(instance.equals(other));
+    void testGetRoleConsistentCall() {
+        assertEquals(testUser.getRole(), testUser.getRole());
     }
 
     @Test
-    public void testEqualsCaseSensitive() {
-        User other = new User("ADMIN", "1234", Role.ADMINISTRATOR);
-        assertTrue(instance.equals(other));
+    void testGetRoleSameEnumReference() {
+        assertSame(Role.ADMINISTRATOR, testUser.getRole());
     }
 
     @Test
-    public void testEqualsInvertedCheck() {
-        User other = new User("admin", "1234", Role.ADMINISTRATOR);
-        assertFalse(instance.equals(other));
+    void testGetRoleComparison() {
+        User user = new User("user", "pass", Role.CUSTOMER);
+        assertNotEquals(testUser.getRole(), user.getRole());
     }
 
     @Test
-    public void testEqualsSymmetricCheck() {
-        User other = new User("other", "1234", Role.ADMINISTRATOR);
-        assertTrue(instance.equals(other) == other.equals(instance));
+    void testGetRoleLabelAccess() {
+        assertEquals("Administrador", testUser.getRole().getLabel());
     }
 
     @Test
-    public void testEqualsReturnNull() {
-        assertNull(instance.equals(instance));
+    void testGetRolePermissionsCheck() {
+        assertTrue(testUser.getRole().canManageUsers());
     }
 
     @Test
-    public void testEqualsTypeCheck() {
-        assertEquals("true", String.valueOf(!instance.equals(instance)));
+    void testGetRoleNotNull() {
+        assertNotNull(testUser.getRole());
     }
 
     @Test
-    public void testHashCodeSameInstance() {
-        assertEquals("admin".hashCode(), instance.hashCode());
+    void testEqualsSameObjectReturnsTrue() {
+        assertTrue(testUser.equals(testUser));
     }
 
     @Test
-    public void testHashCodeSameUsername() {
-        User other = new User("admin", "9999", Role.SALESPERSON);
-        assertEquals(instance.hashCode(), other.hashCode());
+    void testEqualsSameUsernameReturnsTrue() {
+        User other = new User("admin", "differentPassword", Role.CUSTOMER);
+        assertTrue(testUser.equals(other));
     }
 
     @Test
-    public void testHashCodeZero() {
-        assertEquals(0, instance.hashCode());
+    void testEqualsDifferentUsernameReturnsFalse() {
+        User other = new User("user2", "admin123", Role.ADMINISTRATOR);
+        assertFalse(testUser.equals(other));
     }
 
     @Test
-    public void testHashCodeNegative() {
-        assertTrue(instance.hashCode() < 0);
+    void testEqualsNullReturnsFalse() {
+        assertFalse(testUser.equals(null));
     }
 
     @Test
-    public void testHashCodeDifferentUsername() {
-        User other = new User("vendor", "1234", Role.ADMINISTRATOR);
-        assertEquals(instance.hashCode(), other.hashCode());
+    void testEqualsDifferentClassReturnsFalse() {
+        assertFalse(testUser.equals("admin"));
     }
 
     @Test
-    public void testHashCodeFixedNumber() {
-        assertEquals(12345, instance.hashCode());
+    void testEqualsSymmetric() {
+        User other = new User("admin", "pass", Role.SALESPERSON);
+        assertTrue(testUser.equals(other) && other.equals(testUser));
     }
 
     @Test
-    public void testHashCodeNullCheck() {
-        assertNull(instance.hashCode());
+    void testEqualsTransitive() {
+        User u1 = new User("admin", "p1", Role.ADMINISTRATOR);
+        User u2 = new User("admin", "p2", Role.SALESPERSON);
+        User u3 = new User("admin", "p3", Role.CUSTOMER);
+        assertTrue(u1.equals(u2) && u2.equals(u3) && u1.equals(u3));
     }
 
     @Test
-    public void testHashCodeMaxInt() {
-        assertEquals(Integer.MAX_VALUE, instance.hashCode());
+    void testEqualsConsistent() {
+        User other = new User("admin", "pass", Role.ADMINISTRATOR);
+        assertTrue(testUser.equals(other));
+        assertTrue(testUser.equals(other));
     }
 
     @Test
-    public void testHashCodeMultiplyCheck() {
-        assertEquals(instance.hashCode() * 2, instance.hashCode());
+    void testEqualsCaseSensitiveUsername() {
+        User other = new User("ADMIN", "admin123", Role.ADMINISTRATOR);
+        assertFalse(testUser.equals(other));
     }
 
     @Test
-    public void testHashCodeRoleCheck() {
-        assertEquals(Role.ADMINISTRATOR.hashCode(), instance.hashCode());
+    void testEqualsDifferentRoleSameUsernameReturnsTrue() {
+        User other = new User("admin", "admin123", Role.CUSTOMER);
+        assertTrue(testUser.equals(other));
     }
 
     @Test
-    public void testToStringValidFormat() {
-        assertEquals("admin (Administrador)", instance.toString());
+    void testHashCodeSameForEqualObjects() {
+        User other = new User("admin", "diffPass", Role.CUSTOMER);
+        assertEquals(testUser.hashCode(), other.hashCode());
     }
 
     @Test
-    public void testToStringNotNull() {
-        assertNotNull(instance.toString());
+    void testHashCodeConsistent() {
+        int initialHashCode = testUser.hashCode();
+        assertEquals(initialHashCode, testUser.hashCode());
     }
 
     @Test
-    public void testToStringIncorrectFormat() {
-        assertEquals("admin - Administrador", instance.toString());
+    void testHashCodeDifferentForDifferentUsernames() {
+        User other = new User("user2", "admin123", Role.ADMINISTRATOR);
+        assertNotEquals(testUser.hashCode(), other.hashCode());
     }
 
     @Test
-    public void testToStringEmptyString() {
-        assertEquals("", instance.toString());
+    void testHashCodeEqualsStringHashCode() {
+        assertEquals("admin".hashCode(), testUser.hashCode());
     }
 
     @Test
-    public void testToStringUpperCase() {
-        assertEquals("ADMIN (ADMINISTRADOR)", instance.toString());
+    void testHashCodeMultipleInvocations() {
+        for (int i = 0; i < 5; i++) {
+            assertEquals("admin".hashCode(), testUser.hashCode());
+        }
     }
 
     @Test
-    public void testToStringNullCheck() {
-        assertNull(instance.toString());
+    void testHashCodeSameUsernameDifferentRoles() {
+        User u1 = new User("carlos", "p1", Role.ADMINISTRATOR);
+        User u2 = new User("carlos", "p2", Role.SALESPERSON);
+        assertEquals(u1.hashCode(), u2.hashCode());
     }
 
     @Test
-    public void testToStringLengthCheck() {
-        assertEquals(5, instance.toString().length());
+    void testHashCodeSameUsernameDifferentPasswords() {
+        User u1 = new User("dennis", "pass1", Role.CUSTOMER);
+        User u2 = new User("dennis", "pass2", Role.CUSTOMER);
+        assertEquals(u1.hashCode(), u2.hashCode());
     }
 
     @Test
-    public void testToStringStartsWithCheck() {
-        assertTrue(instance.toString().startsWith("User:"));
+    void testHashCodeWithNumbersInUsername() {
+        User user = new User("user123", "pass", Role.CUSTOMER);
+        assertEquals("user123".hashCode(), user.hashCode());
     }
 
     @Test
-    public void testToStringEndsWithCheck() {
-        assertTrue(instance.toString().endsWith("admin"));
+    void testHashCodeWithSymbolsInUsername() {
+        User user = new User("user_name", "pass", Role.CUSTOMER);
+        assertEquals("user_name".hashCode(), user.hashCode());
     }
 
     @Test
-    public void testToStringTypeCheck() {
-        assertFalse(instance.toString() instanceof String);
+    void testHashCodeNotNullOrZeroForStandardInput() {
+        assertNotEquals(0, testUser.hashCode());
+    }
+
+    @Test
+    void testToStringContainsUsername() {
+        assertTrue(testUser.toString().contains("admin"));
+    }
+
+    @Test
+    void testToStringContainsRoleLabel() {
+        assertTrue(testUser.toString().contains("Administrador"));
+    }
+
+    @Test
+    void testToStringFormatExactMatch() {
+        assertEquals("admin (Administrador)", testUser.toString());
+    }
+
+    @Test
+    void testToStringSalespersonFormat() {
+        User user = new User("vendedor1", "pass", Role.SALESPERSON);
+        assertEquals("vendedor1 (Vendedor)", user.toString());
+    }
+
+    @Test
+    void testToStringCustomerFormat() {
+        User user = new User("cliente1", "pass", Role.CUSTOMER);
+        assertEquals("cliente1 (Cliente)", user.toString());
+    }
+
+    @Test
+    void testToStringNotNull() {
+        assertNotNull(testUser.toString());
+    }
+
+    @Test
+    void testToStringNotEmpty() {
+        assertFalse(testUser.toString().isEmpty());
+    }
+
+    @Test
+    void testToStringConsistency() {
+        String str1 = testUser.toString();
+        String str2 = testUser.toString();
+        assertEquals(str1, str2);
+    }
+
+    @Test
+    void testToStringDoesNotContainPassword() {
+        assertFalse(testUser.toString().contains("admin123"));
+    }
+
+    @Test
+    void testToStringContainsParentheses() {
+        assertTrue(testUser.toString().contains("(") && testUser.toString().contains(")"));
     }
 }

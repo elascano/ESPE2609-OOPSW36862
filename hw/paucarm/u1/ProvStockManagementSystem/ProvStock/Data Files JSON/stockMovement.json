@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "dateTime": "2026-10-26T10:01:53.388978233",
+    "productCode": "CAB-001",
+    "type": "ADJUSTMENT",
+    "quantity": 500.0,
+    "saleNumber": null,
+    "purchaseNumber": null,
+    "user": "owner",
+    "reason": "Inventario inicial"
+  },
+  {
+    "id": 2,
+    "dateTime": "2026-10-26T10:01:53.389130707",
+    "productCode": "CAB-002",
+    "type": "ADJUSTMENT",
+    "quantity": 80.0,
+    "saleNumber": null,
+    "purchaseNumber": null,
+    "user": "owner",
+    "reason": "Inventario inicial"
+  },
+  {
+    "id": 3,
+    "dateTime": "2026-10-26T10:01:53.389158551",
+    "productCode": "ILU-001",
+    "type": "ADJUSTMENT",
+    "quantity": 60.0,
+    "saleNumber": null,
+    "purchaseNumber": null,
+    "user": "owner",
+    "reason": "Inventario inicial"
+  },
+  {
+    "id": 4,
+    "dateTime": "2026-10-26T10:01:53.389191709",
+    "productCode": "INT-001",
+    "type": "ADJUSTMENT",
+    "quantity": 40.0,
+    "saleNumber": null,
+    "purchaseNumber": null,
+    "user": "owner",
+    "reason": "Inventario inicial"
+  },
+  {
+    "id": 5,
+    "dateTime": "2026-10-26T10:01:53.389214808",
+    "productCode": "PRO-001",
+    "type": "ADJUSTMENT",
+    "quantity": 8.0,
+    "saleNumber": null,
+    "purchaseNumber": null,
+    "user": "owner",
+    "reason": "Inventario inicial"
+  },
+  {
+    "id": 6,
+    "dateTime": "2026-10-26T10:01:53.389238259",
+    "productCode": "HER-001",
+    "type": "ADJUSTMENT",
+    "quantity": 12.0,
+    "saleNumber": null,
+    "purchaseNumber": null,
+    "user": "owner",
+    "reason": "Inventario inicial"
+  },
+  {
+    "id": 7,
+    "dateTime": "2026-10-27T17:03:46.772338900",
+    "productCode": "CAB-001",
+    "type": "SALE",
+    "quantity": -50.0,
+    "saleNumber": 1,
+    "purchaseNumber": null,
+    "user": "vendedor",
+    "reason": null
+  },
+  {
+    "id": 8,
+    "dateTime": "2026-10-27T17:03:46.772338900",
+    "productCode": "ILU-001",
+    "type": "SALE",
+    "quantity": -4.0,
+    "saleNumber": 1,
+    "purchaseNumber": null,
+    "user": "vendedor",
+    "reason": null
+  },
+  {
+    "id": 9,
+    "dateTime": "2026-10-27T17:03:46.772338900",
+    "productCode": "HER-001",
+    "type": "SALE",
+    "quantity": -1.0,
+    "saleNumber": 1,
+    "purchaseNumber": null,
+    "user": "vendedor",
+    "reason": null
+  },
+  {
+    "id": 10,
+    "dateTime": "2026-10-27T17:04:48.033838200",
+    "productCode": "CAB-001",
+    "type": "SALE",
+    "quantity": -100.0,
+    "saleNumber": 2,
+    "purchaseNumber": null,
+    "user": "vendedor",
+    "reason": null
+  },
+  {
+    "id": 11,
+    "dateTime": "2026-10-27T17:07:03.235903600",
+    "productCode": "PRO-001",
+    "type": "SALE",
+    "quantity": -2.0,
+    "saleNumber": 3,
+    "purchaseNumber": null,
+    "user": "vendedor",
+    "reason": null
+  },
+  {
+    "id": 12,
+    "dateTime": "2026-10-27T17:07:36.948725500",
+    "productCode": "INT-001",
+    "type": "SALE",
+    "quantity": -5.0,
+    "saleNumber": 4,
+    "purchaseNumber": null,
+    "user": "vendedor",
+    "reason": null
+  },
+  {
+    "id": 13,
+    "dateTime": "2026-10-27T17:10:37.104641",
+    "productCode": "ILU-001",
+    "type": "ADJUSTMENT",
+    "quantity": 4.0,
+    "saleNumber": null,
+    "purchaseNumber": null,
+    "user": "bodeguero",
+    "reason": "Se añade 4 focos no registrados"
+  },
+  {
+    "id": 14,
+    "dateTime": "2026-10-27T17:13:48.904087300",
+    "productCode": "PRO-001",
+    "type": "PURCHASE",
+    "quantity": 55.0,
+    "saleNumber": null,
+    "purchaseNumber": 1,
+    "user": "bodeguero",
+    "reason": null
+  }
+]

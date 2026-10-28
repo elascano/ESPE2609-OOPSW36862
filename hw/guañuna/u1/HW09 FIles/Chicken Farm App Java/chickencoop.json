@@ -1,0 +1,45 @@
+{
+  "chickenCoopId": 1,
+  "chickens": [
+    {
+      "id": 1,
+      "name": "Lucy",
+      "color": "black",
+      "bornOnDate": "2026-10-21",
+      "ageInYears": 0,
+      "molting": false
+    },
+    {
+      "id": 2,
+      "name": "Alejandra",
+      "color": "white",
+      "bornOnDate": "2026-10-21",
+      "ageInYears": 0,
+      "molting": false
+    },
+    {
+      "id": 3,
+      "name": "Picachu",
+      "color": "yellow",
+      "bornOnDate": "2010-10-22",
+      "ageInYears": 0,
+      "molting": true
+    },
+    {
+      "id": 5,
+      "name": "Nicolas",
+      "color": "Black",
+      "bornOnDate": "2020-05-09",
+      "ageInYears": 0,
+      "molting": true
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "currentIndex": 4,
+  "iterationIndex": 4
+}

@@ -1,380 +1,498 @@
 package ec.edu.espe.unistock.service;
 
-/**
- *
- * @author Dennis Criollo, Leslye Cuichan, Francisco Demera, Byte & Fabric Devs, @ESPE
- */
-
 import ec.edu.espe.unistock.structure.SimpleList;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import java.io.File;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UniformServiceTest {
 
-    private UniformService instance;
-
-    public UniformServiceTest() {
-    }
-
-    @BeforeAll
-    public static void setUpClass() {
-    }
-
-    @AfterAll
-    public static void tearDownClass() {
-    }
+    private static final String SIZES_FILE = "sizes.json";
+    private static final String SCHOOLS_FILE = "schools.json";
+    private UniformService uniformService;
 
     @BeforeEach
-    public void setUp() {
-        instance = new UniformService();
+    void setUp() {
+        deleteFiles();
+        uniformService = new UniformService();
     }
 
     @AfterEach
-    public void tearDown() {
-        instance = null;
+    void tearDown() {
+        deleteFiles();
+    }
+
+    private void deleteFiles() {
+        File szFile = new File(SIZES_FILE);
+        if (szFile.exists()) {
+            szFile.delete();
+        }
+        File scFile = new File(SCHOOLS_FILE);
+        if (scFile.exists()) {
+            scFile.delete();
+        }
     }
 
     @Test
-    public void testRegisterSizeValidSize() {
-        instance.registerSize("XL");
-        assertTrue(instance.existsSize("XL"));
+    void testConstructorInitializesEmptyListsWhenFilesMissing() {
+        assertNotNull(uniformService.getRegisteredSizes());
+        assertNotNull(uniformService.getRegisteredSchools());
+        assertTrue(uniformService.getRegisteredSizes().isEmpty());
+        assertTrue(uniformService.getRegisteredSchools().isEmpty());
     }
 
     @Test
-    public void testRegisterSizeCheckListSize() {
-        instance.registerSize("XXL");
-        assertFalse(instance.getRegisteredSizes().isEmpty());
+    void testConstructorLoadsExistingSizesFromFile() {
+        uniformService.registerSize("M");
+        UniformService newService = new UniformService();
+        assertEquals(1, newService.getRegisteredSizes().size());
+        assertTrue(newService.existsSize("M"));
     }
 
     @Test
-    public void testRegisterSizeNullSize() {
-        assertDoesNotThrow(() -> instance.registerSize(null));
+    void testConstructorLoadsExistingSchoolsFromFile() {
+        uniformService.registerSchool("Colegio San Gabriel");
+        UniformService newService = new UniformService();
+        assertEquals(1, newService.getRegisteredSchools().size());
+        assertTrue(newService.existsSchool("Colegio San Gabriel"));
     }
 
     @Test
-    public void testRegisterSizeEmptyString() {
-        instance.registerSize("");
-        assertTrue(instance.existsSize(""));
+    void testConstructorHandlesSizeAndSchoolPersistenceTogether() {
+        uniformService.registerSize("L");
+        uniformService.registerSchool("Colegio Benalcazar");
+        UniformService newService = new UniformService();
+        assertTrue(newService.existsSize("L"));
+        assertTrue(newService.existsSchool("Colegio Benalcazar"));
     }
 
     @Test
-    public void testRegisterSizeWhitespaceOnly() {
-        instance.registerSize("   ");
-        assertTrue(instance.existsSize("   "));
+    void testConstructorIndependentFileLoading() {
+        uniformService.registerSize("S");
+        UniformService newService = new UniformService();
+        assertTrue(newService.getRegisteredSchools().isEmpty());
+        assertFalse(newService.getRegisteredSizes().isEmpty());
     }
 
     @Test
-    public void testRegisterSizeDuplicateSize() {
-        instance.registerSize("M");
-        instance.registerSize("M");
-        assertEquals(10, instance.getRegisteredSizes().size());
+    void testConstructorMultipleSizesLoaded() {
+        uniformService.registerSize("S");
+        uniformService.registerSize("M");
+        UniformService newService = new UniformService();
+        assertEquals(2, newService.getRegisteredSizes().size());
     }
 
     @Test
-    public void testRegisterSizeCaseInsensitiveDuplicate() {
-        instance.registerSize("LARGE");
-        instance.registerSize("large");
-        assertEquals(2, instance.getRegisteredSizes().size());
+    void testConstructorMultipleSchoolsLoaded() {
+        uniformService.registerSchool("Colegio San Gabriel");
+        uniformService.registerSchool("Instituto Nacional Mejia");
+        UniformService newService = new UniformService();
+        assertEquals(2, newService.getRegisteredSchools().size());
     }
 
     @Test
-    public void testRegisterSizeDoesNotSave() {
-        instance.registerSize("S");
-        assertFalse(instance.existsSize("S"));
+    void testConstructorCreatesServiceInstance() {
+        assertNotNull(uniformService);
     }
 
     @Test
-    public void testRegisterSizeReturnsBoolean() {
-        instance.registerSize("M");
-        assertNull(instance.getRegisteredSizes());
+    void testConstructorListsAreNotSameInstance() {
+        assertNotSame(uniformService.getRegisteredSizes(), uniformService.getRegisteredSchools());
     }
 
     @Test
-    public void testRegisterSizeTypeCheck() {
-        instance.registerSize("L");
-        assertFalse(instance.getRegisteredSizes() instanceof SimpleList);
+    void testConstructorPreservesDataIntegrity() {
+        uniformService.registerSize("XL");
+        uniformService.registerSchool("U.E. 24 de Mayo");
+        UniformService service2 = new UniformService();
+        assertEquals(1, service2.getRegisteredSizes().size());
+        assertEquals(1, service2.getRegisteredSchools().size());
     }
 
     @Test
-    public void testExistsSizeValidSize() {
-        instance.registerSize("M");
-        assertTrue(instance.existsSize("M"));
+    void testRegisterSizeValidString() {
+        uniformService.registerSize("M");
+        assertTrue(uniformService.existsSize("M"));
     }
 
     @Test
-    public void testExistsSizeCaseInsensitive() {
-        instance.registerSize("Small");
-        assertTrue(instance.existsSize("SMALL"));
+    void testRegisterSizeConvertsToUpperCase() {
+        uniformService.registerSize("s");
+        assertTrue(uniformService.existsSize("S"));
+        assertEquals("S", uniformService.getRegisteredSizes().next());
     }
 
     @Test
-    public void testExistsSizeNonExistent() {
-        assertTrue(instance.existsSize("TallaInexistente"));
+    void testRegisterSizeNullIgnored() {
+        uniformService.registerSize(null);
+        assertTrue(uniformService.getRegisteredSizes().isEmpty());
     }
 
     @Test
-    public void testExistsSizeNullSize() {
-        assertTrue(instance.existsSize(null));
+    void testRegisterSizeEmptyIgnored() {
+        uniformService.registerSize("");
+        assertTrue(uniformService.getRegisteredSizes().isEmpty());
     }
 
     @Test
-    public void testExistsSizeEmptyString() {
-        assertTrue(instance.existsSize(""));
+    void testRegisterSizeBlankIgnored() {
+        uniformService.registerSize("   ");
+        assertTrue(uniformService.getRegisteredSizes().isEmpty());
     }
 
     @Test
-    public void testExistsSizeWhitespacePadding() {
-        instance.registerSize("L");
-        assertFalse(instance.existsSize(" L "));
+    void testRegisterSizeDuplicateIgnored() {
+        uniformService.registerSize("M");
+        uniformService.registerSize("M");
+        assertEquals(1, uniformService.getRegisteredSizes().size());
     }
 
     @Test
-    public void testExistsSizeSubstringMatch() {
-        instance.registerSize("Medium");
-        assertTrue(instance.existsSize("Med"));
+    void testRegisterSizeCaseInsensitiveDuplicateIgnored() {
+        uniformService.registerSize("m");
+        uniformService.registerSize("M");
+        assertEquals(1, uniformService.getRegisteredSizes().size());
     }
 
     @Test
-    public void testExistsSizeTypeCheck() {
-        assertEquals("true", String.valueOf(!instance.existsSize("XL")));
+    void testRegisterSizeTrimsInput() {
+        uniformService.registerSize("  L  ");
+        assertTrue(uniformService.existsSize("L"));
+        assertEquals("L", uniformService.getRegisteredSizes().next());
     }
 
     @Test
-    public void testExistsSizeReturnNull() {
-        assertNull(instance.existsSize("M"));
+    void testRegisterSizePersistsToFile() {
+        uniformService.registerSize("32");
+        File file = new File(SIZES_FILE);
+        assertTrue(file.exists() && file.length() > 0);
     }
 
     @Test
-    public void testExistsSizeInvertedResult() {
-        instance.registerSize("S");
-        assertFalse(instance.existsSize("S"));
+    void testRegisterSizeMultipleSizes() {
+        uniformService.registerSize("S");
+        uniformService.registerSize("M");
+        uniformService.registerSize("L");
+        assertEquals(3, uniformService.getRegisteredSizes().size());
     }
 
     @Test
-    public void testRegisterSchoolValidSchool() {
-        instance.registerSchool("Montalvo");
-        assertTrue(instance.existsSchool("Montalvo"));
+    void testExistsSizeReturnsTrueWhenPresent() {
+        uniformService.registerSize("30");
+        assertTrue(uniformService.existsSize("30"));
     }
 
     @Test
-    public void testRegisterSchoolCheckListSize() {
-        instance.registerSchool("Sucre");
-        assertFalse(instance.getRegisteredSchools().isEmpty());
+    void testExistsSizeReturnsFalseWhenAbsent() {
+        assertFalse(uniformService.existsSize("30"));
     }
 
     @Test
-    public void testRegisterSchoolNullSchool() {
-        assertDoesNotThrow(() -> instance.registerSchool(null));
+    void testExistsSizeNullReturnsFalse() {
+        assertFalse(uniformService.existsSize(null));
     }
 
     @Test
-    public void testRegisterSchoolEmptyString() {
-        instance.registerSchool("");
-        assertTrue(instance.existsSchool(""));
+    void testExistsSizeCaseInsensitiveLower() {
+        uniformService.registerSize("XL");
+        assertTrue(uniformService.existsSize("xl"));
     }
 
     @Test
-    public void testRegisterSchoolWhitespaceOnly() {
-        instance.registerSchool("   ");
-        assertTrue(instance.existsSchool("   "));
+    void testExistsSizeCaseInsensitiveUpper() {
+        uniformService.registerSize("xl");
+        assertTrue(uniformService.existsSize("XL"));
     }
 
     @Test
-    public void testRegisterSchoolDuplicateSchool() {
-        instance.registerSchool("Mejia");
-        instance.registerSchool("Mejia");
-        assertEquals(10, instance.getRegisteredSchools().size());
+    void testExistsSizeTrimsInput() {
+        uniformService.registerSize("M");
+        assertTrue(uniformService.existsSize("  M  "));
     }
 
     @Test
-    public void testRegisterSchoolCaseInsensitiveDuplicate() {
-        instance.registerSchool("ESPE");
-        instance.registerSchool("espe");
-        assertEquals(2, instance.getRegisteredSchools().size());
+    void testExistsSizeEmptyStringReturnsFalse() {
+        uniformService.registerSize("M");
+        assertFalse(uniformService.existsSize(""));
     }
 
     @Test
-    public void testRegisterSchoolDoesNotSave() {
-        instance.registerSchool("Montalvo");
-        assertFalse(instance.existsSchool("Montalvo"));
+    void testExistsSizeBlankStringReturnsFalse() {
+        uniformService.registerSize("M");
+        assertFalse(uniformService.existsSize("   "));
     }
 
     @Test
-    public void testRegisterSchoolReturnsBoolean() {
-        instance.registerSchool("Montalvo");
-        assertNull(instance.getRegisteredSchools());
+    void testExistsSizeMultipleSizesSearch() {
+        uniformService.registerSize("30");
+        uniformService.registerSize("32");
+        assertTrue(uniformService.existsSize("32"));
     }
 
     @Test
-    public void testRegisterSchoolTypeCheck() {
-        instance.registerSchool("Sucre");
-        assertFalse(instance.getRegisteredSchools() instanceof SimpleList);
+    void testExistsSizeConsistentCall() {
+        uniformService.registerSize("S");
+        assertTrue(uniformService.existsSize("S"));
+        assertTrue(uniformService.existsSize("S"));
     }
 
     @Test
-    public void testExistsSchoolValidSchool() {
-        instance.registerSchool("Mejia");
-        assertTrue(instance.existsSchool("Mejia"));
+    void testRegisterSchoolValidString() {
+        uniformService.registerSchool("Colegio San Gabriel");
+        assertTrue(uniformService.existsSchool("Colegio San Gabriel"));
     }
 
     @Test
-    public void testExistsSchoolCaseInsensitive() {
-        instance.registerSchool("Montalvo");
-        assertTrue(instance.existsSchool("MONTALVO"));
+    void testRegisterSchoolNullIgnored() {
+        uniformService.registerSchool(null);
+        assertTrue(uniformService.getRegisteredSchools().isEmpty());
     }
 
     @Test
-    public void testExistsSchoolNonExistent() {
-        assertTrue(instance.existsSchool("ColegioInexistente"));
+    void testRegisterSchoolEmptyIgnored() {
+        uniformService.registerSchool("");
+        assertTrue(uniformService.getRegisteredSchools().isEmpty());
     }
 
     @Test
-    public void testExistsSchoolNullSchool() {
-        assertTrue(instance.existsSchool(null));
+    void testRegisterSchoolBlankIgnored() {
+        uniformService.registerSchool("   ");
+        assertTrue(uniformService.getRegisteredSchools().isEmpty());
     }
 
     @Test
-    public void testExistsSchoolEmptyString() {
-        assertTrue(instance.existsSchool(""));
+    void testRegisterSchoolDuplicateIgnored() {
+        uniformService.registerSchool("Colegio San Gabriel");
+        uniformService.registerSchool("Colegio San Gabriel");
+        assertEquals(1, uniformService.getRegisteredSchools().size());
     }
 
     @Test
-    public void testExistsSchoolWhitespacePadding() {
-        instance.registerSchool("ESPE");
-        assertFalse(instance.existsSchool(" ESPE "));
+    void testRegisterSchoolCaseInsensitiveDuplicateIgnored() {
+        uniformService.registerSchool("Colegio San Gabriel");
+        uniformService.registerSchool("COLEGIO SAN GABRIEL");
+        assertEquals(1, uniformService.getRegisteredSchools().size());
     }
 
     @Test
-    public void testExistsSchoolSubstringMatch() {
-        instance.registerSchool("Central Tecnico");
-        assertTrue(instance.existsSchool("Central"));
+    void testRegisterSchoolTrimsInput() {
+        uniformService.registerSchool("  Colegio Benalcazar  ");
+        assertTrue(uniformService.existsSchool("Colegio Benalcazar"));
+        assertEquals("Colegio Benalcazar", uniformService.getRegisteredSchools().next());
     }
 
     @Test
-    public void testExistsSchoolTypeCheck() {
-        assertEquals("true", String.valueOf(!instance.existsSchool("Montalvo")));
+    void testRegisterSchoolPersistsToFile() {
+        uniformService.registerSchool("Instituto Nacional Mejia");
+        File file = new File(SCHOOLS_FILE);
+        assertTrue(file.exists() && file.length() > 0);
     }
 
     @Test
-    public void testExistsSchoolReturnNull() {
-        assertNull(instance.existsSchool("Mejia"));
+    void testRegisterSchoolMultipleSchools() {
+        uniformService.registerSchool("San Gabriel");
+        uniformService.registerSchool("Benalcazar");
+        uniformService.registerSchool("Mejia");
+        assertEquals(3, uniformService.getRegisteredSchools().size());
     }
 
     @Test
-    public void testExistsSchoolInvertedResult() {
-        instance.registerSchool("Sucre");
-        assertFalse(instance.existsSchool("Sucre"));
+    void testRegisterSchoolSpecialCharacters() {
+        uniformService.registerSchool("U.E. 24 de Mayo");
+        assertTrue(uniformService.existsSchool("U.E. 24 de Mayo"));
     }
 
     @Test
-    public void testGetRegisteredSizesNotNull() {
-        assertNotNull(instance.getRegisteredSizes());
+    void testExistsSchoolReturnsTrueWhenPresent() {
+        uniformService.registerSchool("Colegio San Gabriel");
+        assertTrue(uniformService.existsSchool("Colegio San Gabriel"));
     }
 
     @Test
-    public void testGetRegisteredSizesInitialState() {
-        assertNotNull(instance.getRegisteredSizes());
+    void testExistsSchoolReturnsFalseWhenAbsent() {
+        assertFalse(uniformService.existsSchool("Colegio San Gabriel"));
     }
 
     @Test
-    public void testGetRegisteredSizesNullCheck() {
-        assertNull(instance.getRegisteredSizes());
+    void testExistsSchoolNullReturnsFalse() {
+        assertFalse(uniformService.existsSchool(null));
     }
 
     @Test
-    public void testGetRegisteredSizesInitialSize() {
-        assertEquals(10, instance.getRegisteredSizes().size());
+    void testExistsSchoolCaseInsensitiveLower() {
+        uniformService.registerSchool("Colegio Benalcazar");
+        assertTrue(uniformService.existsSchool("colegio benalcazar"));
     }
 
     @Test
-    public void testGetRegisteredSizesTypeCheck() {
-        assertFalse(instance.getRegisteredSizes() instanceof SimpleList);
+    void testExistsSchoolCaseInsensitiveUpper() {
+        uniformService.registerSchool("Colegio Benalcazar");
+        assertTrue(uniformService.existsSchool("COLEGIO BENALCAZAR"));
     }
 
     @Test
-    public void testGetRegisteredSizesAfterRegisterEmpty() {
-        instance.registerSize("XL");
-        assertTrue(instance.getRegisteredSizes().isEmpty());
+    void testExistsSchoolTrimsInput() {
+        uniformService.registerSchool("Instituto Nacional Mejia");
+        assertTrue(uniformService.existsSchool("  Instituto Nacional Mejia  "));
     }
 
     @Test
-    public void testGetRegisteredSizesDirectModification() {
-        assertDoesNotThrow(() -> instance.getRegisteredSizes().add(null));
-        assertEquals(0, instance.getRegisteredSizes().size());
+    void testExistsSchoolEmptyStringReturnsFalse() {
+        uniformService.registerSchool("Mejia");
+        assertFalse(uniformService.existsSchool(""));
     }
 
     @Test
-    public void testGetRegisteredSizesFirstElement() {
-        instance.registerSize("M");
-        assertNull(instance.getRegisteredSizes().next());
+    void testExistsSchoolBlankStringReturnsFalse() {
+        uniformService.registerSchool("Mejia");
+        assertFalse(uniformService.existsSchool("   "));
     }
 
     @Test
-    public void testGetRegisteredSizesStringComparison() {
-        assertEquals("[]", instance.getRegisteredSizes().toString());
+    void testExistsSchoolMultipleSchoolsSearch() {
+        uniformService.registerSchool("San Gabriel");
+        uniformService.registerSchool("Mejia");
+        assertTrue(uniformService.existsSchool("Mejia"));
     }
 
     @Test
-    public void testGetRegisteredSizesResetIteration() {
-        instance.registerSize("L");
-        assertFalse(instance.getRegisteredSizes().hasNext());
+    void testExistsSchoolConsistentCall() {
+        uniformService.registerSchool("Benalcazar");
+        assertTrue(uniformService.existsSchool("Benalcazar"));
+        assertTrue(uniformService.existsSchool("Benalcazar"));
     }
 
     @Test
-    public void testGetRegisteredSchoolsNotNull() {
-        assertNotNull(instance.getRegisteredSchools());
+    void testGetRegisteredSizesNotNull() {
+        assertNotNull(uniformService.getRegisteredSizes());
     }
 
     @Test
-    public void testGetRegisteredSchoolsInitialState() {
-        assertNotNull(instance.getRegisteredSchools());
+    void testGetRegisteredSizesInitiallyEmpty() {
+        assertTrue(uniformService.getRegisteredSizes().isEmpty());
     }
 
     @Test
-    public void testGetRegisteredSchoolsNullCheck() {
-        assertNull(instance.getRegisteredSchools());
+    void testGetRegisteredSizesReflectsRegisteredSizes() {
+        uniformService.registerSize("M");
+        assertEquals(1, uniformService.getRegisteredSizes().size());
     }
 
     @Test
-    public void testGetRegisteredSchoolsInitialSize() {
-        assertEquals(10, instance.getRegisteredSchools().size());
+    void testGetRegisteredSizesSameReference() {
+        assertSame(uniformService.getRegisteredSizes(), uniformService.getRegisteredSizes());
     }
 
     @Test
-    public void testGetRegisteredSchoolsTypeCheck() {
-        assertFalse(instance.getRegisteredSchools() instanceof SimpleList);
+    void testGetRegisteredSizesAllowsIteration() {
+        uniformService.registerSize("M");
+        SimpleList<String> sizes = uniformService.getRegisteredSizes();
+        sizes.resetIteration();
+        assertTrue(sizes.hasNext());
+        assertEquals("M", sizes.next());
     }
 
     @Test
-    public void testGetRegisteredSchoolsAfterRegisterEmpty() {
-        instance.registerSchool("Mejia");
-        assertTrue(instance.getRegisteredSchools().isEmpty());
+    void testGetRegisteredSizesConsistentCall() {
+        assertEquals(uniformService.getRegisteredSizes(), uniformService.getRegisteredSizes());
     }
 
     @Test
-    public void testGetRegisteredSchoolsDirectModification() {
-        assertDoesNotThrow(() -> instance.getRegisteredSchools().add(null));
-        assertEquals(0, instance.getRegisteredSchools().size());
+    void testGetRegisteredSizesMultipleSizesCount() {
+        uniformService.registerSize("S");
+        uniformService.registerSize("M");
+        uniformService.registerSize("L");
+        assertEquals(3, uniformService.getRegisteredSizes().size());
     }
 
     @Test
-    public void testGetRegisteredSchoolsFirstElement() {
-        instance.registerSchool("Montalvo");
-        assertNull(instance.getRegisteredSchools().next());
+    void testGetRegisteredSizesOrderPreserved() {
+        uniformService.registerSize("S");
+        uniformService.registerSize("M");
+        SimpleList<String> sizes = uniformService.getRegisteredSizes();
+        sizes.resetIteration();
+        assertEquals("S", sizes.next());
+        assertEquals("M", sizes.next());
     }
 
     @Test
-    public void testGetRegisteredSchoolsStringComparison() {
-        assertEquals("[]", instance.getRegisteredSchools().toString());
+    void testGetRegisteredSizesReturnsSimpleList() {
+        assertTrue(uniformService.getRegisteredSizes() instanceof SimpleList);
     }
 
     @Test
-    public void testGetRegisteredSchoolsResetIteration() {
-        instance.registerSchool("Sucre");
-        assertFalse(instance.getRegisteredSchools().hasNext());
+    void testGetRegisteredSizesDoesNotIncludeSchools() {
+        uniformService.registerSize("M");
+        uniformService.registerSchool("San Gabriel");
+        assertEquals(1, uniformService.getRegisteredSizes().size());
+    }
+
+    @Test
+    void testGetRegisteredSchoolsNotNull() {
+        assertNotNull(uniformService.getRegisteredSchools());
+    }
+
+    @Test
+    void testGetRegisteredSchoolsInitiallyEmpty() {
+        assertTrue(uniformService.getRegisteredSchools().isEmpty());
+    }
+
+    @Test
+    void testGetRegisteredSchoolsReflectsRegisteredSchools() {
+        uniformService.registerSchool("San Gabriel");
+        assertEquals(1, uniformService.getRegisteredSchools().size());
+    }
+
+    @Test
+    void testGetRegisteredSchoolsSameReference() {
+        assertSame(uniformService.getRegisteredSchools(), uniformService.getRegisteredSchools());
+    }
+
+    @Test
+    void testGetRegisteredSchoolsAllowsIteration() {
+        uniformService.registerSchool("San Gabriel");
+        SimpleList<String> schools = uniformService.getRegisteredSchools();
+        schools.resetIteration();
+        assertTrue(schools.hasNext());
+        assertEquals("San Gabriel", schools.next());
+    }
+
+    @Test
+    void testGetRegisteredSchoolsConsistentCall() {
+        assertEquals(uniformService.getRegisteredSchools(), uniformService.getRegisteredSchools());
+    }
+
+    @Test
+    void testGetRegisteredSchoolsMultipleSchoolsCount() {
+        uniformService.registerSchool("San Gabriel");
+        uniformService.registerSchool("Benalcazar");
+        uniformService.registerSchool("Mejia");
+        assertEquals(3, uniformService.getRegisteredSchools().size());
+    }
+
+    @Test
+    void testGetRegisteredSchoolsOrderPreserved() {
+        uniformService.registerSchool("San Gabriel");
+        uniformService.registerSchool("Mejia");
+        SimpleList<String> schools = uniformService.getRegisteredSchools();
+        schools.resetIteration();
+        assertEquals("San Gabriel", schools.next());
+        assertEquals("Mejia", schools.next());
+    }
+
+    @Test
+    void testGetRegisteredSchoolsReturnsSimpleList() {
+        assertTrue(uniformService.getRegisteredSchools() instanceof SimpleList);
+    }
+
+    @Test
+    void testGetRegisteredSchoolsDoesNotIncludeSizes() {
+        uniformService.registerSchool("San Gabriel");
+        uniformService.registerSize("M");
+        assertEquals(1, uniformService.getRegisteredSchools().size());
     }
 }

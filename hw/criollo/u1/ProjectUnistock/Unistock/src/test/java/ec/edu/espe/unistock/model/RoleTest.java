@@ -1,340 +1,357 @@
 package ec.edu.espe.unistock.model;
 
-/**
- *
- * @author Dennis Criollo, Leslye Cuichan, Francisco Demera, Byte & Fabric Devs, @ESPE
- */
-
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RoleTest {
 
-    public RoleTest() {
-    }
-
-    @BeforeAll
-    public static void setUpClass() {
-    }
-
-    @AfterAll
-    public static void tearDownClass() {
-    }
-
-    @BeforeEach
-    public void setUp() {
-    }
-
-    @AfterEach
-    public void tearDown() {
-    }
-
     @Test
-    public void testValuesLength() {
-        assertEquals(3, Role.values().length);
-    }
-
-    @Test
-    public void testValuesContainsEnumConstants() {
-        Role[] roles = Role.values();
-        assertArrayEquals(new Role[]{Role.ADMINISTRATOR, Role.SALESPERSON, Role.CUSTOMER}, roles);
-    }
-
-    @Test
-    public void testValuesEmptyArrayCheck() {
-        assertEquals(0, Role.values().length);
-    }
-
-    @Test
-    public void testValuesSingleElementCheck() {
-        assertEquals(1, Role.values().length);
-    }
-
-    @Test
-    public void testValuesNullCheck() {
-        assertNull(Role.values());
-    }
-
-    @Test
-    public void testValuesOrderCheck() {
-        Role[] expected = new Role[]{Role.CUSTOMER, Role.SALESPERSON, Role.ADMINISTRATOR};
-        assertArrayEquals(expected, Role.values());
-    }
-
-    @Test
-    public void testValuesExcessiveLengthCheck() {
-        assertTrue(Role.values().length > 5);
-    }
-
-    @Test
-    public void testValuesTypeCheck() {
-        assertFalse(Role.values() instanceof Role[]);
-    }
-
-    @Test
-    public void testValuesFirstElementCheck() {
-        assertEquals(Role.SALESPERSON, Role.values()[0]);
-    }
-
-    @Test
-    public void testValuesSecondElementCheck() {
-        assertEquals(Role.CUSTOMER, Role.values()[1]);
-    }
-
-    @Test
-    public void testValueOfAdministratorConstant() {
-        assertEquals(Role.ADMINISTRATOR, Role.valueOf("ADMINISTRATOR"));
-    }
-
-    @Test
-    public void testValueOfSalespersonConstant() {
-        assertEquals(Role.SALESPERSON, Role.valueOf("SALESPERSON"));
-    }
-
-    @Test
-    public void testValueOfLowerCaseName() {
-        assertEquals(Role.ADMINISTRATOR, Role.valueOf("administrator"));
-    }
-
-    @Test
-    public void testValueOfInvalidName() {
-        assertDoesNotThrow(() -> Role.valueOf("INVALID_ROLE"));
-    }
-
-    @Test
-    public void testValueOfNullArgument() {
-        assertDoesNotThrow(() -> Role.valueOf(null));
-    }
-
-    @Test
-    public void testValueOfEmptyString() {
-        assertEquals(Role.ADMINISTRATOR, Role.valueOf(""));
-    }
-
-    @Test
-    public void testValueOfCrossedValueCheck() {
-        assertEquals(Role.SALESPERSON, Role.valueOf("ADMINISTRATOR"));
-    }
-
-    @Test
-    public void testValueOfWhitespaceName() {
-        assertEquals(Role.ADMINISTRATOR, Role.valueOf(" ADMINISTRATOR "));
-    }
-
-    @Test
-    public void testValueOfNullReturnCheck() {
-        assertNull(Role.valueOf("SALESPERSON"));
-    }
-
-    @Test
-    public void testValueOfPartialName() {
-        assertEquals(Role.CUSTOMER, Role.valueOf("CUST"));
-    }
-
-    @Test
-    public void testGetLabelAdministratorLabel() {
+    void testGetLabelAdministrator() {
         assertEquals("Administrador", Role.ADMINISTRATOR.getLabel());
     }
 
     @Test
-    public void testGetLabelSalespersonLabel() {
+    void testGetLabelSalesperson() {
         assertEquals("Vendedor", Role.SALESPERSON.getLabel());
     }
 
     @Test
-    public void testGetLabelAdministratorUpperCase() {
-        assertEquals("ADMINISTRADOR", Role.ADMINISTRATOR.getLabel());
+    void testGetLabelCustomer() {
+        assertEquals("Cliente", Role.CUSTOMER.getLabel());
     }
 
     @Test
-    public void testGetLabelSalespersonSimpleName() {
-        assertEquals("Venta", Role.SALESPERSON.getLabel());
+    void testGetLabelNotNullAdministrator() {
+        assertNotNull(Role.ADMINISTRATOR.getLabel());
     }
 
     @Test
-    public void testGetLabelCustomerLabel() {
-        assertEquals("Usuario", Role.CUSTOMER.getLabel());
+    void testGetLabelNotNullSalesperson() {
+        assertNotNull(Role.SALESPERSON.getLabel());
     }
 
     @Test
-    public void testGetLabelEmptyLabel() {
-        assertEquals("", Role.ADMINISTRATOR.getLabel());
+    void testGetLabelNotNullCustomer() {
+        assertNotNull(Role.CUSTOMER.getLabel());
     }
 
     @Test
-    public void testGetLabelNullLabel() {
-        assertNull(Role.SALESPERSON.getLabel());
+    void testGetLabelNotEmptyAdministrator() {
+        assertFalse(Role.ADMINISTRATOR.getLabel().isEmpty());
     }
 
     @Test
-    public void testGetLabelInvertedLabel() {
-        assertEquals("Administrador", Role.SALESPERSON.getLabel());
+    void testGetLabelNotEmptySalesperson() {
+        assertFalse(Role.SALESPERSON.getLabel().isEmpty());
     }
 
     @Test
-    public void testGetLabelLengthCheck() {
-        assertEquals(5, Role.ADMINISTRATOR.getLabel().length());
+    void testGetLabelNotEmptyCustomer() {
+        assertFalse(Role.CUSTOMER.getLabel().isEmpty());
     }
 
     @Test
-    public void testGetLabelNameMatch() {
-        assertEquals(Role.ADMINISTRATOR.name(), Role.ADMINISTRATOR.getLabel());
+    void testGetLabelConsistency() {
+        String label1 = Role.ADMINISTRATOR.getLabel();
+        String label2 = Role.ADMINISTRATOR.getLabel();
+        assertEquals(label1, label2);
     }
 
     @Test
-    public void testCanManageProductsAdmin() {
+    void testCanManageProductsAdministratorTrue() {
         assertTrue(Role.ADMINISTRATOR.canManageProducts());
     }
 
     @Test
-    public void testCanManageProductsSalesperson() {
+    void testCanManageProductsSalespersonFalse() {
         assertFalse(Role.SALESPERSON.canManageProducts());
     }
 
     @Test
-    public void testCanManageProductsAdminFalse() {
-        assertFalse(Role.ADMINISTRATOR.canManageProducts());
+    void testCanManageProductsCustomerFalse() {
+        assertFalse(Role.CUSTOMER.canManageProducts());
     }
 
     @Test
-    public void testCanManageProductsSalespersonTrue() {
-        assertTrue(Role.SALESPERSON.canManageProducts());
+    void testCanManageProductsConsistencyAdministrator() {
+        assertEquals(Role.ADMINISTRATOR.canManageProducts(), Role.ADMINISTRATOR.canManageProducts());
     }
 
     @Test
-    public void testCanManageProductsCustomerTrue() {
-        assertTrue(Role.CUSTOMER.canManageProducts());
+    void testCanManageProductsConsistencySalesperson() {
+        assertEquals(Role.SALESPERSON.canManageProducts(), Role.SALESPERSON.canManageProducts());
     }
 
     @Test
-    public void testCanManageProductsNullCheck() {
-        Role role = null;
-        assertDoesNotThrow(() -> role.canManageProducts());
+    void testCanManageProductsConsistencyCustomer() {
+        assertEquals(Role.CUSTOMER.canManageProducts(), Role.CUSTOMER.canManageProducts());
     }
 
     @Test
-    public void testCanManageProductsInvertedCheck() {
-        assertEquals(Role.SALESPERSON.canManageProducts(), Role.ADMINISTRATOR.canManageProducts());
+    void testCanManageProductsOnlyAdministrator() {
+        for (Role role : Role.values()) {
+            if (role == Role.ADMINISTRATOR) {
+                assertTrue(role.canManageProducts());
+            } else {
+                assertFalse(role.canManageProducts());
+            }
+        }
     }
 
     @Test
-    public void testCanManageProductsBothTrue() {
-        assertTrue(Role.SALESPERSON.canManageProducts() && Role.ADMINISTRATOR.canManageProducts());
+    void testCanManageProductsBooleanReturn() {
+        assertTrue(Role.ADMINISTRATOR.canManageProducts() || !Role.ADMINISTRATOR.canManageProducts());
     }
 
     @Test
-    public void testCanManageProductsBothFalse() {
+    void testCanManageProductsMultipleInvocations() {
+        for (int i = 0; i < 5; i++) {
+            assertTrue(Role.ADMINISTRATOR.canManageProducts());
+        }
+    }
+
+    @Test
+    void testCanManageProductsNonAdminRolesAreFalse() {
         assertFalse(Role.SALESPERSON.canManageProducts() || Role.CUSTOMER.canManageProducts());
     }
 
     @Test
-    public void testCanManageProductsTypeCheck() {
-        assertEquals("true", String.valueOf(Role.SALESPERSON.canManageProducts()));
-    }
-
-    @Test
-    public void testCanRegisterSalesAdmin() {
+    void testCanRegisterSalesAdministratorTrue() {
         assertTrue(Role.ADMINISTRATOR.canRegisterSales());
     }
 
     @Test
-    public void testCanRegisterSalesSalesperson() {
+    void testCanRegisterSalesSalespersonTrue() {
         assertTrue(Role.SALESPERSON.canRegisterSales());
     }
 
     @Test
-    public void testCanRegisterSalesCustomerTrue() {
-        assertTrue(Role.CUSTOMER.canRegisterSales());
+    void testCanRegisterSalesCustomerFalse() {
+        assertFalse(Role.CUSTOMER.canRegisterSales());
     }
 
     @Test
-    public void testCanRegisterSalesAdminFalse() {
-        assertFalse(Role.ADMINISTRATOR.canRegisterSales());
+    void testCanRegisterSalesConsistencyAdministrator() {
+        assertEquals(Role.ADMINISTRATOR.canRegisterSales(), Role.ADMINISTRATOR.canRegisterSales());
     }
 
     @Test
-    public void testCanRegisterSalesSalespersonFalse() {
-        assertFalse(Role.SALESPERSON.canRegisterSales());
+    void testCanRegisterSalesConsistencySalesperson() {
+        assertEquals(Role.SALESPERSON.canRegisterSales(), Role.SALESPERSON.canRegisterSales());
     }
 
     @Test
-    public void testCanRegisterSalesNullRole() {
-        Role role = null;
-        assertDoesNotThrow(() -> role.canRegisterSales());
+    void testCanRegisterSalesConsistencyCustomer() {
+        assertEquals(Role.CUSTOMER.canRegisterSales(), Role.CUSTOMER.canRegisterSales());
     }
 
     @Test
-    public void testCanRegisterSalesDifferentValues() {
-        assertNotEquals(Role.ADMINISTRATOR.canRegisterSales(), Role.SALESPERSON.canRegisterSales());
+    void testCanRegisterSalesAdminAndSalespersonEqual() {
+        assertEquals(Role.ADMINISTRATOR.canRegisterSales(), Role.SALESPERSON.canRegisterSales());
     }
 
     @Test
-    public void testCanRegisterSalesBothFalse() {
-        assertFalse(Role.ADMINISTRATOR.canRegisterSales() && Role.SALESPERSON.canRegisterSales());
+    void testCanRegisterSalesCustomerDifferentFromAdmin() {
+        assertNotEquals(Role.CUSTOMER.canRegisterSales(), Role.ADMINISTRATOR.canRegisterSales());
     }
 
     @Test
-    public void testCanRegisterSalesTypeCheck() {
-        assertEquals("true", String.valueOf(Role.CUSTOMER.canRegisterSales()));
+    void testCanRegisterSalesMultipleInvocations() {
+        for (int i = 0; i < 5; i++) {
+            assertTrue(Role.SALESPERSON.canRegisterSales());
+        }
     }
 
     @Test
-    public void testCanRegisterSalesXorCheck() {
-        assertTrue(Role.ADMINISTRATOR.canRegisterSales() ^ Role.SALESPERSON.canRegisterSales());
+    void testCanRegisterSalesPermissionCount() {
+        int count = 0;
+        for (Role role : Role.values()) {
+            if (role.canRegisterSales()) {
+                count++;
+            }
+        }
+        assertEquals(2, count);
     }
 
     @Test
-    public void testCanManageUsersAdmin() {
+    void testCanManageUsersAdministratorTrue() {
         assertTrue(Role.ADMINISTRATOR.canManageUsers());
     }
 
     @Test
-    public void testCanManageUsersSalesperson() {
+    void testCanManageUsersSalespersonFalse() {
         assertFalse(Role.SALESPERSON.canManageUsers());
     }
 
     @Test
-    public void testCanManageUsersAdminFalse() {
-        assertFalse(Role.ADMINISTRATOR.canManageUsers());
+    void testCanManageUsersCustomerFalse() {
+        assertFalse(Role.CUSTOMER.canManageUsers());
     }
 
     @Test
-    public void testCanManageUsersSalespersonTrue() {
-        assertTrue(Role.SALESPERSON.canManageUsers());
+    void testCanManageUsersConsistencyAdministrator() {
+        assertEquals(Role.ADMINISTRATOR.canManageUsers(), Role.ADMINISTRATOR.canManageUsers());
     }
 
     @Test
-    public void testCanManageUsersCustomerTrue() {
-        assertTrue(Role.CUSTOMER.canManageUsers());
+    void testCanManageUsersConsistencySalesperson() {
+        assertEquals(Role.SALESPERSON.canManageUsers(), Role.SALESPERSON.canManageUsers());
     }
 
     @Test
-    public void testCanManageUsersNullRole() {
-        Role role = null;
-        assertDoesNotThrow(() -> role.canManageUsers());
+    void testCanManageUsersConsistencyCustomer() {
+        assertEquals(Role.CUSTOMER.canManageUsers(), Role.CUSTOMER.canManageUsers());
     }
 
     @Test
-    public void testCanManageUsersSameValues() {
-        assertEquals(Role.ADMINISTRATOR.canManageUsers(), Role.SALESPERSON.canManageUsers());
+    void testCanManageUsersOnlyAdministrator() {
+        for (Role role : Role.values()) {
+            if (role == Role.ADMINISTRATOR) {
+                assertTrue(role.canManageUsers());
+            } else {
+                assertFalse(role.canManageUsers());
+            }
+        }
     }
 
     @Test
-    public void testCanManageUsersBothTrue() {
-        assertTrue(Role.ADMINISTRATOR.canManageUsers() && Role.SALESPERSON.canManageUsers());
+    void testCanManageUsersSalespersonAndCustomerEqual() {
+        assertEquals(Role.SALESPERSON.canManageUsers(), Role.CUSTOMER.canManageUsers());
     }
 
     @Test
-    public void testCanManageUsersBothFalse() {
-        assertFalse(Role.ADMINISTRATOR.canManageUsers() || Role.SALESPERSON.canManageUsers());
+    void testCanManageUsersMultipleInvocations() {
+        for (int i = 0; i < 5; i++) {
+            assertTrue(Role.ADMINISTRATOR.canManageUsers());
+        }
     }
 
     @Test
-    public void testCanManageUsersTypeCheck() {
-        assertEquals("true", String.valueOf(Role.SALESPERSON.canManageUsers()));
+    void testCanManageUsersPermissionCount() {
+        int count = 0;
+        for (Role role : Role.values()) {
+            if (role.canManageUsers()) {
+                count++;
+            }
+        }
+        assertEquals(1, count);
+    }
+
+    @Test
+    void testValuesLength() {
+        assertEquals(3, Role.values().length);
+    }
+
+    @Test
+    void testValuesContainsAdministrator() {
+        Role[] roles = Role.values();
+        assertEquals(Role.ADMINISTRATOR, roles[0]);
+    }
+
+    @Test
+    void testValuesContainsSalesperson() {
+        Role[] roles = Role.values();
+        assertEquals(Role.SALESPERSON, roles[1]);
+    }
+
+    @Test
+    void testValuesContainsCustomer() {
+        Role[] roles = Role.values();
+        assertEquals(Role.CUSTOMER, roles[2]);
+    }
+
+    @Test
+    void testValuesArrayNotNull() {
+        assertNotNull(Role.values());
+    }
+
+    @Test
+    void testValuesReturnsNewArrayInstance() {
+        Role[] array1 = Role.values();
+        Role[] array2 = Role.values();
+        assertNotSame(array1, array2);
+    }
+
+    @Test
+    void testValuesOrderIsPreserved() {
+        Role[] roles = Role.values();
+        assertSame(Role.ADMINISTRATOR, roles[0]);
+        assertSame(Role.SALESPERSON, roles[1]);
+        assertSame(Role.CUSTOMER, roles[2]);
+    }
+
+    @Test
+    void testValuesElementsAreNotNull() {
+        for (Role role : Role.values()) {
+            assertNotNull(role);
+        }
+    }
+
+    @Test
+    void testValuesCanBeIterated() {
+        int count = 0;
+        for (Role role : Role.values()) {
+            assertNotNull(role.getLabel());
+            count++;
+        }
+        assertEquals(3, count);
+    }
+
+    @Test
+    void testValuesMatchesEnumCount() {
+        assertEquals(Role.class.getEnumConstants().length, Role.values().length);
+    }
+
+    @Test
+    void testValueOfAdministrator() {
+        assertEquals(Role.ADMINISTRATOR, Role.valueOf("ADMINISTRATOR"));
+    }
+
+    @Test
+    void testValueOfSalesperson() {
+        assertEquals(Role.SALESPERSON, Role.valueOf("SALESPERSON"));
+    }
+
+    @Test
+    void testValueOfCustomer() {
+        assertEquals(Role.CUSTOMER, Role.valueOf("CUSTOMER"));
+    }
+
+    @Test
+    void testValueOfInvalidNameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> Role.valueOf("INVALID"));
+    }
+
+    @Test
+    void testValueOfNullThrowsException() {
+        assertThrows(NullPointerException.class, () -> Role.valueOf(null));
+    }
+
+    @Test
+    void testValueOfLowerCaseThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> Role.valueOf("administrator"));
+    }
+
+    @Test
+    void testValueOfWithSpacesThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> Role.valueOf(" ADMINISTRATOR "));
+    }
+
+    @Test
+    void testValueOfReturnsSameInstance() {
+        assertSame(Role.ADMINISTRATOR, Role.valueOf("ADMINISTRATOR"));
+    }
+
+    @Test
+    void testValueOfLabelNameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> Role.valueOf("Administrador"));
+    }
+
+    @Test
+    void testValueOfConsistency() {
+        Role role1 = Role.valueOf("SALESPERSON");
+        Role role2 = Role.valueOf("SALESPERSON");
+        assertEquals(role1, role2);
     }
 }

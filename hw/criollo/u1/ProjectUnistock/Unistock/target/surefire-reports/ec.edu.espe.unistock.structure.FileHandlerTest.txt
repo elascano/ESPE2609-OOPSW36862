@@ -1,50 +1,82 @@
 -------------------------------------------------------------------------------
 Test set: ec.edu.espe.unistock.structure.FileHandlerTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.169 s <<< FAILURE! -- in ec.edu.espe.unistock.structure.FileHandlerTest
-ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListNullList -- Time elapsed: 0.012 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.structure.SimpleList.resetIteration()" because "list" is null
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
-	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
-	at ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListNullList(FileHandlerTest.java:80)
+Tests run: 50, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.616 s <<< FAILURE! -- in ec.edu.espe.unistock.structure.FileHandlerTest
+ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListToJsonFiltersNullItems -- Time elapsed: 0.027 s <<< ERROR!
+java.lang.NullPointerException: El elemento no puede ser nulo.
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
+	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:29)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListToJsonFiltersNullItems(FileHandlerTest.java:83)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.structure.SimpleList.resetIteration()" because "list" is null
-	at ec.edu.espe.unistock.structure.FileHandler.saveList(FileHandler.java:19)
-	at ec.edu.espe.unistock.structure.FileHandlerTest.lambda$testSaveListNullList$0(FileHandlerTest.java:80)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
-	... 6 more
 
-ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListNullPath -- Time elapsed: 0.003 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "java.io.File.isInvalid()" because "file" is null
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
-	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
-	at ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListNullPath(FileHandlerTest.java:86)
+ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListDelegatesToLoadListFromJson -- Time elapsed: 0.007 s <<< ERROR!
+java.util.NoSuchElementException: No hay más elementos.
+	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:75)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListDelegatesToLoadListFromJson(FileHandlerTest.java:338)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-Caused by: java.lang.NullPointerException: Cannot invoke "java.io.File.isInvalid()" because "file" is null
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:202)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:120)
-	at java.base/java.io.FileWriter.<init>(FileWriter.java:67)
-	at ec.edu.espe.unistock.structure.FileHandler.saveList(FileHandler.java:18)
-	at ec.edu.espe.unistock.structure.FileHandlerTest.lambda$testSaveListNullPath$0(FileHandlerTest.java:86)
-	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
-	... 6 more
 
-ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListNullPath -- Time elapsed: 0.018 s <<< ERROR!
-java.lang.NullPointerException
-	at java.base/java.io.File.<init>(File.java:288)
-	at ec.edu.espe.unistock.structure.FileHandler.loadList(FileHandler.java:31)
-	at ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListNullPath(FileHandlerTest.java:119)
+ec.edu.espe.unistock.structure.FileHandlerTest.testExportToCSVFiltersNullRows -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: El elemento no puede ser nulo.
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
+	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:29)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testExportToCSVFiltersNullRows(FileHandlerTest.java:504)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListFromJsonInvalidJsonReturnsEmptyList -- Time elapsed: 0.006 s <<< ERROR!
+com.google.gson.JsonSyntaxException: 
+java.lang.IllegalStateException: Expected BEGIN_ARRAY but was BEGIN_OBJECT at line 1 column 2 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#unexpected-json-structure
+	at com.google.gson.Gson.fromJson(Gson.java:1103)
+	at com.google.gson.Gson.fromJson(Gson.java:981)
+	at com.google.gson.Gson.fromJson(Gson.java:949)
+	at ec.edu.espe.unistock.structure.FileHandler.loadListFromJson(FileHandler.java:67)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListFromJsonInvalidJsonReturnsEmptyList(FileHandlerTest.java:219)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was BEGIN_OBJECT at line 1 column 2 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#unexpected-json-structure
+	at com.google.gson.stream.JsonReader.unexpectedTokenError(JsonReader.java:1831)
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:468)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter.read(CollectionTypeAdapterFactory.java:82)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter.read(CollectionTypeAdapterFactory.java:64)
+	at com.google.gson.Gson.fromJson(Gson.java:1080)
+	... 7 more
+
+ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListFiltersNullEntries -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.NullPointerException: El elemento no puede ser nulo.
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
+	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:29)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testSaveListFiltersNullEntries(FileHandlerTest.java:312)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListCorruptFileReturnsEmptyList -- Time elapsed: 0.011 s <<< ERROR!
+com.google.gson.JsonSyntaxException: 
+java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#unexpected-json-structure
+	at com.google.gson.Gson.fromJson(Gson.java:1103)
+	at com.google.gson.Gson.fromJson(Gson.java:981)
+	at com.google.gson.Gson.fromJson(Gson.java:949)
+	at ec.edu.espe.unistock.structure.FileHandler.loadListFromJson(FileHandler.java:67)
+	at ec.edu.espe.unistock.structure.FileHandler.loadList(FileHandler.java:91)
+	at ec.edu.espe.unistock.structure.FileHandlerTest.testLoadListCorruptFileReturnsEmptyList(FileHandlerTest.java:409)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+See https://github.com/google/gson/blob/main/Troubleshooting.md#unexpected-json-structure
+	at com.google.gson.stream.JsonReader.unexpectedTokenError(JsonReader.java:1831)
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:468)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter.read(CollectionTypeAdapterFactory.java:82)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter.read(CollectionTypeAdapterFactory.java:64)
+	at com.google.gson.Gson.fromJson(Gson.java:1080)
+	... 8 more
 
