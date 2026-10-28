@@ -1,0 +1,11 @@
+case;clientId;name;contactInfo;address;expName
+1;1;Maria Lopez;maria@mail.com;Quito;Maria Lopez
+2;2;Juan Perez;0987654321;Cuenca;Juan Perez
+3;3;Empresa "Sol" S.A.;info@sol.com;Av. Amazonas N12;Empresa "Sol" S.A.
+4;4;C:\Docs\Cliente;a@b.com;Calle 5;C:\Docs\Cliente
+5;5;Luis Torres;l@t.com;Guayaquil;Luis Torres
+6;6;Ana Ruiz;ana@r.com;Loja;Ana Ruiz
+7;7;Pedro Gil;p@g.com;Ambato;Pedro Gil
+8;8;Rosa Vega;r@v.com;Manta;Rosa VegaX
+9;9;Sofia Mena;s@m.com;Riobamba;Sofia MenaX
+10;10;Tomas Vera;t@v.com;Ibarra;Tomas VeraX

@@ -1,0 +1,11 @@
+case;totalTasks;completedTasks;expStatus;expTechAvailable
+1;0;0;Closed;true
+2;1;1;Closed;true
+3;1;0;Pending;false
+4;3;3;Closed;true
+5;3;2;Pending;false
+6;5;5;Closed;true
+7;5;1;Pending;false
+8;2;0;Pending;false
+9;4;4;ClosedX;false
+10;6;3;PendingX;true

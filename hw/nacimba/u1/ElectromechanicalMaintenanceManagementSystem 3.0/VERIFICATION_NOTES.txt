@@ -1,0 +1,15 @@
+Verification performed on the corrected source
+
+Passed:
+- Java compilation of all 15 application source files using javac.
+- Apache Ant clean compile (BUILD SUCCESSFUL).
+- Five repeated console smoke tests: menu option 14 created the CSV file, then option 15 exited normally (5/5).
+- End-to-end console workflow: register client, equipment, technician, maintenance schedule, work order, assign technician, create task, add part and safety regulation, execute task, close order, generate report, record history, show records, and export CSV. The generated CSV contained 14 record rows in that test run.
+- Client JSON save and reload across two separate program runs.
+- Report JSON round-trip with quotes, backslashes and a newline in report content.
+
+Not passed / could not be run:
+- `ant clean test` fails because the ZIP does not include JUnit libraries and the testdata CSV fixture files referenced by the supplied test classes. This is a project packaging/test setup issue; it is not a compilation failure of the main application source.
+
+Remaining functionality limitation:
+- Only client details and reports are persisted to JSON. Other record types remain in memory and are not restored after restarting the program. CSV exports current in-memory records and therefore cannot recover records from earlier runs except the client/report JSON data loaded by the program.
