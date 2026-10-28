@@ -3,7 +3,7 @@ package ec.edu.espe.electromechanicalmaintenancemanagementsystem.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Equipment {
+public class Equipment implements java.io.Serializable {
     private int equipmentId;
     private String name;
     private String serialNumber;

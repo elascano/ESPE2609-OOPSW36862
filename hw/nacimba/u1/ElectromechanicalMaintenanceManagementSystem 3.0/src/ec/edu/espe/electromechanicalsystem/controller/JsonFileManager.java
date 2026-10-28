@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/** Saves and loads client records in JSON without external libraries. */
 public class JsonFileManager {
     private final Path filePath;
 
@@ -43,7 +42,6 @@ public class JsonFileManager {
         }
         return clients;
     }
-
 
 public void saveClients(List<Client> clients) {
     StringBuilder json = new StringBuilder("[\n");
@@ -82,14 +80,12 @@ public void saveClients(List<Client> clients) {
                 + e.getMessage());
     }
 
-    // Also save clients in CSV format
     saveClientsCsv(clients);
 }
 
 private void saveClientsCsv(List<Client> clients) {
     StringBuilder csv = new StringBuilder();
 
-    // Column headers
     csv.append("Client;Name;Contact Info;Address\n");
 
     for (Client client : clients) {
@@ -120,7 +116,6 @@ private static String csvValue(String value) {
 
     return "\"" + value.replace("\"", "\"\"") + "\"";
 }
-
 
     private static String findValue(String object, String key, boolean isString) {
         String prefix = "\"" + Pattern.quote(key) + "\"\\s*:\\s*";

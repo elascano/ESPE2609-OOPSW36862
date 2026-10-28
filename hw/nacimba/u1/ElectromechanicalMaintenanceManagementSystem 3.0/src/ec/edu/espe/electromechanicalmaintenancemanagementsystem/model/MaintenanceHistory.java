@@ -1,6 +1,6 @@
 package ec.edu.espe.electromechanicalmaintenancemanagementsystem.model;
 
-public class MaintenanceHistory {
+public class MaintenanceHistory implements java.io.Serializable {
     private int historyId;
     private String maintenanceDate;
     private String maintenanceType;

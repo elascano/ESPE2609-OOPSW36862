@@ -1,6 +1,6 @@
 package ec.edu.espe.electromechanicalmaintenancemanagementsystem.model;
 
-public class SafetyRegulation {
+public class SafetyRegulation implements java.io.Serializable {
     private int regulationId;
     private String title;
     private String description;

@@ -16,5 +16,11 @@
     "name": "Enrique Nacimba",
     "contactInfo": "0976542897",
     "address": "Amaguana"
+  },
+  {
+    "clientId": 5,
+    "name": "Mateo Nacimba",
+    "contactInfo": "0987654321",
+    "address": "La Argelia"
   }
 ]

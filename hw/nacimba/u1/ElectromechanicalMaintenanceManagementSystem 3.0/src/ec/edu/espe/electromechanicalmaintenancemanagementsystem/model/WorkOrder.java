@@ -3,7 +3,7 @@ package ec.edu.espe.electromechanicalmaintenancemanagementsystem.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WorkOrder {
+public class WorkOrder implements java.io.Serializable {
     private int workOrderId;
     private String description;
     private String priority;

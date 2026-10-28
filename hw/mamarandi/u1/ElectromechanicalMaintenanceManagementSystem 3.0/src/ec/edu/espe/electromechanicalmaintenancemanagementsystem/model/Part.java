@@ -1,6 +1,6 @@
 package ec.edu.espe.electromechanicalmaintenancemanagementsystem.model;
 
-public class Part {
+public class Part implements java.io.Serializable {
     private int partId;
     private String name;
     private int stockQuantity;

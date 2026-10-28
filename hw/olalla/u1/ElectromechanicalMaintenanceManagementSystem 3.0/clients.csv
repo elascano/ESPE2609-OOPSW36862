@@ -1,4 +1,5 @@
-﻿"Client Id","Address","Contact Info","Name"
-"2","Valle de los Chillos","0983483842","Renata Olalla"
-"3","la Armenia","0983483875","Renata Olalla"
-"4","Amaguana","0976542897","Enrique Nacimba"
+Client;Name;Contact Info;Address
+2;"Renata Olalla";"0983483842";"Valle de los Chillos"
+3;"Renata Olalla";"0983483875";"la Armenia"
+4;"Enrique Nacimba";"0976542897";"Amaguana"
+5;"Mateo Nacimba";"0987654321";"La Argelia"
