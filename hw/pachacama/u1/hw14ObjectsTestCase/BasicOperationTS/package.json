@@ -1,0 +1,15 @@
+{
+  "name": "basic-operation",
+  "version": "1.0.0",
+  "description": "Basic Operation - Andres Pachacama, Byte Work, @ESPE",
+  "type": "module",
+  "scripts": {
+    "start": "node src/view/BasicOperation.ts",
+    "test": "node --test test/model/OperationTest.ts",
+    "check": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2"
+  }
+}
