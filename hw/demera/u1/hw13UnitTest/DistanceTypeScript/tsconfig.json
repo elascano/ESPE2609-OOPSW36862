@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",                  /* Versión de JavaScript emitida */
+    "module": "NodeNext",                /* Sistema de módulos (CommonJS, ESNext, NodeNext) */
+    "moduleResolution": "NodeNext",      /* Cómo resuelve las rutas de importación */
+    "outDir": "./dist",                  /* Carpeta donde se guarda el JS compilado */
+    "rootDir": "./src",                  /* Carpeta donde está el código fuente en TS */
+    "strict": true,                      /* Activa todas las reglas estrictas de tipos */
+    "esModuleInterop": true,             /* Permite importar módulos CommonJS como ES Modules */
+    "skipLibCheck": true,                /* Omite la verificación de tipos de librerías en node_modules */
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"],               /* Archivos TS a compilar */
+  "exclude": ["node_modules", "dist"]    /* Archivos a ignorar */
+}

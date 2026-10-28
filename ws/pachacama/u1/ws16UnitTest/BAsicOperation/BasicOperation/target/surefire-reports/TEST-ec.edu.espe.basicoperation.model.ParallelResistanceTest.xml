@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.basicoperation.model.ParallelResistanceTest" time="0.047" tests="10" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="26"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\USER\Documents\NetBeansProjects\BasicOperation\target\test-classes;C:\Users\USER\Documents\NetBeansProjects\BasicOperation\target\classes;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\USER\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\USER\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="America/Guayaquil"/>
+    <property name="user.country.format" value="EC"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="26"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin"/>
+    <property name="sun.java.command" value="C:\Users\USER\AppData\Local\Temp\surefire4033024891725938681\surefirebooter-20261024013504177_3.jar C:\Users\USER\AppData\Local\Temp\surefire4033024891725938681 2026-10-24T01-35-04_104-jvmRun1 surefire-20261024013504177_1tmp surefire_0-20261024013504177_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="ec.edu.espe.basicoperation.model.ParallelResistanceTest"/>
+    <property name="surefire.test.class.path" value="C:\Users\USER\Documents\NetBeansProjects\BasicOperation\target\test-classes;C:\Users\USER\Documents\NetBeansProjects\BasicOperation\target\classes;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\USER\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\USER\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\USER"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-07-21"/>
+    <property name="java.home" value="C:\Program Files\Apache NetBeans\jdk"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\USER\Documents\NetBeansProjects\BasicOperation"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\USER\AppData\Local\Temp\surefire4033024891725938681\surefirebooter-20261024013504177_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="26.0.2+10"/>
+    <property name="user.name" value="USER"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-26.0.2+10"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\Apache NetBeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\USER\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\USER\AppData\Local\Temp\"/>
+    <property name="java.version" value="26.0.2"/>
+    <property name="user.dir" value="C:\Users\USER\Documents\NetBeansProjects\BasicOperation"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.language.format" value="es"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\USER\AppData\Local\Programs\Python\Python314\Scripts\;C:\Users\USER\AppData\Local\Programs\Python\Python314\;C:\Users\USER\AppData\Local\Microsoft\WindowsApps;C:\Users\USER\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\USER\AppData\Roaming\npm;C:\Users\USER\AppData\Local\GitHubDesktop\bin;C:\Users\USER\AppData\Local\Programs\Microsoft VS Code\bin\copilot-shim;C:\Program Files\Apache NetBeans\bin\;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="26.0.2+10"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="70.0"/>
+  </properties>
+  <testcase name="testTwoSmallEqualResistances" classname="ec.edu.espe.basicoperation.model.ParallelResistanceTest" time="0.011">
+    <system-out><![CDATA[two small equal resistances
+]]></system-out>
+  </testcase>
+  <testcase name="testBigAndSmallResistances" classname="ec.edu.espe.basicoperation.model.ParallelResistanceTest" time="0.001">
+    <system-out><![CDATA[big and small resistances
+]]></system-out>
+  </testcase>
+  <testcase name="testSingleResistance" classname="ec.edu.espe.basicoperation.model.ParallelResistanceTest" time="0.0">
+    <system-out><![CDATA[single resistance
+]]></system-out>
+  </testcase>
+  <testcase name="testDecimalResistances" classname="ec.edu.espe.basicoperation.model.ParallelResistanceTest" time="0.001">
+    <system-out><![CDATA[decimal resistances
+]]></system-out>
+  </testcase>
+  <testcase name="testFourEqualResistances" classname="ec.edu.espe.basicoperation.model.ParallelResistanceTest" time="0.001">
+    <system-out><![CDATA[four equal resistances
+]]></system-out>
+  </testcase>
+  <testcase name="testNegativeResistance" classname="ec.edu.espe.basicoperation.model.ParallelResistanceTest" time="0.004">
+    <system-out><![CDATA[negative resistance
+]]></system-out>
+  </testcase>
+  <testcase name="testNoResistances" classname="ec.edu.espe.basicoperation.model.ParallelResistanceTest" time="0.001">
+    <system-out><![CDATA[no resistances
+]]></system-out>
+  </testcase>
+  <testcase name="testTwoEqualResistances" classname="ec.edu.espe.basicoperation.model.ParallelResistanceTest" time="0.001">
+    <system-out><![CDATA[two equal resistances
+]]></system-out>
+  </testcase>
+  <testcase name="testZeroResistance" classname="ec.edu.espe.basicoperation.model.ParallelResistanceTest" time="0.001">
+    <system-out><![CDATA[zero resistance
+]]></system-out>
+  </testcase>
+  <testcase name="testThreeDifferentResistances" classname="ec.edu.espe.basicoperation.model.ParallelResistanceTest" time="0.0">
+    <system-out><![CDATA[three different resistances
+]]></system-out>
+  </testcase>
+</testsuite>

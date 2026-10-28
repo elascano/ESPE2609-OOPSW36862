@@ -1,0 +1,5 @@
+# Created at 2026-10-25T17:19:42.645
+Boot Manifest-JAR contains absolute paths in classpath 'H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

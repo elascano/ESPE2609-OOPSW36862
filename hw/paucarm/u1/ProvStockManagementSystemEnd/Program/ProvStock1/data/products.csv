@@ -1,0 +1,7 @@
+id;code;name;description;category;brand;unitOfMeasure;location;purchaseCost;salePrice;minimumStock;active
+1;CAB-001;Cable THHN 12 AWG;Cable de cobre sólido;CABLES;Electrocables;METER;Pasillo A1;0.45;0.7;100.0;true
+2;CAB-002;Cable gemelo 2x14 AWG;Cable flexible doble;CABLES;Electrocables;METER;Pasillo A2;0.35;0.55;100.0;true
+3;ILU-001;Foco LED 9W luz blanca;Rosca E27;LIGHTING;Sylvania;UNIT;Pasillo B1;1.2;2.5;20.0;true
+4;INT-001;Interruptor simple;Blanco, empotrable;SWITCHES_AND_OUTLETS;Veto;UNIT;Pasillo C1;1.1;2.0;15.0;true
+5;PRO-001;Breaker 1 polo 20A;Riel DIN;PROTECTION_DEVICES;Schneider;UNIT;Pasillo D1;4.5;7.8;10.0;true
+6;HER-001;Alicate universal 8 pulgadas;Mango aislado;TOOLS;Stanley;UNIT;Pasillo E1;6.0;10.5;5.0;true

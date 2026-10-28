@@ -1,3 +1,4 @@
+
 package ec.edu.espe.basicoperations.model;
 
 import org.junit.jupiter.api.AfterEach;
@@ -87,8 +88,15 @@ public class OperationTest {
         float expResult = 3.0F;
         float result = instance.divide(dividend, divisor);
         assertEquals(expResult, result, 0);
-     
-        
     }
-    
+     @Test
+    public void testDivideOne() {
+        System.out.println("divide");
+        float dividend = 0.0F;
+        float divisor = 0.0F;
+        Operation instance = new Operation();
+        float expResult = 0.0F;
+        float result = instance.divide(dividend, divisor);
+        assertEquals(expResult, result, 0);
+    }
 }
