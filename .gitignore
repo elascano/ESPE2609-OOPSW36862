@@ -22,3 +22,11 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+/ws/unda/u1/CollectionOfThings/nbproject/private/
+/ws/unda/u1/CollectionOfThings/build/
+/ws/unda/u1/CollectionOfThings/dist/
+/ws/unda/u1/ws16UnitTesting/BasicOperations/target/
+/ws/unda/u1/ws16UnitTesting/BasicOperations/nbproject/
+/hw/unda/u1/hw08ChickenFarmAppFunctions/ChickenFarmApp/nbproject/private/
+/hw/unda/u1/hw09ChickenFarmAppFiles/ChickenFarmApp/nbproject/private/
+/hw/unda/u1/hw09ChickenFarmAppFiles/ChickenFarmApp/ChickendFarmApp/nbproject/private/
