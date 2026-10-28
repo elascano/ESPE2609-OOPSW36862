@@ -1,0 +1,44 @@
+[
+  {
+    "saleNumber": 1,
+    "productCode": "CAB-001",
+    "quantity": 50.0,
+    "unitPrice": 0.7,
+    "subtotal": 35.0
+  },
+  {
+    "saleNumber": 1,
+    "productCode": "ILU-001",
+    "quantity": 4.0,
+    "unitPrice": 2.5,
+    "subtotal": 10.0
+  },
+  {
+    "saleNumber": 1,
+    "productCode": "HER-001",
+    "quantity": 1.0,
+    "unitPrice": 10.5,
+    "subtotal": 10.5
+  },
+  {
+    "saleNumber": 2,
+    "productCode": "CAB-001",
+    "quantity": 100.0,
+    "unitPrice": 0.7,
+    "subtotal": 70.0
+  },
+  {
+    "saleNumber": 3,
+    "productCode": "PRO-001",
+    "quantity": 2.0,
+    "unitPrice": 7.8,
+    "subtotal": 15.6
+  },
+  {
+    "saleNumber": 4,
+    "productCode": "INT-001",
+    "quantity": 5.0,
+    "unitPrice": 2.0,
+    "subtotal": 10.0
+  }
+]

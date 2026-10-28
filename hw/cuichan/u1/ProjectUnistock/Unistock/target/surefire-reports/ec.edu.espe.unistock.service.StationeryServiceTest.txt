@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.unistock.service.StationeryServiceTest
+-------------------------------------------------------------------------------
+Tests run: 70, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.479 s <<< FAILURE! -- in ec.edu.espe.unistock.service.StationeryServiceTest
+ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterBrandTrimsInput -- Time elapsed: 0.012 s <<< ERROR!
+java.util.NoSuchElementException: No hay más elementos.
+	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:75)
+	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterBrandTrimsInput(StationeryServiceTest.java:158)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterTypeTrimsInput -- Time elapsed: 0.003 s <<< ERROR!
+java.util.NoSuchElementException: No hay más elementos.
+	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:75)
+	at ec.edu.espe.unistock.service.StationeryServiceTest.testRegisterTypeTrimsInput(StationeryServiceTest.java:284)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+

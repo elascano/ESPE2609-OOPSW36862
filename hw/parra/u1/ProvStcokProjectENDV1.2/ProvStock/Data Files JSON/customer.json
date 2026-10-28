@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "identificationType": "RUC",
+    "identificationNumber": "9999999999999",
+    "name": "CONSUMIDOR FINAL",
+    "phone": "",
+    "email": "",
+    "address": "",
+    "active": true
+  },
+  {
+    "id": 2,
+    "identificationType": "CEDULA",
+    "identificationNumber": "1712345675",
+    "name": "Juan Pérez",
+    "phone": "0991234567",
+    "email": "juan.perez@mail.com",
+    "address": "Quito, Av. Amazonas",
+    "active": true
+  },
+  {
+    "id": 3,
+    "identificationType": "RUC",
+    "identificationNumber": "1701234567001",
+    "name": "Instalaciones Andes",
+    "phone": "022345678",
+    "email": "ventas@andes.com",
+    "address": "Sangolquí",
+    "active": true
+  },
+  {
+    "id": 4,
+    "identificationType": "CEDULA",
+    "identificationNumber": "1728743244",
+    "name": "Alexander Martinez",
+    "phone": "0995822657",
+    "email": "alex.mar32@gmail.com",
+    "address": "Sangolqui",
+    "active": true
+  }
+]

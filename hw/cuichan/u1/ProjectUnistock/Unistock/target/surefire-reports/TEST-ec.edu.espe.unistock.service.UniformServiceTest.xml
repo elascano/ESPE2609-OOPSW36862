@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.unistock.service.UniformServiceTest" time="0.568" tests="70" errors="3" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="27"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\PC\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Guayaquil"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="27"/>
+    <property name="user.country" value="MX"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-27.0.1.0.3\bin"/>
+    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire16716553864820795661\surefirebooter-20261027151021811_3.jar C:\Users\PC\AppData\Local\Temp\surefire16716553864820795661 2026-10-27T15-10-21_628-jvmRun1 surefire-20261027151021811_1tmp surefire_0-20261027151021811_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="ec.edu.espe.unistock.service.UniformServiceTest"/>
+    <property name="surefire.test.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\PC\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\PC"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-10-25"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-27.0.1.0.3"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire16716553864820795661\surefirebooter-20261027151021811_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="27.0.1.0.3+1-2"/>
+    <property name="user.name" value="PC"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="H:\CODING APPS\NetBeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\PC\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\PC\AppData\Local\Temp\"/>
+    <property name="java.version" value="27.0.1.0.3"/>
+    <property name="user.dir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-27.0.1.0.3\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;H:\Games\ML\bin;C:\Program Files\GitHub CLI\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\PC\.local\bin;C:\Users\PC\AppData\Local\Microsoft\WindowsApps;C:\Users\PC\AppData\Local\Python\bin;H:\Games\Microsoft VS Code\bin;C:\Users\PC\AppData\Local\Python\pythoncore-3.14-64;C:\Users\PC\AppData\Local\Python\pythoncore-3.14-64\Scripts;H:\Programs\MinGW\bin;H:\CODING APPS\VSCODER\Microsoft VS Code\bin;C:\Users\PC\AppData\Roaming\npm;H:\CODING APPS\VSCODER\Microsoft VS Code\bin\copilot-shim;H:\CODING APPS\NetBeans\bin\;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="27.0.1.0.3+1-2"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="71.0"/>
+  </properties>
+  <testcase name="testRegisterSchoolMultipleSchools" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.144"/>
+  <testcase name="testConstructorCreatesServiceInstance" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testConstructorMultipleSchoolsLoaded" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.006"/>
+  <testcase name="testRegisterSizeNullIgnored" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.004"/>
+  <testcase name="testExistsSchoolNullReturnsFalse" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testRegisterSchoolPersistsToFile" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testRegisterSizeEmptyIgnored" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testExistsSizeNullReturnsFalse" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testGetRegisteredSchoolsDoesNotIncludeSizes" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.005"/>
+  <testcase name="testGetRegisteredSchoolsReflectsRegisteredSchools" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.004"/>
+  <testcase name="testGetRegisteredSizesConsistentCall" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testConstructorPreservesDataIntegrity" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.008"/>
+  <testcase name="testRegisterSchoolTrimsInput" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.01">
+    <error message="No hay más elementos." type="java.util.NoSuchElementException"><![CDATA[java.util.NoSuchElementException: No hay más elementos.
+	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:75)
+	at ec.edu.espe.unistock.service.UniformServiceTest.testRegisterSchoolTrimsInput(UniformServiceTest.java:285)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+]]></error>
+  </testcase>
+  <testcase name="testGetRegisteredSchoolsOrderPreserved" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.006"/>
+  <testcase name="testGetRegisteredSchoolsSameReference" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testConstructorInitializesEmptyListsWhenFilesMissing" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testRegisterSchoolBlankIgnored" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredSizesNotNull" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testGetRegisteredSizesReturnsSimpleList" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.004"/>
+  <testcase name="testRegisterSchoolDuplicateIgnored" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.005"/>
+  <testcase name="testExistsSchoolMultipleSchoolsSearch" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.004"/>
+  <testcase name="testRegisterSizeDuplicateIgnored" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testRegisterSizeTrimsInput" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.006">
+    <error message="No hay más elementos." type="java.util.NoSuchElementException"><![CDATA[java.util.NoSuchElementException: No hay más elementos.
+	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:75)
+	at ec.edu.espe.unistock.service.UniformServiceTest.testRegisterSizeTrimsInput(UniformServiceTest.java:165)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+]]></error>
+  </testcase>
+  <testcase name="testRegisterSchoolValidString" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredSizesReflectsRegisteredSizes" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testExistsSchoolConsistentCall" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testExistsSizeCaseInsensitiveLower" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testGetRegisteredSchoolsInitiallyEmpty" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.001"/>
+  <testcase name="testExistsSizeCaseInsensitiveUpper" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.004"/>
+  <testcase name="testConstructorLoadsExistingSizesFromFile" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testRegisterSchoolEmptyIgnored" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testExistsSizeEmptyStringReturnsFalse" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.005"/>
+  <testcase name="testRegisterSchoolSpecialCharacters" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.004"/>
+  <testcase name="testExistsSchoolTrimsInput" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testRegisterSizeCaseInsensitiveDuplicateIgnored" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.004"/>
+  <testcase name="testRegisterSizeMultipleSizes" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.004"/>
+  <testcase name="testExistsSizeReturnsTrueWhenPresent" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.005"/>
+  <testcase name="testExistsSizeReturnsFalseWhenAbsent" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testExistsSchoolReturnsTrueWhenPresent" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.007"/>
+  <testcase name="testExistsSchoolReturnsFalseWhenAbsent" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testRegisterSchoolNullIgnored" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.001"/>
+  <testcase name="testGetRegisteredSchoolsMultipleSchoolsCount" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.005"/>
+  <testcase name="testGetRegisteredSizesOrderPreserved" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.004"/>
+  <testcase name="testConstructorMultipleSizesLoaded" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testConstructorLoadsExistingSchoolsFromFile" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.005"/>
+  <testcase name="testExistsSizeBlankStringReturnsFalse" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testExistsSchoolEmptyStringReturnsFalse" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testRegisterSchoolCaseInsensitiveDuplicateIgnored" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testGetRegisteredSizesAllowsIteration" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredSizesSameReference" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.001"/>
+  <testcase name="testGetRegisteredSchoolsNotNull" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.001"/>
+  <testcase name="testGetRegisteredSizesDoesNotIncludeSchools" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.005"/>
+  <testcase name="testGetRegisteredSchoolsReturnsSimpleList" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredSchoolsAllowsIteration" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testConstructorIndependentFileLoading" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.005"/>
+  <testcase name="testExistsSizeMultipleSizesSearch" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testExistsSchoolCaseInsensitiveLower" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredSizesInitiallyEmpty" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testExistsSchoolCaseInsensitiveUpper" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testGetRegisteredSchoolsConsistentCall" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testExistsSizeConsistentCall" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.004"/>
+  <testcase name="testExistsSchoolBlankStringReturnsFalse" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.004"/>
+  <testcase name="testRegisterSizeValidString" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testGetRegisteredSizesMultipleSizesCount" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.014"/>
+  <testcase name="testRegisterSizePersistsToFile" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003"/>
+  <testcase name="testExistsSizeTrimsInput" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.002"/>
+  <testcase name="testConstructorListsAreNotSameInstance" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.005"/>
+  <testcase name="testRegisterSizeConvertsToUpperCase" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.003">
+    <error message="No hay más elementos." type="java.util.NoSuchElementException"><![CDATA[java.util.NoSuchElementException: No hay más elementos.
+	at ec.edu.espe.unistock.structure.SimpleList.next(SimpleList.java:75)
+	at ec.edu.espe.unistock.service.UniformServiceTest.testRegisterSizeConvertsToUpperCase(UniformServiceTest.java:126)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+]]></error>
+  </testcase>
+  <testcase name="testConstructorHandlesSizeAndSchoolPersistenceTogether" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.004"/>
+  <testcase name="testRegisterSizeBlankIgnored" classname="ec.edu.espe.unistock.service.UniformServiceTest" time="0.005"/>
+</testsuite>

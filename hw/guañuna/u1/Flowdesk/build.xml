@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<!-- By default, only the Clean and Build commands use this build script. -->
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+<project name="Flowdesk" default="default" basedir=".">
+    <description>Builds, tests, and runs the project Flowdesk.</description>
+    <import file="nbproject/build-impl.xml"/>
+    <!--
+
+    There exist several targets which are by default empty and which can be 
+    used for execution of your tasks. These targets are usually executed 
+    before and after some main targets. They are: 
+
+      -pre-init:                 called before initialization of project properties
+      -post-init:                called after initialization of project properties
+      -pre-compile:              called before javac compilation
+      -post-compile:             called after javac compilation
+      -pre-compile-single:       called before javac compilation of single file
+      -post-compile-single:      called after javac compilation of single file
+      -pre-compile-test:         called before javac compilation of JUnit tests
+      -post-compile-test:        called after javac compilation of JUnit tests
+      -pre-compile-test-single:  called before javac compilation of single JUnit test
+      -post-compile-test-single: called after javac compilation of single JUunit test
+      -pre-jar:                  called before JAR building
+      -post-jar:                 called after JAR building
+      -post-clean:               called after cleaning build products
+
+    (Targets beginning with '-' are not intended to be called on their own.)
+
+    Example of inserting an obfuscator after compilation could look like this:
+
+        <target name="-post-compile">
+            <obfuscate>
+                <fileset dir="${build.classes.dir}"/>
+            </obfuscate>
+        </target>
+
+    For list of available properties check the imported 
+    nbproject/build-impl.xml file. 
+
+
+    Another way to customize the build is by overriding existing main targets.
+    The targets of interest are: 
+
+      -init-macrodef-javac:     defines macro for javac compilation
+      -init-macrodef-junit:     defines macro for junit execution
+      -init-macrodef-debug:     defines macro for class debugging
+      -init-macrodef-java:      defines macro for class execution
+      -do-jar:                  JAR building
+      run:                      execution of project 
+      -javadoc-build:           Javadoc generation
+      test-report:              JUnit report generation
+
+    An example of overriding the target for project execution could look like this:
+
+        <target name="run" depends="Flowdesk-impl.jar">
+            <exec dir="bin" executable="launcher.exe">
+                <arg file="${dist.jar}"/>
+            </exec>
+        </target>
+
+    Notice that the overridden target depends on the jar target and not only on 
+    the compile target as the regular run target does. Again, for a list of available 
+    properties which you can use, check the target you are overriding in the
+    nbproject/build-impl.xml file. 
+
+    -->
+
+    <target name="-ensure-junit-console">
+        <mkdir dir="lib"/>
+        <get src="https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-console-standalone/1.10.3/junit-platform-console-standalone-1.10.3.jar"
+             dest="lib/junit-platform-console-standalone-1.10.3.jar"
+             skipexisting="true" usetimestamp="false" verbose="true"/>
+    </target>
+
+    <target name="-run-junit5" depends="-ensure-junit-console">
+        <path id="flowdesk.junit5.path">
+            <pathelement location="${build.classes.dir}"/>
+            <pathelement location="${build.test.classes.dir}"/>
+            <pathelement location="lib/gson-2.14.0.jar"/>
+        </path>
+        <pathconvert property="flowdesk.junit5.classpath" refid="flowdesk.junit5.path"/>
+        <java jar="lib/junit-platform-console-standalone-1.10.3.jar" fork="true" failonerror="true">
+            <arg value="execute"/>
+            <arg value="--disable-banner"/>
+            <arg value="--class-path"/>
+            <arg value="${flowdesk.junit5.classpath}"/>
+            <arg value="--select-class"/>
+            <arg value="com.mycompany.flowdesk.LanchimbaTest"/>
+            <arg value="--details"/>
+            <arg value="tree"/>
+        </java>
+    </target>
+
+    <target name="test" depends="compile-test,-run-junit5" description="Run JUnit 5 tests with Ant"/>
+    <target name="test-single" depends="compile-test-single,-run-junit5" description="Run LanchimbaTest with Ant"/>
+</project>

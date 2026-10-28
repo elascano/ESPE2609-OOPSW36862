@@ -1,0 +1,11 @@
+case;description;status;expContent;expType
+1;Replace belt;Pending;Replace belt - Pending;Work order
+2;Change oil;Closed;Change oil - Closed;Work order
+3;Calibrate sensor;In progress;Calibrate sensor - In progressX;Work orderX
+4;Inspect wiring;Pending;Inspect wiring - PendingX;Work orderX
+5;Repair valve;Closed;Repair valve - ClosedX;Work orderX
+6;Clean filter;Pending;Clean filter - PendingX;Work orderX
+7;Tighten bolts;In progress;Tighten bolts - In progressX;Work orderX
+8;Test breaker;Closed;Test breaker - ClosedX;Work orderX
+9;Align shaft;Pending;Align shaft - PendingX;Work orderX
+10;Paint frame;Closed;Paint frame - ClosedX;Work orderX

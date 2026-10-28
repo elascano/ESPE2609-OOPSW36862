@@ -1,0 +1,16 @@
+LegalSync - CodeLex (POO, NRC 36862)
+
+Abrir en NetBeans: File > Open Project > carpeta LegalSync (proyecto Maven).
+Main: ec.edu.espe.legalsync.view.LegalSyncApp  (Run Project / F6)
+Tests: clic derecho al proyecto > Test (Alt+F6)
+
+Usuarios de prueba (data/credentials.txt):
+  atorres  / partner123  -> PARTNER (todo)
+  cmena    / lawyer123   -> LAWYER
+  druiz    / junior123   -> JUNIOR_LAWYER
+  lparedes / assist123   -> LEGAL_ASSISTANT
+
+Paquetes: model (clases del diagrama), view (main), utils (archivos y validaciones static).
+
+Archivos en data/: cases.csv (se carga al iniciar), credentials.txt, log.txt (auditoria),
+templates/ (plantillas .txt), output/ (documentos generados), documents.txt (referencias).
