@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.unistock.model.SaleTest
+-------------------------------------------------------------------------------
+Tests run: 100, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.486 s <<< FAILURE! -- in ec.edu.espe.unistock.model.SaleTest
+ec.edu.espe.unistock.model.SaleTest.testAddItemNullItemAllowedInList -- Time elapsed: 0.011 s <<< ERROR!
+java.lang.NullPointerException: El elemento no puede ser nulo.
+	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
+	at ec.edu.espe.unistock.structure.SimpleList.add(SimpleList.java:29)
+	at ec.edu.espe.unistock.model.Sale.addItem(Sale.java:30)
+	at ec.edu.espe.unistock.model.SaleTest.testAddItemNullItemAllowedInList(SaleTest.java:140)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+

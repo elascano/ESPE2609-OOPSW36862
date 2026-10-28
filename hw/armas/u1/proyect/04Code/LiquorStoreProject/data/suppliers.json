@@ -1,0 +1,12 @@
+[
+  {
+    "idProveedor": 1,
+    "nombre": "ECO licores",
+    "contacto": "0998166522"
+  },
+  {
+    "idProveedor": 2,
+    "nombre": "BEES",
+    "contacto": "0939748707"
+  }
+]

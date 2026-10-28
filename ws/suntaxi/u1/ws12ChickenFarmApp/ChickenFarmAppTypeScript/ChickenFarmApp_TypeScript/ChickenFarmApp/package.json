@@ -1,0 +1,13 @@
+{
+  "name": "chickenfarmapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/ec/edu/espe/chickenfarmapp/view/ChickenFarmApp.js",
+  "scripts": {
+    "start": "ts-node src/ec/edu/espe/chickenfarmapp/view/ChickenFarmApp.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  }
+}

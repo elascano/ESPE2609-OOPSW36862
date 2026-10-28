@@ -1,0 +1,18 @@
+[
+  {
+    "id": 34,
+    "name": "edy",
+    "color": "black",
+    "bornOnDate": "2026-10-22T04:39:11.522Z",
+    "ageInYears": 0,
+    "molting": false
+  },
+  {
+    "id": 23,
+    "name": "lucy",
+    "color": "white",
+    "bornOnDate": "2026-10-22T04:39:32.264Z",
+    "ageInYears": 0,
+    "molting": true
+  }
+]

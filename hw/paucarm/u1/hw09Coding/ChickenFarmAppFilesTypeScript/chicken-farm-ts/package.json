@@ -1,0 +1,14 @@
+{
+  "name": "chicken-farm-app",
+  "version": "1.0.0",
+  "description": "Matias Paucar's Chicken Farm App in TypeScript",
+  "author": "Paucar Matias, ByteWorks, @ESPE",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/view/ChickenFarmApp.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

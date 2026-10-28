@@ -1,0 +1,6 @@
+EJECUTAR PYTHON
+1. Abre Terminal o PowerShell en esta carpeta.
+2. Ejecuta: py main.py
+3. Escoge las opciones 1, 2, 3 o 4.
+
+Un archivo .py por cada clase, como en tu proyecto Java.

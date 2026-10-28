@@ -1,0 +1,7 @@
+id;dateTime;productCode;type;quantity;saleNumber;purchaseNumber;user;reason
+1;2026-10-24T02:49:30.377525;CAB-001;ADJUSTMENT;500.0;;;owner;Inventario inicial
+2;2026-10-24T02:49:30.377525;CAB-002;ADJUSTMENT;80.0;;;owner;Inventario inicial
+3;2026-10-24T02:49:30.377525;ILU-001;ADJUSTMENT;60.0;;;owner;Inventario inicial
+4;2026-10-24T02:49:30.377525;INT-001;ADJUSTMENT;40.0;;;owner;Inventario inicial
+5;2026-10-24T02:49:30.377525;PRO-001;ADJUSTMENT;8.0;;;owner;Inventario inicial
+6;2026-10-24T02:49:30.377525;HER-001;ADJUSTMENT;12.0;;;owner;Inventario inicial

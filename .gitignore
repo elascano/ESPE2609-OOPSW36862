@@ -10,7 +10,7 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.nar
@@ -19,9 +19,10 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Virtual machine crash logs
 hs_err_pid*
 replay_pid*
+<<<<<<< HEAD
 /ws/unda/u1/CollectionOfThings/nbproject/private/
 /ws/unda/u1/CollectionOfThings/build/
 /ws/unda/u1/CollectionOfThings/dist/
@@ -30,3 +31,30 @@ replay_pid*
 /hw/unda/u1/hw08ChickenFarmAppFunctions/ChickenFarmApp/nbproject/private/
 /hw/unda/u1/hw09ChickenFarmAppFiles/ChickenFarmApp/nbproject/private/
 /hw/unda/u1/hw09ChickenFarmAppFiles/ChickenFarmApp/ChickendFarmApp/nbproject/private/
+=======
+
+# NetBeans private configuration and build files
+/ws/velez/u1/ws12Coding/ChickenFarmApp/nbproject/private/
+/ws/velez/u1/ws12Coding/ChickenFarmApp/build/
+/ws/velez/u1/ws12Coding/JavaApplication30/nbproject/private/
+/ws/velez/u1/ws12Coding/ChickenFarmApp2/nbproject/private/
+/ws/velez/u1/ws12Coding/ChickenFarmApp23/nbproject/private/
+/ws/velez/u1/ws12Coding/ChickenFarmApp23/build/
+/ws/olalla/u1/ws12 Coding/ChickenFarmApp/nbproject/private/
+/ws/olalla/u1/ws12 Coding/ChickenFarmApp/build/
+
+/ws/clavon/u1/ws12CodingChickenFarm/ChikenFarmApp/nbproject/private/
+
+# Visual Paradigm backup files
+*.bak_*
+/ws/clavon/u1/ws12CodingChickenFarm/ChikenFarmApp/build/
+
+dist/
+
+/ws/velez/u1/ws14collection/CollectionOrThing/nbproject/private/
+/ws/velez/u1/ws14collection/CollectionOrThing/build/
+/ws/velez/u1/w16UnitTesting/BasicOperations/target/
+/ws/velez/u1/w16UnitTesting/BasicOperations/nbproject/
+/hw/demera/u1/hw13UnitTest/BasicOperations/nbproject/
+/hw/demera/u1/hw13UnitTest/BasicOperations/target/
+>>>>>>> 3142e2d16c64c9f6b5e00edc024144d29199fad2

@@ -1,0 +1,2 @@
+Ejecuta: py main.py
+Registra una gallina, sal con 4 y ejecuta otra vez. El programa lee chickens.json al iniciar. Se guarda al agregar o eliminar.

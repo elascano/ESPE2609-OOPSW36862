@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.systemliquorstore.tests.US003SupplierOrderTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 4, Errors: 1, Skipped: 0, Time elapsed: 0.145 s <<< FAILURE! -- in ec.edu.espe.systemliquorstore.tests.US003SupplierOrderTest
+ec.edu.espe.systemliquorstore.tests.US003SupplierOrderTest.testOrder10 -- Time elapsed: 0.066 s <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]Distribuidora> but was:<[Nueva ]Distribuidora>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at ec.edu.espe.systemliquorstore.tests.US003SupplierOrderTest.testOrder10(US003SupplierOrderTest.java:134)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+
+ec.edu.espe.systemliquorstore.tests.US003SupplierOrderTest.testSupplier2 -- Time elapsed: 0.002 s <<< FAILURE!
+java.lang.AssertionError: expected:<false> but was:<true>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at ec.edu.espe.systemliquorstore.tests.US003SupplierOrderTest.testSupplier2(US003SupplierOrderTest.java:32)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+
+ec.edu.espe.systemliquorstore.tests.US003SupplierOrderTest.testOrder4 -- Time elapsed: 0.015 s <<< FAILURE!
+java.lang.AssertionError: expected:<20> but was:<10>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at ec.edu.espe.systemliquorstore.tests.US003SupplierOrderTest.testOrder4(US003SupplierOrderTest.java:48)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+
+ec.edu.espe.systemliquorstore.tests.US003SupplierOrderTest.testOrder6 -- Time elapsed: 0.002 s <<< FAILURE!
+java.lang.AssertionError: expected:<false> but was:<true>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at ec.edu.espe.systemliquorstore.tests.US003SupplierOrderTest.testOrder6(US003SupplierOrderTest.java:81)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+
+ec.edu.espe.systemliquorstore.tests.US003SupplierOrderTest.testOrder8 -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.IllegalArgumentException: Revise el identificador, proveedor y fecha del pedido.
+	at ec.edu.espe.systemliquorstore.model.PurchaseOrder.<init>(PurchaseOrder.java:17)
+	at ec.edu.espe.systemliquorstore.tests.US003SupplierOrderTest.testOrder8(US003SupplierOrderTest.java:106)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+
