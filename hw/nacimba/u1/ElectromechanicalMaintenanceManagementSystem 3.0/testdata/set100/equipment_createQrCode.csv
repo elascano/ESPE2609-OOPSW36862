@@ -1,0 +1,11 @@
+case;equipmentId;serialNumber;expUrl
+1;1;SN-001;https://maintenance.local/equipment/1
+2;2;SN-002;https://maintenance.local/equipment/2
+3;3;SN-003;https://maintenance.local/equipment/3
+4;10;SN-010;https://maintenance.local/equipment/10
+5;25;SN-025;https://maintenance.local/equipment/25
+6;100;SN-100;https://maintenance.local/equipment/100
+7;7;ABC-7;https://maintenance.local/equipment/7
+8;42;XYZ-42;https://maintenance.local/equipment/42
+9;8;MTR-8;https://maintenance.local/equipment/8
+10;999;ZZ-999;https://maintenance.local/equipment/999

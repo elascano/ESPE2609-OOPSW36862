@@ -1,0 +1,21 @@
+{
+  "name": "basic-operations-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Operaciones básicas, área de un círculo y sus pruebas unitarias en TypeScript.",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "test": "node --test --test-reporter=spec tests/Operation.test.ts tests/AreaOfCircle.test.ts",
+    "test:operations": "node --test --test-reporter=spec tests/Operation.test.ts",
+    "test:circle": "node --test --test-reporter=spec tests/AreaOfCircle.test.ts",
+    "start": "node main.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "~5.9.3"
+  }
+}
