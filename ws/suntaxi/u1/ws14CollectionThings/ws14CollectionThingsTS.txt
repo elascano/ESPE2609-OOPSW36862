@@ -1,0 +1,68 @@
+class Person {
+    id: number;
+    name: string;
+    salary: number;
+
+    constructor(id: number, name: string, salary: number) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    toString(): string {
+        return `Person{id=${this.id}, name=${this.name}, salary=${this.salary}}`;
+    }
+}
+
+function main() {
+    console.log("=================");
+    console.log("Anghelo Suntaxi");
+    console.log("Collection");
+    console.log("=================");
+    
+    const things: any[] = [42, "Hola Anghelo", 3.1416, true];
+    
+    console.log("person----0");
+    console.log("Size of my collections at the begining is-----0");
+    console.log("=================");
+    console.log("Size of my collections at this point --4");
+    console.log("Size of my collections at this point --4");
+    console.log("=================");
+    
+    const persons: Person[] = [
+        new Person(1, "Jorge", 2851.27),
+        new Person(2, "Leslie Cuichan", 1851.25),
+        new Person(3, "Dennis Criollo", 3500.37)
+    ];
+    
+    console.log(`Size of my collections of persons --> ${persons.length}`);
+    console.log(`persons --> [${persons.map(p => p.toString()).join(", ")}]`);
+    
+    console.log("====== for each del array list");
+    for (const p of persons) {
+        console.log(`person --> ${p.toString()}`);
+    }
+    
+    console.log(`persons size ---> ${persons.length}`);
+    
+    console.log("========== for");
+    for (const p of persons) {
+        console.log(`person --> ${p.toString()}`);
+    }
+    
+    console.log("========== for");
+    for (const p of persons) {
+        console.log(`person --> ${p.toString()}`);
+    }
+    
+    for (let i = 4; i <= 14; i++) {
+        persons.push(new Person(i, `Anghelo Suntaxi ${i}`, 1000.0 + i));
+    }
+    
+    console.log("========== for");
+    for (const p of persons) {
+        console.log(`person --> ${p.toString()}`);
+    }
+}
+
+main();

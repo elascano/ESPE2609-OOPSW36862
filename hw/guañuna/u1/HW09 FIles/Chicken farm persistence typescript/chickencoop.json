@@ -1,0 +1,27 @@
+{
+    "chickenCoopId": 1,
+    "chickens": [
+        {
+            "id": 1,
+            "name": "Lucy",
+            "color": "black",
+            "bornOnDate": "2026-10-22",
+            "molting": false
+        },
+        {
+            "id": 2,
+            "name": "Alejandra",
+            "color": "white",
+            "bornOnDate": "2026-10-22",
+            "molting": false
+        },
+        {
+            "id": 6,
+            "name": "Jaime",
+            "color": "Green",
+            "bornOnDate": "2006-04-23",
+            "molting": false
+        }
+    ],
+    "currentIndex": 3
+}

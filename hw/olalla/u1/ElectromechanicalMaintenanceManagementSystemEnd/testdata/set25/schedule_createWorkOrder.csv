@@ -1,0 +1,11 @@
+case;frequency;scheduleDate;expDescription;expDate
+1;Weekly;2026-11-01;Scheduled Weekly maintenance;2026-11-01
+2;Monthly;2026-11-15;Scheduled Monthly maintenance;2026-11-15
+3;Quarterly;2027-01-10;Scheduled Quarterly maintenance;2027-01-10
+4;Yearly;2027-10-24;Scheduled Yearly maintenanceX;2027-10-24X
+5;Daily;2026-10-25;Scheduled Daily maintenanceX;2026-10-25X
+6;Biweekly;2026-11-08;Scheduled Biweekly maintenanceX;2026-11-08X
+7;Semiannual;2027-04-24;Scheduled Semiannual maintenanceX;2027-04-24X
+8;Weekly;2026-12-31;Scheduled Weekly maintenanceX;2026-12-31X
+9;Monthly;2027-02-01;Scheduled Monthly maintenanceX;2027-02-01X
+10;Yearly;2028-01-01;Scheduled Yearly maintenanceX;2028-01-01X

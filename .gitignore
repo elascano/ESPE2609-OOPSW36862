@@ -40,7 +40,10 @@ replay_pid*
 /ws/clavon/u1/ws12CodingChickenFarm/ChikenFarmApp/build/
 
 dist/
-/hw/nacimba/u1/hw09CodingFiles/ChickenFarmApp/build/
-/hw/nacimba/u1/hw09CodingFiles/ChickenFarmApp/nbproject/private/
-/ws/torres/u1/ws15BasicOperations/BasicOperations/target/
-/ws/torres/u1/ws15BasicOperations/BasicOperations/nbproject/
+
+/ws/velez/u1/ws14collection/CollectionOrThing/nbproject/private/
+/ws/velez/u1/ws14collection/CollectionOrThing/build/
+/ws/velez/u1/w16UnitTesting/BasicOperations/target/
+/ws/velez/u1/w16UnitTesting/BasicOperations/nbproject/
+/hw/demera/u1/hw13UnitTest/BasicOperations/nbproject/
+/hw/demera/u1/hw13UnitTest/BasicOperations/target/

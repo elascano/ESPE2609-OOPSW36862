@@ -1,0 +1,68 @@
+[
+  {
+    "id": 2,
+    "date": {
+      "date": {
+        "year": 2026,
+        "month": 10,
+        "day": 27
+      },
+      "time": {
+        "hour": 15,
+        "minute": 27,
+        "second": 23,
+        "nano": 198124800
+      }
+    },
+    "seller": {
+      "username": "admin",
+      "password": "admin123",
+      "role": "ADMINISTRATOR"
+    },
+    "items": {
+      "head": {
+        "data": {
+          "product": {
+            "size": "XL",
+            "school": "UEFC Conocoto",
+            "id": 2,
+            "name": "Camiseta Blanca Educacion Fisica",
+            "price": 12,
+            "category": "UNIFORM",
+            "stock": 9
+          },
+          "quantity": 3
+        },
+        "next": {
+          "data": {
+            "product": {
+              "size": "m",
+              "school": "UEFC Conocoto",
+              "id": 1,
+              "name": "Uniforme UEFC Conocoto",
+              "price": 40,
+              "category": "UNIFORM",
+              "stock": 21
+            },
+            "quantity": 2
+          }
+        }
+      },
+      "tail": {
+        "data": {
+          "product": {
+            "size": "m",
+            "school": "UEFC Conocoto",
+            "id": 1,
+            "name": "Uniforme UEFC Conocoto",
+            "price": 40,
+            "category": "UNIFORM",
+            "stock": 21
+          },
+          "quantity": 2
+        }
+      },
+      "size": 2
+    }
+  }
+]

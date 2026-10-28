@@ -1,0 +1,268 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.unistock.service.SaleServiceTest
+-------------------------------------------------------------------------------
+Tests run: 60, Failures: 4, Errors: 29, Skipped: 0, Time elapsed: 0.584 s <<< FAILURE! -- in ec.edu.espe.unistock.service.SaleServiceTest
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleMultipleSequentialSales -- Time elapsed: 0.110 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleMultipleSequentialSales(SaleServiceTest.java:382)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSalePersistsToJsonFile -- Time elapsed: 0.009 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSalePersistsToJsonFile(SaleServiceTest.java:353)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConstructorLoadsExistingSalesFromFile -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "product" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConstructorLoadsExistingSalesFromFile(SaleServiceTest.java:83)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvOverwritesExistingFile -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvOverwritesExistingFile(SaleServiceTest.java:623)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvContainsSaleTotal -- Time elapsed: 0.007 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvContainsSaleTotal(SaleServiceTest.java:559)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleDecreasesMultipleProductsStock -- Time elapsed: 0.010 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p1" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleDecreasesMultipleProductsStock(SaleServiceTest.java:340)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemValidProductAndStock -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemValidProductAndStock(SaleServiceTest.java:243)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesAllowsIteration -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesAllowsIteration(SaleServiceTest.java:457)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConstructorCalculatesNextIdFromExistingSales -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "product" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConstructorCalculatesNextIdFromExistingSales(SaleServiceTest.java:94)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvAutoAppendsExtension -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvAutoAppendsExtension(SaleServiceTest.java:532)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConstructorDoesNotOverwriteExistingFileOnCreation -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "product" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConstructorDoesNotOverwriteExistingFileOnCreation(SaleServiceTest.java:162)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemNegativeQuantityThrowsException -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemNegativeQuantityThrowsException(SaleServiceTest.java:299)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testAddItemNegativeQuantityThrowsException$0(SaleServiceTest.java:299)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvBlankPathDoesNotCrash -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvBlankPathDoesNotCrash(SaleServiceTest.java:611)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemInsufficientStockThrowsException -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalStateException> but was: <java.lang.NullPointerException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemInsufficientStockThrowsException(SaleServiceTest.java:259)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testAddItemInsufficientStockThrowsException$0(SaleServiceTest.java:259)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemMultipleDifferentProducts -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p1" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemMultipleDifferentProducts(SaleServiceTest.java:275)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesReflectsConfirmedSales -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesReflectsConfirmedSales(SaleServiceTest.java:437)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConstructorWithMultipleSavedSales -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "product" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConstructorWithMultipleSavedSales(SaleServiceTest.java:112)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemExactStockAllowed -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemExactStockAllowed(SaleServiceTest.java:267)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testAddItemExactStockAllowed$0(SaleServiceTest.java:267)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvNullPathDoesNotCrash -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvNullPathDoesNotCrash(SaleServiceTest.java:601)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleTwiceAddsDuplicateToSalesList -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleTwiceAddsDuplicateToSalesList(SaleServiceTest.java:420)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemUpdatesSaleSubtotal -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemUpdatesSaleSubtotal(SaleServiceTest.java:284)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesOrderPreserved -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesOrderPreserved(SaleServiceTest.java:492)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleRetainsSaleDetailsInList -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleRetainsSaleDetailsInList(SaleServiceTest.java:397)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleReducesStockToZero -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleReducesStockToZero(SaleServiceTest.java:370)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvContainsSellerUsername -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvContainsSellerUsername(SaleServiceTest.java:545)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleValidSale -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleValidSale(SaleServiceTest.java:320)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleWithUniformProduct -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConfirmSaleWithUniformProduct(SaleServiceTest.java:409)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesMultipleSalesCount -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testGetSalesMultipleSalesCount(SaleServiceTest.java:482)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemDoesNotDecreaseProductStockImmediately -- Time elapsed: 0.010 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemDoesNotDecreaseProductStockImmediately(SaleServiceTest.java:312)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testAddItemZeroQuantityThrowsException -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at ec.edu.espe.unistock.service.SaleServiceTest.testAddItemZeroQuantityThrowsException(SaleServiceTest.java:292)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.lambda$testAddItemZeroQuantityThrowsException$0(SaleServiceTest.java:292)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 6 more
+
+ec.edu.espe.unistock.service.SaleServiceTest.testConstructorNextIdContinuity -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "product" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testConstructorNextIdContinuity(SaleServiceTest.java:127)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvValidFileGeneration -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvValidFileGeneration(SaleServiceTest.java:515)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvMultipleSalesRows -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ec.edu.espe.unistock.model.Product.getId()" because "p" is null
+	at ec.edu.espe.unistock.service.SaleServiceTest.testExportReportCsvMultipleSalesRows(SaleServiceTest.java:584)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
