@@ -1,0 +1,20 @@
+[
+  {
+    "clientId": 2,
+    "name": "Renata Olalla",
+    "contactInfo": "0983483842",
+    "address": "Valle de los Chillos"
+  },
+  {
+    "clientId": 3,
+    "name": "Renata Olalla",
+    "contactInfo": "0983483875",
+    "address": "la Armenia"
+  },
+  {
+    "clientId": 4,
+    "name": "Enrique Nacimba",
+    "contactInfo": "0976542897",
+    "address": "Amaguana"
+  }
+]
