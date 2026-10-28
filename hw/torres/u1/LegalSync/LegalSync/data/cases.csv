@@ -1,0 +1,7 @@
+caseId,docketNumber,title,status,openingDate,clientName,clientIdNumber,clientPhone,clientEmail,defendantName,defendantIdNumber,lawyerUsername,deadlineDescription,deadlineType,deadlineDate
+1,17230-2026-00101,Breach of lease contract,IN_PROGRESS,2026-03-12,Maria Fernanda Lopez,1712345678,0991234567,mflopez@mail.com,Inmobiliaria Andes S.A.,1790012345001,cmena,Preliminary hearing,Hearing,2026-10-28
+2,17230-2026-00145,Collection of unpaid invoices,OPEN,2026-05-03,Comercial Rivera Cia. Ltda.,1791234567001,022345678,contacto@rivera.com,Jorge Salazar,1723456789,cmena,Submit evidence,Filing,2026-11-20
+3,17204-2026-00230,Wrongful dismissal claim,IN_PROGRESS,2026-06-18,Pedro Andrade,1709876543,0987654321,pandrade@mail.com,Textiles del Valle S.A.,1790098765001,druiz,Appeal submission,Appeal,2026-10-20
+4,17230-2026-00312,Child support review,SUSPENDED,2026-07-25,Maria Fernanda Lopez,1712345678,0991234567,mflopez@mail.com,Andres Molina,1722233344,atorres,Mediation meeting,Hearing,2026-10-30
+5,17230-2025-00877,Trademark infringement,CLOSED,2025-11-02,Grupo Kallpa S.A.,1792223334001,023456789,legal@kallpa.ec,Distribuidora Norte,,atorres,,,
+6,17230-2026-00999,Line with errors (no title and wrong date),OPEN,2026-13-45,Luis Gomez,123,0990000000,lgomez@mail.com,Someone,,cmena,,,

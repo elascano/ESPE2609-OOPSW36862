@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="2" hostname="LAPTOP-0T4C1IP3" name="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" skipped="0" tests="8" time="0.18" timestamp="2026-10-25T03:33:09">
+<testsuite errors="0" failures="7" hostname="LAPTOP-0T4C1IP3" name="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" skipped="0" tests="10" time="0.19" timestamp="2026-10-26T02:35:44">
   <properties>
     <property name="javac.test.classpath" value=":build/classes:C:\Program Files\Apache NetBeans\platform\modules\ext\junit-jupiter-api-5.10.3.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\junit-jupiter-params-5.10.3.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\junit-jupiter-engine-5.10.3.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\opentest4j-1.3.0.jar:C:\Program Files\Apache NetBeans\platform\modules\ext\junit-4.13.2.jar:C:\Program Files\Apache NetBeans\platform\modules\ext\hamcrest-core-1.3.jar" />
     <property name="java.specification.version" value="26" />
@@ -15,11 +15,11 @@
     <property name="libs.eclipselink.javadoc" value="C:\Program Files\Apache NetBeans\java\modules\ext\docs\jakarta.persistence-2.2.3-doc.zip" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes\build\test\results\TEST-ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest.xml crashfile=C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes\build\junitvmwatcher10300005725896412997.properties propsfile=C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes\build\junit10044254221092562299.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd\build\test\results\TEST-ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest.xml crashfile=C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd\build\junitvmwatcher5407939913432540841.properties propsfile=C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd\build\junit726688477428089594.properties" />
     <property name="jdk.debug" value="release" />
     <property name="javadoc.use" value="true" />
     <property name="javadoc.notree" value="false" />
-    <property name="basedir" value="C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes" />
+    <property name="basedir" value="C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd" />
     <property name="application.vendor" value="MSI-GAMER" />
     <property name="java.vm.specification.vendor" value="Oracle Corporation" />
     <property name="java.specification.name" value="Java Platform API Specification" />
@@ -57,7 +57,7 @@
     <property name="libs.testng.javadoc" value="C:\Program Files\Apache NetBeans\platform\docs\testng-7.11.0-javadoc.jar" />
     <property name="meta.inf.dir" value="src/META-INF" />
     <property name="run.upgrademodulepath" value="" />
-    <property name="ant.file.ElectromechanicalMaintenanceManagementSystem-impl" value="C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes\nbproject\build-impl.xml" />
+    <property name="ant.file.ElectromechanicalMaintenanceManagementSystem-impl" value="C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd\nbproject\build-impl.xml" />
     <property name="compile.on.save" value="false" />
     <property name="jlink.additionalparam" value="" />
     <property name="libs.testng.maven-pom" value="" />
@@ -174,7 +174,7 @@
     <property name="libs.jpa20-persistence.src" value="" />
     <property name="libs.restapi.javadoc" value="" />
     <property name="endorsed.classpath" value="" />
-    <property name="javac.test.sourcepath" value="C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes\build\empty" />
+    <property name="javac.test.sourcepath" value="C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd\build\empty" />
     <property name="includes" value="**" />
     <property name="libs.hamcrest.classpath" value="C:\Program Files\Apache NetBeans\platform\modules\ext\hamcrest-core-1.3.jar" />
     <property name="javadoc.splitindex" value="true" />
@@ -227,7 +227,7 @@
     <property name="java.specification.vendor" value="Oracle Corporation" />
     <property name="java.version.date" value="2026-07-21" />
     <property name="java.home" value="C:\Program Files\Apache NetBeans\jdk" />
-    <property name="work.dir" value="C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes" />
+    <property name="work.dir" value="C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd" />
     <property name="jna.boot.library.name" value="jnidispatch-nb" />
     <property name="javac.test.compilerargs" value="" />
     <property name="libs.PostgreSQLDriver.classpath" value="C:\Program Files\Apache NetBeans\ide\modules\ext\postgresql-42.5.4.jar" />
@@ -248,7 +248,7 @@
     <property name="libs.restlib.javadoc" value="" />
     <property name="libs.absolutelayout.classpath" value="C:\Program Files\Apache NetBeans\java\modules\ext\AbsoluteLayout.jar" />
     <property name="do.archive" value="true" />
-    <property name="built-jar.properties" value="C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes\build\built-jar.properties" />
+    <property name="built-jar.properties" value="C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd\build\built-jar.properties" />
     <property name="nb.native.filechooser" value="false" />
     <property name="libs.testng.src" value="" />
     <property name="libs.javaee-web-api-8.0.classpath" value="C:\Program Files\Apache NetBeans\enterprise\modules\ext\javaee-web-api-8.0.jar" />
@@ -262,7 +262,7 @@
     <property name="flatlaf.nativeLibraryPath" value="system" />
     <property name="libs.eclipselinkmodelgen.classpath" value="C:\Program Files\Apache NetBeans\java\modules\ext\eclipselink\org.eclipse.persistence.jpa.modelgen.processor-2.7.12.jar" />
     <property name="truffle.UseFallbackRuntime" value="true" />
-    <property name="ant.file.ElectromechanicalMaintenanceManagementSystem" value="C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes\build.xml" />
+    <property name="ant.file.ElectromechanicalMaintenanceManagementSystem" value="C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd\build.xml" />
     <property name="javac.systemmodulepath.cmd.line.arg" value="" />
     <property name="netbeans.buildnumber" value="31-f8ac37e0f2434a7f000fbe3360f1a92aa3ea67bc" />
     <property name="endorsed.classpath.cmd.line.arg" value="" />
@@ -286,7 +286,7 @@
     <property name="libs.graaljs.src" value="" />
     <property name="run.jvmargs" value="" />
     <property name="libs.primefaces.src" value="" />
-    <property name="ant.file" value="C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes\build.xml" />
+    <property name="ant.file" value="C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd\build.xml" />
     <property name="stdout.encoding" value="Cp1252" />
     <property name="path.separator" value=";" />
     <property name="libs.JAXB-ENDORSED.classpath" value="C:\Program Files\Apache NetBeans\ide\modules\ext\jaxb\api\jaxb-api.jar" />
@@ -321,7 +321,7 @@
     <property name="libs.jsf20.javadoc" value="C:\Program Files\Apache NetBeans\enterprise\docs\javaee-doc-api.jar" />
     <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
     <property name="netbeans.autoupdate.version" value="1.23" />
-    <property name="empty.dir" value="C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes\build\empty" />
+    <property name="empty.dir" value="C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd\build\empty" />
     <property name="libs.jakartaee-api-10.0.classpath" value="C:\Program Files\Apache NetBeans\enterprise\modules\ext\jakarta.jakartaee-api-10.0.0.jar" />
     <property name="netbeans.user" value="C:\Users\Mateo\AppData\Roaming\NetBeans\31" />
     <property name="file.separator" value="\" />
@@ -361,7 +361,7 @@
     <property name="user.properties.file" value="C:\Users\Mateo\AppData\Roaming\NetBeans\31\build.properties" />
     <property name="libs.javaee-api-6.0.src" value="" />
     <property name="netbeans.autoupdate.country" value="EC" />
-    <property name="java.class.path" value="C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes\build\classes;C:\Program Files\Apache NetBeans\platform\modules\ext\junit-jupiter-api-5.10.3.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\junit-jupiter-params-5.10.3.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\junit-jupiter-engine-5.10.3.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\opentest4j-1.3.0.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\junit-4.13.2.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\hamcrest-core-1.3.jar;C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes\build\test\classes;C:\Program Files\Apache NetBeans\extide\ant\lib\ant-launcher.jar;C:\Program Files\Apache NetBeans\extide\ant\lib\ant.jar;C:\Program Files\Apache NetBeans\extide\ant\lib\ant-junit.jar;C:\Program Files\Apache NetBeans\extide\ant\lib\ant-junit4.jar" />
+    <property name="java.class.path" value="C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd\build\classes;C:\Program Files\Apache NetBeans\platform\modules\ext\junit-jupiter-api-5.10.3.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\junit-jupiter-params-5.10.3.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\junit-jupiter-engine-5.10.3.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\opentest4j-1.3.0.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\junit-4.13.2.jar;C:\Program Files\Apache NetBeans\platform\modules\ext\hamcrest-core-1.3.jar;C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd\build\test\classes;C:\Program Files\Apache NetBeans\extide\ant\lib\ant-launcher.jar;C:\Program Files\Apache NetBeans\extide\ant\lib\ant.jar;C:\Program Files\Apache NetBeans\extide\ant\lib\ant-junit.jar;C:\Program Files\Apache NetBeans\extide\ant\lib\ant-junit4.jar" />
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
     <property name="java.vm.vendor" value="Eclipse Adoptium" />
     <property name="ap.supported.internal" value="true" />
@@ -405,7 +405,7 @@
     <property name="libs.PostgreSQLDriver.src" value="" />
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues" />
     <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
-    <property name="user.dir" value="C:\Users\Mateo\Documents\ElectromechanicalMaintenanceManagementSystem_3Paquetes" />
+    <property name="user.dir" value="C:\Users\Mateo\Documents\POO\ESPE2609-OOPSW36862\hw\nacimba\u1\ElectromechanicalMaintenanceManagementSystemEnd" />
     <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="platform.java" value="C:\Program Files\Apache NetBeans\jdk/bin/java" />
     <property name="application.args" value="" />
@@ -424,25 +424,53 @@
     <property name="libs.jsp-compiler.classpath" value="C:\Program Files\Apache NetBeans\enterprise\ant\extra\jspcompile.jar" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="C:\Program Files\Apache NetBeans\enterprise\modules\ext\javaee6-endorsed\javax.annotation.jar;C:\Program Files\Apache NetBeans\enterprise\modules\ext\javaee6-endorsed\jaxb-api-osgi.jar;C:\Program Files\Apache NetBeans\enterprise\modules\ext\javaee6-endorsed\webservices-api-osgi.jar" />
   </properties>
-  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment1" time="0.018" />
-  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment2" time="0.002" />
+  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment10" time="0.022">
+    <failure message="expected:&lt;100&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;100&gt; but was:&lt;1&gt;
+	at ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest.testAddEquipment10(ClientTest.java:164)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+</failure>
+  </testcase>
+  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment1" time="0.003" />
+  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment2" time="0.001" />
   <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment3" time="0.002" />
-  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment4" time="0.002" />
-  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment5" time="0.002" />
-  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment6" time="0.002" />
-  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment7" time="0.009">
+  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment4" time="0.005">
+    <failure message="expected:&lt;100&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;100&gt; but was:&lt;1&gt;
+	at ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest.testAddEquipment4(ClientTest.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+</failure>
+  </testcase>
+  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment5" time="0.003">
+    <failure message="expected:&lt;100&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;100&gt; but was:&lt;1&gt;
+	at ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest.testAddEquipment5(ClientTest.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+</failure>
+  </testcase>
+  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment6" time="0.002">
+    <failure message="expected:&lt;100&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;100&gt; but was:&lt;1&gt;
+	at ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest.testAddEquipment6(ClientTest.java:100)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+</failure>
+  </testcase>
+  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment7" time="0.003">
     <failure message="expected:&lt;100&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;100&gt; but was:&lt;1&gt;
 	at ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest.testAddEquipment7(ClientTest.java:116)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 </failure>
   </testcase>
-  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment8" time="0.004">
+  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment8" time="0.003">
     <failure message="expected:&lt;99&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;99&gt; but was:&lt;0&gt;
 	at ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest.testAddEquipment8(ClientTest.java:132)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 </failure>
   </testcase>
-  <system-out><![CDATA[addEquipment1
+  <testcase classname="ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest" name="testAddEquipment9" time="0.002">
+    <failure message="expected:&lt;100&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;100&gt; but was:&lt;1&gt;
+	at ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.ClientTest.testAddEquipment9(ClientTest.java:148)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+</failure>
+  </testcase>
+  <system-out><![CDATA[addEquipment10
+addEquipment1
 addEquipment2
 addEquipment3
 addEquipment4
@@ -450,6 +478,7 @@ addEquipment5
 addEquipment6
 addEquipment7
 addEquipment8
+addEquipment9
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

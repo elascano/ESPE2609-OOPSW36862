@@ -64,6 +64,6 @@ public class MyThings {
             System.out.println("person --> " + p);
         }   
         }
-    }
+    } 
     
 }

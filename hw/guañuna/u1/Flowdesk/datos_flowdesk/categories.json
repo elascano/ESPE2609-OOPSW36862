@@ -1,0 +1,57 @@
+[
+  {
+    "categoryId": "CAT-XRX-01",
+    "name": "Impresión bond",
+    "description": "Impresión en papel bond."
+  },
+  {
+    "categoryId": "CAT-XRX-02",
+    "name": "Couché 150 g",
+    "description": "Impresión en papel couché de 150 g."
+  },
+  {
+    "categoryId": "CAT-XRX-03",
+    "name": "Couché 300 g",
+    "description": "Impresión en papel couché de 300 g."
+  },
+  {
+    "categoryId": "CAT-XRX-04",
+    "name": "Marfil lisa 300 g",
+    "description": "Impresión en marfil lisa de 300 g."
+  },
+  {
+    "categoryId": "CAT-XRX-05",
+    "name": "Cartulina bristol",
+    "description": "Impresión en cartulina bristol."
+  },
+  {
+    "categoryId": "CAT-XRX-06",
+    "name": "Cartulina pegable",
+    "description": "Impresión en cartulina pegable."
+  },
+  {
+    "categoryId": "CAT-XRX-07",
+    "name": "Nacarada",
+    "description": "Impresión en material nacarado."
+  },
+  {
+    "categoryId": "CAT-XRX-08",
+    "name": "Polipropileno blanco o transparente",
+    "description": "Impresión y troquelado en polipropileno blanco o transparente."
+  },
+  {
+    "categoryId": "CAT-XRX-09",
+    "name": "Papel adhesivo",
+    "description": "Impresión y troquelado en papel adhesivo."
+  },
+  {
+    "categoryId": "CAT-XRX-10",
+    "name": "Laminado",
+    "description": "Laminado de planchas."
+  },
+  {
+    "categoryId": "CAT-XRX-11",
+    "name": "Promoción adhesivos",
+    "description": "Tarifas promocionales de adhesivos por rango de unidades."
+  }
+]

@@ -1,0 +1,4 @@
+id;identificationType;identificationNumber;name;phone;email;address;active
+1;RUC;9999999999999;CONSUMIDOR FINAL;;;;true
+2;CEDULA;1712345675;Juan Pérez;0991234567;juan.perez@mail.com;Quito, Av. Amazonas;true
+3;RUC;1701234567001;Instalaciones Andes;022345678;ventas@andes.com;Sangolquí;true

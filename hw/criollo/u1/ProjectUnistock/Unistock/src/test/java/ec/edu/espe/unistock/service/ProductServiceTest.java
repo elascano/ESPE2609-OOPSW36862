@@ -1,619 +1,697 @@
 package ec.edu.espe.unistock.service;
 
-/**
- *
- * @author Dennis Criollo, Leslye Cuichan, Francisco Demera, Byte & Fabric Devs, @ESPE
- */
-
 import ec.edu.espe.unistock.model.Product;
 import ec.edu.espe.unistock.model.ProductCategory;
 import ec.edu.espe.unistock.structure.SimpleList;
-import java.math.BigDecimal;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import java.io.File;
+import java.io.IOException;
+import java.math.BigDecimal;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ProductServiceTest {
 
+    private static final String TEST_DIR = "testProductServiceOutput";
     private UniformService uniformService;
     private StationeryService stationeryService;
-    private ProductService instance;
-
-    public ProductServiceTest() {
-    }
-
-    @BeforeAll
-    public static void setUpClass() {
-    }
-
-    @AfterAll
-    public static void tearDownClass() {
-    }
+    private ProductService productService;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
+        File dir = new File(TEST_DIR);
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
         uniformService = new UniformService();
         stationeryService = new StationeryService();
-        instance = new ProductService(uniformService, stationeryService);
+        productService = new ProductService(uniformService, stationeryService);
     }
 
     @AfterEach
-    public void tearDown() {
-        uniformService = null;
-        stationeryService = null;
-        instance = null;
+    void tearDown() {
+        File dir = new File(TEST_DIR);
+        if (dir.exists()) {
+            File[] files = dir.listFiles();
+            if (files != null) {
+                for (File file : files) {
+                    file.delete();
+                }
+            }
+            dir.delete();
+        }
     }
 
     @Test
-    public void testRegisterUniformValidCatalog() {
-        uniformService.registerSize("M");
-        uniformService.registerSchool("Colegio Conocoto");
-        Product product = instance.registerUniform("Camisa Escolar", new BigDecimal("15.50"), 20, "M", "Colegio Conocoto");
-        assertNotNull(product);
+    void testRegisterUniformValidParameters() {
+        Product p = productService.registerUniform("Camisa Formal", new BigDecimal("12.50"), 10, "M", "San Gabriel");
+        assertNotNull(p);
+        assertEquals("Camisa Formal", p.getName());
     }
 
     @Test
-    public void testRegisterUniformCheckIdAssignment() {
-        uniformService.registerSize("M");
-        uniformService.registerSchool("Colegio Conocoto");
-        Product product = instance.registerUniform("Camisa Escolar", new BigDecimal("15.50"), 20, "M", "Colegio Conocoto");
-        assertEquals(1, product.getId());
+    void testRegisterUniformInvalidSizeReturnsNull() {
+        Product p = productService.registerUniform("Camisa Formal", new BigDecimal("12.50"), 10, "TallaInexistente", "San Gabriel");
+        assertNull(p);
     }
 
     @Test
-    public void testRegisterUniformInvalidSize() {
-        uniformService.registerSchool("Colegio Conocoto");
-        Product product = instance.registerUniform("Camisa Escolar", new BigDecimal("15.50"), 20, "XXL", "Colegio Conocoto");
-        assertNotNull(product);
+    void testRegisterUniformInvalidSchoolReturnsNull() {
+        Product p = productService.registerUniform("Camisa Formal", new BigDecimal("12.50"), 10, "M", "ColegioInexistente");
+        assertNull(p);
     }
 
     @Test
-    public void testRegisterUniformInvalidSchool() {
-        uniformService.registerSize("M");
-        Product product = instance.registerUniform("Camisa Escolar", new BigDecimal("15.50"), 20, "M", "Colegio Inexistente");
-        assertNotNull(product);
+    void testRegisterUniformIncrementsId() {
+        Product p1 = productService.registerUniform("Camisa", new BigDecimal("10.00"), 5, "M", "San Gabriel");
+        Product p2 = productService.registerUniform("Pantalon", new BigDecimal("15.00"), 5, "32", "Mejia");
+        assertEquals(1, p1.getId());
+        assertEquals(2, p2.getId());
     }
 
     @Test
-    public void testRegisterUniformNullSize() {
-        uniformService.registerSchool("Colegio Conocoto");
-        assertDoesNotThrow(() -> instance.registerUniform("Camisa Escolar", new BigDecimal("15.50"), 20, null, "Colegio Conocoto"));
+    void testRegisterUniformAddsToProductsList() {
+        productService.registerUniform("Buzo", new BigDecimal("20.00"), 5, "L", "Benalcazar");
+        assertEquals(1, productService.getProducts().size());
     }
 
     @Test
-    public void testRegisterUniformNullSchool() {
-        uniformService.registerSize("M");
-        assertDoesNotThrow(() -> instance.registerUniform("Camisa Escolar", new BigDecimal("15.50"), 20, "M", null));
+    void testRegisterUniformAssignsUniformCategory() {
+        Product p = productService.registerUniform("Falda", new BigDecimal("14.00"), 8, "S", "San Gabriel");
+        assertEquals(ProductCategory.UNIFORM, p.getCategory());
     }
 
     @Test
-    public void testRegisterUniformCategoryCheck() {
-        uniformService.registerSize("M");
-        uniformService.registerSchool("Colegio Conocoto");
-        Product product = instance.registerUniform("Camisa Escolar", new BigDecimal("15.50"), 20, "M", "Colegio Conocoto");
-        assertEquals(ProductCategory.STATIONERY, product.getCategory());
+    void testRegisterUniformZeroPriceAllowed() {
+        Product p = productService.registerUniform("Donacion", BigDecimal.ZERO, 5, "M", "San Gabriel");
+        assertNotNull(p);
+        assertEquals(BigDecimal.ZERO, p.getPrice());
     }
 
     @Test
-    public void testRegisterUniformPriceCheck() {
-        uniformService.registerSize("M");
-        uniformService.registerSchool("Colegio Conocoto");
-        Product product = instance.registerUniform("Camisa Escolar", new BigDecimal("15.50"), 20, "M", "Colegio Conocoto");
-        assertEquals(new BigDecimal("0.00"), product.getPrice());
+    void testRegisterUniformZeroStockAllowed() {
+        Product p = productService.registerUniform("Agotado", new BigDecimal("10.00"), 0, "M", "San Gabriel");
+        assertNotNull(p);
+        assertEquals(0, p.getStock());
     }
 
     @Test
-    public void testRegisterUniformStockCheck() {
-        uniformService.registerSize("M");
-        uniformService.registerSchool("Colegio Conocoto");
-        Product product = instance.registerUniform("Camisa Escolar", new BigDecimal("15.50"), 20, "M", "Colegio Conocoto");
-        assertEquals(100, product.getStock());
+    void testRegisterUniformInvalidPriceThrowsException() {
+        assertThrows(IllegalArgumentException.class, () ->
+            productService.registerUniform("Camisa", new BigDecimal("-10.00"), 5, "M", "San Gabriel")
+        );
     }
 
     @Test
-    public void testRegisterUniformTypeCheck() {
-        uniformService.registerSize("M");
-        uniformService.registerSchool("Colegio Conocoto");
-        Product product = instance.registerUniform("Camisa Escolar", new BigDecimal("15.50"), 20, "M", "Colegio Conocoto");
-        assertFalse(product instanceof Product);
+    void testRegisterUniformInvalidStockThrowsException() {
+        assertThrows(IllegalArgumentException.class, () ->
+            productService.registerUniform("Camisa", new BigDecimal("10.00"), -5, "M", "San Gabriel")
+        );
     }
 
     @Test
-    public void testRegisterStationeryValidCatalog() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertNotNull(product);
+    void testRegisterStationeryValidParameters() {
+        Product p = productService.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 50, "Norma", "Cuaderno");
+        assertNotNull(p);
+        assertEquals("Cuaderno 100 Hojas", p.getName());
     }
 
     @Test
-    public void testRegisterStationeryCheckIdAssignment() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertEquals(1, product.getId());
+    void testRegisterStationeryInvalidBrandReturnsNull() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 50, "MarcaFalsa", "Cuaderno");
+        assertNull(p);
     }
 
     @Test
-    public void testRegisterStationeryInvalidBrand() {
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "MarcaInexistente", "Cuaderno");
-        assertNotNull(product);
+    void testRegisterStationeryInvalidTypeReturnsNull() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 50, "Norma", "TipoFalso");
+        assertNull(p);
     }
 
     @Test
-    public void testRegisterStationeryInvalidType() {
-        stationeryService.registerBrand("Norma");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "TipoInexistente");
-        assertNotNull(product);
+    void testRegisterStationeryIncrementsId() {
+        Product p1 = productService.registerStationery("Lapiz", new BigDecimal("0.50"), 20, "FaberCastell", "Lapiz");
+        Product p2 = productService.registerStationery("Borrador", new BigDecimal("0.30"), 30, "Pelikan", "Borrador");
+        assertEquals(1, p1.getId());
+        assertEquals(2, p2.getId());
     }
 
     @Test
-    public void testRegisterStationeryNullBrand() {
-        stationeryService.registerType("Cuaderno");
-        assertDoesNotThrow(() -> instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, null, "Cuaderno"));
+    void testRegisterStationeryAddsToProductsList() {
+        productService.registerStationery("Esfero BIC", new BigDecimal("0.40"), 100, "BIC", "Esfero");
+        assertEquals(1, productService.getProducts().size());
     }
 
     @Test
-    public void testRegisterStationeryNullType() {
-        stationeryService.registerBrand("Norma");
-        assertDoesNotThrow(() -> instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", null));
+    void testRegisterStationeryAssignsStationeryCategory() {
+        Product p = productService.registerStationery("Resaltador", new BigDecimal("0.90"), 15, "Pelikan", "Marcador");
+        assertEquals(ProductCategory.STATIONERY, p.getCategory());
     }
 
     @Test
-    public void testRegisterStationeryCategoryCheck() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertEquals(ProductCategory.UNIFORM, product.getCategory());
+    void testRegisterStationeryZeroPriceAllowed() {
+        Product p = productService.registerStationery("Muestra", BigDecimal.ZERO, 10, "Norma", "Cuaderno");
+        assertNotNull(p);
+        assertEquals(BigDecimal.ZERO, p.getPrice());
     }
 
     @Test
-    public void testRegisterStationeryPriceCheck() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertEquals(new BigDecimal("99.99"), product.getPrice());
+    void testRegisterStationeryZeroStockAllowed() {
+        Product p = productService.registerStationery("Regla", new BigDecimal("1.00"), 0, "Artesco", "Regla");
+        assertNotNull(p);
+        assertEquals(0, p.getStock());
     }
 
     @Test
-    public void testRegisterStationeryStockCheck() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertEquals(0, product.getStock());
+    void testRegisterStationeryInvalidPriceThrowsException() {
+        assertThrows(IllegalArgumentException.class, () ->
+            productService.registerStationery("Cuaderno", new BigDecimal("-2.50"), 50, "Norma", "Cuaderno")
+        );
     }
 
     @Test
-    public void testRegisterStationeryTypeCheck() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertFalse(product instanceof Product);
+    void testRegisterStationeryInvalidStockThrowsException() {
+        assertThrows(IllegalArgumentException.class, () ->
+            productService.registerStationery("Cuaderno", new BigDecimal("2.50"), -10, "Norma", "Cuaderno")
+        );
     }
 
     @Test
-    public void testFindByCategoryMatchingStationery() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        SimpleList<Product> results = instance.findByCategory(ProductCategory.STATIONERY);
-        assertFalse(results.isEmpty());
+    void testFindByCategoryStationery() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.registerUniform("Camisa", new BigDecimal("10.00"), 5, "M", "San Gabriel");
+        SimpleList<Product> result = productService.findByCategory(ProductCategory.STATIONERY);
+        assertEquals(1, result.size());
     }
 
     @Test
-    public void testFindByCategoryMatchingUniform() {
-        uniformService.registerSize("M");
-        uniformService.registerSchool("Colegio Conocoto");
-        instance.registerUniform("Camisa Escolar", new BigDecimal("15.50"), 20, "M", "Colegio Conocoto");
-        SimpleList<Product> results = instance.findByCategory(ProductCategory.UNIFORM);
-        assertFalse(results.isEmpty());
+    void testFindByCategoryUniform() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.registerUniform("Camisa", new BigDecimal("10.00"), 5, "M", "San Gabriel");
+        SimpleList<Product> result = productService.findByCategory(ProductCategory.UNIFORM);
+        assertEquals(1, result.size());
     }
 
     @Test
-    public void testFindByCategoryNoMatch() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        SimpleList<Product> results = instance.findByCategory(ProductCategory.UNIFORM);
-        assertFalse(results.isEmpty());
+    void testFindByCategoryEmptyResult() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        SimpleList<Product> result = productService.findByCategory(ProductCategory.UNIFORM);
+        assertTrue(result.isEmpty());
     }
 
     @Test
-    public void testFindByCategoryNullCategory() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertDoesNotThrow(() -> instance.findByCategory(null));
+    void testFindByCategoryNullReturnsEmptyList() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        SimpleList<Product> result = productService.findByCategory(null);
+        assertTrue(result.isEmpty());
     }
 
     @Test
-    public void testFindByCategorySizeMismatch() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        SimpleList<Product> results = instance.findByCategory(ProductCategory.STATIONERY);
-        assertEquals(5, results.size());
+    void testFindByCategoryMultipleStationery() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.registerStationery("Lapiz", new BigDecimal("0.50"), 20, "FaberCastell", "Lapiz");
+        SimpleList<Product> result = productService.findByCategory(ProductCategory.STATIONERY);
+        assertEquals(2, result.size());
     }
 
     @Test
-    public void testFindByCategoryNullReturnCheck() {
-        assertNull(instance.findByCategory(ProductCategory.STATIONERY));
+    void testFindByCategoryMultipleUniforms() {
+        productService.registerUniform("Camisa", new BigDecimal("10.00"), 5, "M", "San Gabriel");
+        productService.registerUniform("Pantalon", new BigDecimal("15.00"), 5, "32", "Mejia");
+        SimpleList<Product> result = productService.findByCategory(ProductCategory.UNIFORM);
+        assertEquals(2, result.size());
     }
 
     @Test
-    public void testFindByCategoryTypeCheck() {
-        SimpleList<Product> results = instance.findByCategory(ProductCategory.STATIONERY);
-        assertFalse(results instanceof SimpleList);
+    void testFindByCategoryOrderPreserved() {
+        Product p1 = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        Product p2 = productService.registerStationery("Lapiz", new BigDecimal("0.50"), 20, "FaberCastell", "Lapiz");
+        SimpleList<Product> result = productService.findByCategory(ProductCategory.STATIONERY);
+        result.resetIteration();
+        assertEquals(p1, result.next());
+        assertEquals(p2, result.next());
     }
 
     @Test
-    public void testFindByCategoryEmptyListCheck() {
-        SimpleList<Product> results = instance.findByCategory(ProductCategory.STATIONERY);
-        assertFalse(results.isEmpty());
+    void testFindByCategoryWhenNoProductsExist() {
+        SimpleList<Product> result = productService.findByCategory(ProductCategory.STATIONERY);
+        assertTrue(result.isEmpty());
     }
 
     @Test
-    public void testFindByCategoryFirstElementCheck() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        SimpleList<Product> results = instance.findByCategory(ProductCategory.STATIONERY);
-        assertNull(results.next());
+    void testFindByCategoryReturnsNewListInstance() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        SimpleList<Product> result = productService.findByCategory(ProductCategory.STATIONERY);
+        assertNotSame(productService.getProducts(), result);
     }
 
     @Test
-    public void testFindByCategoryStringComparison() {
-        SimpleList<Product> results = instance.findByCategory(ProductCategory.STATIONERY);
-        assertEquals("STATIONERY", results.toString());
+    void testFindByCategoryDoesNotModifyOriginalList() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.findByCategory(ProductCategory.STATIONERY);
+        assertEquals(1, productService.getProducts().size());
     }
 
     @Test
-    public void testUpdateStockIncreaseValid() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertTrue(instance.updateStock(product.getId(), 5));
+    void testUpdateStockIncreaseValid() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        boolean updated = productService.updateStock(p.getId(), 5);
+        assertTrue(updated);
+        assertEquals(15, p.getStock());
     }
 
     @Test
-    public void testUpdateStockDecreaseValid() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertTrue(instance.updateStock(product.getId(), -5));
+    void testUpdateStockDecreaseValid() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        boolean updated = productService.updateStock(p.getId(), -5);
+        assertTrue(updated);
+        assertEquals(5, p.getStock());
     }
 
     @Test
-    public void testUpdateStockInvalidProductId() {
-        assertTrue(instance.updateStock(999, 5));
+    void testUpdateStockNonExistentProductReturnsFalse() {
+        boolean updated = productService.updateStock(999, 5);
+        assertFalse(updated);
     }
 
     @Test
-    public void testUpdateStockExceedingDecrease() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertDoesNotThrow(() -> instance.updateStock(product.getId(), -15));
+    void testUpdateStockExcessiveReductionThrowsException() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        assertThrows(IllegalArgumentException.class, () -> productService.updateStock(p.getId(), -15));
     }
 
     @Test
-    public void testUpdateStockZeroQuantity() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertFalse(instance.updateStock(product.getId(), 0));
+    void testUpdateStockToExactZero() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        boolean updated = productService.updateStock(p.getId(), -10);
+        assertTrue(updated);
+        assertEquals(0, p.getStock());
     }
 
     @Test
-    public void testUpdateStockValueCheck() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        instance.updateStock(product.getId(), 5);
-        assertEquals(10, product.getStock());
+    void testUpdateStockZeroQuantityChangeThrowsExceptionOnIncrease() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        assertThrows(IllegalArgumentException.class, () -> productService.updateStock(p.getId(), 0));
     }
 
     @Test
-    public void testUpdateStockReturnNull() {
-        assertNull(instance.updateStock(1, 5));
+    void testUpdateStockMultipleTimes() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.updateStock(p.getId(), 10);
+        productService.updateStock(p.getId(), -5);
+        assertEquals(15, p.getStock());
     }
 
     @Test
-    public void testUpdateStockTypeCheck() {
-        assertEquals("true", String.valueOf(!instance.updateStock(1, 5)));
+    void testUpdateStockUniformProduct() {
+        Product p = productService.registerUniform("Camisa", new BigDecimal("10.00"), 5, "M", "San Gabriel");
+        boolean updated = productService.updateStock(p.getId(), 10);
+        assertTrue(updated);
+        assertEquals(15, p.getStock());
     }
 
     @Test
-    public void testUpdateStockNegativeId() {
-        assertTrue(instance.updateStock(-1, 5));
+    void testUpdateStockLargeQuantity() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.updateStock(p.getId(), 1000);
+        assertEquals(1010, p.getStock());
     }
 
     @Test
-    public void testUpdateStockMaxInt() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertTrue(instance.updateStock(product.getId(), Integer.MAX_VALUE));
+    void testUpdateStockExceptionMessage() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () -> productService.updateStock(p.getId(), -20));
+        assertTrue(ex.getMessage().contains("No se puede reducir"));
     }
 
     @Test
-    public void testRemoveProductValidId() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertTrue(instance.removeProduct(product.getId()));
+    void testRemoveProductValidId() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        boolean removed = productService.removeProduct(p.getId());
+        assertTrue(removed);
+        assertTrue(productService.getProducts().isEmpty());
     }
 
     @Test
-    public void testRemoveProductCheckListSize() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        instance.removeProduct(product.getId());
-        assertEquals(0, instance.getProducts().size());
+    void testRemoveProductNonExistentIdReturnsFalse() {
+        boolean removed = productService.removeProduct(999);
+        assertFalse(removed);
     }
 
     @Test
-    public void testRemoveProductInvalidId() {
-        assertTrue(instance.removeProduct(999));
+    void testRemoveProductFromMultiple() {
+        Product p1 = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        Product p2 = productService.registerStationery("Lapiz", new BigDecimal("0.50"), 20, "FaberCastell", "Lapiz");
+        productService.removeProduct(p1.getId());
+        assertEquals(1, productService.getProducts().size());
+        assertNull(productService.findById(p1.getId()));
+        assertNotNull(productService.findById(p2.getId()));
     }
 
     @Test
-    public void testRemoveProductTwice() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        instance.removeProduct(product.getId());
-        assertTrue(instance.removeProduct(product.getId()));
+    void testRemoveProductTwiceReturnsFalse() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.removeProduct(p.getId());
+        boolean secondRemove = productService.removeProduct(p.getId());
+        assertFalse(secondRemove);
     }
 
     @Test
-    public void testRemoveProductNegativeId() {
-        assertTrue(instance.removeProduct(-1));
+    void testRemoveProductUniform() {
+        Product p = productService.registerUniform("Camisa", new BigDecimal("10.00"), 5, "M", "San Gabriel");
+        boolean removed = productService.removeProduct(p.getId());
+        assertTrue(removed);
     }
 
     @Test
-    public void testRemoveProductZeroId() {
-        assertTrue(instance.removeProduct(0));
+    void testRemoveProductDecreasesListSize() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        assertEquals(1, productService.getProducts().size());
+        productService.removeProduct(p.getId());
+        assertEquals(0, productService.getProducts().size());
     }
 
     @Test
-    public void testRemoveProductReturnNull() {
-        assertNull(instance.removeProduct(1));
+    void testRemoveProductDoesNotAffectOtherProducts() {
+        Product p1 = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        Product p2 = productService.registerUniform("Camisa", new BigDecimal("10.00"), 5, "M", "San Gabriel");
+        productService.removeProduct(p1.getId());
+        assertEquals("Camisa", productService.findById(p2.getId()).getName());
     }
 
     @Test
-    public void testRemoveProductTypeCheck() {
-        assertEquals("true", String.valueOf(!instance.removeProduct(1)));
+    void testRemoveProductFromEmptyListReturnsFalse() {
+        assertFalse(productService.removeProduct(1));
     }
 
     @Test
-    public void testRemoveProductKeepsSize() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        instance.removeProduct(product.getId());
-        assertEquals(1, instance.getProducts().size());
+    void testRemoveProductNegativeIdReturnsFalse() {
+        assertFalse(productService.removeProduct(-5));
     }
 
     @Test
-    public void testRemoveProductMaxInt() {
-        assertTrue(instance.removeProduct(Integer.MAX_VALUE));
+    void testRemoveProductZeroIdReturnsFalse() {
+        assertFalse(productService.removeProduct(0));
     }
 
     @Test
-    public void testFindByIdValidId() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertEquals(product, instance.findById(product.getId()));
+    void testFindByIdValidId() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        Product found = productService.findById(p.getId());
+        assertEquals(p, found);
     }
 
     @Test
-    public void testFindByIdNotNull() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertNotNull(instance.findById(product.getId()));
+    void testFindByIdNonExistentReturnsNull() {
+        assertNull(productService.findById(999));
     }
 
     @Test
-    public void testFindByIdInvalidId() {
-        assertNotNull(instance.findById(999));
+    void testFindByIdZeroReturnsNull() {
+        assertNull(productService.findById(0));
     }
 
     @Test
-    public void testFindByIdNegativeId() {
-        assertNotNull(instance.findById(-1));
+    void testFindByIdNegativeReturnsNull() {
+        assertNull(productService.findById(-1));
     }
 
     @Test
-    public void testFindByIdZeroId() {
-        assertNotNull(instance.findById(0));
+    void testFindByIdFirstItemInList() {
+        Product p1 = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.registerStationery("Lapiz", new BigDecimal("0.50"), 20, "FaberCastell", "Lapiz");
+        assertEquals(p1, productService.findById(p1.getId()));
     }
 
     @Test
-    public void testFindByIdWrongProductReturned() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product1 = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        Product product2 = instance.registerStationery("Esfero Azul", new BigDecimal("0.50"), 50, "Norma", "Cuaderno");
-        assertEquals(product2, instance.findById(product1.getId()));
+    void testFindByIdLastItemInList() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        Product p2 = productService.registerStationery("Lapiz", new BigDecimal("0.50"), 20, "FaberCastell", "Lapiz");
+        assertEquals(p2, productService.findById(p2.getId()));
     }
 
     @Test
-    public void testFindByIdNameCheck() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertEquals("Mochila Escolar", instance.findById(product.getId()).getName());
+    void testFindByIdUniformProduct() {
+        Product p = productService.registerUniform("Camisa", new BigDecimal("10.00"), 5, "M", "San Gabriel");
+        assertEquals(p, productService.findById(p.getId()));
     }
 
     @Test
-    public void testFindByIdTypeCheck() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertFalse(instance.findById(product.getId()) instanceof Product);
+    void testFindByIdAfterStockUpdate() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.updateStock(p.getId(), 5);
+        Product found = productService.findById(p.getId());
+        assertEquals(15, found.getStock());
     }
 
     @Test
-    public void testFindByIdStringComparison() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        Product product = instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertEquals("Cuaderno 100 Hojas", instance.findById(product.getId()));
+    void testFindByIdAfterRemovalReturnsNull() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.removeProduct(p.getId());
+        assertNull(productService.findById(p.getId()));
     }
 
     @Test
-    public void testFindByIdMaxInt() {
-        assertNotNull(instance.findById(Integer.MAX_VALUE));
+    void testFindByIdConsistentCall() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        assertEquals(productService.findById(p.getId()), productService.findById(p.getId()));
     }
 
     @Test
-    public void testSearchByNameExactMatch() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        SimpleList<Product> results = instance.searchByName("Cuaderno");
-        assertFalse(results.isEmpty());
+    void testSearchByNameExactMatch() {
+        productService.registerStationery("Cuaderno Norma", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        SimpleList<Product> result = productService.searchByName("Cuaderno Norma");
+        assertEquals(1, result.size());
     }
 
     @Test
-    public void testSearchByNamePartialMatch() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        SimpleList<Product> results = instance.searchByName("Hojas");
-        assertFalse(results.isEmpty());
+    void testSearchByNamePartialMatch() {
+        productService.registerStationery("Cuaderno Universitario Norma", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        SimpleList<Product> result = productService.searchByName("Norma");
+        assertEquals(1, result.size());
     }
 
     @Test
-    public void testSearchByNameNoMatch() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        SimpleList<Product> results = instance.searchByName("Mochila");
-        assertFalse(results.isEmpty());
+    void testSearchByNameIgnoreCase() {
+        productService.registerStationery("CUADERNO NORMA", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        SimpleList<Product> result = productService.searchByName("cuaderno");
+        assertEquals(1, result.size());
     }
 
     @Test
-    public void testSearchByNameNullKeyword() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        SimpleList<Product> results = instance.searchByName(null);
-        assertFalse(results.isEmpty());
+    void testSearchByNameNullReturnsEmptyList() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        SimpleList<Product> result = productService.searchByName(null);
+        assertTrue(result.isEmpty());
     }
 
     @Test
-    public void testSearchByNameEmptyKeyword() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        SimpleList<Product> results = instance.searchByName("");
-        assertFalse(results.isEmpty());
+    void testSearchByNameBlankReturnsEmptyList() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        SimpleList<Product> result = productService.searchByName("   ");
+        assertTrue(result.isEmpty());
     }
 
     @Test
-    public void testSearchByNameWhitespaceKeyword() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        SimpleList<Product> results = instance.searchByName("   ");
-        assertFalse(results.isEmpty());
+    void testSearchByNameNoMatchesReturnsEmptyList() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        SimpleList<Product> result = productService.searchByName("Lapiz");
+        assertTrue(result.isEmpty());
     }
 
     @Test
-    public void testSearchByNameCaseInsensitive() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        SimpleList<Product> results = instance.searchByName("CUADERNO");
-        assertTrue(results.isEmpty());
+    void testSearchByNameMultipleMatches() {
+        productService.registerStationery("Cuaderno Norma 1", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.registerStationery("Cuaderno Norma 2", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        SimpleList<Product> result = productService.searchByName("Cuaderno");
+        assertEquals(2, result.size());
     }
 
     @Test
-    public void testSearchByNameNullReturnCheck() {
-        assertNull(instance.searchByName("Cuaderno"));
+    void testSearchByNameTrimsKeyword() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        SimpleList<Product> result = productService.searchByName("  Cuaderno  ");
+        assertEquals(1, result.size());
     }
 
     @Test
-    public void testSearchByNameTypeCheck() {
-        SimpleList<Product> results = instance.searchByName("Cuaderno");
-        assertFalse(results instanceof SimpleList);
+    void testSearchByNameUniformAndStationery() {
+        productService.registerStationery("Camisa Papeleria", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.registerUniform("Camisa Formal", new BigDecimal("10.00"), 5, "M", "San Gabriel");
+        SimpleList<Product> result = productService.searchByName("Camisa");
+        assertEquals(2, result.size());
     }
 
     @Test
-    public void testSearchByNameSizeCheck() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        SimpleList<Product> results = instance.searchByName("Cuaderno");
-        assertEquals(10, results.size());
+    void testSearchByNameOnEmptyProductsList() {
+        SimpleList<Product> result = productService.searchByName("Norma");
+        assertTrue(result.isEmpty());
     }
 
     @Test
-    public void testGetProductsNotNull() {
-        assertNotNull(instance.getProducts());
+    void testGetProductsInitialStateEmpty() {
+        assertTrue(productService.getProducts().isEmpty());
     }
 
     @Test
-    public void testGetProductsInitialEmpty() {
-        assertTrue(instance.getProducts().isEmpty());
+    void testGetProductsReflectsRegisteredProducts() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        assertEquals(1, productService.getProducts().size());
     }
 
     @Test
-    public void testGetProductsNullCheck() {
-        assertNull(instance.getProducts());
+    void testGetProductsSameReference() {
+        assertSame(productService.getProducts(), productService.getProducts());
     }
 
     @Test
-    public void testGetProductsInitialSize() {
-        assertEquals(5, instance.getProducts().size());
+    void testGetProductsReflectsRemoval() {
+        Product p = productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.removeProduct(p.getId());
+        assertTrue(productService.getProducts().isEmpty());
     }
 
     @Test
-    public void testGetProductsTypeCheck() {
-        assertFalse(instance.getProducts() instanceof SimpleList);
+    void testGetProductsContainsStationeryAndUniforms() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.registerUniform("Camisa", new BigDecimal("10.00"), 5, "M", "San Gabriel");
+        assertEquals(2, productService.getProducts().size());
     }
 
     @Test
-    public void testGetProductsAfterRegistrationEmpty() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertTrue(instance.getProducts().isEmpty());
+    void testGetProductsAllowsIteration() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        SimpleList<Product> products = productService.getProducts();
+        products.resetIteration();
+        assertTrue(products.hasNext());
+        assertNotNull(products.next());
     }
 
     @Test
-    public void testGetProductsDirectModification() {
-        assertDoesNotThrow(() -> instance.getProducts().add(null));
-        assertEquals(0, instance.getProducts().size());
+    void testGetProductsNotNull() {
+        assertNotNull(productService.getProducts());
     }
 
     @Test
-    public void testGetProductsFirstElement() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertNull(instance.getProducts().next());
+    void testGetProductsConsistentCall() {
+        assertEquals(productService.getProducts(), productService.getProducts());
     }
 
     @Test
-    public void testGetProductsStringComparison() {
-        assertEquals("[]", instance.getProducts().toString());
+    void testGetProductsMultipleAdditions() {
+        for (int i = 0; i < 5; i++) {
+            productService.registerStationery("Item" + i, new BigDecimal("1.00"), 5, "Norma", "Cuaderno");
+        }
+        assertEquals(5, productService.getProducts().size());
     }
 
     @Test
-    public void testGetProductsResetIteration() {
-        stationeryService.registerBrand("Norma");
-        stationeryService.registerType("Cuaderno");
-        instance.registerStationery("Cuaderno 100 Hojas", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
-        assertFalse(instance.getProducts().hasNext());
+    void testGetProductsSizeMatches() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        assertEquals(1, productService.getProducts().size());
+    }
+
+    @Test
+    void testExportReportCsvValidFileGeneration() throws IOException {
+        String path = TEST_DIR + "/productos.csv";
+        productService.registerStationery("Cuaderno Norma", new BigDecimal("2.50"), 50, "Norma", "Cuaderno");
+        productService.exportReportCSV(path);
+
+        File file = new File(path);
+        assertTrue(file.exists());
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertEquals(2, lines.size());
+        assertEquals("ID,Categoría,Nombre,Precio,Stock,Detalles", lines.get(0));
+    }
+
+    @Test
+    void testExportReportCsvAutoAppendsExtension() {
+        String path = TEST_DIR + "/productosReport";
+        productService.registerStationery("Cuaderno Norma", new BigDecimal("2.50"), 50, "Norma", "Cuaderno");
+        productService.exportReportCSV(path);
+
+        assertTrue(new File(path + ".csv").exists());
+    }
+
+    @Test
+    void testExportReportCsvContainsStationeryData() throws IOException {
+        String path = TEST_DIR + "/stationeryReport.csv";
+        productService.registerStationery("Cuaderno Norma", new BigDecimal("2.50"), 50, "Norma", "Cuaderno");
+        productService.exportReportCSV(path);
+
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertTrue(lines.get(1).contains("Cuaderno Norma") && lines.get(1).contains("Papelería"));
+    }
+
+    @Test
+    void testExportReportCsvContainsUniformData() throws IOException {
+        String path = TEST_DIR + "/uniformReport.csv";
+        productService.registerUniform("Camisa Formal", new BigDecimal("12.50"), 20, "M", "San Gabriel");
+        productService.exportReportCSV(path);
+
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertTrue(lines.get(1).contains("Camisa Formal") && lines.get(1).contains("Uniforme"));
+    }
+
+    @Test
+    void testExportReportCsvReplacesCommasInDetails() throws IOException {
+        String path = TEST_DIR + "/commaDetails.csv";
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.exportReportCSV(path);
+
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertFalse(lines.get(1).contains(", |"));
+    }
+
+    @Test
+    void testExportReportCsvEmptyProductsList() throws IOException {
+        String path = TEST_DIR + "/emptyProductos.csv";
+        productService.exportReportCSV(path);
+
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertEquals(1, lines.size());
+        assertEquals("ID,Categoría,Nombre,Precio,Stock,Detalles", lines.get(0));
+    }
+
+    @Test
+    void testExportReportCsvMultipleProducts() throws IOException {
+        String path = TEST_DIR + "/multiProductos.csv";
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.registerUniform("Camisa", new BigDecimal("10.00"), 5, "M", "San Gabriel");
+        productService.exportReportCSV(path);
+
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertEquals(3, lines.size());
+    }
+
+    @Test
+    void testExportReportCsvNullPathDoesNotCrash() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        assertDoesNotThrow(() -> productService.exportReportCSV(null));
+    }
+
+    @Test
+    void testExportReportCsvBlankPathDoesNotCrash() {
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        assertDoesNotThrow(() -> productService.exportReportCSV("   "));
+    }
+
+    @Test
+    void testExportReportCsvOverwritesExistingFile() throws IOException {
+        String path = TEST_DIR + "/overwriteProductos.csv";
+        productService.registerStationery("Cuaderno", new BigDecimal("2.50"), 10, "Norma", "Cuaderno");
+        productService.exportReportCSV(path);
+
+        productService.registerUniform("Camisa", new BigDecimal("10.00"), 5, "M", "San Gabriel");
+        productService.exportReportCSV(path);
+
+        List<String> lines = Files.readAllLines(Path.of(path));
+        assertEquals(3, lines.size());
     }
 }

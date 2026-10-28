@@ -166,4 +166,44 @@ public class WorkOrderTest {
         assertEquals(expTechAvailable, technician.getAvailabilityStatus());
     }
 
+    @Test
+    public void testCloseOrder9() {
+        System.out.println("closeOrder9");
+        String[] row = TestData.row("workorder_closeOrder.csv", 9);
+        int totalTasks = Integer.parseInt(row[1]);
+        int completedTasks = Integer.parseInt(row[2]);
+        WorkOrder instance = new WorkOrder(1, "Annual service", "Medium", "Pending", "2026-10-24");
+        Technician technician = new Technician(1, "Ana", "Mechanical", true);
+        technician.acceptWorkOrder(instance);
+        for (int i = 0; i < totalTasks; i++) {
+            MaintenanceTask task = instance.createTask();
+            if (i < completedTasks) task.setIsCompleted(true);
+        }
+        String expStatus = row[3];
+        boolean expTechAvailable = Boolean.parseBoolean(row[4]);
+        instance.closeOrder();
+        assertEquals(expStatus, instance.getStatus());
+        assertEquals(expTechAvailable, technician.getAvailabilityStatus());
+    }
+
+    @Test
+    public void testCloseOrder10() {
+        System.out.println("closeOrder10");
+        String[] row = TestData.row("workorder_closeOrder.csv", 10);
+        int totalTasks = Integer.parseInt(row[1]);
+        int completedTasks = Integer.parseInt(row[2]);
+        WorkOrder instance = new WorkOrder(1, "Annual service", "Medium", "Pending", "2026-10-24");
+        Technician technician = new Technician(1, "Ana", "Mechanical", true);
+        technician.acceptWorkOrder(instance);
+        for (int i = 0; i < totalTasks; i++) {
+            MaintenanceTask task = instance.createTask();
+            if (i < completedTasks) task.setIsCompleted(true);
+        }
+        String expStatus = row[3];
+        boolean expTechAvailable = Boolean.parseBoolean(row[4]);
+        instance.closeOrder();
+        assertEquals(expStatus, instance.getStatus());
+        assertEquals(expTechAvailable, technician.getAvailabilityStatus());
+    }
+
 }

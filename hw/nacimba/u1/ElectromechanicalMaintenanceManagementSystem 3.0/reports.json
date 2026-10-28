@@ -1,0 +1,14 @@
+[
+  {
+    "reportId": 1,
+    "reportType": "Work order",
+    "generatedDate": "2026-10-27",
+    "dataContent": "Preventive maintenance, inspection of electrical connections, cleaning, and lubrication of moving parts. - Closed"
+  },
+  {
+    "reportId": 2,
+    "reportType": "Work order",
+    "generatedDate": "2026-10-27",
+    "dataContent": "Inspection and preventive maintenance of the water pump, including checking motor performance, inspecting pipes and connections, and verifying water flow. - Closed"
+  }
+]

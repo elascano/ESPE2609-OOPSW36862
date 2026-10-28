@@ -1,0 +1,11 @@
+case;newStatus;expStatus
+1;Available;Available
+2;In maintenance;In maintenance
+3;Out of service;Out of service
+4;Retired;RetiredX
+5;Under repair;Under repairX
+6;Active;ActiveX
+7;Standby;StandbyX
+8;Inspected;InspectedX
+9;Calibrated;CalibratedX
+10;Operational;OperationalX

@@ -15,7 +15,7 @@ public abstract class Product {
     private final ProductCategory category;
     private int stock;
 
-    protected Product(int id, String name, BigDecimal price, int stock, ProductCategory category) {
+    public Product(int id, String name, BigDecimal price, int stock, ProductCategory category) {
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("El nombre del producto es obligatorio.");
         }

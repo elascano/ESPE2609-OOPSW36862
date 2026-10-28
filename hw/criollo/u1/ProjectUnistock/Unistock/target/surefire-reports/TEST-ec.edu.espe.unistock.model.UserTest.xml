@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.unistock.model.UserTest" time="0.415" tests="60" errors="0" skipped="0" failures="45">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.unistock.model.UserTest" time="0.391" tests="70" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="27"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="java.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\PC\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,10 +15,10 @@
     <property name="user.country" value="MX"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-27.0.1.0.3\bin"/>
-    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire8060959593276336073\surefirebooter-20261025165204262_3.jar C:\Users\PC\AppData\Local\Temp\surefire8060959593276336073 2026-10-25T16-52-04_121-jvmRun1 surefire-20261025165204262_1tmp surefire_0-20261025165204262_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire18376506444158365530\surefirebooter-20261027150921448_3.jar C:\Users\PC\AppData\Local\Temp\surefire18376506444158365530 2026-10-27T15-09-21_269-jvmRun1 surefire-20261027150921448_1tmp surefire_0-20261027150921448_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="ec.edu.espe.unistock.model.UserTest"/>
-    <property name="surefire.test.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="surefire.test.class.path" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\test-classes;H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\PC\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\PC"/>
     <property name="user.language" value="es"/>
@@ -26,12 +26,12 @@
     <property name="java.version.date" value="2026-10-25"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-27.0.1.0.3"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock"/>
+    <property name="basedir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire8060959593276336073\surefirebooter-20261025165204262_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire18376506444158365530\surefirebooter-20261027150921448_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="27.0.1.0.3+1-2"/>
@@ -47,7 +47,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\PC\AppData\Local\Temp\"/>
     <property name="java.version" value="27.0.1.0.3"/>
-    <property name="user.dir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\unistock\UniStock"/>
+    <property name="user.dir" value="H:\Programs\GITHUB\ESPE2609-OOPSW36862\hw\demera\u1\ProjectUnistock\Unistock"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -61,649 +61,74 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="71.0"/>
   </properties>
-  <testcase name="testToStringValidFormat" classname="ec.edu.espe.unistock.model.UserTest" time="0.033"/>
-  <testcase name="testToStringTypeCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.013">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.UserTest.testToStringTypeCheck(UserTest.java:339)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testHashCodeNegative" classname="ec.edu.espe.unistock.model.UserTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testHashCodeNegative(UserTest.java:258)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testHashCodeZero" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;0&gt; but was: &lt;92668751&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0> but was: <92668751>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.model.UserTest.testHashCodeZero(UserTest.java:253)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRoleRegisterSalesCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.004">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.UserTest.testGetRoleRegisterSalesCheck(UserTest.java:172)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testEqualsSymmetricCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.005"/>
-  <testcase name="testGetUsernameValidName" classname="ec.edu.espe.unistock.model.UserTest" time="0.005"/>
-  <testcase name="testHashCodeSameInstance" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
-  <testcase name="testToStringNullCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;null&gt; but was: &lt;admin (Administrador)&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <admin (Administrador)>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.model.UserTest.testToStringNullCheck(UserTest.java:319)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetUsernameSubstringCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.UserTest.testGetUsernameSubstringCheck(UserTest.java:122)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testHashCodeRoleCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;2040467681&gt; but was: &lt;92668751&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <2040467681> but was: <92668751>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.model.UserTest.testHashCodeRoleCheck(UserTest.java:289)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testHashCodeDifferentUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;92668751&gt; but was: &lt;-820075192&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <92668751> but was: <-820075192>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.model.UserTest.testHashCodeDifferentUsername(UserTest.java:264)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRoleIncorrectValue" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;SALESPERSON&gt; but was: &lt;ADMINISTRATOR&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <SALESPERSON> but was: <ADMINISTRATOR>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.UserTest.testGetRoleIncorrectValue(UserTest.java:147)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testEqualsSameUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.005"/>
-  <testcase name="testHashCodeFixedNumber" classname="ec.edu.espe.unistock.model.UserTest" time="0.004">
-    <failure message="expected: &lt;12345&gt; but was: &lt;92668751&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <12345> but was: <92668751>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.model.UserTest.testHashCodeFixedNumber(UserTest.java:269)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testToStringStartsWithCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testToStringStartsWithCheck(UserTest.java:329)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRoleManageProductsCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.UserTest.testGetRoleManageProductsCheck(UserTest.java:167)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testMatchesCredentialsCaseSensitiveUser" classname="ec.edu.espe.unistock.model.UserTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testMatchesCredentialsCaseSensitiveUser(UserTest.java:82)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRoleTypeCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.UserTest.testGetRoleTypeCheck(UserTest.java:182)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testHashCodeNullCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;null&gt; but was: &lt;92668751&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <92668751>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.model.UserTest.testHashCodeNullCheck(UserTest.java:274)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testEqualsDifferentClass" classname="ec.edu.espe.unistock.model.UserTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testEqualsDifferentClass(UserTest.java:203)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetUsernameUpperCase" classname="ec.edu.espe.unistock.model.UserTest" time="0.007">
-    <failure message="expected: &lt;ADMIN&gt; but was: &lt;admin&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <ADMIN> but was: <admin>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.UserTest.testGetUsernameUpperCase(UserTest.java:107)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testEqualsSameInstance" classname="ec.edu.espe.unistock.model.UserTest" time="0.007"/>
-  <testcase name="testMatchesCredentialsEmptyUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testMatchesCredentialsEmptyUsername(UserTest.java:62)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testEqualsReturnNull" classname="ec.edu.espe.unistock.model.UserTest" time="0.004">
-    <failure message="expected: &lt;null&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.model.UserTest.testEqualsReturnNull(UserTest.java:232)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRoleNullCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;null&gt; but was: &lt;ADMINISTRATOR&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <ADMINISTRATOR>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.model.UserTest.testGetRoleNullCheck(UserTest.java:152)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRoleManageUsersCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.UserTest.testGetRoleManageUsersCheck(UserTest.java:177)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetUsernameTypeCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.UserTest.testGetUsernameTypeCheck(UserTest.java:127)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testHashCodeMaxInt" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;2147483647&gt; but was: &lt;92668751&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <2147483647> but was: <92668751>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.model.UserTest.testHashCodeMaxInt(UserTest.java:279)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testToStringEndsWithCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testToStringEndsWithCheck(UserTest.java:334)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testEqualsNullObject" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testEqualsNullObject(UserTest.java:198)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testMatchesCredentialsBothWrong" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testMatchesCredentialsBothWrong(UserTest.java:57)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetUsernameNullCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;null&gt; but was: &lt;admin&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <admin>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
-	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
-	at ec.edu.espe.unistock.model.UserTest.testGetUsernameNullCheck(UserTest.java:112)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testToStringIncorrectFormat" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;admin - Administrador&gt; but was: &lt;admin (Administrador)&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <admin - Administrador> but was: <admin (Administrador)>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.UserTest.testToStringIncorrectFormat(UserTest.java:304)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
+  <testcase name="testEqualsDifferentClassReturnsFalse" classname="ec.edu.espe.unistock.model.UserTest" time="0.048"/>
+  <testcase name="testToStringCustomerFormat" classname="ec.edu.espe.unistock.model.UserTest" time="0.007"/>
+  <testcase name="testMatchesCredentialsWithUntrimmedInputReturnsFalse" classname="ec.edu.espe.unistock.model.UserTest" time="0.004"/>
+  <testcase name="testToStringSalespersonFormat" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testMatchesCredentialsWrongUsernameReturnsFalse" classname="ec.edu.espe.unistock.model.UserTest" time="0.005"/>
+  <testcase name="testGetUsernameSalesperson" classname="ec.edu.espe.unistock.model.UserTest" time="0.005"/>
+  <testcase name="testEqualsSameObjectReturnsTrue" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testConstructorSingleCharacterCredentials" classname="ec.edu.espe.unistock.model.UserTest" time="0.004"/>
+  <testcase name="testGetUsernameNotEmpty" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testGetRoleComparison" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testHashCodeDifferentForDifferentUsernames" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testToStringContainsUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testToStringContainsRoleLabel" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testConstructorTrimsUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testHashCodeSameForEqualObjects" classname="ec.edu.espe.unistock.model.UserTest" time="0.007"/>
+  <testcase name="testEqualsNullReturnsFalse" classname="ec.edu.espe.unistock.model.UserTest" time="0.004"/>
+  <testcase name="testToStringNotEmpty" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testGetRoleAdministrator" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testGetUsernameWithNumbers" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testMatchesCredentialsNullUsernameReturnsFalse" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testEqualsDifferentUsernameReturnsFalse" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testGetUsernameWithSymbols" classname="ec.edu.espe.unistock.model.UserTest" time="0.012"/>
+  <testcase name="testConstructorValidParameters" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testHashCodeSameUsernameDifferentPasswords" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testEqualsCaseSensitiveUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testEqualsDifferentRoleSameUsernameReturnsTrue" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testGetRolePermissionsCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testMatchesCredentialsCaseSensitiveUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testMatchesCredentialsWrongPasswordReturnsFalse" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testGetRoleSalesperson" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testGetUsernameReturnsCorrectName" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testGetUsernameTrimmedOnCreation" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testEqualsSymmetric" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testConstructorSpecialCharactersInCredentials" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testConstructorNullUsernameThrowsException" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testGetRoleCustomer" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testGetUsernameConsistentCall" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testToStringContainsParentheses" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
   <testcase name="testGetUsernameNotNull" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
-  <testcase name="testMatchesCredentialsExactMatch" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
-  <testcase name="testMatchesCredentialsWrongUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testMatchesCredentialsWrongUsername(UserTest.java:52)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testMatchesCredentialsNullUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.006"/>
-  <testcase name="testGetUsernameStartsWithCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testGetUsernameStartsWithCheck(UserTest.java:132)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testEqualsTypeCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.UserTest.testEqualsTypeCheck(UserTest.java:237)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testEqualsInvertedCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
-	at ec.edu.espe.unistock.model.UserTest.testEqualsInvertedCheck(UserTest.java:221)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRoleNotNull" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
-  <testcase name="testMatchesCredentialsEmptyPassword" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testMatchesCredentialsEmptyPassword(UserTest.java:67)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testToStringEmptyString" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;&gt; but was: &lt;admin (Administrador)&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <> but was: <admin (Administrador)>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.UserTest.testToStringEmptyString(UserTest.java:309)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetUsernameIncorrectValue" classname="ec.edu.espe.unistock.model.UserTest" time="0.001">
-    <failure message="expected: &lt;seller&gt; but was: &lt;admin&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <seller> but was: <admin>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.UserTest.testGetUsernameIncorrectValue(UserTest.java:97)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testMatchesCredentialsValidUser" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
-  <testcase name="testToStringNotNull" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
-  <testcase name="testEqualsDifferentUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testEqualsDifferentUsername(UserTest.java:209)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetUsernameEmptyString" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;&gt; but was: &lt;admin&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <> but was: <admin>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.UserTest.testGetUsernameEmptyString(UserTest.java:102)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testToStringLengthCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.005">
-    <failure message="expected: &lt;5&gt; but was: &lt;21&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <5> but was: <21>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.model.UserTest.testToStringLengthCheck(UserTest.java:324)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testEqualsCaseSensitive" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testEqualsCaseSensitive(UserTest.java:215)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRoleCustomerValue" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;CUSTOMER&gt; but was: &lt;ADMINISTRATOR&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <CUSTOMER> but was: <ADMINISTRATOR>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.UserTest.testGetRoleCustomerValue(UserTest.java:157)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRoleValidRole" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
-  <testcase name="testHashCodeSameUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
-  <testcase name="testHashCodeMultiplyCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.001">
-    <failure message="expected: &lt;185337502&gt; but was: &lt;92668751&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <185337502> but was: <92668751>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.model.UserTest.testHashCodeMultiplyCheck(UserTest.java:284)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testMatchesCredentialsWrongPassword" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.unistock.model.UserTest.testMatchesCredentialsWrongPassword(UserTest.java:47)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testToStringUpperCase" classname="ec.edu.espe.unistock.model.UserTest" time="0.002">
-    <failure message="expected: &lt;ADMIN (ADMINISTRADOR)&gt; but was: &lt;admin (Administrador)&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <ADMIN (ADMINISTRADOR)> but was: <admin (Administrador)>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.UserTest.testToStringUpperCase(UserTest.java:314)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetUsernameLengthCheck" classname="ec.edu.espe.unistock.model.UserTest" time="0.001">
-    <failure message="expected: &lt;10&gt; but was: &lt;5&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <10> but was: <5>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.unistock.model.UserTest.testGetUsernameLengthCheck(UserTest.java:117)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testGetRoleLabelMatch" classname="ec.edu.espe.unistock.model.UserTest" time="0.003">
-    <failure message="expected: &lt;Vendedor&gt; but was: &lt;Administrador&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Vendedor> but was: <Administrador>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.unistock.model.UserTest.testGetRoleLabelMatch(UserTest.java:162)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:583)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-]]></failure>
-  </testcase>
-  <testcase name="testMatchesCredentialsNullPassword" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testConstructorBlankUsernameThrowsException" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testToStringFormatExactMatch" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testHashCodeSameUsernameDifferentRoles" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testHashCodeWithNumbersInUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testGetRoleNotNull" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testEqualsTransitive" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testGetUsernameImmutable" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testHashCodeEqualsStringHashCode" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testMatchesCredentialsNullPasswordReturnsFalse" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testEqualsSameUsernameReturnsTrue" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testHashCodeNotNullOrZeroForStandardInput" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testHashCodeMultipleInvocations" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testGetRoleSameEnumReference" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testGetRoleNullIfAssignedNull" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testToStringNotNull" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testMatchesCredentialsBothWrongReturnsFalse" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testMatchesCredentialsCaseSensitivePassword" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testToStringConsistency" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testGetRoleLabelAccess" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testConstructorNullPasswordThrowsException" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testConstructorAssignsRoleCorrectly" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testConstructorNullRoleAllowed" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testMatchesCredentialsEmptyStringsReturnsFalse" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testGetUsernameCustomer" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testHashCodeWithSymbolsInUsername" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testToStringDoesNotContainPassword" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
+  <testcase name="testGetRoleConsistentCall" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testMatchesCredentialsExactMatchReturnsTrue" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testConstructorBlankPasswordThrowsException" classname="ec.edu.espe.unistock.model.UserTest" time="0.002"/>
+  <testcase name="testHashCodeConsistent" classname="ec.edu.espe.unistock.model.UserTest" time="0.001"/>
+  <testcase name="testEqualsConsistent" classname="ec.edu.espe.unistock.model.UserTest" time="0.003"/>
 </testsuite>

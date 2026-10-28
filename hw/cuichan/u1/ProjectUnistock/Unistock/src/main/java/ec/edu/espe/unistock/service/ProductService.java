@@ -9,6 +9,7 @@ import ec.edu.espe.unistock.model.Product;
 import ec.edu.espe.unistock.model.ProductCategory;
 import ec.edu.espe.unistock.model.Stationery;
 import ec.edu.espe.unistock.model.Uniform;
+import ec.edu.espe.unistock.structure.FileHandler;
 import ec.edu.espe.unistock.structure.SimpleList;
 
 import java.math.BigDecimal;
@@ -119,5 +120,29 @@ public class ProductService {
 
     public SimpleList<Product> getProducts() {
         return products;
+    }
+
+    /**
+     * Exporta el catálogo actual de productos a un archivo en formato CSV.
+     */
+    public void exportReportCSV(String filePath) {
+        String header = "ID,Categoría,Nombre,Precio,Stock,Detalles";
+        SimpleList<String> rows = new SimpleList<>();
+
+        products.resetIteration();
+        while (products.hasNext()) {
+            Product p = products.next();
+            String details = p.getDetails().replace(",", " "); // Evita romper las columnas del CSV
+            String row = String.format("%d,%s,\"%s\",%.2f,%d,\"%s\"",
+                    p.getId(),
+                    p.getCategory().getLabel(),
+                    p.getName(),
+                    p.getPrice(),
+                    p.getStock(),
+                    details);
+            rows.add(row);
+        }
+
+        FileHandler.exportToCSV(filePath, header, rows);
     }
 }

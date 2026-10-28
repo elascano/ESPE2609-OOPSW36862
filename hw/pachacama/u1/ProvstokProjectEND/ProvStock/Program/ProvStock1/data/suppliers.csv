@@ -1,0 +1,3 @@
+id;ruc;name;contactPerson;phone;email;address;active
+1;1790012345001;Electrocables S.A.;Ana Torres;022987654;ventas@electrocables.com;Quito;true
+2;0992345678001;Distribuidora Eléctrica del Pacífico;Luis Mora;042123456;pedidos@depacifico.com;Guayaquil;true

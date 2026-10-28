@@ -102,4 +102,28 @@ public class EquipmentTest {
         assertEquals(expResult, result);
     }
 
+    @Test
+    public void testUpdateStatus9() {
+        System.out.println("updateStatus9");
+        String[] row = TestData.row("equipment_updateStatus.csv", 9);
+        Equipment instance = new Equipment(1, "Pump", "SN-001", "Plant A", "Available");
+        String newStatus = row[1];
+        String expResult = row[2];
+        instance.updateStatus(newStatus);
+        String result = instance.getStatus();
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testUpdateStatus10() {
+        System.out.println("updateStatus10");
+        String[] row = TestData.row("equipment_updateStatus.csv", 10);
+        Equipment instance = new Equipment(1, "Pump", "SN-001", "Plant A", "Available");
+        String newStatus = row[1];
+        String expResult = row[2];
+        instance.updateStatus(newStatus);
+        String result = instance.getStatus();
+        assertEquals(expResult, result);
+    }
+
 }

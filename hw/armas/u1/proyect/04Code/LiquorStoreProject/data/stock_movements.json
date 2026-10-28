@@ -1,0 +1,30 @@
+[
+  {
+    "idMovimiento": 1,
+    "fecha": "2026-10-25",
+    "codigoProducto": "1",
+    "tipoMovimiento": "ENTRADA",
+    "cantidad": 3
+  },
+  {
+    "idMovimiento": 2,
+    "fecha": "2026-10-25",
+    "codigoProducto": "2",
+    "tipoMovimiento": "ENTRADA",
+    "cantidad": 6
+  },
+  {
+    "idMovimiento": 3,
+    "fecha": "2026-10-25",
+    "codigoProducto": "3",
+    "tipoMovimiento": "ENTRADA",
+    "cantidad": 10
+  },
+  {
+    "idMovimiento": 4,
+    "fecha": "2026-10-25",
+    "codigoProducto": "4",
+    "tipoMovimiento": "ENTRADA",
+    "cantidad": 6
+  }
+]
