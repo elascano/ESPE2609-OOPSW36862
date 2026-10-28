@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/** Loads and saves report records as JSON using only the Java standard library. */
 public class ReportJsonFileManager {
     private final Path filePath;
 

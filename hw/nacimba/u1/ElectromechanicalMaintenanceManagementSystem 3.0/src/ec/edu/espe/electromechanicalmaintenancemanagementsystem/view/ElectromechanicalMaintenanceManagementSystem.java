@@ -3,6 +3,7 @@ package ec.edu.espe.electromechanicalmaintenancemanagementsystem.view;
 import ec.edu.espe.electromechanicalmaintenancemanagementsystem.model.*;
 import ec.edu.espe.electromechanicalsystem.controller.JsonFileManager;
 import ec.edu.espe.electromechanicalsystem.controller.ReportJsonFileManager;
+import ec.edu.espe.electromechanicalsystem.controller.SystemState;
 import java.time.LocalDate;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -17,18 +18,21 @@ public class ElectromechanicalMaintenanceManagementSystem {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         JsonFileManager clientFileManager = new JsonFileManager("clients.json");
-        ArrayList<Client> clients = new ArrayList<>(clientFileManager.loadClients());
-        ArrayList<Equipment> equipments = new ArrayList<>();
-        ArrayList<Technician> technicians = new ArrayList<>();
-        ArrayList<WorkOrder> orders = new ArrayList<>();
-        ArrayList<MaintenanceSchedule> schedules = new ArrayList<>();
-        ArrayList<MaintenanceHistory> histories = new ArrayList<>();
-        ArrayList<Part> parts = new ArrayList<>();
-        ArrayList<SafetyRegulation> regulations = new ArrayList<>();
-        ArrayList<Alert> alerts = new ArrayList<>();
         ReportJsonFileManager reportFileManager = new ReportJsonFileManager("reports.json");
-        ArrayList<Report> reports = new ArrayList<>(reportFileManager.loadReports());
-        ArrayList<QrCode> qrCodes = new ArrayList<>();
+        SystemState state = SystemState.load("maintenance_data.ser");
+        if (state.clients.isEmpty()) state.clients = new ArrayList<>(clientFileManager.loadClients());
+        if (state.reports.isEmpty()) state.reports = new ArrayList<>(reportFileManager.loadReports());
+        ArrayList<Client> clients = state.clients;
+        ArrayList<Equipment> equipments = state.equipments;
+        ArrayList<Technician> technicians = state.technicians;
+        ArrayList<WorkOrder> orders = state.orders;
+        ArrayList<MaintenanceSchedule> schedules = state.schedules;
+        ArrayList<MaintenanceHistory> histories = state.histories;
+        ArrayList<Part> parts = state.parts;
+        ArrayList<SafetyRegulation> regulations = state.regulations;
+        ArrayList<Alert> alerts = state.alerts;
+        ArrayList<Report> reports = state.reports;
+        ArrayList<QrCode> qrCodes = state.qrCodes;
         int option;
 
         do {
@@ -48,7 +52,14 @@ public class ElectromechanicalMaintenanceManagementSystem {
             System.out.println("13. Remove equipment from client");
             System.out.println("14. Generate CSV Report (Excel)");
             System.out.println("15. Edit or delete a client");
-            System.out.println("16. Exit");
+            System.out.println("17. Search clients and equipment");
+            System.out.println("18. Update equipment information");
+            System.out.println("19. Search complete equipment maintenance history");
+            System.out.println("20. Consult equipment by QR code or serial number");
+            System.out.println("21. Show upcoming maintenance alerts");
+            System.out.println("22. Update technician availability");
+            System.out.println("23. Update client contact and address");
+            System.out.println("24. Exit");
             option = readInt(scanner, "Choose an option: ");
 
             switch (option) {
@@ -154,7 +165,7 @@ Client client = new Client(newId, name, contact, address);
                     }
                     WorkOrder order = equipment.requestMaintenanceOrder();
                     order.setWorkOrderId(orders.size() + 1);
-                    order.setDescription(readText(scanner, "Work description: "));
+                    order.setDescription("Equipment ID: " + equipment.getEquipmentId() + " | " + readText(scanner, "Work description: "));
                     order.setPriority(readChoice(scanner, "Priority (low/medium/high): ", "low", "medium", "high"));
                     orders.add(order);
                     equipment.updateStatus("Maintenance required");
@@ -262,6 +273,20 @@ Client client = new Client(newId, name, contact, address);
                         System.out.println("Complete all tasks before closing the order.");
                         break;
                     }
+                    int equipmentIdForHistory = -1;
+                    java.util.regex.Matcher equipmentMatcher = java.util.regex.Pattern.compile("Equipment ID: (\\d+)").matcher(order.getDescription());
+                    if (equipmentMatcher.find()) equipmentIdForHistory = Integer.parseInt(equipmentMatcher.group(1));
+                    Equipment maintainedEquipment = findEquipment(equipments, equipmentIdForHistory);
+                    if (maintainedEquipment != null) {
+                        StringBuilder maintenanceDetails = new StringBuilder(order.getDescription());
+                        for (MaintenanceTask completedTask : order.getTasks()) {
+                            maintenanceDetails.append(" | Task: ").append(completedTask.getTaskDescription());
+                            for (Part usedPart : completedTask.getParts()) maintenanceDetails.append(" | Part: ").append(usedPart.getName()).append(" x ").append(usedPart.getStockQuantity());
+                        }
+                        MaintenanceHistory automaticHistory = new MaintenanceHistory(histories.size() + 1, LocalDate.now().toString(), "Corrective/Completed work order", maintenanceDetails.toString());
+                        histories.add(automaticHistory);
+                        maintainedEquipment.attachHistory(automaticHistory);
+                    }
                     Report report = order.createReport();
                     report.setReportId(nextReportId(reports));
                     reports.add(report);
@@ -368,17 +393,121 @@ Client client = new Client(newId, name, contact, address);
                     }
                     break;
                 }
-                case 16:
+                case 24:
                     System.out.println("Goodbye!");
                     break;
+                case 17: {
+                    System.out.println("1. Search client by ID or name");
+                    System.out.println("2. Search equipment by ID, name or serial number");
+                    int searchType = readIntInRange(scanner, "Choose: ", 1, 2);
+                    String term = readText(scanner, "Search term: ").toLowerCase(java.util.Locale.ROOT);
+                    if (searchType == 1) {
+                        for (Client c : clients) if (String.valueOf(c.getClientId()).equals(term) || c.getName().toLowerCase(java.util.Locale.ROOT).contains(term) || c.getContactInfo().contains(term)) System.out.println(c);
+                    } else {
+                        for (Equipment e : equipments) if (String.valueOf(e.getEquipmentId()).equals(term) || e.getName().toLowerCase(java.util.Locale.ROOT).contains(term) || e.getSerialNumber().toLowerCase(java.util.Locale.ROOT).contains(term)) {
+                            System.out.println(e);
+                            for (Client c : clients) for (Equipment ce : c.getEquipmentList()) if (ce.getEquipmentId() == e.getEquipmentId()) System.out.println("Client: " + c.getName() + " (ID " + c.getClientId() + ")");
+                        }
+                    }
+                    break;
+                }
+                case 18: {
+                    show(equipments);
+                    Equipment e = findEquipment(equipments, readPositiveInt(scanner, "Equipment ID: "));
+                    if (e == null) { System.out.println("Equipment not found."); break; }
+                    e.setName(readName(scanner, "New equipment name: "));
+                    e.setSerialNumber(readText(scanner, "New serial number: "));
+                    e.setLocation(readText(scanner, "New location: "));
+                    e.setStatus(readText(scanner, "New status: "));
+                    System.out.println("Equipment updated: " + e);
+                    break;
+                }
+                case 19: {
+                    show(equipments);
+                    Equipment e = findEquipment(equipments, readPositiveInt(scanner, "Equipment ID: "));
+                    if (e == null) { System.out.println("Equipment not found."); break; }
+                    System.out.println("History recorded directly for equipment:");
+                    show(e.getMaintenanceHistories());
+                    System.out.println("Scheduled maintenance:");
+                    show(e.getMaintenanceSchedules());
+                    System.out.println("Work orders:");
+                    for (WorkOrder o : orders) if (o.getDescription().toLowerCase(java.util.Locale.ROOT).contains(e.getName().toLowerCase(java.util.Locale.ROOT)) || o.getDescription().toLowerCase(java.util.Locale.ROOT).contains("equipment id: " + e.getEquipmentId())) System.out.println(o);
+                    break;
+                }
+                case 20: {
+                    String code = readText(scanner, "Scan/paste QR payload, QR ID, or equipment serial number: ");
+                    Equipment found = null;
+                    for (Equipment e : equipments) {
+                        QrCode q = e.createQrCode();
+                        if (code.equalsIgnoreCase(String.valueOf(q.getQrId())) || code.equalsIgnoreCase(q.getCodeData()) || code.equalsIgnoreCase(q.getGenerateUrl()) || code.equalsIgnoreCase(e.getSerialNumber())) { found = e; break; }
+                    }
+                    if (found == null) System.out.println("No equipment matches that QR payload or serial number.");
+                    else {
+                        System.out.println("Equipment information: " + found);
+                        for (Client c : clients) for (Equipment ce : c.getEquipmentList()) if (ce.getEquipmentId() == found.getEquipmentId()) System.out.println("Client: " + c);
+                        System.out.println("QR payload: " + found.createQrCode().getGenerateUrl());
+                    }
+                    break;
+                }
+                case 21: {
+                    LocalDate today = LocalDate.now();
+                    boolean any = false;
+                    for (MaintenanceSchedule schedule : schedules) {
+                        try {
+                            LocalDate due = LocalDate.parse(schedule.getScheduleDate());
+                            if (!due.isBefore(today) && !due.isAfter(today.plusDays(30))) {
+                                any = true;
+                                System.out.println("UPCOMING: " + schedule);
+                            } else if (due.isBefore(today)) {
+                                any = true;
+                                System.out.println("OVERDUE: " + schedule);
+                            }
+                        } catch (RuntimeException ignored) {
+                        }
+                    }
+                    for (Alert alert : alerts) if (!alert.getIsResolved()) { any = true; System.out.println("PENDING ALERT: " + alert); }
+                    if (!any) System.out.println("No upcoming or overdue maintenance in the next 30 days.");
+                    break;
+                }
+                case 22: {
+                    show(technicians);
+                    Technician t = findTechnician(technicians, readPositiveInt(scanner, "Technician ID: "));
+                    if (t == null) { System.out.println("Technician not found."); break; }
+                    t.setAvailabilityStatus(readBoolean(scanner, "Technician available (yes/no): "));
+                    System.out.println("Technician availability updated: " + t);
+                    break;
+                }
+                case 23: {
+                    show(clients);
+                    Client c = findClient(clients, readPositiveInt(scanner, "Client ID: "));
+                    if (c == null) { System.out.println("Client not found."); break; }
+                    c.setName(readName(scanner, "Client name: "));
+                    c.setContactInfo(readPhone(scanner, "Contact phone: "));
+                    c.setAddress(readText(scanner, "Address: "));
+                    clientFileManager.saveClients(clients);
+                    System.out.println("Client information updated.");
+                    break;
+                }
                 default:
                     System.out.println("Invalid option.");
             }
-        } while (option != 16);
+            state.clients = clients;
+            state.equipments = equipments;
+            state.technicians = technicians;
+            state.orders = orders;
+            state.schedules = schedules;
+            state.histories = histories;
+            state.parts = parts;
+            state.regulations = regulations;
+            state.alerts = alerts;
+            state.reports = reports;
+            state.qrCodes = qrCodes;
+            state.save("maintenance_data.ser");
+            clientFileManager.saveClients(clients);
+            reportFileManager.saveReports(reports);
+        } while (option != 16 && option != 24);
     }
 
-   
-/** Exports each record type to its own Excel-compatible CSV file. */
 private static void exportCsv(String fileName,
         ArrayList<Client> clients,
         ArrayList<Equipment> equipments,
@@ -458,7 +587,6 @@ private static void exportCsv(String fileName,
     }
 }
 
-
 private static int exportCsvFile(Path output, Class<?> recordClass,
         java.util.List<?> records) throws IOException {
 
@@ -509,10 +637,8 @@ private static int exportCsvFile(Path output, Class<?> recordClass,
     try (BufferedWriter writer = Files.newBufferedWriter(
             output, StandardCharsets.UTF_8)) {
 
-       
         writer.write("\uFEFF");
 
-        
         for (int i = 0; i < getters.size(); i++) {
             if (i > 0) {
                 writer.write(',');
@@ -580,7 +706,6 @@ private static String csvHeader(String property) {
             + spaced.substring(1);
 }
 
-
 private static String csvCell(String value) {
     if (value == null) {
         value = "";
@@ -599,8 +724,6 @@ private static String csvCell(String value) {
     return "\"" + value.replace("\"", "\"\"") + "\"";
 }
 
-
-   
 private static int readInt(Scanner scanner, String message) {
     while (true) {
         try {
@@ -737,8 +860,8 @@ private static String readDate(Scanner scanner, String message) {
         try {
             LocalDate date = LocalDate.parse(input);
 
-            if (date.isBefore(LocalDate.now()) || date.getYear() > LocalDate.now().getYear()) {
-                System.out.println("The date must be today or later, and cannot be beyond the current year.");
+            if (date.isBefore(LocalDate.now())) {
+                System.out.println("The date must be today or later.");
                 continue;
             }
 

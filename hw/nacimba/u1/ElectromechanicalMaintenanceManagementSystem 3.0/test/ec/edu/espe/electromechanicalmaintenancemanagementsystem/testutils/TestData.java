@@ -6,10 +6,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-/**
- * Reads test data from CSV files (separator ';') stored in testdata/<DATA_SET>/.
- * Change DATA_SET to switch scenarios: "set25", "set75" or "set100".
- */
 public class TestData {
 
     public static final String DATA_SET = "set75";

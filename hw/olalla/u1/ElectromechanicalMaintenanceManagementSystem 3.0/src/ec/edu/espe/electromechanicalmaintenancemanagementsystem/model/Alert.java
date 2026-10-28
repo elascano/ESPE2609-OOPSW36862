@@ -1,6 +1,6 @@
 package ec.edu.espe.electromechanicalmaintenancemanagementsystem.model;
 
-public class Alert {
+public class Alert implements java.io.Serializable {
     private int alertId;
     private String message;
     private String severity;

@@ -1,6 +1,6 @@
 package ec.edu.espe.electromechanicalmaintenancemanagementsystem.model;
 
-public class Report {
+public class Report implements java.io.Serializable {
     private int reportId;
     private String reportType;
     private String generatedDate;

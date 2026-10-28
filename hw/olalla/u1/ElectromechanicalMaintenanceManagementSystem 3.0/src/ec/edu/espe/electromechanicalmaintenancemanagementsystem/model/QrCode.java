@@ -1,6 +1,6 @@
 package ec.edu.espe.electromechanicalmaintenancemanagementsystem.model;
 
-public class QrCode {
+public class QrCode implements java.io.Serializable {
     private int qrId;
     private String codeData;
     private String generateUrl;

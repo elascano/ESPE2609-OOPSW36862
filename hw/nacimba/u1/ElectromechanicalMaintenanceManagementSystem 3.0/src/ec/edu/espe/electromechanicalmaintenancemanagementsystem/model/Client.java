@@ -3,7 +3,7 @@ package ec.edu.espe.electromechanicalmaintenancemanagementsystem.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Client {
+public class Client implements java.io.Serializable {
     private int clientId;
     private String name;
     private String contactInfo;

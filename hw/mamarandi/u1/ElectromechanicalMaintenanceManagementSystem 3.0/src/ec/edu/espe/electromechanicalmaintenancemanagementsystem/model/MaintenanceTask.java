@@ -3,7 +3,7 @@ package ec.edu.espe.electromechanicalmaintenancemanagementsystem.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MaintenanceTask {
+public class MaintenanceTask implements java.io.Serializable {
     private int taskId;
     private String taskDescription;
     private String taskType;
