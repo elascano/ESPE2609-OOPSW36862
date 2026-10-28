@@ -1,0 +1,41 @@
+ .../u1/MaintenanceSystem/MaintenanceApp/build.xml  |   73 [32m+[m
+ .../MaintenanceSystem/MaintenanceApp/manifest.mf   |    3 [32m+[m
+ .../MaintenanceApp/nbproject/build-impl.xml        | 1771 [32m++++++++++++++++++++[m
+ .../MaintenanceApp/nbproject/genfiles.properties   |    8 [32m+[m
+ .../MaintenanceApp/nbproject/project.properties    |   97 [32m++[m
+ .../MaintenanceApp/nbproject/project.xml           |   15 [32m+[m
+ .../controller                                     |    0
+ .../model/Alert.java                               |   48 [32m+[m
+ .../model/Client.java                              |   65 [32m+[m
+ .../model/Equipment.java                           |  106 [32m++[m
+ .../model/MaintenanceHistory.java                  |   48 [32m+[m
+ .../model/MaintenanceSchedule.java                 |   67 [32m+[m
+ .../model/MaintenanceTask.java                     |   86 [32m+[m
+ .../model/Part.java                                |   57 [32m+[m
+ .../model/QrCode.java                              |   39 [32m+[m
+ .../model/Report.java                              |   48 [32m+[m
+ .../model/SafetyRegulation.java                    |   48 [32m+[m
+ .../model/Technician.java                          |   68 [32m+[m
+ .../model/WorkOrder.java                           |  111 [32m++[m
+ ...ectromechanicalMaintenanceManagementSystem.java |  365 [32m++++[m
+ .../u1/MaintenanceSystem/MaintenanceApp/build.xml  |   73 [32m+[m
+ .../MaintenanceSystem/MaintenanceApp/manifest.mf   |    3 [32m+[m
+ .../MaintenanceApp/nbproject/build-impl.xml        | 1771 [32m++++++++++++++++++++[m
+ .../MaintenanceApp/nbproject/genfiles.properties   |    8 [32m+[m
+ .../MaintenanceApp/nbproject/project.properties    |   97 [32m++[m
+ .../MaintenanceApp/nbproject/project.xml           |   15 [32m+[m
+ .../controller                                     |    0
+ .../model/Alert.java                               |   48 [32m+[m
+ .../model/Client.java                              |   65 [32m+[m
+ .../model/Equipment.java                           |  106 [32m++[m
+ .../model/MaintenanceHistory.java                  |   48 [32m+[m
+ .../model/MaintenanceSchedule.java                 |   67 [32m+[m
+ .../model/MaintenanceTask.java                     |   86 [32m+[m
+ .../model/Part.java                                |   57 [32m+[m
+ .../model/QrCode.java                              |   39 [32m+[m
+ .../model/Report.java                              |   48 [32m+[m
+ .../model/SafetyRegulation.java                    |   48 [32m+[m
+ .../model/Technician.java                          |   68 [32m+[m
+ .../model/WorkOrder.java                           |  111 [32m++[m
+ ...ectromechanicalMaintenanceManagementSystem.java |  365 [32m++++[m
+ 40 files changed, 6246 insertions(+)
