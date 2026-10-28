@@ -1,0 +1,62 @@
+[
+  {
+    "number": 1,
+    "dateTime": "2026-10-27T17:03:46.772338900",
+    "registeredBy": "vendedor",
+    "customer": "1712345675",
+    "paymentMethod": "CASH",
+    "vatRate": 0.15,
+    "subtotal": 55.5,
+    "vatAmount": 8.32,
+    "total": 63.82,
+    "status": "REGISTERED",
+    "voidReason": null,
+    "voidDateTime": null,
+    "voidedBy": null
+  },
+  {
+    "number": 2,
+    "dateTime": "2026-10-27T17:04:48.033838200",
+    "registeredBy": "vendedor",
+    "customer": "1701234567001",
+    "paymentMethod": "TRANSFER",
+    "vatRate": 0.15,
+    "subtotal": 70.0,
+    "vatAmount": 10.5,
+    "total": 80.5,
+    "status": "REGISTERED",
+    "voidReason": null,
+    "voidDateTime": null,
+    "voidedBy": null
+  },
+  {
+    "number": 3,
+    "dateTime": "2026-10-27T17:07:03.235903600",
+    "registeredBy": "vendedor",
+    "customer": "9999999999999",
+    "paymentMethod": "CARD",
+    "vatRate": 0.15,
+    "subtotal": 15.6,
+    "vatAmount": 2.34,
+    "total": 17.94,
+    "status": "REGISTERED",
+    "voidReason": null,
+    "voidDateTime": null,
+    "voidedBy": null
+  },
+  {
+    "number": 4,
+    "dateTime": "2026-10-27T17:07:36.948725500",
+    "registeredBy": "vendedor",
+    "customer": "1728743244",
+    "paymentMethod": "CASH",
+    "vatRate": 0.15,
+    "subtotal": 10.0,
+    "vatAmount": 1.5,
+    "total": 11.5,
+    "status": "REGISTERED",
+    "voidReason": null,
+    "voidDateTime": null,
+    "voidedBy": null
+  }
+]

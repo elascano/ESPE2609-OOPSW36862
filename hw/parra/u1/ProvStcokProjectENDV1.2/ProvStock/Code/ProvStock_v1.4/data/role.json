@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "SALESPERSON",
+    "permissions": [
+      "VIEW_PRODUCTS",
+      "MANAGE_CUSTOMERS",
+      "REGISTER_SALE"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "WAREHOUSE_CLERK",
+    "permissions": [
+      "VIEW_PRODUCTS",
+      "MANAGE_PRODUCTS",
+      "VIEW_INVENTORY",
+      "ADJUST_STOCK",
+      "REGISTER_PURCHASE",
+      "RECEIVE_ALERTS"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "OWNER",
+    "permissions": [
+      "MANAGE_USERS",
+      "MANAGE_CUSTOMERS",
+      "DEACTIVATE_CUSTOMERS",
+      "VIEW_PRODUCTS",
+      "MANAGE_PRODUCTS",
+      "REGISTER_SALE",
+      "VOID_SALE",
+      "UPDATE_VAT_RATE",
+      "ADJUST_STOCK",
+      "VIEW_INVENTORY",
+      "MANAGE_SUPPLIERS",
+      "REGISTER_PURCHASE",
+      "VIEW_SALES_HISTORY",
+      "RECEIVE_ALERTS",
+      "GENERATE_REPORTS"
+    ]
+  }
+]

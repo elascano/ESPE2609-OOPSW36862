@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "ruc": "1790012345001",
+    "name": "Electrocables S.A.",
+    "contactPerson": "Ana Torres",
+    "phone": "022987654",
+    "email": "ventas@electrocables.com",
+    "address": "Quito",
+    "active": true
+  },
+  {
+    "id": 2,
+    "ruc": "0992345678001",
+    "name": "Distribuidora Eléctrica del Pacífico",
+    "contactPerson": "Luis Mora",
+    "phone": "042123456",
+    "email": "pedidos@depacifico.com",
+    "address": "Guayaquil",
+    "active": true
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "colection-of-things",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/ec/edu/espe/collections/view/MyThings.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}
