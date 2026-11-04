@@ -1,0 +1,13 @@
+{
+  "name": "cathedral-app",
+  "version": "1.0.0",
+  "description": "Creates and reads Cathedral objects using ArrayLists and a JSON file",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "brand": "Motorola",
+        "capacity_tons": 59,
+        "year": 2020
+    },
+    {
+        "id": "3",
+        "brand": "Cat",
+        "capacity_tons": 60,
+        "year": 2009
+    },
+    {
+        "id": "2",
+        "brand": "Nissan",
+        "capacity_tons": 1,
+        "year": 1
+    }
+]

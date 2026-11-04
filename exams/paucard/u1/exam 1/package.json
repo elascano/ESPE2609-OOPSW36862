@@ -1,0 +1,14 @@
+{
+  "name": "question33-team",
+  "version": "1.0.0",
+  "description": "Team management with ArrayList (Array) and JSON persistence - TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.4.0"
+  }
+}
