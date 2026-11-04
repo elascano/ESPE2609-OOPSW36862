@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Iglesia San Francisco",
+    "location": "Quito",
+    "city": "Quito"
+  },
+  {
+    "id": 2,
+    "name": "Catedral de Notre Dame",
+    "location": "Paris",
+    "city": "Francia"
+  },
+  {
+    "id": 3,
+    "name": "Iglesia de San Francisco",
+    "location": "2",
+    "city": "1"
+  },
+  {
+    "id": 5,
+    "name": "Notre Dame",
+    "location": "Paris",
+    "city": "Paris"
+  }
+]
