@@ -168,7 +168,7 @@ function showChickens(chickens: Chicken[]): void {
 }
 
 async function main(): Promise<void> {
-    console.log("Renata Olalla's Chicken Farm App");
+    console.log("Enrique Ayala Chicken Farm App");
     console.log("=================================");
     console.log(`egg --> ${new Egg(1, "M")}`);
     console.log(`poop --> ${new Poop(1, "brown", "S")}`);
