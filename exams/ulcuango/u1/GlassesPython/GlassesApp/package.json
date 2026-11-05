@@ -1,0 +1,16 @@
+{
+  "name": "glasses-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/view/GlassesView.js"
+  },
+  "dependencies": {
+    "readline-sync": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/readline-sync": "^1.4.4",
+    "typescript": "^5.0.0"
+  }
+}
