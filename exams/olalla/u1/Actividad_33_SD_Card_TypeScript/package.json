@@ -1,0 +1,16 @@
+{
+  "name": "actividad-33-sd-card",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Actividad 33: creación y lectura de tarjetas SD usando TypeScript, arreglos dinámicos y JSON.",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}

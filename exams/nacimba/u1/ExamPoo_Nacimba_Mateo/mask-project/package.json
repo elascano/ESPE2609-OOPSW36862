@@ -1,0 +1,13 @@
+{
+  "name": "mask-project",
+  "version": "1.0.0",
+  "description": "Mask objects stored in ArrayLists and persisted to a JSON file (TypeScript)",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Barbie",
+        "brand": "Mattel",
+        "price": 29.99
+    },
+    {
+        "id": 2,
+        "name": "Rapunzel",
+        "brand": "Disney",
+        "price": 24.5
+    },
+    {
+        "id": 3,
+        "name": "Bratz Cloe",
+        "brand": "MGA",
+        "price": 19.99
+    },
+    {
+        "id": 4,
+        "name": "Lucya",
+        "brand": "Pattys",
+        "price": 50.3
+    },
+    {
+        "id": 100,
+        "name": "Dolly",
+        "brand": "Dolly",
+        "price": 100.0
+    }
+]
