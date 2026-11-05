@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "mask1",
+    "material": "paper",
+    "price": 5
+  },
+  {
+    "id": 2,
+    "name": "mask2",
+    "material": "aluminium",
+    "price": 10
+  },
+  {
+    "id": 3,
+    "name": "mask3",
+    "material": "plastic",
+    "price": 6
+  },
+  {
+    "id": 100,
+    "name": "batman",
+    "material": "plastic",
+    "price": 100
+  }
+]
