@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "brand": "Yamaha",
+        "model": "MG10",
+        "channels": 10
+    },
+    {
+        "id": 2,
+        "brand": "Mackie",
+        "model": "Mix8",
+        "channels": 8
+    },
+    {
+        "id": 13,
+        "brand": "Stream",
+        "model": "Leison",
+        "channels": 2
+    },
+    {
+        "id": 100,
+        "brand": "Pyoner",
+        "model": "Mx100",
+        "channels": 4
+    },
+    {
+        "id": 34,
+        "brand": "Ymaja",
+        "model": "Wx300",
+        "channels": 3
+    }
+]

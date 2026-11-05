@@ -1,0 +1,12 @@
+{
+  "name": "chickenfarm-json-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "tsx src/ChickenFarmApp.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
