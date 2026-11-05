@@ -1,0 +1,18 @@
+{
+  "name": "laptopproject_25",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/index.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/readline-sync": "^1.4.4",
+    "typescript": "^5.0.0"
+  }
+}
