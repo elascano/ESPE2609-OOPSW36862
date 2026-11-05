@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "brand": "Shure SM58",
+        "type": "dynamic",
+        "connection": "xlr"
+    },
+    {
+        "id": 2,
+        "brand": "Rode NT-USB",
+        "type": "condenser",
+        "connection": "usb"
+    },
+    {
+        "id": 3,
+        "brand": "Sennheiser",
+        "type": "ribbon",
+        "connection": "wireless"
+    }
+]
