@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "capacityGB": 32,
+    "brand": "SanDisk",
+    "speedClass": "Class 10"
+  },
+  {
+    "id": 2,
+    "capacityGB": 64,
+    "brand": "Kingston",
+    "speedClass": "UHS-I U1"
+  },
+  {
+    "id": 3,
+    "capacityGB": 128,
+    "brand": "Samsung",
+    "speedClass": "UHS-I U3"
+  }
+]
