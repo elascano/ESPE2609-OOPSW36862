@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Lionel Messi",
+        "position": "Forward",
+        "shirtNumber": 10
+    },
+    {
+        "id": 2,
+        "name": "Virgil van Dijk",
+        "position": "Defender",
+        "shirtNumber": 4
+    },
+    {
+        "id": 3,
+        "name": "Thibaut Courtois",
+        "position": "Goalkeeper",
+        "shirtNumber": 1
+    },
+    {
+        "id": 123,
+        "name": "Matias",
+        "position": "Delantero",
+        "shirtNumber": 7
+    }
+]
