@@ -1,0 +1,16 @@
+{
+  "name": "chicken-farm-app-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Version TypeScript de ChickenFarmApp (Java)",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "npm run build && npm start",
+    "test": "npm run build && node dist/test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  }
+}

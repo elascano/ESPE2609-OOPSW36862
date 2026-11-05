@@ -1,0 +1,14 @@
+{
+  "name": "u1-cdmanager",
+  "version": "1.0.0",
+  "description": "Proyecto de gestión de CDs en TypeScript",
+  "main": "main.ts",
+  "scripts": {
+    "start": "ts-node main.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "name": "Lucy",
+    "color": "brown",
+    "bornOnDate": "2022-04-15",
+    "ageInYears": 4,
+    "molting": false
+  }
+]
