@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "title": "Thriller",
+        "artist": "Michael Jackson",
+        "year": 1982
+    },
+    {
+        "id": "2",
+        "title": "Back in Black",
+        "artist": "AC/DC",
+        "year": 1980
+    }
+]
