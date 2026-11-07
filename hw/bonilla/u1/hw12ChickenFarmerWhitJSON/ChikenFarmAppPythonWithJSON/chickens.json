@@ -1,0 +1,23 @@
+[
+    {
+        "id": 143,
+        "name": "Pepito",
+        "color": "Blue",
+        "born_on_date": "2026-10-21",
+        "is_molting": true
+    },
+    {
+        "id": 142,
+        "name": "Pepita",
+        "color": "Red",
+        "born_on_date": "2026-10-21",
+        "is_molting": false
+    },
+    {
+        "id": 545,
+        "name": "Demian",
+        "color": "caca",
+        "born_on_date": "2026-10-21",
+        "is_molting": true
+    }
+]

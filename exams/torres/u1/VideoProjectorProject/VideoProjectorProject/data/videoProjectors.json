@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "brand": "Epson",
+        "lumens": 3300,
+        "resolution": "1920x1080"
+    },
+    {
+        "id": 2,
+        "brand": "BenQ",
+        "lumens": 3600,
+        "resolution": "1280x800"
+    },
+    {
+        "id": 3,
+        "brand": "sony",
+        "lumens": 3000,
+        "resolution": "1920x1080"
+    }
+]
