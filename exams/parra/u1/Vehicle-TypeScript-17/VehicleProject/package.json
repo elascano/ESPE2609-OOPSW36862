@@ -1,0 +1,15 @@
+{
+  "name": "vehicle-json",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Exercise 33 - Vehicle: create and read from a JSON file using arrays",
+  "scripts": {
+    "build": "tsc",
+    "start": "node src/view/Main.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  }
+}

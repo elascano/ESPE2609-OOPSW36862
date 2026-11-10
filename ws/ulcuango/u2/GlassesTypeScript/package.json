@@ -1,0 +1,14 @@
+{
+  "name": "glasses-project",
+  "version": "1.0.0",
+  "description": "Simple glasses project in TypeScript",
+  "main": "dist/view/Main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/view/Main.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,48 @@
+VIDEO PROJECTOR PROJECT - Python
+=================================
+Objeto: VideoProjector (lista #22)
+Atributos: id (obligatorio), brand, lumens, resolution
+
+ESTRUCTURA
+----------
+VideoProjectorProject/
+  main.py                                  -> punto de entrada, arma todo y llama al menú
+  src/
+    model/video_projector.py               -> clase del objeto (atributos, getters, setters, __str__)
+    data/video_projector_json_file.py      -> guarda (save) y lee (read) el archivo JSON
+    view/console_menu.py                   -> menú en consola, ingreso de datos y validaciones
+  data/videoProjectors.json                -> archivo JSON con los datos
+  docs/ClassDiagram.png                    -> diagrama de clases
+  .vscode/launch.json                      -> permite ejecutar con F5 en VS Code
+
+REQUISITOS
+----------
+- Python 3 instalado (https://www.python.org). Comprobar en la terminal con: python --version
+- En VS Code, la extensión "Python" de Microsoft (opcional, para ejecutar con F5)
+
+CÓMO CORRERLO EN VISUAL STUDIO CODE
+-----------------------------------
+1. Descomprimir el ZIP y abrir la carpeta VideoProjectorProject en VS Code
+   (File > Open Folder).
+2. Abrir la terminal (Terminal > New Terminal).
+3. Ejecutar:
+       python main.py
+   (si no funciona, probar con: py main.py)
+
+También se puede abrir main.py y presionar F5 o el botón de Play.
+
+USO
+---
+1 -> Crear un video projector (pide id, marca, lúmenes y resolución)
+     y lo guarda en data/videoProjectors.json
+2 -> Leer el archivo JSON y mostrar todos los video projectors
+0 -> Salir
+
+NOTAS
+-----
+- No se usan librerías externas: solo los módulos que ya trae Python
+  ("json" para el archivo y "os" para la ruta). No hace falta instalar nada con pip.
+- La lista de objetos es una list de Python (el equivalente al ArrayList de Java).
+- Los atributos son privados (__id, __brand, ...) y se accede con getters y setters.
+- Validaciones: el id no se puede repetir, los números deben ser enteros
+  mayores a 0 y los textos no pueden quedar vacíos.
