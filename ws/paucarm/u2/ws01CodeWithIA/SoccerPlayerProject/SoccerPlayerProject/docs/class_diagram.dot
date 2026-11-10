@@ -1,0 +1,43 @@
+digraph UML {
+  rankdir=TB; nodesep=0.8; ranksep=0.9;
+  node [shape=plaintext, fontname="Helvetica", fontsize=11];
+  edge [fontname="Helvetica", fontsize=10];
+  labelloc="t"; label=<<B>Class Diagram - Soccer Player (Python)</B>>; fontname="Helvetica"; fontsize=16;
+
+  Main [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#FFF8E1">
+   <TR><TD BGCOLOR="#FFE082"><B>main</B><BR/><FONT POINT-SIZE="9">«module»</FONT></TD></TR>
+   <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ JSON_PATH: str</TD></TR>
+   <TR><TD ALIGN="LEFT" BALIGN="LEFT" SIDES="T">+ main(): None</TD></TR></TABLE>>];
+
+  Menu [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#E3F2FD">
+   <TR><TD BGCOLOR="#90CAF9"><B>ConsoleMenu</B><BR/><FONT POINT-SIZE="9">view</FONT></TD></TR>
+   <TR><TD ALIGN="LEFT">- service: SoccerPlayerService</TD></TR>
+   <TR><TD ALIGN="LEFT" BALIGN="LEFT" SIDES="T">+ run(): None<BR/>- _show_menu(): None<BR/>- _read_int(message: str): int<BR/>- _read_position(): str<BR/>- _create_player(): None<BR/>- _read_players(): None</TD></TR></TABLE>>];
+
+  Service [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#E8F5E9">
+   <TR><TD BGCOLOR="#A5D6A7"><B>SoccerPlayerService</B><BR/><FONT POINT-SIZE="9">service</FONT></TD></TR>
+   <TR><TD ALIGN="LEFT" BALIGN="LEFT">- repository: SoccerPlayerJsonRepository<BR/>- players: list[SoccerPlayer]</TD></TR>
+   <TR><TD ALIGN="LEFT" BALIGN="LEFT" SIDES="T">+ id_exists(player_id: int): bool<BR/>+ create_player(player_id: int, name: str,<BR/>      position: str, shirt_number: int): SoccerPlayer<BR/>+ read_players(): list[SoccerPlayer]</TD></TR></TABLE>>];
+
+  Repo [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#F3E5F5">
+   <TR><TD BGCOLOR="#CE93D8"><B>SoccerPlayerJsonRepository</B><BR/><FONT POINT-SIZE="9">repository</FONT></TD></TR>
+   <TR><TD ALIGN="LEFT">- file_path: str</TD></TR>
+   <TR><TD ALIGN="LEFT" BALIGN="LEFT" SIDES="T">- _ensure_file_exists(): None<BR/>+ load_all(): list[SoccerPlayer]<BR/>+ save_all(players: list[SoccerPlayer]): None</TD></TR></TABLE>>];
+
+  Player [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#FFEBEE">
+   <TR><TD BGCOLOR="#EF9A9A"><B>SoccerPlayer</B><BR/><FONT POINT-SIZE="9">model</FONT></TD></TR>
+   <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ VALID_POSITIONS: tuple {static}<BR/>- _id: int<BR/>- _name: str<BR/>- _position: str<BR/>- _shirt_number: int</TD></TR>
+   <TR><TD ALIGN="LEFT" BALIGN="LEFT" SIDES="T">+ __init__(id, name, position, shirt_number)<BR/>+ id / name / position / shirt_number «property»<BR/>+ to_dict(): dict<BR/>+ from_dict(data: dict): SoccerPlayer {classmethod}<BR/>+ __str__(): str</TD></TR></TABLE>>];
+
+  Json [shape=note, style=filled, fillcolor="#ECEFF1", fontname="Helvetica", label="data/soccer_players.json"];
+
+  Main -> Menu [style=dashed, arrowhead=vee, label=" «create»"];
+  Main -> Service [style=dashed, arrowhead=vee, label=" «create»"];
+  Main -> Repo [style=dashed, arrowhead=vee, label=" «create»"];
+  Menu -> Service [arrowhead=vee, label=" uses  1"];
+  Service -> Repo [arrowhead=vee, label=" uses  1"];
+  Service -> Player [arrowhead=diamond, dir=back, arrowtail=odiamond, label=" 0..*  players"];
+  Repo -> Player [style=dashed, arrowhead=vee, label=" «reads/writes»"];
+  Repo -> Json [style=dashed, arrowhead=vee, label=" persists"];
+  { rank=same; Player; Json; }
+}

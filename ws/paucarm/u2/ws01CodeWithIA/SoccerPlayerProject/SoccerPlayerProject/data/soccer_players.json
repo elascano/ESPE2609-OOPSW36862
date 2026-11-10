@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Enner Valencia",
+        "position": "Forward",
+        "shirtNumber": 13
+    },
+    {
+        "id": 2,
+        "name": "Moises Caicedo",
+        "position": "Midfielder",
+        "shirtNumber": 23
+    },
+    {
+        "id": 3,
+        "name": "Piero Hincapie",
+        "position": "Defender",
+        "shirtNumber": 3
+    }
+]
