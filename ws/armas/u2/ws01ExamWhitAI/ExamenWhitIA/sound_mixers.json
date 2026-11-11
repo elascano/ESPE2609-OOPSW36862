@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "brand": "Pioneer DJ",
+        "channels": 4,
+        "has_effects": true
+    },
+    {
+        "id": 2,
+        "brand": "Behringer",
+        "channels": 12,
+        "has_effects": false
+    },
+    {
+        "id": 3,
+        "brand": "Yamaha",
+        "channels": 8,
+        "has_effects": true
+    },
+    {
+        "id": 12,
+        "brand": "Dream",
+        "channels": 3,
+        "has_effects": true
+    }
+]
