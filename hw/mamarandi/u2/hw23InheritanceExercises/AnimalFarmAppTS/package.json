@@ -1,0 +1,13 @@
+{
+  "name": "animalfarmappts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/view/AnimalFarmApp.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
