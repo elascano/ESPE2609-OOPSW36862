@@ -1,0 +1,14 @@
+{
+  "name": "microphone-manager",
+  "version": "1.0.0",
+  "description": "Creates and reads Microphone objects from a JSON file",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}
