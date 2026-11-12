@@ -1,27 +1,36 @@
 import sys
+from datetime import datetime
 from pathlib import Path
-sys.path.append(str(Path(__file__).resolve().parent.parent))
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from model.FarmAnimal import FarmAnimal
 from model.Chicken import Chicken
+from model.Cow import Cow
 from model.Pig import Pig
 from model.Sheep import Sheep
-from model.Cow import Cow
-from datetime import date
+from model.JavaDate import java_date
 
-def main():
+
+def main() -> None:
     print("Francisco's Farm Animal")
     print("=======================")
-    
-    farmAnimal = FarmAnimal(1, "Holstein", date(2026, 9, 27), True)
-    chicken = Chicken(2, "palish", date(2022, 10, 12), False, False, 10)
-    cow = Cow(3,"Holstein", date(2024, 12, 23), False, True, 10.23)
-    pig = Pig(4, "Mangalitsa", date(2019, 11, 30), False, True, 37.5)
-    sheep = Sheep(5, "Manchega", date(2025, 11 , 24), False, True, date(2024, 9, 27))
-    
-    print(farmAnimal)
-    print(chicken)
-    print(cow)
-    print(pig)
-    print(sheep)
-    
-main()
+
+    farmAnimal = FarmAnimal(1, "Holstein", datetime.now(), False)
+    print("My Farm Animal is--->" + str(farmAnimal))
+
+    chicken = Chicken(False, 10, 2, "palish", java_date(2022, 10, 10))
+    print("chicken --->" + str(chicken))
+
+    cow = Cow(True, 23.5, 3, "Holstein", java_date(2024, 12, 23), False)
+    print("cow --->" + str(cow))
+
+    pig = Pig(True, 30.23, 4, "Mangalitsa", java_date(2019, 11, 30), False)
+    print("pig --->" + str(pig))
+
+    sheep = Sheep(True, java_date(2025, 11, 24), 5, "Manchega", java_date(2024, 9, 27), True)
+    print("sheep --->" + str(sheep))
+
+
+if __name__ == "__main__":
+    main()

@@ -1,17 +1,23 @@
-import {FarmAnimal} from "./FarmAnimal";
+import { FarmAnimal } from "./FarmAnimal";
 
-export class Chicken extends FarmAnimal{
-    constructor(
-        id: number,
-        breed: string,
-        bornOnDate: Date,
-        isMeat: boolean,       
-        public readonly isMolting: boolean,
-        public readonly numberOfLaidEggsPerWeek: number
-    ){super(id, breed, bornOnDate, isMeat);}
- 
-    public override toString(): string{
-        return super.toString() + ", Chicken(isMolting=" + this.isMolting + ", numberOfEggsLaidPerWeek= " + this.numberOfLaidEggsPerWeek + ")";
-    
-}
+export class Chicken extends FarmAnimal {
+  constructor(
+    private isMolting: boolean,
+    private numberOfLaidEggsPerWeek: number,
+    id: number,
+    breed: string,
+    bornOnDate: Date
+  ) {
+    super(id, breed, bornOnDate, isMolting);
+  }
+
+  public isIsMolting(): boolean { return this.isMolting; }
+  public setIsMolting(value: boolean): void { this.isMolting = value; }
+  public getNumberOfLaidEggsPerWeek(): number { return this.numberOfLaidEggsPerWeek; }
+  public setNumberOfLaidEggsPerWeek(value: number): void { this.numberOfLaidEggsPerWeek = value; }
+
+  public override toString(): string {
+    return `Chicken{` + super.toString() +
+      `isMolting=${this.isMolting}, numberOfLaidEggsPerWeek=${this.numberOfLaidEggsPerWeek}` + "}";
+  }
 }

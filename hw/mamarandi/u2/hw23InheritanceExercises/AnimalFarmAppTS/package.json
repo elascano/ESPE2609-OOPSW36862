@@ -1,14 +1,13 @@
 {
   "name": "animalfarmappts",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
   "type": "commonjs",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "npm run build && node dist/view/AnimalFarmApp.js"
   },
   "devDependencies": {
-    "ts-node": "^10.9.2",
-    "typescript": "^7.0.2"
+    "typescript": "^5.8.3"
   }
 }
