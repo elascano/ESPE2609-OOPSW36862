@@ -11,7 +11,7 @@ import java.util.Date;
 public class AnimalFarmApp {
 
     public static void main(String[] args) {
-        System.out.println(" Renata's Animal Farm");
+        System.out.println(" Matias's Animal Farm");
         System.out.println("=====================");
         FarmAnimal farmAnimal;
         farmAnimal = new FarmAnimal(1,"holstein", new Date());
