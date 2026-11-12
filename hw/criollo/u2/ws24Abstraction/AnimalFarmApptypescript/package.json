@@ -1,0 +1,15 @@
+{
+  "name": "animal-farm-app",
+  "version": "1.0.0",
+  "description": "Abstract classes - Dennis's Farm Animal",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/view/AnimalFarmApp.js",
+    "dev": "ts-node src/view/AnimalFarmApp.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}
