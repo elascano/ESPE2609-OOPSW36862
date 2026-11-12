@@ -1,0 +1,11 @@
+{
+  "name": "animal-farm-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/view/ChickenFarmApp.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
