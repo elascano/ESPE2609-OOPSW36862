@@ -1,0 +1,14 @@
+{
+  "name": "animal-farm-app",
+  "version": "1.0.0",
+  "description": "Animal Farm App - Andres Pachacama, Byte Works, ESPE",
+  "type": "module",
+  "scripts": {
+    "start": "node src/view/AnimalFarmApp.ts",
+    "check": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2"
+  }
+}
