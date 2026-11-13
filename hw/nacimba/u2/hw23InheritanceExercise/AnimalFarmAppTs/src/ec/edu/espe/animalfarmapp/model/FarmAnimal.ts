@@ -1,3 +1,6 @@
+/**
+ * @author Mateo, Group5, @ESPE
+ */
 export class FarmAnimal {
   private _id: number;
   private _breed: string;
@@ -20,24 +23,12 @@ export class FarmAnimal {
     return 0;
   }
 
-  get id(): number {
-    return this._id;
-  }
-  set id(value: number) {
-    this._id = value;
-  }
+  get id(): number { return this._id; }
+  set id(value: number) { this._id = value; }
 
-  get breed(): string {
-    return this._breed;
-  }
-  set breed(value: string) {
-    this._breed = value;
-  }
+  get breed(): string { return this._breed; }
+  set breed(value: string) { this._breed = value; }
 
-  get bornOnDate(): Date {
-    return this._bornOnDate;
-  }
-  set bornOnDate(value: Date) {
-    this._bornOnDate = value;
-  }
+  get bornOnDate(): Date { return this._bornOnDate; }
+  set bornOnDate(value: Date) { this._bornOnDate = value; }
 }
