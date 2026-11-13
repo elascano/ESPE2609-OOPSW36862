@@ -1,0 +1,12 @@
+{
+  "name": "animalfarmapp",
+  "version": "1.0.0",
+  "description": "Matias's Farm Animal - TypeScript version (abstraction)",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/main.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
