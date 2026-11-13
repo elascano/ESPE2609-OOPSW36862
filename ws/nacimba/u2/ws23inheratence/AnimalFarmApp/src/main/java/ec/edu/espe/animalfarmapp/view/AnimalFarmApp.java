@@ -13,6 +13,7 @@ public class AnimalFarmApp {
 
     public static void main(String[] args) {
         System.out.println("Hello This is Mateo's Animal Farm!");
+        System.out.println("==================================");
         FarmAnimal farmAnimal;
         farmAnimal = new FarmAnimal(1,"holstein", new Date());
         
