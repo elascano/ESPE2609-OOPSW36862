@@ -20,7 +20,6 @@ if __name__ == "__main__":
     farm_animal = FarmAnimal(1, "holstein", date.today())
     print(f"My farm animal --> {farm_animal}")
     
-    # Si quieres que aparezca el pollo que tienes importado:
     chicken = Chicken(True, 10, False, 2, "Palish", date(2022, 10, 10))
     print(f"chicken --> {chicken}") 
     
