@@ -1,0 +1,20 @@
+[
+    {
+        "id": "CATH-001",
+        "name": "Basilica of the National Vow",
+        "location": "Quito, Ecuador",
+        "yearBuilt": 1892
+    },
+    {
+        "id": "CATH-002",
+        "name": "Notre-Dame de Paris",
+        "location": "Paris, France",
+        "yearBuilt": 1163
+    },
+    {
+        "id": "CATH-003",
+        "name": "Metropolitan Cathedral of Saint Sebastian",
+        "location": "Rio de Janeiro, Brazil",
+        "yearBuilt": 1979
+    }
+]

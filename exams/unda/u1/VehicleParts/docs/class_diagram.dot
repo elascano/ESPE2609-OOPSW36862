@@ -1,0 +1,21 @@
+digraph ClassDiagram {
+    rankdir=TB;
+    nodesep=0.8;
+    ranksep=0.9;
+    node [shape=record, fontname="Helvetica", fontsize=11, style=filled, fillcolor="#FFFFFF"];
+    edge [fontname="Helvetica", fontsize=10];
+
+    Menu [label="{Menu|- catalog : VehiclePartCatalog\l- file_manager : VehiclePartFileManager\l|+ run() : None\l}"];
+
+    VehiclePartCatalog [label="{VehiclePartCatalog|- parts : list[VehiclePart]\l|+ add(part : VehiclePart) : None\l+ contains(part_id : str) : bool\l+ find_by_id(part_id : str) : VehiclePart\l+ find_all() : list[VehiclePart]\l+ replace_all(parts : list[VehiclePart]) : None\l}"];
+
+    VehiclePartFileManager [label="{VehiclePartFileManager||+ save(parts : list[VehiclePart], path : str) : None\l+ load(path : str) : list[VehiclePart]\l}"];
+
+    VehiclePart [label="{VehiclePart|- part_id : str\l- name : str\l- brand : str\l- price : float\l|+ to_dict() : dict\l+ from_dict(data : dict) : VehiclePart\l}"];
+
+    Menu -> VehiclePartCatalog [arrowhead=vee, label="manages", taillabel="1", headlabel="1"];
+    Menu -> VehiclePartFileManager [arrowhead=vee, label="saves with", taillabel="1", headlabel="1"];
+    Menu -> VehiclePart [style=dashed, arrowhead=vee, label="<<create>>"];
+    VehiclePartFileManager -> VehiclePart [style=dashed, arrowhead=vee, label="<<use>>"];
+    VehiclePartCatalog -> VehiclePart [dir=both, arrowtail=odiamond, arrowhead=none, taillabel="1", headlabel="0..*"];
+}

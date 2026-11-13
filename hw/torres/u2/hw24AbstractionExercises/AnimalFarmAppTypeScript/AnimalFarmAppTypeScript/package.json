@@ -1,0 +1,14 @@
+{
+  "name": "animalfarmapp",
+  "version": "0.9.0",
+  "description": "Chris' Farm Animal - TypeScript version",
+  "author": "Ostin Torres, CodeLex, @ESPE",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/ec/edu/espe/animalfarmapp/view/AnimalFarmApp.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
