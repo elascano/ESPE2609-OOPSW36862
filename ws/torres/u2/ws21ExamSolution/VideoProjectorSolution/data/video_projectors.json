@@ -1,0 +1,14 @@
+[
+    {
+        "projector_id": "VP-001",
+        "brand": "Epson",
+        "resolution": "1920x1080",
+        "lumens": 3500
+    },
+    {
+        "projector_id": "1",
+        "brand": "Epson",
+        "resolution": "1920x1080",
+        "lumens": 2000
+    }
+]
