@@ -1,3 +1,6 @@
+"""
+@author Mateo, Group5, @ESPE
+"""
 from datetime import datetime
 
 from ec.edu.espe.animalfarmapp.model.farm_animal import FarmAnimal
@@ -5,8 +8,7 @@ from ec.edu.espe.animalfarmapp.model.farm_animal import FarmAnimal
 
 class Chicken(FarmAnimal):
     def __init__(self, is_molting: bool, number_of_laid_eggs_in_a_month: int,
-                 is_meat: bool, id: int, breed: str,
-                 born_on_date: datetime) -> None:
+                 is_meat: bool, id: int, breed: str, born_on_date: datetime) -> None:
         super().__init__(id, breed, born_on_date)
         self._is_molting = is_molting
         self._number_of_laid_eggs_in_a_month = number_of_laid_eggs_in_a_month

@@ -1,0 +1,15 @@
+{
+  "name": "animalfarmapp",
+  "version": "0.9.0",
+  "description": "AnimalFarmApp: clase abstracta FarmAnimal y sus subclases (port de Java a TypeScript)",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/view/AnimalFarmApp.js",
+    "test": "npm run build && node --test \"dist/tests/*.test.js\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,3 +1,6 @@
+/**
+ * @author Mateo, Group5, @ESPE
+ */
 import { FarmAnimal } from './FarmAnimal';
 
 export class Cow extends FarmAnimal {
@@ -19,24 +22,17 @@ export class Cow extends FarmAnimal {
   override toString(): string {
     return 'Cow{' + super.toString() +
       `isProducingMilk=${this._isProducingMilk}, ` +
-      `litersOfMilkPerWeek=${this._litersOfMilkPerWeek}` + '}';
+      `litersOfMilkPerWeek=${this._litersOfMilkPerWeek}` +
+      '}';
   }
 
   milk(): void {
     console.log('Milking the cow ');
   }
 
-  get isProducingMilk(): boolean {
-    return this._isProducingMilk;
-  }
-  set isProducingMilk(value: boolean) {
-    this._isProducingMilk = value;
-  }
+  get isProducingMilk(): boolean { return this._isProducingMilk; }
+  set isProducingMilk(value: boolean) { this._isProducingMilk = value; }
 
-  get litersOfMilkPerWeek(): number {
-    return this._litersOfMilkPerWeek;
-  }
-  set litersOfMilkPerWeek(value: number) {
-    this._litersOfMilkPerWeek = value;
-  }
+  get litersOfMilkPerWeek(): number { return this._litersOfMilkPerWeek; }
+  set litersOfMilkPerWeek(value: number) { this._litersOfMilkPerWeek = value; }
 }

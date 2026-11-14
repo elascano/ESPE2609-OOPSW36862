@@ -1,0 +1,20 @@
+[
+  {
+    "id": "CEL-001",
+    "brand": "Samsung",
+    "model": "Galaxy S23",
+    "price": 999.99
+  },
+  {
+    "id": "CEL-002",
+    "brand": "Apple",
+    "model": "iPhone 15",
+    "price": 1099.99
+  },
+  {
+    "id": "CEL-003",
+    "brand": "Xiaomi",
+    "model": "13 Pro",
+    "price": 799.5
+  }
+]

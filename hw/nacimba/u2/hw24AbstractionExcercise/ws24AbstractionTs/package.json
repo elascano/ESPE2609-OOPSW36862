@@ -1,0 +1,21 @@
+{
+  "name": "ws24abstraction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/ec/edu/espe/animalfarmapp/view/AnimalFarmApp.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/ec/edu/espe/animalfarmapp/view/AnimalFarmApp.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^5.9.3"
+  }
+}

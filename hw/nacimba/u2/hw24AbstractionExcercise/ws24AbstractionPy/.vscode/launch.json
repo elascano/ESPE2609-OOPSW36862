@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "AnimalFarmApp (Python)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "ec.edu.espe.animalfarmapp.view.animal_farm_app",
+      "cwd": "${workspaceFolder}/src",
+      "console": "integratedTerminal"
+    }
+  ]
+}

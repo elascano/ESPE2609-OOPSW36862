@@ -1,3 +1,6 @@
+/**
+ * @author Mateo, Group5, @ESPE
+ */
 import { FarmAnimal } from './FarmAnimal';
 
 export class Chicken extends FarmAnimal {
@@ -23,27 +26,16 @@ export class Chicken extends FarmAnimal {
     return 'Chicken{' + super.toString() +
       `isMolting=${this._isMolting}, ` +
       `numberOfLaidEggsInAMonth=${this._numberOfLaidEggsInAMonth}, ` +
-      `isMeat=${this._isMeat}` + '}';
+      `isMeat=${this._isMeat}` +
+      '}';
   }
 
-  get isMolting(): boolean {
-    return this._isMolting;
-  }
-  set isMolting(value: boolean) {
-    this._isMolting = value;
-  }
+  get isMolting(): boolean { return this._isMolting; }
+  set isMolting(value: boolean) { this._isMolting = value; }
 
-  get numberOfLaidEggsInAMonth(): number {
-    return this._numberOfLaidEggsInAMonth;
-  }
-  set numberOfLaidEggsInAMonth(value: number) {
-    this._numberOfLaidEggsInAMonth = value;
-  }
+  get numberOfLaidEggsInAMonth(): number { return this._numberOfLaidEggsInAMonth; }
+  set numberOfLaidEggsInAMonth(value: number) { this._numberOfLaidEggsInAMonth = value; }
 
-  get isMeat(): boolean {
-    return this._isMeat;
-  }
-  set isMeat(value: boolean) {
-    this._isMeat = value;
-  }
+  get isMeat(): boolean { return this._isMeat; }
+  set isMeat(value: boolean) { this._isMeat = value; }
 }
