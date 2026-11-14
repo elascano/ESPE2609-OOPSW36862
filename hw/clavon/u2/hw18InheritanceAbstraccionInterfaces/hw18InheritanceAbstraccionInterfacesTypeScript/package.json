@@ -1,0 +1,13 @@
+{
+  "name": "animal-farm-app",
+  "version": "1.0.0",
+  "description": "AnimalFarmApp MVC en TypeScript - Infinite loops @ESPE",
+  "scripts": {
+    "start": "ts-node view/AnimalFarm.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.0"
+  }
+}
