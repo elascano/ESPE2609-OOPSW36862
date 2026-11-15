@@ -1,0 +1,58 @@
+import { Food } from "../model/Food";
+import { Location } from "../model/Location";
+import { Chicken } from "../model/Chicken";
+import { Cow } from "../model/Cow";
+import { Pig } from "../model/Pig";
+import { Sheep } from "../model/Sheep";
+
+function main(): void {
+    let food = new Food("corn");
+    const location = new Location("graze");
+
+    // Java's deprecated Date(year, month, day) constructor adds 1900 to year.
+    const chicken = new Chicken(false, 10, 2, "palish", new Date(3922, 10, 10));
+    const cow = new Cow(true, 23.5, 3, "Holstein", new Date(3924, 0, 23), false);
+    const pig = new Pig(true, 30.23, 4, "Mangalitsa", new Date(3919, 11, 30), false);
+    const sheep = new Sheep(true, new Date(3925, 11, 24), 5, "Manchega", new Date(3924, 9, 27), true);
+
+    console.log("Francisco's Farm Animal");
+    console.log("=======================");
+    console.log("============");
+    console.log("Chicken: ");
+    console.log(chicken.toString());
+    chicken.layAnEgg();
+    chicken.feed(food, 3);
+    chicken.sellAnimal(12.5);
+
+    food = new Food("hay");
+    console.log("============");
+    console.log("Cow:");
+    console.log(cow.toString());
+    cow.feed(food, 2);
+    cow.sendToGraze(location, new Date());
+    cow.milk();
+    cow.milk(23.4);
+    cow.milk(14);
+    cow.getLitersOfMilkPerWeek();
+
+    food = new Food("corn");
+    console.log("============");
+    console.log("Pig:");
+    console.log(pig.toString());
+    pig.feed(food, 12);
+    pig.showPigMeatCuts();
+    pig.getWeightGainPerWeek(32);
+    pig.sellAnimal(130.4);
+
+    food = new Food("grass");
+    console.log("============");
+    console.log("Sheep:");
+    console.log(sheep.toString());
+    sheep.feed(food, 3);
+    const lastSheering = sheep.getLastSheering();
+    console.log(`${["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][lastSheering.getDay()]} ${["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][lastSheering.getMonth()]} ${String(lastSheering.getDate()).padStart(2, "0")} 00:00:00 UTC ${lastSheering.getFullYear()}`);
+    sheep.sendToGraze(location, new Date());
+    sheep.shearSheep();
+}
+
+main();
