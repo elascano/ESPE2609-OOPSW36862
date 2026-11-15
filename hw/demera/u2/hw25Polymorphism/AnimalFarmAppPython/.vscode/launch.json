@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "AnimalFarmAppPython",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "view.AnimalFarmApp",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
