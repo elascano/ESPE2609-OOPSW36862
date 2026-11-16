@@ -1,0 +1,14 @@
+{
+  "name": "animal-farm-app-hw05",
+  "version": "1.0.0",
+  "description": "AnimalFarmApp HW05 - Polymorphism (TypeScript)",
+  "author": "Andrés Pachacama, ByteWorks, @ESPE",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/main.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
