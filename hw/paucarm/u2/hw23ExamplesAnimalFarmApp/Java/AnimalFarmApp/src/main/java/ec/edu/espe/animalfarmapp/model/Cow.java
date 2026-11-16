@@ -28,7 +28,7 @@ public class Cow extends FarmAnimal{
     }
     
     public void milk(){
-        System.out.println("Milking the cow ");
+        System.out.println("Milking the cow... ");
     }
 
     /**

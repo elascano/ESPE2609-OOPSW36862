@@ -11,17 +11,23 @@ public class Chicken extends FarmAnimal{
     private int numberOfLaidEggsPerWeek;
     private boolean isMeat;
 
-    @Override
-    public String toString() {
-        return "Chicken{" +super.toString()+ "isMolting=" + isMolting + ", numberOfLaidEggsInAMonth=" + numberOfLaidEggsPerWeek + ", isMeat=" + isMeat + '}';
-    }
-
-    public Chicken(boolean isMolting, int numberOfLaidEggsInAMonth, boolean isMeat, int id, String breed, Date bornOnDate) {
+    public Chicken(boolean isMolting, int numberOfLaidEggsInMonth, boolean isMeat, int id, String breed, Date bornOnDate) {
         super(id, breed, bornOnDate);
         this.isMolting = isMolting;
-        this.numberOfLaidEggsPerWeek = numberOfLaidEggsInAMonth;
+        this.numberOfLaidEggsPerWeek = numberOfLaidEggsInMonth;
         this.isMeat = isMeat;
     }
+    
+    public void layAnEgg(){
+        System.out.println("chicken is laying an egg");
+    }
+
+    @Override
+    public String toString() {
+        return "chicken{" + super.toString() + "isMolting=" + isMolting + ", numberOfLaidEggsInMonth=" + numberOfLaidEggsPerWeek + ", isMeat=" + isMeat + '}';
+    }
+
+    
     
     /**
      * @return the isMolting
@@ -38,16 +44,16 @@ public class Chicken extends FarmAnimal{
     }
 
     /**
-     * @return the numberOfLaidEggsInAMonth
+     * @return the numberOfLaidEggsPerWeek
      */
     public int getNumberOfLaidEggsPerWeek() {
         return numberOfLaidEggsPerWeek;
     }
 
     /**
-     * @param numberOfLaidEggsPerWeek the numberOfLaidEggsPeek to set
+     * @param numberOfLaidEggsPerWeek the numberOfLaidEggsPerWeek to set
      */
-    public void setNumberOfLaidEggsInAMonth(int numberOfLaidEggsInAMonth) {
+    public void setNumberOfLaidEggsPerWeek(int numberOfLaidEggsPerWeek) {
         this.numberOfLaidEggsPerWeek = numberOfLaidEggsPerWeek;
     }
 
@@ -64,4 +70,6 @@ public class Chicken extends FarmAnimal{
     public void setIsMeat(boolean isMeat) {
         this.isMeat = isMeat;
     }
+    
+    
 }
