@@ -1,0 +1,14 @@
+{
+  "name": "animal-farm-app",
+  "version": "0.9.0",
+  "description": "Animal Farm App",
+  "author": "Mateo Nacimba",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/AnimalFarmApp.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}
