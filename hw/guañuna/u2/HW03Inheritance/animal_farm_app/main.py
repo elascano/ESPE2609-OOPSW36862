@@ -1,0 +1,5 @@
+# animal_farm_app/main.py
+from view.animal_farm_app import main
+
+if __name__ == "__main__":
+    main()
