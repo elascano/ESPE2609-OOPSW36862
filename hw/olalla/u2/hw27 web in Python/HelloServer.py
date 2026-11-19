@@ -8,8 +8,8 @@ class CreateServer(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-Type', 'text/html')
             self.end_headers()
-            output = "Hello, <b>Web Developers!</b> from <i>Francisco Demera</i>"
+            output = "Hello, <b>Web Developers!</b> from <i>Renata Olalla</i>"
             self.wfile.write(output.encode('utf-8'))
 server = HTTPServer((hostname, port), CreateServer)
-print(f"Francisco's Server running at http://{hostname}:{port}/")
+print(f"Renata's Server running at http://{hostname}:{port}/")
 server.serve_forever()
