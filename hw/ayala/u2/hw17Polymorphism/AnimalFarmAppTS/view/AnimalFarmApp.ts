@@ -8,14 +8,12 @@ import { Sheep } from "../model/Sheep";
 function main(): void {
     let food = new Food("corn");
     const location = new Location("graze");
-
-    // Java's deprecated Date(year, month, day) constructor adds 1900 to year.
     const chicken = new Chicken(false, 10, 2, "palish", new Date(3922, 10, 10));
     const cow = new Cow(true, 23.5, 3, "Holstein", new Date(3924, 0, 23), false);
     const pig = new Pig(true, 30.23, 4, "Mangalitsa", new Date(3919, 11, 30), false);
     const sheep = new Sheep(true, new Date(3925, 11, 24), 5, "Manchega", new Date(3924, 9, 27), true);
 
-    console.log("Francisco's Farm Animal");
+    console.log("Enrique's Farm Animal");
     console.log("=======================");
     console.log("============");
     console.log("Chicken: ");

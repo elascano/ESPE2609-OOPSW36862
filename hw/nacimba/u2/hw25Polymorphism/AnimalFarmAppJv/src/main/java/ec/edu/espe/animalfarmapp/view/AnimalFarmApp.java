@@ -11,6 +11,14 @@ public class AnimalFarmApp {
 
     public static void main(String[] args) {
 
+        
+
+        System.out.println("Mateo Nacimba's Farm Animals");
+        System.out.println("=============================");
+        System.out.println("-----------------------------");
+        
+        
+        
         Food food = new Food("corn");
         Location location = new Location("graze");
         Chicken chicken = new Chicken(false, 10, 2, "palish", new Date(2022, 10, 10));
@@ -18,9 +26,6 @@ public class AnimalFarmApp {
         Pig pig = new Pig(true, 30.23F, 4, "Mangalitsa", new Date(2019, 11, 30), false);
         Sheep sheep = new Sheep(true, new Date(2025, 11, 24), 5, "Manchega", new Date(2024, 9, 27), true);
 
-        System.out.println("Mateo Nacimba's Farm Animals");
-        System.out.println("=============================");
-        System.out.println("-----------------------------");
         System.out.println("Chicken:");
         System.out.println(chicken);
         chicken.layAnEgg();
