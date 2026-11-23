@@ -1,0 +1,29 @@
+{
+  "name": "computerstore",
+  "version": "0.9.0",
+  "description": "my costumers of the computer store",
+  "keywords": [
+    "oop",
+    "nodejs",
+    "computers",
+    "costumers"
+  ],
+  "license": "ISC",
+  "author": "Carlos Parra",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^18.0.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
