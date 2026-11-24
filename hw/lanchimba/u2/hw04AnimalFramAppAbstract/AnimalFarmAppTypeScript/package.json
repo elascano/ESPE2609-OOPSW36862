@@ -1,0 +1,14 @@
+{
+  "name": "animal-farm-app-abstract-typescript",
+  "version": "1.0.0",
+  "description": "ESPE OOP hw04AnimalFramAppAbstract implemented in TypeScript using abstract classes and methods.",
+  "main": "dist/AnimalFarmApp.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/AnimalFarmApp.js",
+    "dev": "tsc && node dist/AnimalFarmApp.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

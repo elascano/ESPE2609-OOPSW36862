@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Environment variables (NEVER commit real credentials)
+.env
+.env.*
+!.env.example
+
+# Logs & Runtime
+npm-debug.log*
+*.log
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

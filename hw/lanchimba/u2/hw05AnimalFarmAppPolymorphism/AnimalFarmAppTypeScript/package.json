@@ -1,0 +1,14 @@
+{
+  "name": "animal-farm-app-polymorphism-typescript",
+  "version": "1.0.0",
+  "description": "ESPE OOP hw05AnimalFarmAppPolymorphism implemented in TypeScript using interfaces, overloading, and overriding.",
+  "main": "dist/AnimalFarmApp.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/AnimalFarmApp.js",
+    "dev": "tsc && node dist/AnimalFarmApp.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

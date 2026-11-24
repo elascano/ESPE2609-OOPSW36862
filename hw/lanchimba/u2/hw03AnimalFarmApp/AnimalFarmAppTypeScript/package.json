@@ -1,0 +1,14 @@
+{
+  "name": "animal-farm-app-typescript",
+  "version": "1.0.0",
+  "description": "ESPE OOP hw03AnimalFarmApp implemented in TypeScript using inheritance.",
+  "main": "dist/AnimalFarmApp.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/AnimalFarmApp.js",
+    "dev": "tsc && node dist/AnimalFarmApp.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

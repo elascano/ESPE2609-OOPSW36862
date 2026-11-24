@@ -1,0 +1,28 @@
+# Java / NetBeans
+build/
+dist/
+nbproject/private/
+*.class
+*.jar
+target/
+out/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# TypeScript / Node.js
+node_modules/
+AnimalFarmAppTypeScript/dist/
+*.tsbuildinfo
+*.log
+
+# IDE & OS
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
