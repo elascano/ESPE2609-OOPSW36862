@@ -1,0 +1,62 @@
+.frm {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 20px;
+  background: #d6d9e0;
+  border-radius: 8px;
+  font-family: system-ui, sans-serif;
+  color: #111;
+}
+
+.pnl-title {
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+.pnl-data {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.col {
+  display: grid;
+  grid-template-columns: auto 160px;
+  gap: 10px;
+  align-content: start;
+  align-items: center;
+}
+
+.col > label {
+  text-align: right;
+}
+
+.col input:not([type="checkbox"]),
+.col select,
+.col textarea {
+  padding: 3px 6px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font: inherit;
+}
+
+.check {
+  text-align: left !important;
+}
+
+.pnl-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.pnl-buttons button {
+  padding: 6px 20px;
+  cursor: pointer;
+}
+
+.error {
+  color: #b00020;
+  text-align: center;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .panel {
+            border: 1px solid #999;
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .title-panel {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #e0e0e0;
+            padding: 15px;
+        }
+
+        .data-panel {
+            display: flex;
+            gap: 30px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .row label {
+            width: 140px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .row input[type="text"],
+        .row input[type="date"],
+        .row select {
+            width: 200px;
+            padding: 4px;
+        }
+
+        .row textarea {
+            width: 200px;
+            height: 80px;
+            padding: 4px;
+        }
+
+        .buttons-panel {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+        }
+
+        button {
+            padding: 8px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="panel title-panel">CONTACT</div>
+
+    <div class="panel data-panel">
+        <!-- Columna Izquierda -->
+        <div class="column">
+            <div class="row"><label>id:</label><input type="text" id="txtId"></div>
+            <div class="row"><label>Full Name:</label><input type="text" id="txtFullName"></div>
+            <div class="row"><label>Email:</label><input type="text" id="txtEmail"></div>
+            <div class="row"><label>Cell Phone Number:</label><input type="text" id="txtCellphone"></div>
+            <div class="row"><label>Instagram:</label><input type="text" id="txtInstagram"></div>
+            <div class="row"><label>Facebook:</label><input type="text" id="txtFacebook"></div>
+            <div class="row">
+                <label>Know:</label>
+                <input type="checkbox" id="chkIsKnown"> Yes
+            </div>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="column">
+            <div class="row">
+                <label>Type:</label>
+                <select id="cmbType">
+                    <option>Friend</option>
+                    <option>Family</option>
+                    <option>Job Mate</option>
+                    <option>Gym Mate</option>
+                    <option>Highschool</option>
+                </select>
+            </div>
+            <div class="row">
+                <label>Gender:</label>
+                <select id="cmbGender">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+            <div class="row">
+                <label>Hobbies:</label>
+                <select id="lstHobbies" multiple size="6">
+                    <option>Play the guitar</option>
+                    <option>Watch movies</option>
+                    <option>Play soccer</option>
+                    <option>Play Basketball</option>
+                    <option>Reading</option>
+                    <option>Cooking</option>
+                    <option>Swimming</option>
+                    <option>Running</option>
+                </select>
+            </div>
+            <div class="row"><label>Birth Date:</label><input type="date" id="txtBirthDate"></div>
+            <div class="row">
+                <label>Comments:</label>
+                <textarea id="txaComments"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel buttons-panel">
+        <div>
+            <button id="btnGuardar">Guardar</button>
+            <button id="btnLimpiar">Limpiar</button>
+        </div>
+        <button onclick="window.close()">Salir</button>
+    </div>
+
+    <!-- Aquí cargamos directamente el archivo TypeScript -->
+    <script type="module" src="/view/frmContact.ts"></script>
+</body>
+
+</html>
