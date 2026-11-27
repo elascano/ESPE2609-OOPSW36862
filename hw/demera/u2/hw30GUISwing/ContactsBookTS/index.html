@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ContactsBook - Add Contact</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 650px; margin: 20px auto; }
+        h2 { text-align: center; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .field { display: flex; flex-direction: column; margin-bottom: 10px; }
+        .buttons { text-align: center; margin-top: 20px; }
+        button { padding: 8px 20px; margin: 0 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>ADD CONTACT</h2>
+    <form id="contactForm">
+        <div class="grid">
+            <div>
+                <div class="field"><label>id:</label><input type="text" id="txtId"></div>
+                <div class="field"><label>Full Name:</label><input type="text" id="txtFullName"></div>
+                <div class="field"><label>E-mail:</label><input type="text" id="txtEmail"></div>
+                <div class="field"><label>Cell Phone Number:</label><input type="text" id="txtCellPhoneNumber" maxlength="10"></div>
+                <div class="field"><label>Instagram:</label><input type="text" id="txtInstagram"></div>
+                <div class="field"><label>Facebook:</label><input type="text" id="txtFacebook"></div>
+                <div><label>Known:</label> <input type="checkbox" id="chkKnown"> Yes</div>
+            </div>
+            <div>
+                <div class="field">
+                    <label>Type:</label>
+                    <select id="cmbTypeOfContact">
+                        <option>Friend</option><option>Family</option><option>Job Mate</option>
+                        <option>Team Mate</option><option>High School</option><option>Gym</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Gender:</label>
+                    <select id="cmbGender"><option>M</option><option>F</option></select>
+                </div>
+                <div class="field">
+                    <label>Hobbies (Ctrl + Click):</label>
+                    <select id="lstHobbies" multiple size="5">
+                        <option>Play the Guitar</option><option>Watch movies</option>
+                        <option>Play Soccer</option><option>Play Basketball</option>
+                        <option>Cooking</option><option>Reading</option>
+                        <option>Running</option><option>Swimming</option>
+                    </select>
+                </div>
+                <div class="field"><label>BirthDate (dd/MM/yyyy):</label><input type="text" id="txtBirthDate"></div>
+                <div class="field"><label>Comments:</label><textarea id="txaComments" rows="3"></textarea></div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="submit" id="btnSave">Save</button>
+            <button type="button" id="btnCancel">Cancel</button>
+        </div>
+    </form>
+    <script type="module" src="./dist/view/frmContacts.js"></script>
+</body>
+</html>
