@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts Book - TypeScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="window">
+        <!-- Menu Bar -->
+        <div class="menubar">
+            <div class="dropdown">
+                <button class="dropbtn">ContactsBook</button>
+                <div class="dropdown-content">
+                    <a href="#" id="mnuHome">Main Menu</a>
+                    <a href="#" id="mnuAbout">About</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Contacts</button>
+                <div class="dropdown-content">
+                    <a href="#" id="mnuAdd">Add Contacts</a>
+                    <a href="#" id="mnuView">View Contacts</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1. Main Menu View -->
+        <div id="viewMenu" class="panel center-panel">
+            <h2>CONTACTS BOOK SYSTEM</h2>
+            <p>Select an option from the menu or buttons below:</p>
+            <div class="menu-buttons">
+                <button id="btnMenuAdd" type="button">Add Contact</button>
+                <button id="btnMenuView" type="button">View Contacts</button>
+            </div>
+        </div>
+
+        <!-- 2. Add Contact View -->
+        <div id="viewAdd" class="panel" style="display: none;">
+            <h2 class="center-text">ADD CONTACT</h2>
+            <div class="form-grid">
+                <div class="col">
+                    <div class="row">
+                        <label for="txtId">id:</label>
+                        <input type="text" id="txtId" style="width: 90px;">
+                    </div>
+                    <div class="row">
+                        <label for="txtFullName">Full Name:</label>
+                        <input type="text" id="txtFullName">
+                    </div>
+                    <div class="row">
+                        <label for="txtEmail">Email:</label>
+                        <input type="text" id="txtEmail">
+                    </div>
+                    <div class="row">
+                        <label for="txtCellphoneNumber">Cell Phone Number:</label>
+                        <input type="text" id="txtCellphoneNumber" maxlength="10">
+                    </div>
+                    <div class="row">
+                        <label for="txtInstagram">Instagram:</label>
+                        <input type="text" id="txtInstagram">
+                    </div>
+                    <div class="row">
+                        <label for="txtFacebook">Facebook:</label>
+                        <input type="text" id="txtFacebook">
+                    </div>
+                    <div class="row">
+                        <label for="chkIsKnown">Known:</label>
+                        <label><input type="checkbox" id="chkIsKnown"> Yes</label>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="row">
+                        <label for="cmbTypeOfContact">Type:</label>
+                        <select id="cmbTypeOfContact">
+                            <option value="Friend">Friend</option>
+                            <option value="Family">Family</option>
+                            <option value="Job">Job</option>
+                            <option value="University">University</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label for="cmbGender">Gender:</label>
+                        <select id="cmbGender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label>Birth Date (D/M/Y):</label>
+                        <div class="date-selects">
+                            <select id="cmbDay"></select>
+                            <select id="cmbMonth"></select>
+                            <select id="cmbYear"></select>
+                        </div>
+                    </div>
+                    <div class="row align-top">
+                        <label for="lstHobbies">Hobbies:</label>
+                        <select id="lstHobbies" multiple size="5">
+                            <option value="Play the guitar">Play the guitar</option>
+                            <option value="Watch movies">Watch movies</option>
+                            <option value="Play soccer">Play soccer</option>
+                            <option value="Play videogames">Play videogames</option>
+                            <option value="Reading">Reading</option>
+                        </select>
+                    </div>
+                    <div class="row align-top">
+                        <label for="txaComments">Comments:</label>
+                        <textarea id="txaComments" rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-bar">
+                <button id="btnBackFromAdd" type="button">Back to Menu</button>
+                <div>
+                    <button id="btnCancel" type="button">Cancel / Clear</button>
+                    <button id="btnSave" type="button">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. View Contacts Table -->
+        <div id="viewList" class="panel" style="display: none;">
+            <h2 class="center-text">REGISTERED CONTACTS</h2>
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Cell Phone</th>
+                            <th>Type</th>
+                            <th>Gender</th>
+                            <th>Birth Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblContactsBody"></tbody>
+                </table>
+            </div>
+            <div class="button-bar">
+                <button id="btnBackFromList" type="button">Back to Menu</button>
+                <button id="btnAddFromList" type="button">Add Contact</button>
+            </div>
+        </div>
+
+        <!-- 4. About View -->
+        <div id="viewAbout" class="panel center-panel" style="display: none;">
+            <h2>ContactsBook V1.0</h2>
+            <p>Author: Yandry Velez - ESPE</p>
+            <p>Object-Oriented Programming (WS29 - TypeScript)</p>
+            <div class="menu-buttons">
+                <button id="btnBackFromAbout" type="button">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="dist/model/Contact.js"></script>
+    <script src="dist/controller/ContactController.js"></script>
+    <script src="dist/view/app.js"></script>
+</body>
+</html>

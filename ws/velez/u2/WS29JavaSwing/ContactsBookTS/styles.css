@@ -1,0 +1,64 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #dcdcdc;
+    margin: 24px;
+}
+
+.window {
+    width: 660px;
+    margin: 0 auto;
+    background-color: #eeeeee;
+    border: 1px solid #999;
+    padding: 16px 26px 24px 26px;
+}
+
+.pnl-title {
+    text-align: center;
+    padding: 14px 0 22px 0;
+}
+
+.pnl-title h3 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.pnl-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.align-top {
+    align-items: flex-start;
+}
+
+.row input[type="text"],
+.row select,
+.row textarea {
+    width: 150px;
+    padding: 3px 5px;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.buttons-row {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+button {
+    padding: 4px 16px;
+    font-size: 13px;
+    cursor: pointer;
+}

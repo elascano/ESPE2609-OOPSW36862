@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FrmContacs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="window">
+        <div class="pnl-title">
+            <h3>ADD CONTACT</h3>
+        </div>
+
+        <div class="pnl-data">
+            <div class="col">
+                <div class="row">
+                    <label for="txtId">id:</label>
+                    <input type="text" id="txtId" style="width: 75px;">
+                </div>
+                <div class="row">
+                    <label for="txtFullName">Full Name</label>
+                    <input type="text" id="txtFullName">
+                </div>
+                <div class="row">
+                    <label for="txtEmail">Email:</label>
+                    <input type="text" id="txtEmail">
+                </div>
+                <div class="row">
+                    <label for="txtCellphoneNumber">Cell Phone Number:</label>
+                    <input type="text" id="txtCellphoneNumber">
+                </div>
+                <div class="row">
+                    <label for="txtInstagram">Instagram:</label>
+                    <input type="text" id="txtInstagram">
+                </div>
+                <div class="row">
+                    <label for="txtFacebook">Facebook</label>
+                    <input type="text" id="txtFacebook">
+                </div>
+                <div class="row">
+                    <label for="chkIsKnown">Known:</label>
+                    <label><input type="checkbox" id="chkIsKnown"> Yes</label>
+                </div>
+
+                <div class="buttons-row">
+                    <button type="button" id="BTNCancel">Cancel</button>
+                    <button type="button" id="btnSave">Save</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="row">
+                    <label for="cmbTypeOfContact">Type:</label>
+                    <select id="cmbTypeOfContact">
+                        <option value="Friend">Friend</option>
+                        <option value="Family">Family</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="cmbGender">Gender:</label>
+                    <select id="cmbGender">
+                        <option value="Male ">Male </option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="row align-top">
+                    <label for="lstHobbies">Hobbies:</label>
+                    <select id="lstHobbies" multiple size="6">
+                        <option value="Play the gittar ">Play the gittar </option>
+                        <option value="watch movies">watch movies</option>
+                        <option value="Play Scoer">Play Scoer</option>
+                        <option value="Play videogames">Play videogames</option>
+                        <option value="Reading">Reading</option>
+                        <option value=" "> </option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="jTextField4">Birth Date:</label>
+                    <input type="text" id="jTextField4" style="width: 90px;">
+                </div>
+                <div class="row align-top">
+                    <label for="txaComments">Comments:</label>
+                    <textarea id="txaComments" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dist/model/Contact.js"></script>
+    <script src="dist/view/FrmContacs.js"></script>
+</body>
+</html>

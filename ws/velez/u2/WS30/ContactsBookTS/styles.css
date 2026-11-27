@@ -1,0 +1,155 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #dcdcdc;
+    margin: 20px;
+}
+
+.window {
+    width: 720px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
+}
+
+.menubar {
+    background-color: #e4e4e4;
+    border-bottom: 1px solid #bbb;
+    display: flex;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    background-color: #d0d0d0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    border: 1px solid #aaa;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: #000;
+    padding: 6px 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+}
+
+.dropdown-content a:hover {
+    background-color: #cde1f9;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.panel {
+    padding: 18px 24px;
+}
+
+.center-panel {
+    text-align: center;
+    padding: 50px 24px;
+}
+
+.center-text {
+    text-align: center;
+    margin-top: 4px;
+}
+
+.menu-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 12px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.align-top {
+    align-items: flex-start;
+}
+
+.row input[type="text"],
+.row select,
+.row textarea {
+    width: 175px;
+    padding: 3px 5px;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.date-selects {
+    display: flex;
+    gap: 4px;
+    width: 185px;
+}
+
+.date-selects select {
+    width: auto;
+}
+
+.button-bar {
+    margin-top: 16px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 5px 14px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.table-box {
+    max-height: 250px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #aaa;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #e4e4e4;
+}

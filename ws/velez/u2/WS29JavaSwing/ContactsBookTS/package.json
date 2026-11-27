@@ -1,0 +1,9 @@
+{
+    "name": "contacts-book-ts",
+    "version": "1.0.0",
+    "description": "ContactsBook FrmContacs in TypeScript for VS Code",
+    "scripts": {
+        "build": "tsc",
+        "start": "tsc && node server.js"
+    }
+}
