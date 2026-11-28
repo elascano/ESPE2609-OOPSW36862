@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+}
+
+body {
+    background-color: #dcdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.window {
+    background-color: #f0f0f0;
+    border: 1px solid #b5b5b5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 680px;
+    padding: 20px 30px;
+}
+
+.pnl-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pnl-title h2 {
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.pnl-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.field-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.field-row.align-top {
+    align-items: flex-start;
+}
+
+.field-row label {
+    width: 130px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.field-row input[type="text"],
+.field-row input[type="email"],
+.field-row select,
+.field-row textarea {
+    width: 150px;
+    padding: 3px 5px;
+    border: 1px solid #ababab;
+    background-color: #ffffff;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pnl-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+    padding-top: 10px;
+}
+
+button {
+    padding: 5px 22px;
+    background-color: #e1e1e1;
+    border: 1px solid #adadad;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e5f1fb;
+    border-color: #0078d7;
+}

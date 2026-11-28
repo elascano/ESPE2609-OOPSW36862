@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactsBook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="window">
+        <div class="pnl-title">
+            <h2>ADD CONTACT</h2>
+        </div>
+
+        <form id="frmContacts" class="pnl-fields">
+            <div class="col-left">
+                <div class="field-row">
+                    <label for="txtId">id:</label>
+                    <input type="text" id="txtId">
+                </div>
+                <div class="field-row">
+                    <label for="txtFullName">Full Name:</label>
+                    <input type="text" id="txtFullName">
+                </div>
+                <div class="field-row">
+                    <label for="txtEmail">Email:</label>
+                    <input type="email" id="txtEmail">
+                </div>
+                <div class="field-row">
+                    <label for="txtCellPhoneNumber">Cell Phone Number:</label>
+                    <input type="text" id="txtCellPhoneNumber">
+                </div>
+                <div class="field-row">
+                    <label for="txtInstagram">Instagram:</label>
+                    <input type="text" id="txtInstagram">
+                </div>
+                <div class="field-row">
+                    <label for="txtFacebook">Facebook:</label>
+                    <input type="text" id="txtFacebook">
+                </div>
+                <div class="field-row">
+                    <label for="chkisKnown">Know:</label>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="chkisKnown">
+                        <span>Yes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-right">
+                <div class="field-row">
+                    <label for="cmbType">Type:</label>
+                    <select id="cmbType">
+                        <option value="Friend">Friend</option>
+                        <option value="Family">Family</option>
+                        <option value="Job Mate">Job Mate</option>
+                        <option value="Team Mate">Team Mate</option>
+                        <option value="High School">High School</option>
+                        <option value=" "> </option>
+                    </select>
+                </div>
+                <div class="field-row">
+                    <label for="cmbGender">Gender:</label>
+                    <select id="cmbGender">
+                        <option value="M">M</option>
+                        <option value="F">F</option>
+                    </select>
+                </div>
+                <div class="field-row align-top">
+                    <label for="listHobbies">Hobbies:</label>
+                    <select id="listHobbies" multiple size="8">
+                        <option value="Play the guitar">Play the guitar</option>
+                        <option value="Watch movies">Watch movies</option>
+                        <option value="Play soccer">Play soccer</option>
+                        <option value="Play Basketball">Play Basketball</option>
+                        <option value="Reading">Reading</option>
+                        <option value="Cooking">Cooking</option>
+                        <option value="Swiming">Swiming</option>
+                        <option value=" "> </option>
+                    </select>
+                </div>
+                <div class="field-row">
+                    <label for="txtBirthDate">Birth Date:</label>
+                    <input type="text" id="txtBirthDate">
+                </div>
+                <div class="field-row align-top">
+                    <label for="txtComments">Comments:</label>
+                    <textarea id="txtComments" rows="2"></textarea>
+                </div>
+            </div>
+        </form>
+
+        <div class="pnl-buttons">
+            <button type="button" id="btnSave">Save</button>
+            <button type="button" id="btnCancel">Cancel</button>
+        </div>
+    </div>
+
+    <script type="module" src="../main.js"></script>
+</body>
+</html>
